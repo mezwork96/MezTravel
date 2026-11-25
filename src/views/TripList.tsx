@@ -57,6 +57,10 @@ export default function TripList({ t, language, data, update }: Props) {
         <strong>🈂️ {t.translator}</strong>
       </a>
 
+      <a className="card row-link money-link" href={link('voice')}>
+        <strong>🎤 {t.voiceTitle}</strong>
+      </a>
+
       <a className="card row-link money-link" href={link('emergency')}>
         <strong>🆘 {t.emergencyTitle}</strong>
       </a>
