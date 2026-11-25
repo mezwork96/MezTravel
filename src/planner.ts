@@ -194,10 +194,18 @@ export function toStages(guide: Guide, route: PlannedRoute, language: GuideLangu
 
 // « Kyoto », « kyōto » ou « Kyoto (Gion) » désignent la même destination.
 const normalise = (text: string) =>
-  text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim()
+  text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim()
+
+// Autres façons courantes d'écrire une ville.
+const spellings: Record<string, string> = { tokio: 'tokyo', kioto: 'kyoto', chioto: 'kyoto' }
+const spelled = (text: string) =>
+  normalise(text).replace(/[a-z]+/g, (word) => spellings[word] ?? word)
+
+const japan = /gia?pp?one|jap+on|japan|nippon|日本/i
+export const isJapan = (text: string) => japan.test(normalise(text))
 
 export function findDestination(guide: Guide, city: string): GuideDestination | undefined {
-  const wanted = normalise(city)
+  const wanted = spelled(city)
   if (!wanted) return undefined
   return guide.destinations.find((d) => {
     const name = normalise(d.name)
@@ -389,9 +397,36 @@ export function planDays(
   return result
 }
 
+// Les villes du guide citées dans un texte, comme « Tokyo e Kyoto ».
+export function mentionedCities(guide: Guide, text: string): string[] {
+  const words = ` ${spelled(text).split(/[^a-z]+/).join(' ')} `
+  return guide.destinations.filter((d) => words.includes(` ${d.id} `)).map((d) => d.id)
+}
+
 // Le guide s'applique si la destination du voyage est le Japon ou une de ses villes.
 export function guideCovers(guide: Guide, trip: Pick<Trip, 'destination' | 'stages'>): boolean {
-  if (/giappone|japan|japon|日本/i.test(trip.destination)) return true
-  if (findDestination(guide, trip.destination)) return true
+  if (isJapan(trip.destination)) return true
+  if (findDestination(guide, trip.destination) || mentionedCities(guide, trip.destination).length) return true
   return Boolean(trip.stages?.length && trip.stages.every((s) => findDestination(guide, s.city)))
+}
+
+// Sans parcours enregistré, l'app en choisit un elle-même pour pouvoir créer
+// l'itinéraire en une fois. null : inutile (parcours déjà là ou une seule ville).
+export function automaticRoute(
+  guide: Guide,
+  trip: Trip,
+  preferences: Preferences,
+  language: GuideLanguage,
+): Stage[] | null {
+  if (trip.stages?.length) return null
+  const cities = mentionedCities(guide, trip.destination)
+  if (cities.length === 1 || (!cities.length && findDestination(guide, trip.destination))) return null
+  const nights = listDays(trip.startDate, trip.endDate).length - 1
+  const routes = proposeRoutes(guide, Math.max(1, nights), preferences, {
+    include: cities,
+    arrival: '',
+    departure: '',
+  })
+  const route = routes.find((r) => r.style === 'balanced') ?? routes[0]
+  return route ? toStages(guide, route, language) : null
 }

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Reminders from '../components/Reminders'
 import TripForm from '../components/TripForm'
 import { formatDate, type Dictionary, type Language } from '../i18n'
+import { isJapan } from '../planner'
 import { link } from '../route'
 import { stageOn } from '../stages'
 import {
@@ -85,7 +86,7 @@ export default function TripView({ t, language, trip, onChange, onDelete }: Prop
             </span>
           </a>
 
-          {/giappone|japan|japon|日本/i.test(trip.destination) && (
+          {isJapan(trip.destination) && (
             <a className="card row-link money-link" href={link('guide')}>
               <strong>📖 {t.guideTitle}</strong>
             </a>

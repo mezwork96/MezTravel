@@ -423,6 +423,12 @@ const it = {
   nearbyOpen: 'Apri in Google Maps',
   nearbyNote: 'Il pulsante apre Google Maps e gli invia il testo della ricerca. Serve internet. Luoghi, orari, recensioni e percorsi sono quelli di Google e possono contenere errori.',
 
+  yourItinerary: 'Il tuo itinerario',
+  autoRoute: 'Percorso scelto dall’app in base ai tuoi interessi. Si salva insieme alle attività.',
+  changeRoute: 'Preferisci scegliere il percorso',
+  notSavedYet: 'Non è ancora salvato: controllalo qui sotto, poi tocca il pulsante per metterlo nel viaggio.',
+  saveItinerary: 'Salva l’itinerario nel viaggio',
+
   backupTitle: 'Copia di sicurezza',
   backupText:
     'I viaggi sono salvati solo su questo dispositivo. Salva ogni tanto una copia in un file, per esempio nell’app File.',
@@ -864,6 +870,12 @@ const en: Dictionary = {
   nearbyOpen: 'Open in Google Maps',
   nearbyNote: 'The button opens Google Maps and sends it the search text. A connection is needed. Places, opening hours, reviews and routes are Google’s and may contain errors.',
 
+  yourItinerary: 'Your itinerary',
+  autoRoute: 'Route chosen by the app from your interests. It is saved together with the activities.',
+  changeRoute: 'Choose the route yourself',
+  notSavedYet: 'It is not saved yet: check it below, then tap the button to put it in the trip.',
+  saveItinerary: 'Save the itinerary to the trip',
+
   backupTitle: 'Backup',
   backupText:
     'Trips are saved only on this device. Save a copy to a file now and then, for example in the Files app.',
@@ -1302,6 +1314,12 @@ const fr: Dictionary = {
   nearbyOther: 'Vous cherchez autre chose ? (facultatif)',
   nearbyOpen: 'Ouvrir dans Google Maps',
   nearbyNote: 'Le bouton ouvre Google Maps et lui envoie le texte de la recherche. Connexion nécessaire. Lieux, horaires, avis et itinéraires viennent de Google et peuvent contenir des erreurs.',
+
+  yourItinerary: 'Votre itinéraire',
+  autoRoute: 'Parcours choisi par l’application selon vos envies. Il est enregistré avec les activités.',
+  changeRoute: 'Choisir vous-même le parcours',
+  notSavedYet: 'Il n’est pas encore enregistré : vérifiez-le ci-dessous, puis touchez le bouton pour le mettre dans le voyage.',
+  saveItinerary: 'Enregistrer l’itinéraire dans le voyage',
 
   backupTitle: 'Copie de sécurité',
   backupText:

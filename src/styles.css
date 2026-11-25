@@ -740,3 +740,8 @@ a.button.wide {
   text-align: center;
   text-decoration: none;
 }
+
+.itinerary-top {
+  scroll-margin-top: 12px;
+  margin-bottom: 12px;
+}

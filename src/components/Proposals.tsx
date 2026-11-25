@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { readCache, writeCache } from '../cache'
 import { useGuide } from '../guide/useGuide'
 import type { Dictionary, Language } from '../i18n'
 import type { Preferences } from '../interests'
-import { guideCovers, planDays } from '../planner'
+import { automaticRoute, guideCovers, planDays } from '../planner'
 import {
   alreadyPlanned,
   buildRequest,
@@ -14,7 +14,7 @@ import {
   type Proposal,
 } from '../proposals'
 import { link } from '../route'
-import { stageDays } from '../stages'
+import { stageDays, type Stage } from '../stages'
 import { listDays, type Trip } from '../trips'
 import ClaudeSteps from './ClaudeSteps'
 import ProposalPreview, { type Row } from './ProposalPreview'
@@ -35,6 +35,7 @@ type Result = {
   ignored: number
   unknownCity: number
   empty: number
+  route: Stage[] | null // parcours choisi par l'app, enregistré avec les activités
 }
 
 const modeLabels = { plan: 'modePlan', pick: 'modePick' } as const
@@ -49,6 +50,13 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
   const [result, setResult] = useState<Result | null>(null)
   const [failed, setFailed] = useState(false)
   const [added, setAdded] = useState(0)
+  const preview = useRef<HTMLDivElement>(null)
+  const created = result?.rows.length ? result.from : null
+
+  // L'itinéraire créé apparaît sous les yeux, sans avoir à le chercher.
+  useEffect(() => {
+    if (created === 'guide') preview.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [created])
 
   const days = listDays(trip.startDate, trip.endDate)
   const stages = date ? [] : stageDays(days, trip.stages ?? [])
@@ -71,7 +79,9 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
   function create() {
     if (!covered) return
     reset()
-    const plan = planDays(guide, trip, preferences, wanted, mode, language)
+    const route = automaticRoute(guide, trip, preferences, language)
+    const withRoute = route ? { ...trip, stages: route } : trip
+    const plan = planDays(guide, withRoute, preferences, wanted, mode, language)
     setResult({
       from: 'guide',
       rows: toRows(plan.proposals),
@@ -79,6 +89,7 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
       ignored: 0,
       unknownCity: plan.unknownCity.length,
       empty: plan.empty.length,
+      route,
     })
   }
 
@@ -94,6 +105,7 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
       ignored: found.ignored,
       unknownCity: 0,
       empty: 0,
+      route: null,
     })
   }
 
@@ -101,7 +113,12 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
     const activities = result!.rows
       .filter((row) => row.chosen)
       .map(({ chosen: _, ...proposal }) => ({ id: crypto.randomUUID(), ...proposal }))
-    onChange((current) => ({ ...current, activities: [...current.activities, ...activities] }))
+    const route = result!.route
+    onChange((current) => ({
+      ...current,
+      activities: [...current.activities, ...activities],
+      ...(route && !current.stages?.length ? { stages: route } : {}),
+    }))
     setAdded(activities.length)
     setResult(null)
     setAnswer('')
@@ -197,7 +214,27 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
             result.unknownCity === 0 && <p role="status">{t.nothingFound}</p>
           ) : (
             <>
-              <h3>{t.preview}</h3>
+              <div ref={preview} className="itinerary-top">
+                <h3>{result.from === 'guide' ? t.yourItinerary : t.preview}</h3>
+                {result.route && (
+                  <p>
+                    🗺️ <strong>{result.route.map((s) => `${s.city} (${s.nights})`).join(' → ')}</strong>
+                    <br />
+                    <span className="muted">
+                      {t.autoRoute} <a href={link(trip.id, 'route')}>{t.changeRoute} ›</a>
+                    </span>
+                  </p>
+                )}
+                <p>{t.notSavedYet}</p>
+                <button
+                  type="button"
+                  className="primary wide"
+                  disabled={!result.rows.some((row) => row.chosen)}
+                  onClick={add}
+                >
+                  ✅ {t.saveItinerary} ({result.rows.filter((row) => row.chosen).length})
+                </button>
+              </div>
               <p className="card warning note">
                 {result.from === 'guide' ? t.guideWarning : t.proposalWarning}
               </p>

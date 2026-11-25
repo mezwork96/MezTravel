@@ -4,7 +4,7 @@ import { test } from 'node:test'
 import { isWebUrl } from '../src/answer.ts'
 import { defaultPreferences, interests, paces, type Preferences } from '../src/interests.ts'
 import type { Guide } from '../src/guide/types.ts'
-import { findDestination, isAvailable, guideCovers, planDays, proposeRoutes, toStages, travelTimes } from '../src/planner.ts'
+import { automaticRoute, findDestination, isAvailable, guideCovers, planDays, proposeRoutes, toStages, travelTimes } from '../src/planner.ts'
 import { isStage, totalNights } from '../src/stages.ts'
 import { listDays, parseData, type Trip } from '../src/trips.ts'
 
@@ -119,6 +119,26 @@ test('respecte les saisons, les fermetures et les journées normales', () => {
       }
     }
   }
+})
+
+test('crée un itinéraire en une fois, quelle que soit l’écriture de la destination', () => {
+  const preferences = likes('temples', 'wellness')
+  for (const destination of ['Giappone', 'Giapone', 'Jappone', 'giappone 2027', 'Japon', 'Japan', 'Tokio', 'Tokyo', 'Tokyo e Kyoto', 'Kioto']) {
+    for (const endDate of ['2027-04-01', '2027-04-02', '2027-04-07', '2027-04-21']) {
+      const t = trip({ destination, endDate })
+      assert.ok(guideCovers(guide, t), destination)
+      const route = automaticRoute(guide, t, preferences, 'it')
+      const days = listDays(t.startDate, t.endDate)
+      const result = planDays(guide, route ? { ...t, stages: route } : t, preferences, days, 'plan', 'it')
+      assert.deepEqual(result.unknownCity, [], `${destination} ${endDate}`)
+      assert.ok(result.proposals.length > 0, `${destination} ${endDate}`)
+    }
+  }
+  const two = automaticRoute(guide, trip({ destination: 'Tokyo e Kioto' }), preferences, 'it')!
+  assert.ok(['Tokyo', 'Kyoto'].every((city) => two.some((s) => s.city === city)))
+  assert.equal(totalNights(two), 20)
+  assert.equal(automaticRoute(guide, trip({ destination: 'Tokio' }), preferences, 'it'), null)
+  assert.equal(automaticRoute(guide, trip({ stages: [{ city: 'Nara', nights: 20 }] }), preferences, 'it'), null)
 })
 
 test('le mode « je choisis » donne plus d’idées, sans horaire', () => {
