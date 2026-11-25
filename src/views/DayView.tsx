@@ -6,6 +6,7 @@ import DayMap from '../components/DayMap'
 import Diary from '../components/Diary'
 import DayWeather from '../components/DayWeather'
 import { formatDate, type Dictionary, type Language } from '../i18n'
+import { ownInterests } from '../interests'
 import { link } from '../route'
 import { activitiesOn, bookingsOn, itemsOn, listDays, upsert, type Activity, type Trip } from '../trips'
 
@@ -80,6 +81,15 @@ export default function DayView({ t, language, trip, date, onChange }: Props) {
           <BookingCard t={t} language={language} booking={booking} onOpenPdf={setViewing} />
         </div>
       ))}
+
+      <a className="card row-link money-link" href={`${link(trip.id, 'ideas')}/${date}`}>
+        <strong>✨ {t.ideasForDay}</strong>
+        {trip.preferences && ownInterests(trip.preferences, date) && (
+          <span className="muted">
+            {t.selectedCount}: {ownInterests(trip.preferences, date)!.length}
+          </span>
+        )}
+      </a>
 
       <section className="card">
         <h2>{t.activities}</h2>

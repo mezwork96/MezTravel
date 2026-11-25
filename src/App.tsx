@@ -10,6 +10,7 @@ import ConverterView from './views/ConverterView'
 import DayView from './views/DayView'
 import EmergencyView from './views/EmergencyView'
 import ExpensesView from './views/ExpensesView'
+import IdeasView from './views/IdeasView'
 import TranslatorView from './views/TranslatorView'
 import TripList from './views/TripList'
 import TripView from './views/TripView'
@@ -67,6 +68,19 @@ export default function App() {
             deleteFiles(fileIds([trip])).catch(() => {})
             window.location.hash = link()
           }}
+        />
+      )
+    }
+    if (trip && route.date === 'ideas') {
+      const days = listDays(trip.startDate, trip.endDate)
+      return (
+        <IdeasView
+          key={trip.id}
+          t={t}
+          language={language}
+          trip={trip}
+          date={route.extra && days.includes(route.extra) ? route.extra : undefined}
+          onChange={(change) => changeTrip(trip.id, change)}
         />
       )
     }

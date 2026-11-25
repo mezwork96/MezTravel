@@ -36,6 +36,10 @@ Les photos sont réduites sur le téléphone (sans la position GPS) et gardées 
 
 [MyMemory](https://mymemory.translated.net/doc/spec.php) : à la demande seulement, un paragraphe de 500 octets au maximum, sans adresse e-mail (limite anonyme). Ses [conditions](https://mymemory.translated.net/terms-and-conditions) prévoient la conservation des textes envoyés : l’avertissement à l’écran doit rester.
 
+## Itinéraire proposé
+
+En cours de construction. Les envies (personnes, rythme, catégories, pour tout le voyage ou pour un jour) sont enregistrées dans le voyage. Les propositions viendront ensuite, sans aucune clé secrète dans le code.
+
 ## Confidentialité
 
 Ne jamais ajouter au dépôt de réservations, documents personnels ou clés d'API.

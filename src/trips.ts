@@ -1,6 +1,7 @@
 // Données des voyages et règles de calcul, sans dépendance à l'écran (donc testables).
 // Chaque élément a un identifiant unique et chaque voyage une date de modification :
 // cela servira pour le partage entre téléphones.
+import { isPreferences, type Preferences } from './interests.ts'
 
 export type Activity = {
   id: string
@@ -91,6 +92,7 @@ export type Trip = TripDetails & {
   diary?: DiaryEntry[]
   photos?: Photo[]
   country?: string // pays choisi pour la fiche d'urgence
+  preferences?: Preferences // envies pour l'itinéraire proposé
   updatedAt: string
 }
 
@@ -310,6 +312,7 @@ function isTrip(value: unknown): boolean {
     isOptionalList(value.diary, isDiaryEntry) &&
     isOptionalList(value.photos, isPhoto) &&
     (value.country === undefined || typeof value.country === 'string') &&
+    (value.preferences === undefined || isPreferences(value.preferences)) &&
     // Sans monnaie des comptes, des dépenses n'auraient pas de sens.
     (!(value.expenses as unknown[] | undefined)?.length || value.currency !== undefined) &&
     hasKnownMembers(value)

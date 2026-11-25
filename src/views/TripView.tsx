@@ -67,6 +67,13 @@ export default function TripView({ t, language, trip, onChange, onDelete }: Prop
 
           <Reminders t={t} language={language} trips={[trip]} />
 
+          <a className="card row-link money-link" href={link(trip.id, 'ideas')}>
+            <strong>✨ {t.ideasTitle}</strong>
+            <span className="muted">
+              {t.selectedCount}: {trip.preferences?.interests.length ?? 0}
+            </span>
+          </a>
+
           <a className="card row-link bookings-link" href={link(trip.id, 'bookings')}>
             <strong>📄 {t.bookingsTitle}</strong>
             <span className="muted">

@@ -601,3 +601,34 @@ main .segmented button[aria-pressed='true'] {
   overflow-wrap: anywhere;
   user-select: text;
 }
+
+/* Envies : de grosses pastilles faciles à toucher. */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+button.chip {
+  min-height: 44px;
+  border-radius: 999px;
+  text-align: left;
+}
+button.chip[aria-pressed='true'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+}
+.stepper button {
+  width: 48px;
+  min-height: 48px;
+  font-size: 1.4rem;
+}

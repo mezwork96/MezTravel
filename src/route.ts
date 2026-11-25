@@ -1,11 +1,11 @@
 // Navigation par l'adresse (#/voyage/jour) : le geste « retour » fonctionne.
 import { useEffect, useState } from 'react'
 
-export type Route = { tripId?: string; date?: string }
+export type Route = { tripId?: string; date?: string; extra?: string }
 
 function read(): Route {
-  const [tripId, date] = window.location.hash.replace(/^#\/?/, '').split('/')
-  return { tripId: tripId || undefined, date: date || undefined }
+  const [tripId, date, extra] = window.location.hash.replace(/^#\/?/, '').split('/')
+  return { tripId: tripId || undefined, date: date || undefined, extra: extra || undefined }
 }
 
 export function link(tripId?: string, date?: string): string {
