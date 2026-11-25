@@ -725,3 +725,18 @@ ul.guide-list .badge {
 details.other-way {
   margin-top: 16px;
 }
+
+/* Liens présentés comme des pastilles. */
+a.button.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+a.button.wide {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}

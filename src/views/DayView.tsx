@@ -3,6 +3,7 @@ import ActivityForm from '../components/ActivityForm'
 import BookingCard, { bookingLabel } from '../components/BookingCard'
 import PdfViewer from '../components/PdfViewer'
 import DayMap from '../components/DayMap'
+import Nearby from '../components/Nearby'
 import Diary from '../components/Diary'
 import DayWeather from '../components/DayWeather'
 import { formatDate, type Dictionary, type Language } from '../i18n'
@@ -32,6 +33,19 @@ export default function DayView({ t, language, trip, date, onChange }: Props) {
   // Les étapes situées sont numérotées de la même façon dans la liste et sur la carte.
   const stops = activities.filter((a) => a.location)
   const here = stageOn(days, trip.stages ?? [], date)
+  const city = here?.stage.city ?? trip.destination
+  const around = [
+    ...new Set(
+      [
+        here?.stage.area ? `${here.stage.area}, ${city}` : '',
+        city,
+        // « Nom du lieu, ville » : sans la ville, la recherche peut se tromper d'endroit.
+        ...activities
+          .map((a) => a.place || a.title)
+          .map((name) => (city && !name.includes(city) ? `${name}, ${city}` : name)),
+      ].filter(Boolean),
+    ),
+  ]
   const isNew = draft !== null && !activities.some((a) => a.id === draft.id)
 
   function saveActivity(activity: Activity) {
@@ -149,6 +163,13 @@ export default function DayView({ t, language, trip, date, onChange }: Props) {
       </section>
 
       <DayMap t={t} stops={stops} />
+
+      <details className="card">
+        <summary>
+          🔎 <strong>{t.nearbyTitle}</strong>
+        </summary>
+        <Nearby key={city} t={t} language={language} places={around} />
+      </details>
 
       <section className="card">
         <h2>{t.toBring}</h2>

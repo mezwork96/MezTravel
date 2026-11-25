@@ -416,6 +416,13 @@ const it = {
   yes: 'Sì',
   no: 'No',
 
+  nearbyTitle: 'Cerca vicino',
+  nearbyWhere: 'Vicino a (città, zona, stazione o luogo)',
+  nearbyEmpty: 'Se lasci vuoto, Google Maps cerca nella zona che sta mostrando: controlla che sia quella giusta.',
+  nearbyOther: 'Cerchi altro? (facoltativo)',
+  nearbyOpen: 'Apri in Google Maps',
+  nearbyNote: 'Il pulsante apre Google Maps e gli invia il testo della ricerca. Serve internet. Luoghi, orari, recensioni e percorsi sono quelli di Google e possono contenere errori.',
+
   backupTitle: 'Copia di sicurezza',
   backupText:
     'I viaggi sono salvati solo su questo dispositivo. Salva ogni tanto una copia in un file, per esempio nell’app File.',
@@ -850,6 +857,13 @@ const en: Dictionary = {
   yes: 'Yes',
   no: 'No',
 
+  nearbyTitle: 'Search nearby',
+  nearbyWhere: 'Near (city, area, station or place)',
+  nearbyEmpty: 'If left empty, Google Maps searches the area it is showing: check that it is the right one.',
+  nearbyOther: 'Looking for something else? (optional)',
+  nearbyOpen: 'Open in Google Maps',
+  nearbyNote: 'The button opens Google Maps and sends it the search text. A connection is needed. Places, opening hours, reviews and routes are Google’s and may contain errors.',
+
   backupTitle: 'Backup',
   backupText:
     'Trips are saved only on this device. Save a copy to a file now and then, for example in the Files app.',
@@ -1281,6 +1295,13 @@ const fr: Dictionary = {
   japanese: 'japonais',
   yes: 'Oui',
   no: 'Non',
+
+  nearbyTitle: 'Chercher à proximité',
+  nearbyWhere: 'Près de (ville, quartier, gare ou lieu)',
+  nearbyEmpty: 'Si le champ est vide, Google Maps cherche dans la zone affichée : vérifiez que c’est la bonne.',
+  nearbyOther: 'Vous cherchez autre chose ? (facultatif)',
+  nearbyOpen: 'Ouvrir dans Google Maps',
+  nearbyNote: 'Le bouton ouvre Google Maps et lui envoie le texte de la recherche. Connexion nécessaire. Lieux, horaires, avis et itinéraires viennent de Google et peuvent contenir des erreurs.',
 
   backupTitle: 'Copie de sécurité',
   backupText:

@@ -50,6 +50,10 @@ Parcours en plusieurs villes : même principe, avec des propositions d’étapes
 
 `src/planner.ts` propose les parcours et les journées par règles fixes, sur le téléphone, sans service externe. Le guide a la même forme pour tout pays (`src/guide/types.ts`).
 
+## Chercher à proximité
+
+Des boutons ouvrent Google Maps avec la recherche prête (format officiel [Maps URLs](https://developers.google.com/maps/documentation/urls/get-started), sans clé). Seul le texte de la recherche est transmis, au moment où l’on touche le bouton ; aucune donnée de Google n’est copiée dans l’app.
+
 ## Confidentialité
 
 Ne jamais ajouter au dépôt de réservations, documents personnels ou clés d'API.
