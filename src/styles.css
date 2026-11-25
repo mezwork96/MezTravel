@@ -660,3 +660,25 @@ summary {
   min-height: 44px;
   padding-top: 10px;
 }
+
+.create-bar {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+}
+.create-bar button {
+  min-height: 52px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+/* Désactivé, il reste opaque pour que le texte soit lisible par-dessus la page. */
+.create-bar button:disabled {
+  opacity: 1;
+  background: #6b6b6b;
+  border-color: #6b6b6b;
+  color: #fff;
+}
+#proposals {
+  scroll-margin-top: 12px;
+}

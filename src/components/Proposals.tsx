@@ -80,8 +80,9 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
   }
 
   return (
-    <section className="card">
+    <section className="card" id="proposals">
       <h2>{t.proposalsTitle}</h2>
+      <p>{t.createHow}</p>
 
       <div className="chips" role="group" aria-label={t.proposalsTitle}>
         {modes.map((option) => (

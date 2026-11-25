@@ -276,7 +276,7 @@ const it = {
   clearInterests: 'Togli tutte le scelte',
 
   moveToDay: 'Giorno (cambialo per spostare l’attività)',
-  proposalsTitle: 'Fatti proporre le attività',
+  proposalsTitle: 'Crea il tuo itinerario',
   modePlan: 'L’app fa il programma',
   modePick: 'Scelgo io',
   modePlanNote: 'Riceverai un programma giorno per giorno. Prima di aggiungerlo puoi togliere voci e cambiare giorno.',
@@ -303,6 +303,9 @@ const it = {
   addChosen: 'Aggiungi le scelte',
   addedCount: 'Attività aggiunte',
   seeProgram: 'Guarda il programma',
+
+  createItinerary: 'Crea il mio itinerario',
+  createHow: 'Si fa in 3 passaggi con l’app Claude: copi la richiesta, la incolli in Claude e riporti qui la risposta.',
 
   backupTitle: 'Copia di sicurezza',
   backupText:
@@ -598,7 +601,7 @@ const en: Dictionary = {
   clearInterests: 'Clear all choices',
 
   moveToDay: 'Day (change it to move the activity)',
-  proposalsTitle: 'Get activity suggestions',
+  proposalsTitle: 'Create your itinerary',
   modePlan: 'The app makes the plan',
   modePick: 'I choose',
   modePlanNote: 'You will get a day-by-day plan. Before adding it you can remove entries and change days.',
@@ -625,6 +628,9 @@ const en: Dictionary = {
   addChosen: 'Add the chosen ones',
   addedCount: 'Activities added',
   seeProgram: 'See the plan',
+
+  createItinerary: 'Create my itinerary',
+  createHow: 'It takes 3 steps with the Claude app: copy the request, paste it into Claude and bring the reply back here.',
 
   backupTitle: 'Backup',
   backupText:
@@ -918,7 +924,7 @@ const fr: Dictionary = {
   clearInterests: 'Retirer tous les choix',
 
   moveToDay: 'Jour (changez-le pour déplacer l’activité)',
-  proposalsTitle: 'Se faire proposer des activités',
+  proposalsTitle: 'Créer votre itinéraire',
   modePlan: 'L’app fait le programme',
   modePick: 'Je choisis',
   modePlanNote: 'Vous recevrez un programme jour par jour. Avant de l’ajouter, vous pouvez retirer des entrées et changer de jour.',
@@ -945,6 +951,9 @@ const fr: Dictionary = {
   addChosen: 'Ajouter les choix',
   addedCount: 'Activités ajoutées',
   seeProgram: 'Voir le programme',
+
+  createItinerary: 'Créer mon itinéraire',
+  createHow: 'Cela se fait en 3 étapes avec l’application Claude : copiez la demande, collez-la dans Claude et rapportez la réponse ici.',
 
   backupTitle: 'Copie de sécurité',
   backupText:

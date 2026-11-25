@@ -10,6 +10,7 @@ import {
   toggleInterest,
   type Preferences,
 } from '../interests'
+import { requestDays } from '../proposals'
 import { link } from '../route'
 import { listDays, type Trip } from '../trips'
 
@@ -35,6 +36,13 @@ export default function IdeasView({ t, language, trip, date, onChange }: Props) 
       preferences: next(current.preferences ?? defaultPreferences),
     }))
 
+  // Ce qui manque avant de pouvoir créer l'itinéraire.
+  const missing = !trip.destination
+    ? t.destinationMissing
+    : requestDays(trip, preferences, date).length === 0
+      ? t.needInterests
+      : null
+
   const dayName = (day: string) => `${t.day} ${days.indexOf(day) + 1} · ${formatDate(day, language)}`
 
   return (
@@ -49,6 +57,8 @@ export default function IdeasView({ t, language, trip, date, onChange }: Props) 
       </p>
       {!trip.destination && <p className="card warning">{t.destinationMissing}</p>}
 
+      {/* Le bouton reste en bas de l'écran tant qu'on est dans les choix. */}
+      <div>
       <section className="card">
         <h2>{t.peopleCount}</h2>
         <div className="stepper">
@@ -136,6 +146,20 @@ export default function IdeasView({ t, language, trip, date, onChange }: Props) 
           </button>
         )}
       </section>
+
+      <div className="create-bar">
+        <button
+          type="button"
+          className="primary wide"
+          disabled={missing !== null}
+          onClick={() =>
+            document.getElementById('proposals')?.scrollIntoView({ behavior: 'smooth' })
+          }
+        >
+          {missing ?? `✨ ${t.createItinerary}`}
+        </button>
+      </div>
+      </div>
 
       <Proposals
         key={date ?? 'trip'}
