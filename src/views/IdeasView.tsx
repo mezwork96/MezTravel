@@ -1,3 +1,4 @@
+import Proposals from '../components/Proposals'
 import { formatDate, type Dictionary, type Language } from '../i18n'
 import {
   clearInterests,
@@ -136,7 +137,15 @@ export default function IdeasView({ t, language, trip, date, onChange }: Props) 
         )}
       </section>
 
-      <p className="card note">{t.ideasNext}</p>
+      <Proposals
+        key={date ?? 'trip'}
+        t={t}
+        language={language}
+        trip={trip}
+        preferences={preferences}
+        date={date}
+        onChange={onChange}
+      />
     </>
   )
 }

@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import type { Dictionary, Language } from '../i18n'
+import { formatDate, type Dictionary, type Language } from '../i18n'
 import type { Activity, Location } from '../trips'
 import PlaceSearch from './PlaceSearch'
 
@@ -8,11 +8,12 @@ type Props = {
   language: Language
   activity: Activity
   isNew: boolean
+  days: string[]
   onSave: (activity: Activity) => void
   onCancel: () => void
 }
 
-export default function ActivityForm({ t, language, activity, isNew, onSave, onCancel }: Props) {
+export default function ActivityForm({ t, language, activity, isNew, days, onSave, onCancel }: Props) {
   const [draft, setDraft] = useState(activity)
   const [missingTitle, setMissingTitle] = useState(false)
 
@@ -44,6 +45,21 @@ export default function ActivityForm({ t, language, activity, isNew, onSave, onC
         {t.title}
         <input value={draft.title} onChange={(e) => set('title', e.target.value)} />
       </label>
+      {!isNew && (
+        <label>
+          {t.moveToDay}
+          <select
+            value={draft.date}
+            onChange={(e) => setDraft((current) => ({ ...current, date: e.target.value }))}
+          >
+            {days.map((day, index) => (
+              <option key={day} value={day}>
+                {t.day} {index + 1} · {formatDate(day, language)}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
       <label>
         {t.time}
         <input type="time" value={draft.time} onChange={(e) => set('time', e.target.value)} />

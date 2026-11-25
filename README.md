@@ -38,7 +38,7 @@ Les photos sont réduites sur le téléphone (sans la position GPS) et gardées 
 
 ## Itinéraire proposé
 
-En cours de construction. Les envies (personnes, rythme, catégories, pour tout le voyage ou pour un jour) sont enregistrées dans le voyage. Les propositions viendront ensuite, sans aucune clé secrète dans le code.
+Les envies (personnes, rythme, catégories, pour tout le voyage ou pour un jour) sont enregistrées dans le voyage. Sans clé secrète : l’app prépare une demande à coller dans l’application Claude, puis lit la réponse collée, la vérifie et montre un aperçu avant d’ajouter les activités choisies. La demande contient la destination, les dates, le nombre de personnes, le rythme, les envies, et le titre avec l’heure des activités déjà prévues ces jours-là. Rien d’autre, et rien n’est envoyé automatiquement.
 
 ## Confidentialité
 

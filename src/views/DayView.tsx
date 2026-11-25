@@ -57,6 +57,7 @@ export default function DayView({ t, language, trip, date, onChange }: Props) {
       language={language}
       activity={draft}
       isNew={isNew}
+      days={days}
       onSave={saveActivity}
       onCancel={() => setDraft(null)}
     />
