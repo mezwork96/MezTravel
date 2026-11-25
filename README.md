@@ -40,6 +40,8 @@ Les photos sont réduites sur le téléphone (sans la position GPS) et gardées 
 
 Les envies (personnes, rythme, catégories, pour tout le voyage ou pour un jour) sont enregistrées dans le voyage. Sans clé secrète : l’app prépare une demande à coller dans l’application Claude, puis lit la réponse collée, la vérifie et montre un aperçu avant d’ajouter les activités choisies. La demande contient la destination, les dates, le nombre de personnes, le rythme, les envies, et le titre avec l’heure des activités déjà prévues ces jours-là. Rien d’autre, et rien n’est envoyé automatiquement.
 
+Les demandes (parcours et journées) font de Claude un conseiller : une question à la fois, évaluation de l’idée de parcours si l’on en a une, discussion, et résultat à importer seulement après confirmation. La discussion a lieu dans l’application Claude.
+
 Parcours en plusieurs villes : même principe, avec des propositions d’étapes et de nuits (le total doit correspondre aux dates). Les demandes invitent à chercher sur le web en privilégiant les sites officiels et à joindre l’adresse consultée. L’app ne vérifie pas ces sources : elle n’accepte que des adresses http(s), affiche le nom du site et signale les activités sans source. La demande peut aussi contenir les villes, le quartier où l’on dort et les trois champs facultatifs du parcours.
 
 ## Confidentialité

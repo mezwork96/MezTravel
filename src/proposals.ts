@@ -2,6 +2,7 @@
 // l'application Claude, puis lit la réponse collée en retour.
 // La réponse est un texte venu de l'extérieur : tout est vérifié, rien n'est exécuté.
 import { clean, readJson, readUrl } from './answer.ts'
+import { consultantRules } from './consultant.ts'
 import { interests, interestsOn, type Pace, type Preferences } from './interests.ts'
 import { stageOn } from './stages.ts'
 import { activitiesOn, isDate, listDays, type Trip } from './trips.ts'
@@ -48,7 +49,7 @@ const texts = {
     rules:
       'Cerca sul web informazioni aggiornate, dando la precedenza ai siti ufficiali (musei, templi, onsen, parchi, enti del turismo). Proponi solo luoghi che esistono davvero. In ogni giorno scegli luoghi vicini tra loro e, se indicata, comodi dalla zona in cui dormo. Controlla chiusure ed eventi per quelle date; se non sono ancora pubblicati, scrivilo nelle note. In "source" metti l’indirizzo esatto di una pagina che hai davvero consultato per quel luogo, altrimenti lascialo vuoto: non inventare link. Non inventare orari di apertura e non indicare prezzi. Se qualcosa va prenotato o dipende dalla stagione, scrivilo nelle note. Se non puoi cercare sul web, metti "webSearch": false. Scrivi titoli e note in italiano.',
     format:
-      'Rispondi SOLO con un blocco di codice JSON in questa forma, senza altro testo. "time" è HH:MM oppure vuoto. "place" è il nome del luogo, utile per cercarlo su una mappa. "notes" è breve.',
+      'Il risultato finale è un blocco di codice JSON in questa forma, con quello che abbiamo scelto. "time" è HH:MM oppure vuoto. "place" è il nome del luogo, utile per cercarlo su una mappa. "notes" è breve.',
   },
   en: {
     intro: 'Help me plan a trip.',
@@ -68,7 +69,7 @@ const texts = {
     rules:
       'Search the web for up-to-date information, giving priority to official websites (museums, temples, onsen, parks, tourist boards). Only suggest places that really exist. On each day choose places close to each other and, if given, handy from the area where I sleep. Check closures and events for those dates; if they are not published yet, say so in the notes. In "source" put the exact address of a page you really consulted about that place, otherwise leave it empty: do not make up links. Do not make up opening hours and do not give prices. If something must be booked or depends on the season, say so in the notes. If you cannot search the web, set "webSearch": false. Write titles and notes in English.',
     format:
-      'Reply ONLY with a JSON code block in this form, with no other text. "time" is HH:MM or empty. "place" is the name of the place, useful to find it on a map. "notes" is short.',
+      'The final result is a JSON code block in this form, with what we chose. "time" is HH:MM or empty. "place" is the name of the place, useful to find it on a map. "notes" is short.',
   },
   fr: {
     intro: 'Aide-moi à organiser un voyage.',
@@ -88,7 +89,7 @@ const texts = {
     rules:
       'Cherche sur le web des informations à jour, en privilégiant les sites officiels (musées, temples, onsen, parcs, offices de tourisme). Ne propose que des lieux qui existent vraiment. Chaque jour, choisis des lieux proches les uns des autres et, s’il est indiqué, pratiques depuis le quartier où je dors. Vérifie les fermetures et événements à ces dates ; s’ils ne sont pas encore publiés, écris-le dans les notes. Dans « source », mets l’adresse exacte d’une page réellement consultée sur ce lieu, sinon laisse vide : n’invente aucun lien. N’invente pas d’horaires d’ouverture et n’indique aucun prix. Si quelque chose doit être réservé ou dépend de la saison, écris-le dans les notes. Si tu ne peux pas chercher sur le web, mets « webSearch » : false. Écris les titres et les notes en français.',
     format:
-      'Réponds UNIQUEMENT par un bloc de code JSON de cette forme, sans autre texte. « time » est HH:MM ou vide. « place » est le nom du lieu, utile pour le chercher sur une carte. « notes » est court.',
+      'Le résultat final est un bloc de code JSON de cette forme, avec ce que nous avons choisi. « time » est HH:MM ou vide. « place » est le nom du lieu, utile pour le chercher sur une carte. « notes » est court.',
   },
 }
 
@@ -135,6 +136,8 @@ export function buildRequest(
     '',
     `${s.days}:`,
     ...lines,
+    '',
+    ...consultantRules(language, 'days'),
     '',
     s[mode](perDay[mode][preferences.pace]),
     s.rules,

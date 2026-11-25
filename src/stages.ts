@@ -1,6 +1,7 @@
 // Parcours en plusieurs étapes : les villes dans l'ordre et le nombre de nuits de
 // chacune. Sans dépendance à l'écran (donc testable).
 import { clean, isWebUrl, readJson, readUrl } from './answer.ts'
+import { consultantRules, ideaLabel } from './consultant.ts'
 import { interests, paces, type Preferences } from './interests.ts'
 
 export type Stage = {
@@ -12,7 +13,12 @@ export type Stage = {
   source?: string
 }
 
-export type RouteWishes = { arrival: string; departure: string; mustSee: string }
+export type RouteWishes = {
+  arrival: string
+  departure: string
+  mustSee: string
+  idea?: string // parcours que l'on a déjà en tête
+}
 export const emptyWishes: RouteWishes = { arrival: '', departure: '', mustSee: '' }
 
 export const maxStages = 60
@@ -61,7 +67,10 @@ export function isStage(value: any): boolean {
 }
 
 export function isRouteWishes(value: any): boolean {
-  return ['arrival', 'departure', 'mustSee'].every((k) => typeof value?.[k] === 'string')
+  return (
+    ['arrival', 'departure', 'mustSee'].every((k) => typeof value?.[k] === 'string') &&
+    (value.idea === undefined || typeof value.idea === 'string')
+  )
 }
 
 type RequestLanguage = 'it' | 'en' | 'fr'
@@ -80,11 +89,11 @@ const texts = {
     departure: 'Città di partenza per il ritorno',
     mustSee: 'Voglio assolutamente includere',
     task: (n: number) =>
-      `Proponi 3 percorsi diversi tra loro, adatti ai miei interessi. Per ciascuno indica le città in ordine e quante notti in ognuna: la somma delle notti deve essere esattamente ${n}. Ordina le tappe per evitare di tornare indietro, non fare troppi cambi per il ritmo scelto e considera il tempo degli spostamenti.`,
+      `Cerca il percorso più adatto a me: le città in ordine e quante notti in ognuna. La somma delle notti deve essere esattamente ${n}. Ordina le tappe per evitare di tornare indietro, non fare troppi cambi per il ritmo scelto e considera il tempo degli spostamenti.`,
     rules:
       'Cerca sul web informazioni aggiornate, dando la precedenza a siti ufficiali (enti del turismo, trasporti, luoghi da visitare). In "source" metti l’indirizzo esatto di una pagina che hai davvero consultato, altrimenti lascialo vuoto: non inventare link. Non indicare prezzi. Se non puoi cercare sul web, metti "webSearch": false. Scrivi in italiano.',
     format:
-      'Rispondi SOLO con un blocco di codice JSON in questa forma, senza altro testo. "nights" è un numero intero di almeno 1. "why" spiega in breve perché quella tappa, "transfer" come arrivarci dalla tappa precedente e quanto dura circa.',
+      'Il risultato finale è un blocco di codice JSON in questa forma, con il percorso che abbiamo scelto. "nights" è un numero intero di almeno 1. "why" spiega in breve perché quella tappa, "transfer" come arrivarci dalla tappa precedente e quanto dura circa.',
   },
   en: {
     intro: 'Help me decide the route of a trip.',
@@ -99,11 +108,11 @@ const texts = {
     departure: 'City I leave from to go home',
     mustSee: 'I definitely want to include',
     task: (n: number) =>
-      `Suggest 3 different routes that suit my interests. For each, give the cities in order and how many nights in each: the nights must add up to exactly ${n}. Order the stops to avoid backtracking, do not change place too often for the chosen pace, and allow for travel time.`,
+      `Look for the route that suits me best: the cities in order and how many nights in each. The nights must add up to exactly ${n}. Order the stops to avoid backtracking, do not change place too often for the chosen pace, and allow for travel time.`,
     rules:
       'Search the web for up-to-date information, giving priority to official websites (tourist boards, transport, places to visit). In "source" put the exact address of a page you really consulted, otherwise leave it empty: do not make up links. Do not give prices. If you cannot search the web, set "webSearch": false. Write in English.',
     format:
-      'Reply ONLY with a JSON code block in this form, with no other text. "nights" is a whole number, at least 1. "why" briefly explains the stop, "transfer" how to get there from the previous stop and roughly how long it takes.',
+      'The final result is a JSON code block in this form, with the route we chose. "nights" is a whole number, at least 1. "why" briefly explains the stop, "transfer" how to get there from the previous stop and roughly how long it takes.',
   },
   fr: {
     intro: 'Aide-moi à choisir le parcours d’un voyage.',
@@ -118,11 +127,11 @@ const texts = {
     departure: 'Ville de départ pour le retour',
     mustSee: 'Je veux absolument inclure',
     task: (n: number) =>
-      `Propose 3 parcours différents, adaptés à mes envies. Pour chacun, donne les villes dans l’ordre et le nombre de nuits dans chacune : le total doit faire exactement ${n}. Ordonne les étapes pour éviter les retours en arrière, ne change pas trop souvent de ville vu le rythme choisi et tiens compte des trajets.`,
+      `Cherche le parcours qui me convient le mieux : les villes dans l’ordre et le nombre de nuits dans chacune. Le total doit faire exactement ${n}. Ordonne les étapes pour éviter les retours en arrière, ne change pas trop souvent de ville vu le rythme choisi et tiens compte des trajets.`,
     rules:
       'Cherche sur le web des informations à jour, en privilégiant les sites officiels (offices de tourisme, transports, lieux à visiter). Dans « source », mets l’adresse exacte d’une page réellement consultée, sinon laisse vide : n’invente aucun lien. N’indique aucun prix. Si tu ne peux pas chercher sur le web, mets « webSearch » : false. Écris en français.',
     format:
-      'Réponds UNIQUEMENT par un bloc de code JSON de cette forme, sans autre texte. « nights » est un entier d’au moins 1. « why » explique brièvement l’étape, « transfer » comment y arriver depuis l’étape précédente et en combien de temps environ.',
+      'Le résultat final est un bloc de code JSON de cette forme, avec le parcours choisi. « nights » est un entier d’au moins 1. « why » explique brièvement l’étape, « transfer » comment y arriver depuis l’étape précédente et en combien de temps environ.',
   },
 }
 
@@ -157,6 +166,9 @@ export function buildRouteRequest(
     ...optional(s.arrival, wishes.arrival),
     ...optional(s.departure, wishes.departure),
     ...optional(s.mustSee, wishes.mustSee),
+    ...optional(ideaLabel(language), wishes.idea ?? ''),
+    '',
+    ...consultantRules(language, 'route', Boolean(wishes.idea?.trim())),
     '',
     s.task(nights),
     s.rules,

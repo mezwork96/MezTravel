@@ -144,6 +144,17 @@ export default function RouteView({ t, language, trip, onChange }: Props) {
             </label>
           ))}
 
+          <label>
+            {t.routeIdea}
+            <textarea
+              rows={3}
+              value={wishes.idea ?? ''}
+              maxLength={2000}
+              placeholder={t.routeIdeaPlaceholder}
+              onChange={(e) => setWish('idea', e.target.value)}
+            />
+          </label>
+
           <ClaudeSteps
             t={t}
             request={request}

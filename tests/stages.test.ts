@@ -88,3 +88,22 @@ test('vérifie étapes et sources dans les données et les copies', () => {
   assert.equal(parseData(data({ stages: [{ city: 'A', nights: 1, source: 'javascript:1' }] })), null)
   assert.equal(parseData(data({ routeWishes: { arrival: 1 } })), null)
 })
+
+test('le conseiller interroge d’abord et attend la confirmation', () => {
+  const trip: Trip = {
+    id: 'a', name: 'x', destination: 'Japon', startDate: '2027-04-01', endDate: '2027-04-05',
+    activities: [], items: [], updatedAt: 'x',
+  }
+  const preferences = toggleInterest(defaultPreferences, 'wellness')
+  const open = buildRouteRequest(trip, 4, preferences, emptyWishes, 'it')
+  assert.ok(open.includes('Hai già un’idea del percorso'))
+  assert.ok(open.includes('UNA sola domanda') && open.includes('«confermo»'))
+  const withIdea = buildRouteRequest(trip, 4, preferences, { ...emptyWishes, idea: 'Tokyo poi Nikko' }, 'it')
+  assert.ok(withIdea.includes('La mia idea di percorso: Tokyo poi Nikko'))
+  assert.ok(!withIdea.includes('La prima domanda è'))
+  for (const [language, word] of [['en', 'I confirm'], ['fr', 'je confirme']] as const) {
+    assert.ok(buildRequest(trip, preferences, 'plan', language).includes(word))
+    assert.ok(buildRouteRequest(trip, 4, preferences, emptyWishes, language).includes(word))
+  }
+  assert.ok(buildRequest(trip, preferences, 'pick', 'it').includes('«confermo»'))
+})
