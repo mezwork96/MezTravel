@@ -745,3 +745,16 @@ a.button.wide {
   scroll-margin-top: 12px;
   margin-bottom: 12px;
 }
+
+label.option {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 44px;
+}
+label.option input {
+  flex: none;
+  width: 24px;
+  height: 24px;
+}

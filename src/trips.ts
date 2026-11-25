@@ -15,6 +15,7 @@ export type Activity = {
   // Point sur la carte, absent des données et copies créées avant la phase 2.
   location?: Location
   source?: string // page web indiquée pour une activité proposée
+  auto?: boolean // créée par l'app et pas modifiée : peut être remplacée
 }
 
 export type Location = {
@@ -144,6 +145,16 @@ export function today(now = new Date()): string {
   return `${now.getFullYear()}-${two(now.getMonth() + 1)}-${two(now.getDate())}`
 }
 
+// Les activités que l'app a créées ces jours-là et que personne n'a modifiées.
+export function replaceable(trip: Trip, days: string[]): Activity[] {
+  return trip.activities.filter((a) => a.auto && days.includes(a.date))
+}
+
+export function without(trip: Trip, activities: Activity[]): Trip {
+  const ids = new Set(activities.map((a) => a.id))
+  return { ...trip, activities: trip.activities.filter((a) => !ids.has(a.id)) }
+}
+
 // Par heure ; les activités sans heure viennent à la fin, dans l'ordre de saisie.
 export function activitiesOn(trip: Trip, date: string): Activity[] {
   return trip.activities
@@ -193,7 +204,8 @@ function isActivity(value: unknown): boolean {
     hasStrings(value, ['id', 'date', 'time', 'title', 'place', 'notes']) &&
     isDate(value.date as string) &&
     (value.location === undefined || isLocation(value.location)) &&
-    (value.source === undefined || isWebUrl(value.source))
+    (value.source === undefined || isWebUrl(value.source)) &&
+    (value.auto === undefined || typeof value.auto === 'boolean')
   )
 }
 

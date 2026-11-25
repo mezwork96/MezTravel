@@ -35,7 +35,8 @@ export default function ActivityForm({ t, language, activity, isNew, days, onSav
   function submit(event: FormEvent) {
     event.preventDefault()
     if (!draft.title.trim()) return setMissingTitle(true)
-    onSave({ ...draft, title: draft.title.trim(), place: draft.place.trim(), notes: draft.notes.trim() })
+    const { auto: _, ...kept } = draft
+    onSave({ ...kept, title: draft.title.trim(), place: draft.place.trim(), notes: draft.notes.trim() })
   }
 
   return (

@@ -429,6 +429,11 @@ const it = {
   notSavedYet: 'Non è ancora salvato: controllalo qui sotto, poi tocca il pulsante per metterlo nel viaggio.',
   saveItinerary: 'Salva l’itinerario nel viaggio',
 
+  fillDays: 'Se i luoghi adatti sono pochi, completa le giornate con altri luoghi della zona (segnati come «Extra»)',
+  replaceOld: 'Sostituisci le attività create prima dall’app in questi giorni',
+  replaceKeeps: 'Quelle scritte o modificate da te restano.',
+  willRemove: 'Salvando, vengono tolte le attività create prima dall’app',
+
   backupTitle: 'Copia di sicurezza',
   backupText:
     'I viaggi sono salvati solo su questo dispositivo. Salva ogni tanto una copia in un file, per esempio nell’app File.',
@@ -876,6 +881,11 @@ const en: Dictionary = {
   notSavedYet: 'It is not saved yet: check it below, then tap the button to put it in the trip.',
   saveItinerary: 'Save the itinerary to the trip',
 
+  fillDays: 'If there are few suitable places, complete the days with other places in the area (marked “Extra”)',
+  replaceOld: 'Replace the activities the app created before on these days',
+  replaceKeeps: 'Those you wrote or edited are kept.',
+  willRemove: 'When you save, activities the app created before are removed',
+
   backupTitle: 'Backup',
   backupText:
     'Trips are saved only on this device. Save a copy to a file now and then, for example in the Files app.',
@@ -1320,6 +1330,11 @@ const fr: Dictionary = {
   changeRoute: 'Choisir vous-même le parcours',
   notSavedYet: 'Il n’est pas encore enregistré : vérifiez-le ci-dessous, puis touchez le bouton pour le mettre dans le voyage.',
   saveItinerary: 'Enregistrer l’itinéraire dans le voyage',
+
+  fillDays: 'S’il y a peu de lieux adaptés, compléter les journées avec d’autres lieux du secteur (marqués « En plus »)',
+  replaceOld: 'Remplacer les activités créées auparavant par l’application ces jours-là',
+  replaceKeeps: 'Celles que vous avez écrites ou modifiées sont conservées.',
+  willRemove: 'À l’enregistrement, les activités créées auparavant par l’application sont retirées',
 
   backupTitle: 'Copie de sécurité',
   backupText:

@@ -219,6 +219,18 @@ const limits: Record<Pace, { hours: number; count: number }> = {
   intense: { hours: 10, count: 6 },
 }
 
+// Lieux généraux, pour compléter une journée quand on le demande.
+const generalInterests = [
+  'museums', 'modernArt', 'historic', 'temples', 'architecture', 'neighborhoods',
+  'viewpoints', 'nature', 'markets',
+]
+const fillTo: Record<Pace, number> = { calm: 2, normal: 3, intense: 4 }
+export const extraText = {
+  it: 'Extra, fuori dagli interessi scelti.',
+  en: 'Extra, outside your chosen interests.',
+  fr: 'En plus, hors des envies choisies.',
+}
+
 const outingText = { it: 'Gita da', en: 'Day trip from', fr: 'Excursion depuis' }
 
 const clock = (minutes: number) =>
@@ -248,6 +260,7 @@ export function planDays(
   days: string[],
   mode: 'plan' | 'pick',
   language: GuideLanguage,
+  fill = false,
 ): DayPlan {
   const allDays = listDays(trip.startDate, trip.endDate)
   const time = travelTimes(guide)
@@ -357,6 +370,37 @@ export function planDays(
       if (next.slot === 'evening') evenings++
       for (const i of next.interests) seen.set(i, (seen.get(i) ?? 0) + 1)
     }
+    const extras = new Set<string>()
+    if (fill && mode === 'plan') {
+      const target = Math.min(count, fillTo[preferences.pace])
+      while (chosen.length < target) {
+        const next = guide.places
+          .filter(
+            (p) =>
+              p.destination === destination.id &&
+              !used.has(p.id) &&
+              !taken.has(normalise(p.name)) &&
+              isAvailable(p, date) &&
+              !p.when?.someDays &&
+              p.slot !== 'evening' &&
+              p.interests.every((i) => !['hiking', 'activeSports', 'winterSports', 'waterSports', 'bars', 'nightlife'].includes(i)) &&
+              p.interests.some((i) => generalInterests.includes(i)) &&
+              spent + p.hours <= hours,
+          )
+          .sort(
+            (a, b) =>
+              Number(areas.has(b.area)) - Number(areas.has(a.area)) ||
+              Number(b.checked) - Number(a.checked) ||
+              a.id.localeCompare(b.id),
+          )[0]
+        if (!next) break
+        chosen.push(next)
+        extras.add(next.id)
+        used.add(next.id)
+        areas.add(next.area)
+        spent += next.hours
+      }
+    }
     if (chosen.length === 0) {
       result.empty.push(date)
       continue
@@ -381,6 +425,7 @@ export function planDays(
         title: place.name,
         place: `${place.name}, ${destination.name}`,
         notes: [
+          extras.has(place.id) && extraText[language],
           outing && `${outingText[language]} ${base.name} (~${time(base.id, outing.id)} min).`,
           place.about[language],
           place.note[language],

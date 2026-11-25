@@ -15,7 +15,7 @@ import {
 } from '../proposals'
 import { link } from '../route'
 import { stageDays, type Stage } from '../stages'
-import { listDays, type Trip } from '../trips'
+import { listDays, replaceable, without, type Trip } from '../trips'
 import ClaudeSteps from './ClaudeSteps'
 import ProposalPreview, { type Row } from './ProposalPreview'
 
@@ -36,6 +36,7 @@ type Result = {
   unknownCity: number
   empty: number
   route: Stage[] | null // parcours choisi par l'app, enregistré avec les activités
+  replaced: string[] // activités créées avant par l'app, retirées à l'enregistrement
 }
 
 const modeLabels = { plan: 'modePlan', pick: 'modePick' } as const
@@ -50,6 +51,8 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
   const [result, setResult] = useState<Result | null>(null)
   const [failed, setFailed] = useState(false)
   const [added, setAdded] = useState(0)
+  const [replace, setReplace] = useState(true)
+  const [fill, setFill] = useState(() => readCache<boolean>('meztravel.fill') === true)
   const preview = useRef<HTMLDivElement>(null)
   const created = result?.rows.length ? result.from : null
 
@@ -80,11 +83,18 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
     if (!covered) return
     reset()
     const route = automaticRoute(guide, trip, preferences, language)
-    const withRoute = route ? { ...trip, stages: route } : trip
-    const plan = planDays(guide, withRoute, preferences, wanted, mode, language)
+    const old = replace ? replaceable(trip, wanted) : []
+    // Le programme est calculé comme si les anciennes propositions n'étaient plus là.
+    const base = without(trip, old)
+    const withRoute = route ? { ...base, stages: route } : base
+    const plan = planDays(guide, withRoute, preferences, wanted, mode, language, fill)
     setResult({
       from: 'guide',
-      rows: toRows(plan.proposals),
+      rows: plan.proposals.map((p) => ({
+        ...p,
+        chosen: mode === 'plan' && !alreadyPlanned(base, p),
+      })),
+      replaced: old.map((a) => a.id),
       searched: true,
       ignored: 0,
       unknownCity: plan.unknownCity.length,
@@ -103,6 +113,7 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
       rows: toRows(found.proposals),
       searched: found.searched,
       ignored: found.ignored,
+      replaced: [],
       unknownCity: 0,
       empty: 0,
       route: null,
@@ -112,11 +123,16 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
   function add() {
     const activities = result!.rows
       .filter((row) => row.chosen)
-      .map(({ chosen: _, ...proposal }) => ({ id: crypto.randomUUID(), ...proposal }))
+      .map(({ chosen: _, ...proposal }) => ({
+        id: crypto.randomUUID(),
+        ...proposal,
+        ...(result!.from === 'guide' ? { auto: true } : {}),
+      }))
     const route = result!.route
+    const replaced = new Set(result!.replaced)
     onChange((current) => ({
       ...current,
-      activities: [...current.activities, ...activities],
+      activities: [...current.activities.filter((a) => !replaced.has(a.id)), ...activities],
       ...(route && !current.stages?.length ? { stages: route } : {}),
     }))
     setAdded(activities.length)
@@ -190,6 +206,35 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
       {covered && (
         <>
           <p>{t.createInApp}</p>
+          {mode === 'plan' && (
+            <label className="option">
+              <input
+                type="checkbox"
+                checked={fill}
+                onChange={(e) => {
+                  setFill(e.target.checked)
+                  writeCache('meztravel.fill', e.target.checked)
+                  reset()
+                }}
+              />
+              <span>{t.fillDays}</span>
+            </label>
+          )}
+          {replaceable(trip, wanted).length > 0 && (
+            <label className="option">
+              <input
+                type="checkbox"
+                checked={replace}
+                onChange={(e) => {
+                  setReplace(e.target.checked)
+                  reset()
+                }}
+              />
+              <span>
+                {t.replaceOld} ({replaceable(trip, wanted).length}). {t.replaceKeeps}
+              </span>
+            </label>
+          )}
           <button type="button" className="primary wide" disabled={!ready} onClick={create}>
             ✨ {t.createItinerary}
           </button>
@@ -226,6 +271,11 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
                   </p>
                 )}
                 <p>{t.notSavedYet}</p>
+                {result.replaced.length > 0 && (
+                  <p className="card warning note">
+                    {t.willRemove}: {result.replaced.length}
+                  </p>
+                )}
                 <button
                   type="button"
                   className="primary wide"
@@ -253,7 +303,10 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
               <ProposalPreview
                 t={t}
                 language={language}
-                trip={trip}
+                trip={without(
+                  trip,
+                  trip.activities.filter((a) => result.replaced.includes(a.id)),
+                )}
                 days={days}
                 date={date}
                 rows={result.rows}

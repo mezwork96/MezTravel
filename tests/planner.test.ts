@@ -4,9 +4,9 @@ import { test } from 'node:test'
 import { isWebUrl } from '../src/answer.ts'
 import { defaultPreferences, interests, paces, type Preferences } from '../src/interests.ts'
 import type { Guide } from '../src/guide/types.ts'
-import { automaticRoute, findDestination, isAvailable, guideCovers, planDays, proposeRoutes, toStages, travelTimes } from '../src/planner.ts'
+import { automaticRoute, extraText, findDestination, isAvailable, guideCovers, planDays, proposeRoutes, toStages, travelTimes } from '../src/planner.ts'
 import { isStage, totalNights } from '../src/stages.ts'
-import { listDays, parseData, type Trip } from '../src/trips.ts'
+import { listDays, parseData, replaceable, without, type Trip } from '../src/trips.ts'
 
 const guide: Guide = JSON.parse(readFileSync(new URL('../src/guide/japan.json', import.meta.url), 'utf-8'))
 const likes = (...ids: string[]): Preferences => ({ ...defaultPreferences, interests: ids })
@@ -139,6 +139,35 @@ test('crée un itinéraire en une fois, quelle que soit l’écriture de la dest
   assert.equal(totalNights(two), 20)
   assert.equal(automaticRoute(guide, trip({ destination: 'Tokio' }), preferences, 'it'), null)
   assert.equal(automaticRoute(guide, trip({ stages: [{ city: 'Nara', nights: 20 }] }), preferences, 'it'), null)
+})
+
+test('complète les journées seulement si on le demande, et le signale', () => {
+  const t = trip({ destination: 'Kyoto', endDate: '2027-04-07' })
+  const preferences = likes('horses')
+  const days = listDays(t.startDate, t.endDate)
+  const strict = planDays(guide, t, preferences, days, 'plan', 'it')
+  const filled = planDays(guide, t, preferences, days, 'plan', 'it', true)
+  assert.ok(strict.proposals.every((p) => !p.notes.startsWith(extraText.it)))
+  assert.ok(filled.proposals.length > strict.proposals.length)
+  assert.ok(filled.empty.length < strict.empty.length)
+  for (const proposal of filled.proposals) {
+    const place = guide.places.find((p) => p.name === proposal.title)!
+    assert.equal(!place.interests.includes('horses'), proposal.notes.startsWith(extraText.it), place.id)
+    assert.ok(!place.when?.someDays)
+  }
+  assert.equal(new Set(filled.proposals.map((p) => p.title)).size, filled.proposals.length)
+})
+
+test('ne remplace que les activités créées par l’app et non modifiées', () => {
+  const activity = (id: string, date: string, auto?: boolean) =>
+    ({ id, date, time: '', title: id, place: '', notes: '', ...(auto ? { auto } : {}) })
+  const t = trip({ activities: [activity('a', '2027-04-01', true), activity('b', '2027-04-01'), activity('c', '2027-04-02', true)] })
+  const old = replaceable(t, ['2027-04-01'])
+  assert.deepEqual(old.map((a) => a.id), ['a'])
+  assert.deepEqual(without(t, old).activities.map((a) => a.id), ['b', 'c'])
+  assert.ok(parseData(JSON.stringify({ version: 1, trips: [t] })))
+  const bad = { ...t, activities: [{ ...activity('d', '2027-04-01'), auto: 'oui' }] }
+  assert.equal(parseData(JSON.stringify({ version: 1, trips: [bad] })), null)
 })
 
 test('le mode « je choisis » donne plus d’idées, sans horaire', () => {
