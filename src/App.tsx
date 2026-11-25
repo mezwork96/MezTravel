@@ -10,6 +10,7 @@ import ConverterView from './views/ConverterView'
 import DayView from './views/DayView'
 import EmergencyView from './views/EmergencyView'
 import ExpensesView from './views/ExpensesView'
+import GuideView from './views/GuideView'
 import IdeasView from './views/IdeasView'
 import RouteView from './views/RouteView'
 import TranslatorView from './views/TranslatorView'
@@ -35,6 +36,7 @@ export default function App() {
   function page() {
     // « convert » ne peut pas être confondu avec l'identifiant d'un voyage.
     if (route.tripId === 'convert') return <ConverterView t={t} language={language} />
+    if (route.tripId === 'guide') return <GuideView t={t} language={language} />
     if (route.tripId === 'translate') return <TranslatorView t={t} language={language} />
     if (route.tripId === 'emergency') {
       return <EmergencyView t={t} language={language} onCountry={() => {}} />

@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import ClaudeSteps from '../components/ClaudeSteps'
+import GuideRoute from '../components/GuideRoute'
 import StagesEditor from '../components/StagesEditor'
+import { useGuide } from '../guide/useGuide'
+import { guideCovers } from '../planner'
 import { formatDate, type Dictionary, type Language } from '../i18n'
 import { defaultPreferences } from '../interests'
 import { link } from '../route'
@@ -36,6 +39,8 @@ export default function RouteView({ t, language, trip, onChange }: Props) {
   // Change après chaque enregistrement pour repartir du parcours enregistré.
   const [version, setVersion] = useState(0)
   const [saved, setSaved] = useState(false)
+  const guide = useGuide()
+  const covered = guide !== null && guide !== 'error' && guideCovers(guide, { destination: trip.destination })
 
   const days = listDays(trip.startDate, trip.endDate)
   const nights = days.length - 1
@@ -55,8 +60,8 @@ export default function RouteView({ t, language, trip, onChange }: Props) {
       routeWishes: { ...(current.routeWishes ?? emptyWishes), [key]: value },
     }))
 
-  function save(next: Stage[]) {
-    if (stages.length > 0 && picked !== null && !window.confirm(t.confirmReplaceRoute)) return
+  function save(next: Stage[], replaces = true) {
+    if (replaces && stages.length > 0 && !window.confirm(t.confirmReplaceRoute)) return
     onChange((current) => ({ ...current, stages: next }))
     setResult(null)
     setPicked(null)
@@ -106,7 +111,7 @@ export default function RouteView({ t, language, trip, onChange }: Props) {
             days={days}
             initial={stages}
             saveLabel={t.saveRoute}
-            onSave={save}
+            onSave={(next) => save(next, false)}
           />
           <button
             type="button"
@@ -124,14 +129,35 @@ export default function RouteView({ t, language, trip, onChange }: Props) {
 
       {nights > 0 && (
         <section className="card">
-          <h2>{t.askRoute}</h2>
-          <p>{t.askRouteNote}</p>
+          <h2>{covered ? t.appRoute : t.askRoute}</h2>
+          <p>{covered ? t.appRouteNote : t.askRouteNote}</p>
           <p>
             <a href={link(trip.id, 'ideas')}>
               ✨ {t.interestsTitle} ({chosenInterests}) ›
             </a>
           </p>
           {chosenInterests === 0 && <p className="card warning note">{t.routeNoInterests}</p>}
+
+          {covered && (
+            <GuideRoute
+              key={version}
+              t={t}
+              language={language}
+              guide={guide}
+              preferences={preferences}
+              days={days}
+              destination={trip.destination}
+              onSave={save}
+            />
+          )}
+          {guide !== null && !covered && <p className="card note">{t.guideOnlyJapan}</p>}
+        </section>
+      )}
+
+      {nights > 0 && guide !== null && (
+        <details className="card" open={!covered}>
+          <summary>{t.otherWay}</summary>
+          <p>{t.askRouteNote}</p>
 
           {wishFields.map(([key, label]) => (
             <label key={key}>
@@ -195,14 +221,14 @@ export default function RouteView({ t, language, trip, onChange }: Props) {
                       days={days}
                       initial={route.stages}
                       saveLabel={t.useRoute}
-                      onSave={save}
+                      onSave={(next) => save(next)}
                     />
                   )}
                 </div>
               ))}
             </>
           )}
-        </section>
+        </details>
       )}
 
       {nights > 0 && stages.length === 0 && picked === null && (

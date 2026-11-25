@@ -1,0 +1,143 @@
+import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
+import { test } from 'node:test'
+import { isWebUrl } from '../src/answer.ts'
+import { defaultPreferences, interests, paces, type Preferences } from '../src/interests.ts'
+import type { Guide } from '../src/guide/types.ts'
+import { findDestination, isAvailable, guideCovers, planDays, proposeRoutes, toStages, travelTimes } from '../src/planner.ts'
+import { isStage, totalNights } from '../src/stages.ts'
+import { listDays, parseData, type Trip } from '../src/trips.ts'
+
+const guide: Guide = JSON.parse(readFileSync(new URL('../src/guide/japan.json', import.meta.url), 'utf-8'))
+const likes = (...ids: string[]): Preferences => ({ ...defaultPreferences, interests: ids })
+const none = { include: [], arrival: '', departure: '' }
+
+const trip = (changes: Partial<Trip> = {}): Trip => ({
+  id: 'a', name: 'J', destination: 'Giappone', startDate: '2027-04-01', endDate: '2027-04-21',
+  activities: [], items: [], updatedAt: 'x', ...changes,
+})
+
+test('le guide est cohérent', () => {
+  const ids = new Set(guide.destinations.map((d) => d.id))
+  const known = new Set<string>(interests.map((i) => i.id))
+  assert.equal(new Set(guide.places.map((p) => p.id)).size, guide.places.length)
+  for (const p of guide.places) {
+    assert.ok(ids.has(p.destination), p.id)
+    assert.ok(p.interests.length && p.interests.every((i) => known.has(i)), p.id)
+    assert.ok(isWebUrl(p.source), p.id)
+    assert.ok(p.about.it && p.about.en && p.about.fr, p.id)
+  }
+  assert.ok(guide.sections.every((s) => s.points.every((x) => isWebUrl(x.source) && x.text.it)))
+  const time = travelTimes(guide)
+  for (const a of ids) for (const b of ids) assert.ok(time(a, b) < 24 * 60, `${a}-${b}`)
+})
+
+test('les parcours ont exactement le bon nombre de nuits', () => {
+  for (const nights of [1, 2, 3, 6, 10, 20, 40, 90]) {
+    for (const pace of paces) {
+      const routes = proposeRoutes(guide, nights, { ...likes('temples', 'wellness'), pace }, none)
+      assert.ok(routes.length > 0, `${nights} ${pace}`)
+      for (const route of routes) {
+        const stages = toStages(guide, route, 'it')
+        assert.equal(totalNights(stages), nights, `${nights} ${pace} ${route.ids}`)
+        assert.ok(stages.every(isStage))
+        assert.equal(new Set(route.ids).size, route.ids.length)
+      }
+    }
+  }
+  assert.deepEqual(proposeRoutes(guide, 0, likes(), none), [])
+})
+
+test('respecte les villes demandées, l’arrivée et le départ', () => {
+  const choices = { include: ['hiroshima'], arrival: 'tokyo', departure: 'osaka' }
+  for (const route of proposeRoutes(guide, 14, likes('museums'), choices)) {
+    assert.equal(route.ids[0], 'tokyo')
+    assert.equal(route.ids[route.ids.length - 1], 'osaka')
+    assert.ok(route.ids.includes('hiroshima'))
+  }
+})
+
+test('les envies changent le parcours', () => {
+  const beach = proposeRoutes(guide, 20, likes('beaches', 'waterSports'), none)
+  const temples = proposeRoutes(guide, 20, likes('temples'), none)
+  assert.notDeepEqual(beach.map((r) => r.ids), temples.map((r) => r.ids))
+  assert.ok(temples.some((r) => r.ids.includes('kyoto')))
+})
+
+test('crée des journées dans la bonne ville, sans répétition', () => {
+  const preferences = likes('temples', 'wellness', 'streetFood', 'nightlife', 'museums')
+  const route = proposeRoutes(guide, 20, preferences, none)[1]
+  const t = trip({ stages: toStages(guide, route, 'it') })
+  const days = listDays(t.startDate, t.endDate)
+  const result = planDays(guide, t, preferences, days, 'plan', 'it')
+  assert.deepEqual(result.unknownCity, [])
+  assert.ok(result.proposals.length >= 21)
+  assert.equal(new Set(result.proposals.map((p) => p.place)).size, result.proposals.length)
+  for (const proposal of result.proposals) {
+    assert.ok(days.includes(proposal.date) && isWebUrl(proposal.source))
+    assert.match(proposal.time, /^([01]\d|2[0-3]):[0-5]\d$|^$/)
+  }
+  for (const day of days) assert.ok(result.proposals.filter((p) => p.date === day).length <= 4, day)
+  // Les activités créées passent la vérification des données.
+  const activities = result.proposals.map((p, i) => ({ id: String(i), ...p }))
+  assert.ok(parseData(JSON.stringify({ version: 1, trips: [{ ...t, activities }] })))
+  // Une seconde création ne repropose pas ce qui est déjà au programme.
+  const again = planDays(guide, { ...t, activities }, preferences, days, 'plan', 'it')
+  assert.ok(again.proposals.every((p) => !activities.some((a) => a.title === p.title)))
+})
+
+test('les excursions ne sont pas des étapes, mais des journées', () => {
+  for (const route of proposeRoutes(guide, 20, likes('temples', 'historic'), none)) {
+    assert.ok(route.ids.every((id) => guide.destinations.find((d) => d.id === id)!.minNights > 0))
+  }
+  const t = trip({ endDate: '2027-04-06', stages: [{ city: 'Tokyo', nights: 5 }] })
+  const days = listDays(t.startDate, t.endDate)
+  const result = planDays(guide, t, likes('temples', 'historic', 'nightlife'), days, 'plan', 'it')
+  assert.ok(result.proposals.some((p) => p.notes.startsWith('Gita da Tokyo')))
+  const last = result.proposals.filter((p) => p.date === '2027-04-06')
+  assert.ok(last.every((p) => p.time < '18:30'))
+})
+
+test('respecte les saisons, les fermetures et les journées normales', () => {
+  const place = (id: string) => guide.places.find((p) => p.id === id)!
+  assert.ok(!isAvailable(place('tokyo-miraikan'), '2027-04-10'))
+  assert.ok(isAvailable(place('tokyo-miraikan'), '2027-05-10'))
+  assert.ok(!isAvailable(place('nikko-yabusame-festival'), '2027-04-10'))
+  assert.ok(!isAvailable(place('sapporo-niseko'), '2027-07-10'))
+  const preferences = likes(...interests.map((i) => i.id))
+  for (const pace of paces) {
+    for (const startMonth of ['01', '04', '07', '10']) {
+      const t = trip({ startDate: `2027-${startMonth}-01`, endDate: `2027-${startMonth}-21` })
+      const route = proposeRoutes(guide, 20, { ...preferences, pace }, none)[2]
+      const stages = toStages(guide, route, 'it')
+      const result = planDays(guide, { ...t, stages }, { ...preferences, pace }, listDays(t.startDate, t.endDate), 'plan', 'it')
+      for (const proposal of result.proposals) {
+        const p = guide.places.find((c) => c.name === proposal.title)!
+        assert.ok(isAvailable(p, proposal.date), `${p.id} ${proposal.date}`)
+        assert.ok(!p.when?.someDays, p.id)
+        if (p.slot !== 'evening') assert.ok(proposal.time < '17:00', `${p.id} ${proposal.time}`)
+      }
+    }
+  }
+})
+
+test('le mode « je choisis » donne plus d’idées, sans horaire', () => {
+  const t = trip({ destination: 'Kyoto', endDate: '2027-04-02' })
+  const preferences = likes('temples')
+  const plan = planDays(guide, t, preferences, ['2027-04-01'], 'plan', 'fr')
+  const pick = planDays(guide, t, preferences, ['2027-04-01'], 'pick', 'fr')
+  assert.ok(pick.proposals.length > plan.proposals.length)
+  assert.ok(pick.proposals.every((p) => p.time === ''))
+})
+
+test('dit quand il ne peut rien proposer', () => {
+  const preferences = likes('temples')
+  const country = planDays(guide, trip(), preferences, ['2027-04-01'], 'plan', 'it')
+  assert.deepEqual(country.unknownCity, ['2027-04-01'])
+  const unknown = trip({ stages: [{ city: 'Ville inconnue', nights: 20 }] })
+  assert.equal(planDays(guide, unknown, preferences, ['2027-04-01'], 'plan', 'it').unknownCity.length, 1)
+  assert.equal(findDestination(guide, 'Kyōto')?.id, 'kyoto')
+  assert.equal(findDestination(guide, ''), undefined)
+  assert.ok(guideCovers(guide, trip()) && guideCovers(guide, trip({ destination: 'Tokyo' })))
+  assert.ok(!guideCovers(guide, trip({ destination: 'Francia' })))
+})

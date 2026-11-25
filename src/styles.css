@@ -712,3 +712,16 @@ button.chip.wide {
   border-radius: 14px;
   padding: 10px 14px;
 }
+
+/* Guide. */
+ul.guide-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  overflow-wrap: anywhere;
+}
+ul.guide-list .badge {
+  margin: 0 6px 0 0;
+}
+details.other-way {
+  margin-top: 16px;
+}

@@ -44,6 +44,12 @@ Les demandes (parcours et journées) font de Claude un conseiller : une question
 
 Parcours en plusieurs villes : même principe, avec des propositions d’étapes et de nuits (le total doit correspondre aux dates). Les demandes invitent à chercher sur le web en privilégiant les sites officiels et à joindre l’adresse consultée. L’app ne vérifie pas ces sources : elle n’accepte que des adresses http(s), affiche le nom du site et signale les activités sans source. La demande peut aussi contenir les villes, le quartier où l’on dort et les trois champs facultatifs du parcours.
 
+## Guide du Japon et itinéraire dans l’app
+
+`src/guide/japan.json` : destinations, lieux, durées de trajet et informations pratiques, recueillis le 2026-11-25 avec leurs adresses sources (descriptions rédigées pour le projet, sans prix ni horaires). `checked: false` = page non confirmée, signalée « à confirmer ». Les durées de visite, quartiers et nombres de nuits conseillés sont en partie des estimations. Toutes les pages n’ont pas été relues une par une après la recherche. À revérifier avant le voyage de 2027.
+
+`src/planner.ts` propose les parcours et les journées par règles fixes, sur le téléphone, sans service externe. Le guide a la même forme pour tout pays (`src/guide/types.ts`).
+
 ## Confidentialité
 
 Ne jamais ajouter au dépôt de réservations, documents personnels ou clés d'API.

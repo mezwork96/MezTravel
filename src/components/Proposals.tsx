@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { readCache, writeCache } from '../cache'
-import { formatDate, type Dictionary, type Language } from '../i18n'
+import { useGuide } from '../guide/useGuide'
+import type { Dictionary, Language } from '../i18n'
 import type { Preferences } from '../interests'
+import { guideCovers, planDays } from '../planner'
 import {
   alreadyPlanned,
   buildRequest,
@@ -15,7 +17,7 @@ import { link } from '../route'
 import { stageDays } from '../stages'
 import { listDays, type Trip } from '../trips'
 import ClaudeSteps from './ClaudeSteps'
-import SourceLink from './SourceLink'
+import ProposalPreview, { type Row } from './ProposalPreview'
 
 type Props = {
   t: Dictionary
@@ -26,19 +28,25 @@ type Props = {
   onChange: (change: (trip: Trip) => Trip) => void
 }
 
-type Row = Proposal & { chosen: boolean }
+type Result = {
+  from: 'guide' | 'claude'
+  rows: Row[]
+  searched: boolean
+  ignored: number
+  unknownCity: number
+  empty: number
+}
 
 const modeLabels = { plan: 'modePlan', pick: 'modePick' } as const
 
 export default function Proposals({ t, language, trip, preferences, date, onChange }: Props) {
+  const guide = useGuide()
   const [mode, setMode] = useState<Mode>(() =>
     readCache<Mode>('meztravel.mode') === 'pick' ? 'pick' : 'plan',
   )
   const [stageIndex, setStageIndex] = useState('') // vide : toutes les étapes
-  const [searched, setSearched] = useState(true)
   const [answer, setAnswer] = useState('')
-  const [rows, setRows] = useState<Row[] | null>(null)
-  const [ignored, setIgnored] = useState(0)
+  const [result, setResult] = useState<Result | null>(null)
   const [failed, setFailed] = useState(false)
   const [added, setAdded] = useState(0)
 
@@ -48,46 +56,75 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
   const wanted = requestDays(trip, preferences, date).filter((day) => !only || only.includes(day))
   const ready = trip.destination !== '' && wanted.length > 0
   const request = ready ? buildRequest(trip, preferences, mode, language, date, only) : ''
-  const chosen = rows?.filter((row) => row.chosen).length ?? 0
-  const dayName = (day: string) => `${t.day} ${days.indexOf(day) + 1} · ${formatDate(day, language)}`
+  const covered = guide !== null && guide !== 'error' && guideCovers(guide, trip)
 
-  function choose(next: Mode) {
-    setMode(next)
-    writeCache('meztravel.mode', next)
-    setRows(null)
+  const toRows = (proposals: Proposal[]) =>
+    proposals.map((p) => ({ ...p, chosen: mode === 'plan' && !alreadyPlanned(trip, p) }))
+
+  function reset() {
+    setResult(null)
+    setFailed(false)
+    setAdded(0)
+  }
+
+  // Créé dans l'app, à partir du guide inclus : rien ne quitte le téléphone.
+  function create() {
+    if (!covered) return
+    reset()
+    const plan = planDays(guide, trip, preferences, wanted, mode, language)
+    setResult({
+      from: 'guide',
+      rows: toRows(plan.proposals),
+      searched: true,
+      ignored: 0,
+      unknownCity: plan.unknownCity.length,
+      empty: plan.empty.length,
+    })
   }
 
   function read() {
-    setAdded(0)
+    reset()
     // La réponse peut concerner n'importe quel jour du voyage affiché.
-    const result = readProposals(answer, date ? [date] : days)
-    setFailed(!result || result.proposals.length === 0)
-    setIgnored(result?.ignored ?? 0)
-    setSearched(result?.searched ?? true)
-    setRows(
-      result && result.proposals.length > 0
-        ? result.proposals.map((p) => ({ ...p, chosen: mode === 'plan' && !alreadyPlanned(trip, p) }))
-        : null,
-    )
+    const found = readProposals(answer, date ? [date] : days)
+    if (!found || found.proposals.length === 0) return setFailed(true)
+    setResult({
+      from: 'claude',
+      rows: toRows(found.proposals),
+      searched: found.searched,
+      ignored: found.ignored,
+      unknownCity: 0,
+      empty: 0,
+    })
   }
 
-  const setRow = (index: number, changes: Partial<Row>) =>
-    setRows((current) => current!.map((row, i) => (i === index ? { ...row, ...changes } : row)))
-
   function add() {
-    const activities = rows!
+    const activities = result!.rows
       .filter((row) => row.chosen)
       .map(({ chosen: _, ...proposal }) => ({ id: crypto.randomUUID(), ...proposal }))
     onChange((current) => ({ ...current, activities: [...current.activities, ...activities] }))
     setAdded(activities.length)
-    setRows(null)
+    setResult(null)
     setAnswer('')
   }
+
+  const consultant = trip.destination !== '' && (
+    <ClaudeSteps
+      t={t}
+      request={request}
+      sentNote={t.daysSent}
+      answer={answer}
+      failed={failed}
+      onAnswer={(value) => {
+        setAnswer(value)
+        reset()
+      }}
+      onRead={read}
+    />
+  )
 
   return (
     <section className="card" id="proposals">
       <h2>{t.proposalsTitle}</h2>
-      <p>{t.createHow}</p>
 
       <div className="chips" role="group" aria-label={t.proposalsTitle}>
         {modes.map((option) => (
@@ -96,7 +133,11 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
             type="button"
             className="chip"
             aria-pressed={mode === option}
-            onClick={() => choose(option)}
+            onClick={() => {
+              setMode(option)
+              writeCache('meztravel.mode', option)
+              reset()
+            }}
           >
             {t[modeLabels[option]]}
           </button>
@@ -111,7 +152,7 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
             value={stageIndex}
             onChange={(e) => {
               setStageIndex(e.target.value)
-              setRows(null)
+              reset()
             }}
           >
             <option value="">{t.allStages}</option>
@@ -126,89 +167,64 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
 
       {!ready && <p className="error">{trip.destination ? t.needInterests : t.destinationMissing}</p>}
 
-      {ready && wanted.length > 10 && <p className="card warning note">{t.longRequest}</p>}
+      {guide === null && <p role="status">{t.guideLoading}</p>}
+      {guide === 'error' && <p className="error">{t.guideError}</p>}
 
-      {trip.destination !== '' && (
-        <ClaudeSteps
-          t={t}
-          request={request}
-          sentNote={t.daysSent}
-          answer={answer}
-          failed={failed}
-          onAnswer={(value) => {
-            setAnswer(value)
-            setRows(null)
-            setFailed(false)
-            setAdded(0)
-          }}
-          onRead={read}
-        />
-      )}
-
-      {rows && (
+      {covered && (
         <>
-          <h3>{t.preview}</h3>
-          <p className="card warning note">{t.proposalWarning}</p>
-          {!searched && <p className="error">{t.noWebSearch}</p>}
-          <p className="muted">
-            {t.withoutSource}: {rows.filter((row) => !row.source).length} / {rows.length}
-          </p>
-          {ignored > 0 && (
-            <p className="muted">
-              {t.ignoredCount}: {ignored}
+          <p>{t.createInApp}</p>
+          <button type="button" className="primary wide" disabled={!ready} onClick={create}>
+            ✨ {t.createItinerary}
+          </button>
+        </>
+      )}
+      {guide !== null && !covered && <p className="card note">{t.guideOnlyJapan}</p>}
+
+      {result && (
+        <>
+          {result.unknownCity > 0 && (
+            <p className="error" role="alert">
+              {t.unknownCityDays}: {result.unknownCity}.{' '}
+              {!date && <a href={link(trip.id, 'route')}>{t.routeFirst}</a>}
             </p>
           )}
-          <button
-            type="button"
-            className="wide"
-            onClick={() => {
-              const all = chosen < rows.length
-              setRows(rows.map((row) => ({ ...row, chosen: all })))
-            }}
-          >
-            {chosen < rows.length ? t.selectAll : t.selectNone}
-          </button>
-          <ul className="plain proposals">
-            {rows.map((row, index) => (
-              <li key={index}>
-                <label>
-                  <input
-                    type="checkbox"
-                    checked={row.chosen}
-                    onChange={(e) => setRow(index, { chosen: e.target.checked })}
-                  />
-                  <span>
-                    <strong>
-                      {row.time && `${row.time} · `}
-                      {row.title}
-                    </strong>
-                    {row.place && <span className="muted">{row.place}</span>}
-                    {row.notes && <span className="notes">{row.notes}</span>}
-                    {!row.source && <span className="muted">{t.noSource}</span>}
-                    {alreadyPlanned(trip, row) && <em className="badge">{t.alreadyPlanned}</em>}
-                  </span>
-                </label>
-                <SourceLink t={t} url={row.source} />
-                {!date && (
-                  <select
-                    value={row.date}
-                    aria-label={`${t.day}: ${row.title}`}
-                    onChange={(e) => setRow(index, { date: e.target.value })}
-                  >
-                    {days.map((day) => (
-                      <option key={day} value={day}>
-                        {dayName(day)}
-                      </option>
-                    ))}
-                  </select>
-                )}
-                {date && <span className="muted">{dayName(date)}</span>}
-              </li>
-            ))}
-          </ul>
-          <button type="button" className="primary wide" disabled={chosen === 0} onClick={add}>
-            {t.addChosen} ({chosen})
-          </button>
+          {result.empty > 0 && (
+            <p className="muted">
+              {t.emptyDays}: {result.empty}
+            </p>
+          )}
+          {result.rows.length === 0 ? (
+            result.unknownCity === 0 && <p role="status">{t.nothingFound}</p>
+          ) : (
+            <>
+              <h3>{t.preview}</h3>
+              <p className="card warning note">
+                {result.from === 'guide' ? t.guideWarning : t.proposalWarning}
+              </p>
+              {!result.searched && <p className="error">{t.noWebSearch}</p>}
+              {result.from === 'claude' && (
+                <p className="muted">
+                  {t.withoutSource}: {result.rows.filter((row) => !row.source).length} /{' '}
+                  {result.rows.length}
+                </p>
+              )}
+              {result.ignored > 0 && (
+                <p className="muted">
+                  {t.ignoredCount}: {result.ignored}
+                </p>
+              )}
+              <ProposalPreview
+                t={t}
+                language={language}
+                trip={trip}
+                days={days}
+                date={date}
+                rows={result.rows}
+                onRows={(rows) => setResult({ ...result, rows })}
+                onAdd={add}
+              />
+            </>
+          )}
         </>
       )}
 
@@ -217,6 +233,21 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
           ✓ {t.addedCount}: {added}.{' '}
           <a href={date ? link(trip.id, date) : link(trip.id)}>{t.seeProgram}</a>
         </p>
+      )}
+
+      {covered ? (
+        <details className="other-way">
+          <summary>{t.otherWay}</summary>
+          <p>{t.createHow}</p>
+          {consultant}
+        </details>
+      ) : (
+        guide !== null && (
+          <>
+            <p>{t.createHow}</p>
+            {consultant}
+          </>
+        )
       )}
     </section>
   )

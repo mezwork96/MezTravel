@@ -45,6 +45,10 @@ export default function TripList({ t, language, data, update }: Props) {
         </section>
       )}
 
+      <a className="card row-link money-link" href={link('guide')}>
+        <strong>📖 {t.guideTitle}</strong>
+      </a>
+
       <a className="card row-link money-link" href={link('convert')}>
         <strong>💱 {t.converter}</strong>
       </a>

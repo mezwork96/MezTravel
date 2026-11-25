@@ -161,7 +161,7 @@ export default function IdeasView({ t, language, trip, date, onChange }: Props) 
             document.getElementById('proposals')?.scrollIntoView({ behavior: 'smooth' })
           }
         >
-          {missing ?? `✨ ${t.createItinerary}`}
+          {missing ?? `${t.goToCreate} ↓`}
         </button>
       </div>
       </div>

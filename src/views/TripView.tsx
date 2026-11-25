@@ -85,6 +85,12 @@ export default function TripView({ t, language, trip, onChange, onDelete }: Prop
             </span>
           </a>
 
+          {/giappone|japan|japon|日本/i.test(trip.destination) && (
+            <a className="card row-link money-link" href={link('guide')}>
+              <strong>📖 {t.guideTitle}</strong>
+            </a>
+          )}
+
           <a className="card row-link bookings-link" href={link(trip.id, 'bookings')}>
             <strong>📄 {t.bookingsTitle}</strong>
             <span className="muted">
