@@ -3,6 +3,7 @@ import Reminders from '../components/Reminders'
 import TripForm from '../components/TripForm'
 import { formatDate, type Dictionary, type Language } from '../i18n'
 import { link } from '../route'
+import { stageOn } from '../stages'
 import {
   activitiesOn,
   bookingsOn,
@@ -27,6 +28,7 @@ type Props = {
 export default function TripView({ t, language, trip, onChange, onDelete }: Props) {
   const [editing, setEditing] = useState(false)
   const now = today()
+  const allDays = listDays(trip.startDate, trip.endDate)
 
   function save(details: TripDetails) {
     const hidden = countOutside(trip, details.startDate, details.endDate)
@@ -67,6 +69,15 @@ export default function TripView({ t, language, trip, onChange, onDelete }: Prop
 
           <Reminders t={t} language={language} trips={[trip]} />
 
+          <a className="card row-link money-link" href={link(trip.id, 'route')}>
+            <strong>🗺️ {t.routeTitle}</strong>
+            <span className="muted">
+              {trip.stages?.length
+                ? trip.stages.map((s) => `${s.city} (${s.nights})`).join(' → ')
+                : t.routeEmpty}
+            </span>
+          </a>
+
           <a className="card row-link money-link" href={link(trip.id, 'ideas')}>
             <strong>✨ {t.ideasTitle}</strong>
             <span className="muted">
@@ -94,7 +105,7 @@ export default function TripView({ t, language, trip, onChange, onDelete }: Prop
             <strong>🆘 {t.emergencyTitle}</strong>
           </a>
 
-          {listDays(trip.startDate, trip.endDate).map((date, index) => {
+          {allDays.map((date, index) => {
             const activities = activitiesOn(trip, date)
             const booked = bookingsOn(trip, date)
             const missing = itemsOn(trip, date).filter((item) => !item.done).length
@@ -105,6 +116,9 @@ export default function TripView({ t, language, trip, onChange, onDelete }: Prop
                   {date === now && <em className="badge">{t.today}</em>}
                 </span>
                 <strong>{formatDate(date, language)}</strong>
+                {stageOn(allDays, trip.stages ?? [], date) && (
+                  <span>📍 {stageOn(allDays, trip.stages ?? [], date)!.stage.city}</span>
+                )}
                 {activities.length > 0 && (
                   <span>{activities.map((a) => a.title).join(' · ')}</span>
                 )}

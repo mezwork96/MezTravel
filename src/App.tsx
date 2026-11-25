@@ -11,6 +11,7 @@ import DayView from './views/DayView'
 import EmergencyView from './views/EmergencyView'
 import ExpensesView from './views/ExpensesView'
 import IdeasView from './views/IdeasView'
+import RouteView from './views/RouteView'
 import TranslatorView from './views/TranslatorView'
 import TripList from './views/TripList'
 import TripView from './views/TripView'
@@ -68,6 +69,17 @@ export default function App() {
             deleteFiles(fileIds([trip])).catch(() => {})
             window.location.hash = link()
           }}
+        />
+      )
+    }
+    if (trip && route.date === 'route') {
+      return (
+        <RouteView
+          key={trip.id}
+          t={t}
+          language={language}
+          trip={trip}
+          onChange={(change) => changeTrip(trip.id, change)}
         />
       )
     }

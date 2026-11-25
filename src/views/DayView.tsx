@@ -8,6 +8,8 @@ import DayWeather from '../components/DayWeather'
 import { formatDate, type Dictionary, type Language } from '../i18n'
 import { ownInterests } from '../interests'
 import { link } from '../route'
+import SourceLink from '../components/SourceLink'
+import { stageOn } from '../stages'
 import { activitiesOn, bookingsOn, itemsOn, listDays, upsert, type Activity, type Trip } from '../trips'
 
 type Props = {
@@ -29,6 +31,7 @@ export default function DayView({ t, language, trip, date, onChange }: Props) {
   const items = itemsOn(trip, date)
   // Les étapes situées sont numérotées de la même façon dans la liste et sur la carte.
   const stops = activities.filter((a) => a.location)
+  const here = stageOn(days, trip.stages ?? [], date)
   const isNew = draft !== null && !activities.some((a) => a.id === draft.id)
 
   function saveActivity(activity: Activity) {
@@ -74,6 +77,14 @@ export default function DayView({ t, language, trip, date, onChange }: Props) {
       </p>
       <h2 className="page-title">{formatDate(date, language, true)}</h2>
 
+      {here && (
+        <p>
+          📍 <strong>{here.stage.city}</strong>
+          {here.from && ` · ${t.arrivingFrom} ${here.from}`}
+        </p>
+      )}
+      {here?.from && here.stage.transfer && <p className="muted">🚆 {here.stage.transfer}</p>}
+
       <DayWeather t={t} language={language} date={date} stop={stops[0]} />
 
       {bookingsOn(trip, date).map(({ booking, role }) => (
@@ -109,6 +120,7 @@ export default function DayView({ t, language, trip, date, onChange }: Props) {
                   <strong>{activity.title}</strong>
                   {activity.place && <p className="muted">{activity.place}</p>}
                   {activity.notes && <p className="notes">{activity.notes}</p>}
+                  <SourceLink t={t} url={activity.source} />
                   <div className="actions">
                     <button type="button" onClick={() => setDraft(activity)}>
                       {t.edit}

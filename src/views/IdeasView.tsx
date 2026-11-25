@@ -56,6 +56,11 @@ export default function IdeasView({ t, language, trip, date, onChange }: Props) 
         {formatDate(trip.startDate, language)} → {formatDate(trip.endDate, language)}
       </p>
       {!trip.destination && <p className="card warning">{t.destinationMissing}</p>}
+      {!date && days.length > 2 && !trip.stages?.length && (
+        <a className="card row-link money-link" href={link(trip.id, 'route')}>
+          <strong>🗺️ {t.routeFirst}</strong>
+        </a>
+      )}
 
       {/* Le bouton reste en bas de l'écran tant qu'on est dans les choix. */}
       <div>

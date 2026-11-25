@@ -1,7 +1,9 @@
 // Données des voyages et règles de calcul, sans dépendance à l'écran (donc testables).
 // Chaque élément a un identifiant unique et chaque voyage une date de modification :
 // cela servira pour le partage entre téléphones.
+import { isWebUrl } from './answer.ts'
 import { isPreferences, type Preferences } from './interests.ts'
+import { isRouteWishes, isStage, type RouteWishes, type Stage } from './stages.ts'
 
 export type Activity = {
   id: string
@@ -12,6 +14,7 @@ export type Activity = {
   notes: string
   // Point sur la carte, absent des données et copies créées avant la phase 2.
   location?: Location
+  source?: string // page web indiquée pour une activité proposée
 }
 
 export type Location = {
@@ -93,6 +96,8 @@ export type Trip = TripDetails & {
   photos?: Photo[]
   country?: string // pays choisi pour la fiche d'urgence
   preferences?: Preferences // envies pour l'itinéraire proposé
+  stages?: Stage[] // parcours en plusieurs villes
+  routeWishes?: RouteWishes
   updatedAt: string
 }
 
@@ -187,7 +192,8 @@ function isActivity(value: unknown): boolean {
   return (
     hasStrings(value, ['id', 'date', 'time', 'title', 'place', 'notes']) &&
     isDate(value.date as string) &&
-    (value.location === undefined || isLocation(value.location))
+    (value.location === undefined || isLocation(value.location)) &&
+    (value.source === undefined || isWebUrl(value.source))
   )
 }
 
@@ -313,6 +319,8 @@ function isTrip(value: unknown): boolean {
     isOptionalList(value.photos, isPhoto) &&
     (value.country === undefined || typeof value.country === 'string') &&
     (value.preferences === undefined || isPreferences(value.preferences)) &&
+    isOptionalList(value.stages, isStage) &&
+    (value.routeWishes === undefined || isRouteWishes(value.routeWishes)) &&
     // Sans monnaie des comptes, des dépenses n'auraient pas de sens.
     (!(value.expenses as unknown[] | undefined)?.length || value.currency !== undefined) &&
     hasKnownMembers(value)

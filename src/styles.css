@@ -682,3 +682,33 @@ summary {
 #proposals {
   scroll-margin-top: 12px;
 }
+
+/* Étapes et sources. */
+ol.stages {
+  list-style: none;
+  padding: 0;
+}
+ol.stages li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+ol.stages .stepper {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+a.source {
+  display: inline-block;
+  padding: 8px 0;
+  overflow-wrap: anywhere;
+}
+.route-option {
+  margin-bottom: 16px;
+}
+button.chip.wide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  border-radius: 14px;
+  padding: 10px 14px;
+}
