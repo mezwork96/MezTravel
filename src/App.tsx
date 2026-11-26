@@ -6,6 +6,7 @@ import { link, useRoute } from './route'
 import { rawStoredData, useStore } from './store'
 import { listDays, upsert, type Trip } from './trips'
 import BookingsView from './views/BookingsView'
+import ConversationView from './views/ConversationView'
 import ConverterView from './views/ConverterView'
 import DayView from './views/DayView'
 import EmergencyView from './views/EmergencyView'
@@ -39,6 +40,7 @@ export default function App() {
     // « convert » ne peut pas être confondu avec l'identifiant d'un voyage.
     if (route.tripId === 'convert') return <ConverterView t={t} language={language} />
     if (route.tripId === 'nearby') return <NearbyView t={t} language={language} />
+    if (route.tripId === 'speak') return <ConversationView t={t} language={language} />
     if (route.tripId === 'voice') return <VoiceTestView t={t} language={language} />
     if (route.tripId === 'guide') return <GuideView t={t} language={language} />
     if (route.tripId === 'translate') return <TranslatorView t={t} language={language} />

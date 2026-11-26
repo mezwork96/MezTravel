@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { readCache, writeCache } from '../cache'
 import type { Dictionary, Language } from '../i18n'
 import { link } from '../route'
+import { speak, stopSpeaking } from '../speech'
 import {
   byteLength,
   checkText,
@@ -31,6 +32,8 @@ export default function TranslatorView({ t, language }: Props) {
   const [copied, setCopied] = useState(false)
   // Une réponse arrivée après un changement de texte ou de langue est ignorée.
   const request = useRef(0)
+  const [speakFailed, setSpeakFailed] = useState(false)
+  useEffect(() => stopSpeaking, [])
 
   useEffect(() => writeCache('meztravel.translator', { from, to }), [from, to])
 
@@ -43,6 +46,8 @@ export default function TranslatorView({ t, language }: Props) {
 
   function reset() {
     request.current++
+    stopSpeaking()
+    setSpeakFailed(false)
     setState({ kind: 'idle' })
     setCopied(false)
   }
@@ -87,6 +92,8 @@ export default function TranslatorView({ t, language }: Props) {
 
   function show(item: Translation) {
     request.current++
+    stopSpeaking()
+    setSpeakFailed(false)
     setFrom(item.from)
     setTo(item.to)
     setText(item.text)
@@ -161,6 +168,15 @@ export default function TranslatorView({ t, language }: Props) {
             <div className="actions">
               <button
                 type="button"
+                onClick={() => {
+                  setSpeakFailed(false)
+                  speak(state.translation.result, state.translation.to, () => setSpeakFailed(true))
+                }}
+              >
+                🔊 {t.listenAloud}
+              </button>
+              <button
+                type="button"
                 onClick={() =>
                   navigator.clipboard.writeText(state.translation.result).then(
                     () => setCopied(true),
@@ -171,6 +187,11 @@ export default function TranslatorView({ t, language }: Props) {
                 {copied ? `✓ ${t.copied}` : t.copy}
               </button>
             </div>
+            {speakFailed && (
+              <p role="alert" className="error">
+                {t.speakFailed}
+              </p>
+            )}
             <p className="muted">{t.translateCheck}</p>
           </>
         )}

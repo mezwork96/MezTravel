@@ -6,6 +6,7 @@
 // - aucune adresse e-mail envoyée (limite gratuite anonyme : 5000 caractères par jour) ;
 // - aucun contournement de la limite.
 import { readCache, writeCache } from './cache.ts'
+import { knownPhrase } from './phrases.ts'
 
 export const maxBytes = 500
 const historyKey = 'meztravel.translations'
@@ -65,6 +66,9 @@ export const clearHistory = () => writeCache(historyKey, [])
 
 export async function translate(text: string, from: string, to: string): Promise<string> {
   const clean = text.trim()
+  // Phrase de voyage incluse : réponse sûre, sans envoi ni quota.
+  const ready = knownPhrase(clean, from, to)
+  if (ready) return ready
   const past = history()
   // Une phrase déjà traduite est relue sur le téléphone, même sans internet.
   const known = past.find((t) => t.text === clean && t.from === from && t.to === to)

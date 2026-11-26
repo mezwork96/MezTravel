@@ -32,6 +32,10 @@ Taux : [ExchangeRate-API](https://www.exchangerate-api.com/docs/free) (source ci
 
 Les photos sont réduites sur le téléphone (sans la position GPS) et gardées dans IndexedDB. Les données d’urgence (`src/emergency.ts`) ne contiennent que des informations lues sur des pages officielles, avec source et date : mettre à jour `checkedOn` après chaque nouveau contrôle.
 
+## Traducteur vocal
+
+`src/speech.ts` utilise la voix et le micro du navigateur (sans clé). `#/speak` : conversation à deux, une moitié d’écran par personne ; sans micro utilisable, on écrit ou on dicte avec le clavier. Les textes sont traduits par MyMemory, sauf les phrases de voyage incluses (`src/phrases.ts`), disponibles sans internet. La reconnaissance vocale dans l’app installée sur l’iPhone reste à confirmer sur un vrai appareil (`#/voice` : page d’essai).
+
 ## Traduction de texte
 
 [MyMemory](https://mymemory.translated.net/doc/spec.php) : à la demande seulement, un paragraphe de 500 octets au maximum, sans adresse e-mail (limite anonyme). Ses [conditions](https://mymemory.translated.net/terms-and-conditions) prévoient la conservation des textes envoyés : l’avertissement à l’écran doit rester.

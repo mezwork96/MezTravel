@@ -602,6 +602,28 @@ main .segmented button[aria-pressed='true'] {
   user-select: text;
 }
 
+/* Traducteur vocal : une moitié par personne. */
+.half select,
+.half textarea,
+.half button {
+  margin-bottom: 8px;
+}
+.half.turned {
+  transform: rotate(180deg);
+}
+.card p.said {
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+}
+button.talk {
+  min-height: 64px;
+  font-size: 1.3rem;
+}
+button.talk[aria-pressed='true'] {
+  outline: 4px solid var(--accent);
+  outline-offset: 2px;
+}
+
 /* Envies : de grosses pastilles faciles à toucher. */
 .chips {
   display: flex;
