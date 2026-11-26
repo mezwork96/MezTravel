@@ -207,10 +207,14 @@ export const isJapan = (text: string) => japan.test(normalise(text))
 export function findDestination(guide: Guide, city: string): GuideDestination | undefined {
   const wanted = spelled(city)
   if (!wanted) return undefined
-  return guide.destinations.find((d) => {
+  const direct = guide.destinations.find((d) => {
     const name = normalise(d.name)
     return wanted === d.id || wanted === name || wanted.split(/[^a-z]+/).includes(d.id)
   })
+  if (direct) return direct
+  // Un nom de préfecture suffit quand elle n'a qu'une destination dans le guide.
+  const inside = guide.destinations.filter((d) => d.prefectures.some((p) => normalise(p) === wanted))
+  return inside.length === 1 ? inside[0] : undefined
 }
 
 const limits: Record<Pace, { hours: number; count: number }> = {

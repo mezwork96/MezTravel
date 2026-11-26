@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
 import { isWebUrl } from '../src/answer.ts'
 import { defaultPreferences, interests, paces, type Preferences } from '../src/interests.ts'
+import { byRegion, regions } from '../src/guide/regions.ts'
 import type { Guide } from '../src/guide/types.ts'
 import { automaticRoute, extraText, findDestination, isAvailable, guideCovers, planDays, proposeRoutes, toStages, travelTimes } from '../src/planner.ts'
 import { isStage, totalNights } from '../src/stages.ts'
@@ -30,6 +31,21 @@ test('le guide est cohérent', () => {
   assert.ok(guide.sections.every((s) => s.points.every((x) => isWebUrl(x.source) && x.text.it)))
   const time = travelTimes(guide)
   for (const a of ids) for (const b of ids) assert.ok(time(a, b) < 24 * 60, `${a}-${b}`)
+})
+
+test('les 47 préfectures sont toutes dans le guide, avec des lieux', () => {
+  const covered = new Set<string>()
+  for (const d of guide.destinations) {
+    assert.ok(regions.some((r) => r.id === d.region), d.id)
+    assert.ok(d.prefectures.length, d.id)
+    assert.ok(guide.places.filter((p) => p.destination === d.id).length >= 5, d.id)
+    for (const p of d.prefectures) covered.add(p)
+  }
+  assert.equal(covered.size, 47, [...covered].sort().join())
+  assert.equal(byRegion(guide.destinations, 'it').flatMap((g) => g.destinations).length, guide.destinations.length)
+  assert.equal(findDestination(guide, 'Gunma')?.id, 'kusatsu')
+  assert.equal(findDestination(guide, 'Aichi')?.id, 'nagoya')
+  assert.equal(findDestination(guide, 'Hyogo'), undefined)
 })
 
 test('les parcours ont exactement le bon nombre de nuits', () => {

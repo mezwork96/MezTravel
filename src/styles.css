@@ -701,6 +701,11 @@ a.source {
   padding: 8px 0;
   overflow-wrap: anywhere;
 }
+.region summary {
+  padding: 0.6rem 0;
+  cursor: pointer;
+}
+
 .route-option {
   margin-bottom: 16px;
 }

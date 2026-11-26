@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { byRegion } from '../guide/regions'
 import type { Guide } from '../guide/types'
 import type { Dictionary, Language } from '../i18n'
 import type { Preferences } from '../interests'
@@ -39,7 +40,7 @@ export default function GuideRoute({
   const [routes, setRoutes] = useState<PlannedRoute[] | null>(null)
   const [picked, setPicked] = useState<number | null>(null)
 
-  const cities = [...guide.destinations].sort((a, b) => a.name.localeCompare(b.name, language))
+  const groups = byRegion(guide.destinations, language)
   const name = (id: string) => guide.destinations.find((d) => d.id === id)!.name
 
   const change = (action: () => void) => {
@@ -53,10 +54,14 @@ export default function GuideRoute({
       {label}
       <select value={value} onChange={(e) => change(() => set(e.target.value))}>
         <option value="">{t.notDecided}</option>
-        {cities.map((city) => (
-          <option key={city.id} value={city.id}>
-            {city.name}
-          </option>
+        {groups.map((group) => (
+          <optgroup key={group.id} label={group.label}>
+            {group.destinations.map((city) => (
+              <option key={city.id} value={city.id}>
+                {city.name}
+              </option>
+            ))}
+          </optgroup>
         ))}
       </select>
     </label>
@@ -66,27 +71,38 @@ export default function GuideRoute({
     <>
       <h3>1. {t.questionIdea}</h3>
       <p className="muted">{t.questionIdeaNote}</p>
-      <div className="chips" role="group" aria-label={t.questionIdea}>
-        {cities.map((city) => (
-          <button
-            key={city.id}
-            type="button"
-            className="chip"
-            aria-pressed={include.includes(city.id)}
-            onClick={() =>
-              change(() =>
-                setInclude((current) =>
-                  current.includes(city.id)
-                    ? current.filter((id) => id !== city.id)
-                    : [...current, city.id],
-                ),
-              )
-            }
-          >
-            {city.name}
-          </button>
-        ))}
-      </div>
+      {groups.map((group) => {
+        const picks = group.destinations.filter((city) => include.includes(city.id)).length
+        return (
+          <details key={group.id} className="region">
+            <summary>
+              {group.label}
+              {picks > 0 && <strong> · {picks} ✓</strong>}
+            </summary>
+            <div className="chips" role="group" aria-label={group.label}>
+              {group.destinations.map((city) => (
+                <button
+                  key={city.id}
+                  type="button"
+                  className="chip"
+                  aria-pressed={include.includes(city.id)}
+                  onClick={() =>
+                    change(() =>
+                      setInclude((current) =>
+                        current.includes(city.id)
+                          ? current.filter((id) => id !== city.id)
+                          : [...current, city.id],
+                      ),
+                    )
+                  }
+                >
+                  {city.name}
+                </button>
+              ))}
+            </div>
+          </details>
+        )
+      })}
 
       <h3>2. {t.questionAirports}</h3>
       {citySelect(t.arrivalCity, arrival, setArrival)}

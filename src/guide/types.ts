@@ -4,7 +4,8 @@ export type Localized = { it: string; en: string; fr: string }
 export type GuideDestination = {
   id: string
   name: string
-  region: string
+  region: string // identifiant de regions.ts
+  prefectures: string[] // préfectures (noms usuels en alphabet latin)
   minNights: number
   idealNights: number
   about: Localized

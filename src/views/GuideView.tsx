@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import SourceLink from '../components/SourceLink'
+import { byRegion } from '../guide/regions'
 import { useGuide } from '../guide/useGuide'
 import { formatDate, type Dictionary, type Language } from '../i18n'
 import { interests } from '../interests'
@@ -37,20 +38,29 @@ export default function GuideView({ t, language }: Props) {
 
   const query = plain(search.trim())
   const filtering = Boolean(city || interest || query)
+  const cityName = (id: string) => guide.destinations.find((d) => d.id === id)?.name
+  const prefectureCount = new Set(guide.destinations.flatMap((d) => d.prefectures)).size
+  const prefecturesOf = (id: string) =>
+    guide.destinations.find((d) => d.id === id)?.prefectures.join(' ') ?? ''
   const places = guide.places.filter(
     (p) =>
       (!city || p.destination === city) &&
       (!interest || p.interests.includes(interest)) &&
-      (!query || plain(`${p.name} ${p.area} ${p.about[language]}`).includes(query)),
+      (!query ||
+        plain(
+          `${p.name} ${p.area} ${cityName(p.destination)} ${prefecturesOf(p.destination)} ${p.about[language]}`,
+        ).includes(query)),
   )
   const destination = guide.destinations.find((d) => d.id === city)
-  const cityName = (id: string) => guide.destinations.find((d) => d.id === id)?.name
 
   return (
     <>
       {header}
       <p className="card note">
         {t.guideIntro} {formatDate(guide.checkedOn, language, true)}.
+      </p>
+      <p className="card">
+        🗾 {t.guidePrefectures}: <strong>{prefectureCount} / 47</strong>
       </p>
 
       <div className="chips" role="group" aria-label={t.guideTitle}>
@@ -94,10 +104,14 @@ export default function GuideView({ t, language }: Props) {
               {t.guideCity}
               <select value={city} onChange={(e) => setCity(e.target.value)}>
                 <option value="">{t.guideAllCities}</option>
-                {guide.destinations.map((d) => (
-                  <option key={d.id} value={d.id}>
-                    {d.name}
-                  </option>
+                {byRegion(guide.destinations, language).map((group) => (
+                  <optgroup key={group.id} label={group.label}>
+                    {group.destinations.map((d) => (
+                      <option key={d.id} value={d.id}>
+                        {d.name}
+                      </option>
+                    ))}
+                  </optgroup>
                 ))}
               </select>
             </label>
