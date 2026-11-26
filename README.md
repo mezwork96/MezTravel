@@ -46,7 +46,7 @@ Parcours en plusieurs villes : même principe, avec des propositions d’étapes
 
 ## Guide du Japon et itinéraire dans l’app
 
-`src/guide/japan.json` : destinations, lieux, durées de trajet et informations pratiques, recueillis le 2026-11-25 avec leurs adresses sources (descriptions rédigées pour le projet, sans prix ni horaires). `checked: false` = page non confirmée, signalée « à confirmer ». Les durées de visite, quartiers et nombres de nuits conseillés sont en partie des estimations. Toutes les pages n’ont pas été relues une par une après la recherche. À revérifier avant le voyage de 2027.
+`src/guide/japan.json` : destinations, lieux, durées de trajet et informations pratiques, recueillis les 2026-11-25 et 2026-11-26 avec leurs adresses sources (descriptions rédigées pour le projet, sans prix ni horaires). `checked: false` = page non confirmée, signalée « à confirmer ». Les durées de visite, quartiers et nombres de nuits conseillés sont en partie des estimations. Toutes les pages n’ont pas été relues une par une après la recherche. À revérifier avant le voyage de 2027.
 
 `src/planner.ts` propose les parcours et les journées par règles fixes, sur le téléphone, sans service externe. Le guide a la même forme pour tout pays (`src/guide/types.ts`).
 

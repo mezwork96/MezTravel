@@ -32,6 +32,7 @@ export type Availability = {
   to?: string
   someDays?: boolean // certains jours seulement : jamais placé automatiquement
   closed?: string[][] // périodes de fermeture [début, fin] en AAAA-MM-JJ
+  closedWeekdays?: number[] // jours de fermeture habituels, 0 = dimanche
 }
 
 export type GuideTravel = { from: string; to: string; minutes: number; how: string; source?: string }

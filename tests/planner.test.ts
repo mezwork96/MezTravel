@@ -104,6 +104,10 @@ test('respecte les saisons, les fermetures et les journées normales', () => {
   assert.ok(isAvailable(place('tokyo-miraikan'), '2027-05-10'))
   assert.ok(!isAvailable(place('nikko-yabusame-festival'), '2027-04-10'))
   assert.ok(!isAvailable(place('sapporo-niseko'), '2027-07-10'))
+  // 3 avril 2027 : un samedi ; 5 avril : un lundi.
+  assert.ok(!isAvailable(place('kyoto-yuzen-class'), '2027-04-03'))
+  assert.ok(isAvailable(place('kyoto-yuzen-class'), '2027-04-05'))
+  assert.ok(!isAvailable(place('takamatsu-chichu'), '2027-04-05'))
   const preferences = likes(...interests.map((i) => i.id))
   for (const pace of paces) {
     for (const startMonth of ['01', '04', '07', '10']) {

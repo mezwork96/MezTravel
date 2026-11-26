@@ -249,6 +249,7 @@ export function isAvailable(place: GuidePlace, date: string): boolean {
   const day = date.slice(5)
   if (when.months && !when.months.includes(Number(date.slice(5, 7)))) return false
   if (when.from && when.to && (day < when.from || day > when.to)) return false
+  if (when.closedWeekdays?.includes(new Date(`${date}T00:00:00Z`).getUTCDay())) return false
   return !when.closed?.some(([from, to]) => date >= from && date <= to)
 }
 
