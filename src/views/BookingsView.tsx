@@ -5,13 +5,13 @@ import PdfViewer from '../components/PdfViewer'
 import { deleteFiles } from '../fileStore'
 import { formatDate, type Dictionary, type Language } from '../i18n'
 import { link } from '../route'
-import { today, upsert, type Booking, type Todo, type Trip } from '../trips'
+import { isDate, today, upsert, type Booking, type Todo, type Trip } from '../trips'
 
 type Props = {
   t: Dictionary
   language: Language
   trip: Trip
-  onChange: (change: (trip: Trip) => Trip) => void
+  onChange: (change: (trip: Trip) => Trip) => boolean
 }
 
 export default function BookingsView({ t, language, trip, onChange }: Props) {
@@ -32,19 +32,24 @@ export default function BookingsView({ t, language, trip, onChange }: Props) {
 
   function save(booking: Booking) {
     const previous = bookings.find((b) => b.id === booking.id)?.file
-    onChange((current) => ({ ...current, bookings: upsert(current.bookings ?? [], booking) }))
+    const saved = onChange((current) => ({
+      ...current,
+      bookings: upsert(current.bookings ?? [], booking),
+    }))
     // L'ancien PDF n'est supprimé qu'après l'enregistrement du nouveau.
-    if (previous && previous.id !== booking.file?.id) deleteFiles([previous.id]).catch(() => {})
+    if (saved && previous && previous.id !== booking.file?.id) {
+      deleteFiles([previous.id]).catch(() => {})
+    }
     setDraft(null)
   }
 
   function remove(booking: Booking) {
     if (!window.confirm(t.confirmDeleteBooking)) return
-    onChange((current) => ({
+    const saved = onChange((current) => ({
       ...current,
       bookings: (current.bookings ?? []).filter((b) => b.id !== booking.id),
     }))
-    if (booking.file) deleteFiles([booking.file.id]).catch(() => {})
+    if (saved && booking.file) deleteFiles([booking.file.id]).catch(() => {})
   }
 
   const setTodos = (change: (list: Todo[]) => Todo[]) =>
@@ -54,6 +59,7 @@ export default function BookingsView({ t, language, trip, onChange }: Props) {
     event.preventDefault()
     const text = todoText.trim()
     if (!text) return
+    if (todoDate && !isDate(todoDate)) return setTodoDate('')
     const todo = { id: crypto.randomUUID(), text, dueDate: todoDate, done: false }
     setTodos((list) => [...list, todo])
     setTodoText('')

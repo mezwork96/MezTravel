@@ -3,7 +3,7 @@ import { putFiles } from '../fileStore'
 import { findDates, rankDates, suggestDates, type FoundDate } from '../findDates'
 import { formatDate, type Dictionary, type Language } from '../i18n'
 import { readPdfText } from '../pdf'
-import { bookingTypes, type Booking, type Trip } from '../trips'
+import { bookingTypes, isDate, type Booking, type Trip } from '../trips'
 
 type Props = {
   t: Dictionary
@@ -79,9 +79,11 @@ export default function BookingForm({ t, language, trip, booking, isNew, onSave,
   async function submit(event: FormEvent) {
     event.preventDefault()
     if (!draft.title.trim()) return setError('nameRequired')
-    if (!draft.date) return setError('bookingDateRequired')
+    if (!isDate(draft.date)) return setError('bookingDateRequired')
     if (draft.type === 'stay' && !draft.endDate) return setError('checkOutRequired')
-    const endDate = hasEnd ? draft.endDate : ''
+    // Une heure d'arrivée sans date : le trajet finit le jour du départ.
+    const endDate = hasEnd ? draft.endDate || (draft.endTime ? draft.date : '') : ''
+    if (endDate && !isDate(endDate)) return setError('dateInvalid')
     // Un vol vers l'est peut arriver à une date antérieure : contrôle pour l'hébergement seulement.
     if (draft.type === 'stay' && endDate < draft.date) return setError('datesOrder')
 

@@ -28,7 +28,7 @@ export default function App() {
   const trip = data.trips.find((candidate) => candidate.id === route.tripId)
 
   function changeTrip(id: string, change: (trip: Trip) => Trip) {
-    update((current) => {
+    return update((current) => {
       const existing = current.trips.find((candidate) => candidate.id === id)
       if (!existing) return current
       const changed = { ...change(existing), updatedAt: new Date().toISOString() }
@@ -70,11 +70,11 @@ export default function App() {
           trip={trip}
           onChange={(change) => changeTrip(trip.id, change)}
           onDelete={() => {
-            update((current) => ({
+            const saved = update((current) => ({
               ...current,
               trips: current.trips.filter((candidate) => candidate.id !== trip.id),
             }))
-            deleteFiles(fileIds([trip])).catch(() => {})
+            if (saved) deleteFiles(fileIds([trip])).catch(() => {})
             window.location.hash = link()
           }}
         />

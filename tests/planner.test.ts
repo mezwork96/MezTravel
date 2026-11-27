@@ -7,7 +7,7 @@ import { byRegion, regions } from '../src/guide/regions.ts'
 import type { Guide } from '../src/guide/types.ts'
 import { automaticRoute, extraText, findDestination, isAvailable, guideCovers, planDays, proposeRoutes, toStages, travelTimes } from '../src/planner.ts'
 import { isStage, totalNights } from '../src/stages.ts'
-import { listDays, parseData, replaceable, without, type Trip } from '../src/trips.ts'
+import { listDays, parseData, replaceable, replacedBy, without, type Trip } from '../src/trips.ts'
 
 const guide: Guide = JSON.parse(readFileSync(new URL('../src/guide/japan.json', import.meta.url), 'utf-8'))
 const likes = (...ids: string[]): Preferences => ({ ...defaultPreferences, interests: ids })
@@ -46,6 +46,23 @@ test('les 47 préfectures sont toutes dans le guide, avec des lieux', () => {
   assert.equal(findDestination(guide, 'Gunma')?.id, 'kusatsu')
   assert.equal(findDestination(guide, 'Aichi')?.id, 'nagoya')
   assert.equal(findDestination(guide, 'Hyogo'), undefined)
+})
+
+test('remplacer ne vide jamais un jour qui ne reçoit rien', () => {
+  const old = ['2027-04-01', '2027-04-02', '2027-04-02'].map((date, i) => ({
+    id: `${i}`, date, time: '', title: `t${i}`, place: '', notes: '', auto: true,
+  }))
+  assert.deepEqual(replacedBy(old, ['2027-04-02']).map((a) => a.id), ['1', '2'])
+  assert.deepEqual(replacedBy(old, []), [])
+})
+
+test('une activité cachée par un changement de dates ne bloque pas les idées', () => {
+  const kyoto = trip({ destination: 'Kyoto', startDate: '2027-04-01', endDate: '2027-04-02' })
+  const days = listDays(kyoto.startDate, kyoto.endDate)
+  const first = planDays(guide, kyoto, likes('temples'), days, 'plan', 'it').proposals
+  const hidden = first.map((p, i) => ({ ...p, id: `h${i}`, date: '2027-03-01' }))
+  const again = planDays(guide, { ...kyoto, activities: hidden }, likes('temples'), days, 'plan', 'it')
+  assert.deepEqual(again.proposals.map((p) => p.title), first.map((p) => p.title))
 })
 
 test('les parcours ont exactement le bon nombre de nuits', () => {

@@ -9,7 +9,7 @@ type Props = {
   t: Dictionary
   trip: Trip
   date: string
-  onChange: (change: (trip: Trip) => Trip) => void
+  onChange: (change: (trip: Trip) => Trip) => boolean
 }
 
 export default function Diary({ t, trip, date, onChange }: Props) {
@@ -42,11 +42,11 @@ export default function Diary({ t, trip, date, onChange }: Props) {
 
   function remove(photo: Photo) {
     if (!window.confirm(t.confirmDeletePhoto)) return
-    onChange((current) => ({
+    const saved = onChange((current) => ({
       ...current,
       photos: (current.photos ?? []).filter((p) => p.id !== photo.id),
     }))
-    deleteFiles([photo.id]).catch(() => {})
+    if (saved) deleteFiles([photo.id]).catch(() => {})
   }
 
   return (

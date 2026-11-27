@@ -73,7 +73,8 @@ export const canListen = () => Boolean(recognitionClass())
 
 type Listener = {
   onText: (text: string) => void // pendant qu'on parle
-  onEnd: (text: string, problem: MicProblem | null) => void // une seule fois
+  // une seule fois ; « detail » est le code technique d'une panne, affiché pour l'aide
+  onEnd: (text: string, problem: MicProblem | null, detail: string) => void
 }
 
 // Écoute une phrase. « stop » garde ce qui a été entendu, « cancel » l'oublie.
@@ -81,12 +82,16 @@ export function listen(code: string, { onText, onEnd }: Listener, limit = 20_000
   let heard = ''
   let failure = ''
   let finished = false
+  let sound = false // le micro a réellement été ouvert
   let timer: ReturnType<typeof setTimeout> | undefined
   const finish = () => {
     if (finished) return
     finished = true
     clearTimeout(timer)
-    onEnd(heard.trim(), heard.trim() ? null : micProblem(failure || 'no-speech'))
+    if (heard.trim()) return onEnd(heard.trim(), null, '')
+    // Rien entendu sans que le micro se soit ouvert : c'est une panne, pas un silence.
+    const reason = failure || (sound ? 'no-speech' : 'no-audio')
+    onEnd('', micProblem(reason), reason)
   }
   let recognition: any
   // Certains navigateurs n'annoncent jamais la fin.
@@ -100,6 +105,7 @@ export function listen(code: string, { onText, onEnd }: Listener, limit = 20_000
     recognition.lang = speechLang(code)
     recognition.interimResults = true
     recognition.continuous = false
+    recognition.onaudiostart = () => (sound = true)
     recognition.onresult = (event: any) => {
       heard = Array.from(event.results as ArrayLike<any>)
         .map((r: any) => r[0].transcript)

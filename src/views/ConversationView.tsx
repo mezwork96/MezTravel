@@ -35,7 +35,11 @@ export default function ConversationView({ t, language }: Props) {
   const [message, setMessage] = useState<Message | null>(null)
   const [listening, setListening] = useState<Side | null>(null)
   const [translating, setTranslating] = useState(false)
-  const [problem, setProblem] = useState<{ side: Side; key: keyof Dictionary } | null>(null)
+  const [problem, setProblem] = useState<{
+    side: Side
+    key: keyof Dictionary
+    mic?: string // code technique d'une panne du micro
+  } | null>(null)
   const [readAloud, setReadAloud] = useState(true)
   const microphone = useRef<ReturnType<typeof listen> | null>(null)
   const request = useRef(0)
@@ -104,10 +108,10 @@ export default function ConversationView({ t, language }: Props) {
     setListening(side)
     microphone.current = listen(codes[side], {
       onText: (text) => setDrafts((current) => ({ ...current, [side]: text })),
-      onEnd: (text, trouble: MicProblem | null) => {
+      onEnd: (text, trouble: MicProblem | null, detail) => {
         microphone.current = null
         setListening(null)
-        if (trouble) setProblem({ side, key: trouble })
+        if (trouble) setProblem({ side, key: trouble, mic: detail })
         else send(side, text)
       },
     })
@@ -194,9 +198,17 @@ export default function ConversationView({ t, language }: Props) {
         </button>
 
         {problem?.side === side && (
-          <p role="alert" className="error">
-            {t[problem.key]}
-          </p>
+          <>
+            <p role="alert" className="error">
+              {t[problem.key]}
+              {problem.mic && ` (${problem.mic})`}
+            </p>
+            {problem.mic && (
+              <p>
+                <a href={link('voice')}>🎤 {t.voiceTitle} ›</a>
+              </p>
+            )}
+          </>
         )}
       </section>
     )

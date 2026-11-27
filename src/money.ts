@@ -37,6 +37,8 @@ export function parseAmount(input: string, currency: string): number | null {
     const repeated = separators.split(mark).length - 1 > 1
     const mixed = separators.includes(mark === '.' ? ',' : '.')
     const thousands = !mixed && (repeated || (after.length === 3 && decimals(currency) < 3))
+    // « 0,500 » : personne n'écrit un millier avec un zéro devant, la saisie est douteuse.
+    if (thousands && text.startsWith('0')) return null
     if (!thousands) {
       if (repeated || after.length > decimals(currency)) return null
       whole = text.slice(0, last)

@@ -2,7 +2,7 @@ import { useState, type FormEvent } from 'react'
 import type { Dictionary, Language } from '../i18n'
 import { allocate, amountToInput, convert, formatAmount, parseAmount, step } from '../money'
 import { rateBetween, type Rates } from '../rates'
-import type { Expense, Member } from '../trips'
+import { isDate, type Expense, type Member } from '../trips'
 import { CurrencySelect, RatesSource } from './Money'
 
 type Props = {
@@ -77,7 +77,7 @@ export default function ExpenseForm(props: Props) {
   function submit(event: FormEvent) {
     event.preventDefault()
     if (!title.trim()) return setError('expenseTitleRequired')
-    if (!date) return setError('bookingDateRequired')
+    if (!isDate(date)) return setError('bookingDateRequired')
     if (!amount) return setError('amountInvalid')
     if (rate === null) return setError('rateRequired')
     let shares: Expense['shares']

@@ -55,7 +55,7 @@ export default function Backup({ t, data, update }: Props) {
       const wanted = new Set(fileIds(incoming.data.trips))
       const files = Object.entries(incoming.files).filter(([id]) => wanted.has(id))
       await putFiles(files.map(([id, f]) => ({ id, bytes: fromBase64(f.base64).buffer })))
-      update((current) => mergeData(current, incoming.data))
+      if (!update((current) => mergeData(current, incoming.data))) throw new Error('not saved')
       const absent = await Promise.all([...wanted].map(async (id) => !(await getFile(id))))
       setMessage(absent.includes(true) ? 'backupMissingFiles' : 'backupRestored')
     } catch {

@@ -112,3 +112,11 @@ test('lit les taux et calcule les taux croisés', () => {
   assert.ok(!isFresh(rates, 100_000_000))
   assert.ok(isFresh({ ...rates, fetchedAt: 99_999_000 }, 100_000_000))
 })
+
+test('refuse un zéro de tête suivi de milliers', () => {
+  assert.equal(parseAmount('0,500', 'CHF'), null)
+  assert.equal(parseAmount('0.500', 'EUR'), null)
+  assert.equal(parseAmount('0,50', 'EUR'), 500)
+  assert.equal(parseAmount('0.500', 'KWD'), 500)
+  assert.equal(parseAmount('1.000', 'EUR'), 1_000_000)
+})

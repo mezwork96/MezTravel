@@ -15,7 +15,7 @@ import {
 } from '../proposals'
 import { link } from '../route'
 import { stageDays, type Stage } from '../stages'
-import { listDays, replaceable, without, type Trip } from '../trips'
+import { listDays, replaceable, replacedBy, without, type Trip } from '../trips'
 import ClaudeSteps from './ClaudeSteps'
 import ProposalPreview, { type Row } from './ProposalPreview'
 
@@ -51,10 +51,19 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
   const [result, setResult] = useState<Result | null>(null)
   const [failed, setFailed] = useState(false)
   const [added, setAdded] = useState(0)
-  const [replace, setReplace] = useState(true)
+  const [replaceChoice, setReplace] = useState<boolean | null>(null)
   const [fill, setFill] = useState(() => readCache<boolean>('meztravel.fill') === true)
   const preview = useRef<HTMLDivElement>(null)
   const created = result?.rows.length ? result.from : null
+  // Quand on choisit soi-même, on ajoute : rien n'est remplacé sans le demander.
+  const replace = replaceChoice ?? mode === 'plan'
+  // Les anciennes activités des seuls jours qui reçoivent une activité cochée.
+  const removed = result
+    ? replacedBy(
+        trip.activities.filter((a) => result.replaced.includes(a.id)),
+        result.rows.filter((row) => row.chosen).map((row) => row.date),
+      )
+    : []
 
   // L'itinéraire créé apparaît sous les yeux, sans avoir à le chercher.
   useEffect(() => {
@@ -129,7 +138,7 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
         ...(result!.from === 'guide' ? { auto: true } : {}),
       }))
     const route = result!.route
-    const replaced = new Set(result!.replaced)
+    const replaced = new Set(removed.map((a) => a.id))
     onChange((current) => ({
       ...current,
       activities: [...current.activities.filter((a) => !replaced.has(a.id)), ...activities],
@@ -169,6 +178,7 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
             onClick={() => {
               setMode(option)
               writeCache('meztravel.mode', option)
+              setReplace(null)
               reset()
             }}
           >
@@ -271,9 +281,9 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
                   </p>
                 )}
                 <p>{t.notSavedYet}</p>
-                {result.replaced.length > 0 && (
+                {removed.length > 0 && (
                   <p className="card warning note">
-                    {t.willRemove}: {result.replaced.length}
+                    {t.willRemove}: {removed.length}
                   </p>
                 )}
                 <button
@@ -303,10 +313,7 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
               <ProposalPreview
                 t={t}
                 language={language}
-                trip={without(
-                  trip,
-                  trip.activities.filter((a) => result.replaced.includes(a.id)),
-                )}
+                trip={without(trip, removed)}
                 days={days}
                 date={date}
                 rows={result.rows}

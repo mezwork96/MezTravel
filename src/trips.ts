@@ -150,6 +150,11 @@ export function replaceable(trip: Trip, days: string[]): Activity[] {
   return trip.activities.filter((a) => a.auto && days.includes(a.date))
 }
 
+// Une ancienne proposition n'est retirée que si son jour reçoit une nouvelle activité.
+export function replacedBy(old: Activity[], newDays: string[]): Activity[] {
+  return old.filter((a) => newDays.includes(a.date))
+}
+
 export function without(trip: Trip, activities: Activity[]): Trip {
   const ids = new Set(activities.map((a) => a.id))
   return { ...trip, activities: trip.activities.filter((a) => !ids.has(a.id)) }

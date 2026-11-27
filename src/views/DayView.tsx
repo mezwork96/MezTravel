@@ -18,7 +18,7 @@ type Props = {
   language: Language
   trip: Trip
   date: string
-  onChange: (change: (trip: Trip) => Trip) => void
+  onChange: (change: (trip: Trip) => Trip) => boolean
 }
 
 export default function DayView({ t, language, trip, date, onChange }: Props) {

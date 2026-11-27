@@ -36,17 +36,25 @@ export function useStore() {
     setState(next)
   }, [])
 
+  // Renvoie true seulement si le changement est réellement enregistré.
   const update = useCallback(
-    (change: (data: Data) => Data) => {
-      if (latest.current.damaged) return
+    (change: (data: Data) => Data): boolean => {
+      if (latest.current.damaged) return false
       const data = change(latest.current.data)
+      const text = JSON.stringify(data)
+      // Des données que l'app ne saurait pas relire bloqueraient tout au redémarrage.
+      if (!parseData(text)) {
+        apply({ ...latest.current, saveFailed: true })
+        return false
+      }
       let saveFailed = false
       try {
-        localStorage.setItem(storageKey, JSON.stringify(data))
+        localStorage.setItem(storageKey, text)
       } catch {
         saveFailed = true
       }
       apply({ data, damaged: false, saveFailed })
+      return !saveFailed
     },
     [apply],
   )

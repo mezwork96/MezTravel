@@ -270,7 +270,10 @@ export function planDays(
   const allDays = listDays(trip.startDate, trip.endDate)
   const time = travelTimes(guide)
   const used = new Set<string>()
-  const taken = new Set(trip.activities.map((a) => normalise(a.title)))
+  // Une activité hors des dates du voyage (après un report) ne bloque rien.
+  const taken = new Set(
+    trip.activities.filter((a) => allDays.includes(a.date)).map((a) => normalise(a.title)),
+  )
   const seen = new Map<string, number>() // fois où une envie a déjà été servie
   const result: DayPlan = { proposals: [], unknownCity: [], empty: [] }
   const onlyDestination = findDestination(guide, trip.destination)
