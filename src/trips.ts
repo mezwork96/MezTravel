@@ -99,6 +99,7 @@ export type Trip = TripDetails & {
   preferences?: Preferences // envies pour l'itinéraire proposé
   stages?: Stage[] // parcours en plusieurs villes
   routeWishes?: RouteWishes
+  mustDo?: string[] // lieux du guide à voir absolument (identifiants)
   updatedAt: string
 }
 
@@ -338,6 +339,8 @@ function isTrip(value: unknown): boolean {
     (value.preferences === undefined || isPreferences(value.preferences)) &&
     isOptionalList(value.stages, isStage) &&
     (value.routeWishes === undefined || isRouteWishes(value.routeWishes)) &&
+    (value.mustDo === undefined ||
+      (Array.isArray(value.mustDo) && value.mustDo.every((id) => typeof id === 'string'))) &&
     // Sans monnaie des comptes, des dépenses n'auraient pas de sens.
     (!(value.expenses as unknown[] | undefined)?.length || value.currency !== undefined) &&
     hasKnownMembers(value)

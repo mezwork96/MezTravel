@@ -4,8 +4,9 @@ import type { Guide } from '../guide/types'
 import type { Dictionary, Language } from '../i18n'
 import type { Preferences } from '../interests'
 import { link } from '../route'
-import { findDestination, proposeRoutes, toStages, type PlannedRoute } from '../planner'
+import { favouriteCities, findDestination, proposeRoutes, toStages, type PlannedRoute } from '../planner'
 import type { Stage } from '../stages'
+import StageInfo from './StageInfo'
 import StagesEditor from './StagesEditor'
 
 type Props = {
@@ -15,6 +16,7 @@ type Props = {
   preferences: Preferences
   days: string[]
   destination: string
+  mustDo?: string[]
   onSave: (stages: Stage[]) => void
 }
 
@@ -28,12 +30,13 @@ export default function GuideRoute({
   preferences,
   days,
   destination,
+  mustDo,
   onSave,
 }: Props) {
   // Une ville écrite comme destination est déjà une ville voulue.
   const [include, setInclude] = useState<string[]>(() => {
     const city = findDestination(guide, destination)
-    return city ? [city.id] : []
+    return [...new Set([...(city ? [city.id] : []), ...favouriteCities(guide, mustDo)])]
   })
   const [arrival, setArrival] = useState('')
   const [departure, setDeparture] = useState('')
@@ -149,6 +152,17 @@ export default function GuideRoute({
                     language={language}
                     days={days}
                     initial={toStages(guide, route, language)}
+                    info={(stage, previous) => (
+                      <StageInfo
+                        t={t}
+                        guide={guide}
+                        stage={stage}
+                        previous={previous}
+                        preferences={preferences}
+                        mustDo={mustDo}
+                      />
+                    )}
+                    suggestions={guide.destinations.map((d) => d.name)}
                     saveLabel={t.useRoute}
                     onSave={onSave}
                   />

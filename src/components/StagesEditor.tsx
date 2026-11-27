@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useId, useState, type ReactNode } from 'react'
 import type { Dictionary, Language } from '../i18n'
 import { formatDate } from '../i18n'
 import { maxStages, stageDays, totalNights, type Stage } from '../stages'
@@ -11,11 +11,23 @@ type Props = {
   initial: Stage[]
   saveLabel: string
   onSave: (stages: Stage[]) => void
+  info?: (stage: Stage, previous?: Stage) => ReactNode // ce que le guide sait de l'étape
+  suggestions?: string[] // noms de villes reconnus, proposés à la saisie
 }
 
 // Les étapes se modifient librement ; on ne peut les enregistrer que si le total
 // des nuits correspond aux dates du voyage.
-export default function StagesEditor({ t, language, days, initial, saveLabel, onSave }: Props) {
+export default function StagesEditor({
+  t,
+  language,
+  days,
+  initial,
+  saveLabel,
+  onSave,
+  info,
+  suggestions,
+}: Props) {
+  const listId = useId()
   const [rows, setRows] = useState(() => initial.map((stage) => ({ key: crypto.randomUUID(), stage })))
   const [city, setCity] = useState('')
 
@@ -62,6 +74,7 @@ export default function StagesEditor({ t, language, days, initial, saveLabel, on
               )}
               {stage.why && <p className="notes">{stage.why}</p>}
               {stage.transfer && <p className="muted">🚆 {stage.transfer}</p>}
+              {info?.(stage, index > 0 ? stages[index - 1] : undefined)}
               <SourceLink t={t} url={stage.source} />
               <div className="stepper">
                 <button
@@ -98,6 +111,11 @@ export default function StagesEditor({ t, language, days, initial, saveLabel, on
                     ↑ {t.moveUp}
                   </button>
                 )}
+                {index < rows.length - 1 && (
+                  <button type="button" onClick={() => moveUp(index + 1)}>
+                    ↓ {t.moveDown}
+                  </button>
+                )}
                 <button type="button" onClick={() => setRows(rows.filter((row) => row.key !== key))}>
                   {t.remove}
                 </button>
@@ -108,7 +126,15 @@ export default function StagesEditor({ t, language, days, initial, saveLabel, on
       </ol>
 
       <div className="add-row">
+        {suggestions && (
+          <datalist id={listId}>
+            {suggestions.map((name) => (
+              <option key={name} value={name} />
+            ))}
+          </datalist>
+        )}
         <input
+          list={suggestions ? listId : undefined}
           value={city}
           maxLength={100}
           placeholder={t.addCity}

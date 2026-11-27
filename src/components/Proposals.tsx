@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { readCache, writeCache } from '../cache'
 import { useGuide } from '../guide/useGuide'
-import type { Dictionary, Language } from '../i18n'
+import { formatDate, type Dictionary, type Language } from '../i18n'
 import type { Preferences } from '../interests'
 import { automaticRoute, guideCovers, planDays } from '../planner'
 import {
@@ -36,6 +36,7 @@ type Result = {
   unknownCity: number
   empty: number
   route: Stage[] | null // parcours choisi par l'app, enregistré avec les activités
+  missed: string[] // lieux favoris non placés
   replaced: string[] // activités créées avant par l'app, retirées à l'enregistrement
 }
 
@@ -51,6 +52,7 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
   const [result, setResult] = useState<Result | null>(null)
   const [failed, setFailed] = useState(false)
   const [added, setAdded] = useState(0)
+  const [booked, setBooked] = useState(false)
   const [replaceChoice, setReplace] = useState<boolean | null>(null)
   const [fill, setFill] = useState(() => readCache<boolean>('meztravel.fill') === true)
   const preview = useRef<HTMLDivElement>(null)
@@ -78,6 +80,31 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
   const request = ready ? buildRequest(trip, preferences, mode, language, date, only) : ''
   const covered = guide !== null && guide !== 'error' && guideCovers(guide, trip)
 
+  // Lieux du programme à réserver et pas encore dans la liste « à réserver ».
+  const toBook = covered
+    ? trip.activities.filter(
+        (a) =>
+          guide.places.some((p) => p.booking && p.name === a.title) &&
+          !(trip.todos ?? []).some((todo) => todo.text.includes(a.title)),
+      )
+    : []
+
+  function addToBook() {
+    onChange((current) => ({
+      ...current,
+      todos: [
+        ...(current.todos ?? []),
+        ...toBook.map((a) => ({
+          id: crypto.randomUUID(),
+          text: `${t.bookPrefix}: ${a.title} (${formatDate(a.date, language)})`,
+          dueDate: '',
+          done: false,
+        })),
+      ],
+    }))
+    setBooked(true)
+  }
+
   const toRows = (proposals: Proposal[]) =>
     proposals.map((p) => ({ ...p, chosen: mode === 'plan' && !alreadyPlanned(trip, p) }))
 
@@ -85,6 +112,7 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
     setResult(null)
     setFailed(false)
     setAdded(0)
+    setBooked(false)
   }
 
   // Créé dans l'app, à partir du guide inclus : rien ne quitte le téléphone.
@@ -109,6 +137,8 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
       unknownCity: plan.unknownCity.length,
       empty: plan.empty.length,
       route,
+      // Seulement quand tout le voyage est organisé d'un coup.
+      missed: !date && !only && mode === 'plan' ? plan.missed : [],
     })
   }
 
@@ -126,6 +156,7 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
       unknownCity: 0,
       empty: 0,
       route: null,
+      missed: [],
     })
   }
 
@@ -265,6 +296,11 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
               {t.emptyDays}: {result.empty}
             </p>
           )}
+          {result.missed.length > 0 && (
+            <p className="card warning note">
+              ⭐ {t.missedFavourites}: {result.missed.join(', ')}
+            </p>
+          )}
           {result.rows.length === 0 ? (
             result.unknownCity === 0 && <p role="status">{t.nothingFound}</p>
           ) : (
@@ -329,6 +365,29 @@ export default function Proposals({ t, language, trip, preferences, date, onChan
         <p role="status">
           ✓ {t.addedCount}: {added}.{' '}
           <a href={date ? link(trip.id, date) : link(trip.id)}>{t.seeProgram}</a>
+        </p>
+      )}
+
+      {toBook.length > 0 && (
+        <div className="card warning note">
+          <p>
+            📅 <strong>{t.bookingNeeded}</strong>
+          </p>
+          <ul>
+            {toBook.map((a) => (
+              <li key={a.id}>
+                {a.title} · {formatDate(a.date, language)}
+              </li>
+            ))}
+          </ul>
+          <button type="button" className="wide" onClick={addToBook}>
+            {t.addToBook}
+          </button>
+        </div>
+      )}
+      {booked && (
+        <p role="status">
+          ✓ {t.addedToBook} <a href={link(trip.id, 'bookings')}>{t.bookingsTitle} ›</a>
         </p>
       )}
 

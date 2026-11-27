@@ -32,6 +32,10 @@ Taux : [ExchangeRate-API](https://www.exchangerate-api.com/docs/free) (source ci
 
 Les photos sont réduites sur le téléphone (sans la position GPS) et gardées dans IndexedDB. Les données d’urgence (`src/emergency.ts`) ne contiennent que des informations lues sur des pages officielles, avec source et date : mettre à jour `checkedOn` après chaque nouveau contrôle.
 
+## Questions, favoris et réservations
+
+`src/questions.ts` : questions facultatives (pour tout le voyage ou une journée) ; chaque réponse modifie les règles de `src/planner.ts`. Dans le guide, un lieu peut être mis en favori pour un voyage (`mustDo`) : le planificateur le place en priorité. `highlight` : présenté comme incontournable par un office de tourisme. `booking` : réservation obligatoire, proposée dans « à réserver ».
+
 ## Traducteur vocal
 
 `src/speech.ts` utilise la voix et le micro du navigateur (sans clé). `#/speak` : conversation à deux, une moitié d’écran par personne ; sans micro utilisable, on écrit ou on dicte avec le clavier. Les textes sont traduits par MyMemory, sauf les phrases de voyage incluses (`src/phrases.ts`), disponibles sans internet. La reconnaissance vocale dans l’app installée sur l’iPhone reste à confirmer sur un vrai appareil (`#/voice` : page d’essai).
@@ -50,7 +54,7 @@ Parcours en plusieurs villes : même principe, avec des propositions d’étapes
 
 ## Guide du Japon et itinéraire dans l’app
 
-`src/guide/japan.json` : destinations, lieux, durées de trajet et informations pratiques, recueillis les 2026-11-25 et 2026-11-26 et couvrant les 47 préfectures (informations pratiques revérifiées le 2026-11-27) avec leurs adresses sources (descriptions rédigées pour le projet, sans prix ni horaires). `checked: false` = page non confirmée, signalée « à confirmer ». Les durées de visite, quartiers et nombres de nuits conseillés sont en partie des estimations. Toutes les pages n’ont pas été relues une par une après la recherche. À revérifier avant le voyage de 2027.
+`src/guide/japan.json` : destinations, lieux, durées de trajet et informations pratiques, recueillis du 2026-11-25 au 2026-11-27 et couvrant les 47 préfectures (informations pratiques revérifiées le 2026-11-27) avec leurs adresses sources (descriptions rédigées pour le projet, sans prix ni horaires). `checked: false` = page non confirmée, signalée « à confirmer ». Les durées de visite, quartiers et nombres de nuits conseillés sont en partie des estimations. Toutes les pages n’ont pas été relues une par une après la recherche. À revérifier avant le voyage de 2027.
 
 `src/planner.ts` propose les parcours et les journées par règles fixes, sur le téléphone, sans service externe. Le guide a la même forme pour tout pays (`src/guide/types.ts`).
 

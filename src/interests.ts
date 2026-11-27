@@ -1,5 +1,6 @@
 // Envies pour l'itinéraire proposé : catégories, rythme et nombre de personnes.
 // Sans dépendance à l'écran (donc testable).
+import { isAnswers, type Answers } from './questions.ts'
 
 // Les identifiants sont enregistrés dans les voyages : ne pas les renommer.
 export const interests = [
@@ -38,6 +39,18 @@ export const interests = [
   { id: 'dayTrips', icon: '🚆', it: 'Gite fuori città', en: 'Day trips', fr: 'Excursions hors de la ville' },
 ] as const
 
+// Les mêmes catégories, rangées par famille pour l'écran.
+export const interestGroups = [
+  { it: 'Cultura e storia', en: 'Culture and history', fr: 'Culture et histoire', ids: ['museums', 'modernArt', 'historic', 'temples', 'architecture', 'crafts'] },
+  { it: 'In città', en: 'In town', fr: 'En ville', ids: ['neighborhoods', 'viewpoints', 'shopping', 'markets', 'gaming', 'filmSpots'] },
+  { it: 'Natura, sport e animali', en: 'Nature, sport and animals', fr: 'Nature, sport et animaux', ids: ['nature', 'hiking', 'beaches', 'waterSports', 'winterSports', 'activeSports', 'sportEvents', 'horses', 'animals'] },
+  { it: 'Cibo', en: 'Food', fr: 'Cuisine', ids: ['restaurants', 'streetFood', 'cafes', 'foodClasses'] },
+  { it: 'Sera e spettacoli', en: 'Evenings and shows', fr: 'Soirées et spectacles', ids: ['bars', 'nightlife', 'shows', 'festivals'] },
+  { it: 'Divertimento e relax', en: 'Fun and relaxing', fr: 'Loisirs et détente', ids: ['themeParks', 'kids', 'wellness', 'dayTrips'] },
+]
+
+export const maxTop = 3
+
 export const paces = ['calm', 'normal', 'intense'] as const
 export type Pace = (typeof paces)[number]
 
@@ -49,6 +62,40 @@ export type Preferences = {
   interests: string[] // pour tout le voyage
   // Jours qui ont leurs propres envies : elles remplacent celles du voyage.
   days: { date: string; interests: string[] }[]
+  // Absents des données créées avant les questions précises.
+  top?: string[] // les envies qui comptent le plus (3 au maximum)
+  answers?: Answers
+  // Réponses propres à une journée : elles remplacent celles du voyage.
+  dayAnswers?: DayAnswers[]
+}
+
+export type DayAnswers = { date: string; pace?: Pace; answers: Answers }
+
+export function dayAnswersOn(preferences: Preferences, date: string): DayAnswers | undefined {
+  return preferences.dayAnswers?.find((day) => day.date === date)
+}
+
+// Rythme et réponses valables un jour donné.
+export function settingsOn(preferences: Preferences, date: string): { pace: Pace; answers: Answers } {
+  const own = dayAnswersOn(preferences, date)
+  return {
+    pace: own?.pace ?? preferences.pace,
+    answers: { ...preferences.answers, ...own?.answers },
+  }
+}
+
+export function setDay(preferences: Preferences, next: DayAnswers): Preferences {
+  const others = (preferences.dayAnswers ?? []).filter((day) => day.date !== next.date)
+  const empty = !next.pace && Object.keys(next.answers).length === 0
+  return { ...preferences, dayAnswers: empty ? others : [...others, next] }
+}
+
+export function toggleTop(preferences: Preferences, id: string): Preferences {
+  const top = preferences.top ?? []
+  if (top.includes(id)) return { ...preferences, top: top.filter((other) => other !== id) }
+  // Seules les envies encore choisies comptent dans la limite.
+  const kept = top.filter((other) => preferences.interests.includes(other))
+  return kept.length >= maxTop ? preferences : { ...preferences, top: [...kept, id] }
 }
 
 export const defaultPreferences: Preferences = { people: 2, pace: 'normal', interests: [], days: [] }
@@ -89,6 +136,16 @@ export function isPreferences(value: any): boolean {
     paces.includes(value.pace) &&
     isStrings(value.interests) &&
     Array.isArray(value.days) &&
-    value.days.every((day: any) => typeof day?.date === 'string' && isStrings(day.interests))
+    value.days.every((day: any) => typeof day?.date === 'string' && isStrings(day.interests)) &&
+    (value.top === undefined || isStrings(value.top)) &&
+    (value.answers === undefined || isAnswers(value.answers)) &&
+    (value.dayAnswers === undefined ||
+      (Array.isArray(value.dayAnswers) &&
+        value.dayAnswers.every(
+          (day: any) =>
+            typeof day?.date === 'string' &&
+            (day.pace === undefined || paces.includes(day.pace)) &&
+            isAnswers(day.answers),
+        )))
   )
 }

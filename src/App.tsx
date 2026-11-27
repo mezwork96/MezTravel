@@ -42,7 +42,9 @@ export default function App() {
     if (route.tripId === 'nearby') return <NearbyView t={t} language={language} />
     if (route.tripId === 'speak') return <ConversationView t={t} language={language} />
     if (route.tripId === 'voice') return <VoiceTestView t={t} language={language} />
-    if (route.tripId === 'guide') return <GuideView t={t} language={language} />
+    if (route.tripId === 'guide') {
+      return <GuideView t={t} language={language} trips={data.trips} onChange={changeTrip} />
+    }
     if (route.tripId === 'translate') return <TranslatorView t={t} language={language} />
     if (route.tripId === 'emergency') {
       return <EmergencyView t={t} language={language} onCountry={() => {}} />

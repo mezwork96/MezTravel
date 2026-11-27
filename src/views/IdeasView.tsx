@@ -1,8 +1,11 @@
 import Proposals from '../components/Proposals'
+import Questions from '../components/Questions'
+import { useGuide } from '../guide/useGuide'
 import { formatDate, type Dictionary, type Language } from '../i18n'
 import {
   clearInterests,
   defaultPreferences,
+  interestGroups,
   interests,
   maxPeople,
   ownInterests,
@@ -10,6 +13,7 @@ import {
   toggleInterest,
   type Preferences,
 } from '../interests'
+import { findDestination, guideCovers } from '../planner'
 import { requestDays } from '../proposals'
 import { link } from '../route'
 import { listDays, type Trip } from '../trips'
@@ -28,6 +32,23 @@ export default function IdeasView({ t, language, trip, date, onChange }: Props) 
   const days = listDays(trip.startDate, trip.endDate)
   const preferences = trip.preferences ?? defaultPreferences
   const chosen = date ? (ownInterests(preferences, date) ?? []) : preferences.interests
+
+  // Combien de lieux du guide pour chaque envie, dans les villes du voyage.
+  const guide = useGuide()
+  const covered = guide !== null && guide !== 'error' && guideCovers(guide, trip)
+  const cities = covered
+    ? new Set(
+        [...(trip.stages ?? []).map((s) => s.city), trip.destination]
+          .map((city) => findDestination(guide, city)?.id)
+          .filter(Boolean),
+      )
+    : new Set()
+  const countFor = (id: string) =>
+    covered
+      ? guide.places.filter(
+          (p) => (!cities.size || cities.has(p.destination)) && p.interests.includes(id),
+        ).length
+      : null
 
   // Chaque choix est enregistré tout de suite.
   const change = (next: (current: Preferences) => Preferences) =>
@@ -124,19 +145,30 @@ export default function IdeasView({ t, language, trip, date, onChange }: Props) 
         </label>
         <p className="muted">{date ? t.dayInterestsNote : t.tripInterestsNote}</p>
 
-        <div className="chips" role="group" aria-label={t.interestsTitle}>
-          {interests.map((interest) => (
-            <button
-              key={interest.id}
-              type="button"
-              className="chip"
-              aria-pressed={chosen.includes(interest.id)}
-              onClick={() => change((p) => toggleInterest(p, interest.id, date))}
-            >
-              <span aria-hidden="true">{interest.icon}</span> {interest[language]}
-            </button>
-          ))}
-        </div>
+        {covered && <p className="muted">{cities.size ? t.countInStages : t.countInGuide}</p>}
+        {interestGroups.map((group) => (
+          <div key={group.en} role="group" aria-label={group[language]}>
+            <h3 className="group-title">{group[language]}</h3>
+            <div className="chips">
+              {interests
+                .filter((interest) => group.ids.includes(interest.id))
+                .map((interest) => (
+                  <button
+                    key={interest.id}
+                    type="button"
+                    className="chip"
+                    aria-pressed={chosen.includes(interest.id)}
+                    onClick={() => change((p) => toggleInterest(p, interest.id, date))}
+                  >
+                    <span aria-hidden="true">{interest.icon}</span> {interest[language]}
+                    {countFor(interest.id) !== null && (
+                      <span className="count"> {countFor(interest.id)}</span>
+                    )}
+                  </button>
+                ))}
+            </div>
+          </div>
+        ))}
 
         <p role="status">
           {date && chosen.length === 0 ? t.dayUsesTrip : `${t.selectedCount}: ${chosen.length}`}
@@ -151,6 +183,15 @@ export default function IdeasView({ t, language, trip, date, onChange }: Props) 
           </button>
         )}
       </section>
+
+      <Questions
+        key={date ?? 'trip'}
+        t={t}
+        language={language}
+        preferences={preferences}
+        date={date}
+        onChange={change}
+      />
 
       <div className="create-bar">
         <button

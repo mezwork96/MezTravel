@@ -24,6 +24,8 @@ export type GuidePlace = {
   note: Localized
   source: string
   checked: boolean // la page a été ouverte pendant la recherche
+  highlight?: boolean // présenté comme incontournable par un office de tourisme
+  booking?: boolean // réservation à l'avance obligatoire
   when?: Availability
 }
 

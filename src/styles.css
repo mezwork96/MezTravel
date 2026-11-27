@@ -602,6 +602,32 @@ main .segmented button[aria-pressed='true'] {
   user-select: text;
 }
 
+/* Questions et familles d'envies. */
+fieldset.question {
+  border: 0;
+  padding: 0;
+  margin: 12px 0 0;
+}
+fieldset.question legend {
+  font-weight: 600;
+}
+.group-title {
+  margin: 14px 0 0;
+  font-size: 1rem;
+}
+.chip .count {
+  margin-left: 8px;
+  opacity: 0.65;
+  font-size: 0.85em;
+}
+.stage-info p {
+  margin: 4px 0;
+}
+button.chip.favourite {
+  display: block;
+  margin-top: 6px;
+}
+
 /* Traducteur vocal : une moitié par personne. */
 .half select,
 .half textarea,

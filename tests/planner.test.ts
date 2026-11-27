@@ -48,6 +48,52 @@ test('les 47 préfectures sont toutes dans le guide, avec des lieux', () => {
   assert.equal(findDestination(guide, 'Hyogo'), undefined)
 })
 
+const plan = (answers: Record<string, string>, changes: Partial<Trip> = {}, prefs = likes('temples', 'nightlife', 'hiking', 'museums')) => {
+  const t = trip({ destination: 'Tokyo', startDate: '2027-04-01', endDate: '2027-04-04', ...changes })
+  return planDays(guide, t, { ...prefs, answers }, listDays(t.startDate, t.endDate), 'plan', 'it')
+}
+const placeOf = (title: string) => guide.places.find((p) => p.name === title)!
+
+test('les réponses aux questions changent l’itinéraire', () => {
+  assert.equal(plan({ start: 'early' }).proposals[0].time, '08:00')
+  assert.equal(plan({ start: 'late' }).proposals[0].time, '11:00')
+  assert.ok(plan({ evening: 'never' }).proposals.every((p) => placeOf(p.title).slot !== 'evening'))
+  assert.ok(plan({ walking: 'little' }).proposals.every((p) => !placeOf(p.title).interests.includes('hiking')))
+  assert.ok(
+    plan({ children: 'yes' }).proposals.every(
+      (p) => !placeOf(p.title).interests.some((i) => i === 'bars' || i === 'nightlife'),
+    ),
+  )
+  const lunches = plan({ lunch: 'yes' }, {}, likes('temples', 'museums')).proposals.filter((p) => p.notes.startsWith('Per pranzo.'))
+  assert.ok(lunches.length >= 2)
+  assert.ok(lunches.every((p) => p.time >= '11:30' && p.time <= '13:30'), lunches.map((p) => p.time).join())
+})
+
+test('les réponses d’une journée ne valent que ce jour-là', () => {
+  const prefs = { ...likes('temples', 'museums'), dayAnswers: [{ date: '2027-04-02', pace: 'calm' as const, answers: { start: 'late' } }] }
+  const days = plan({}, {}, prefs).proposals
+  assert.equal(days.find((p) => p.date === '2027-04-02')!.time, '11:00')
+  assert.ok(days.find((p) => p.date === '2027-04-01')!.time < '11:00')
+  assert.ok(days.filter((p) => p.date === '2027-04-02').length <= 2)
+})
+
+test('un lieu favori est placé même hors des envies, sinon il est signalé', () => {
+  const favourite = guide.places.find((p) => p.destination === 'tokyo' && !p.when && p.interests.includes('themeParks'))!
+  const result = plan({}, { mustDo: [favourite.id] }, likes('temples'))
+  assert.ok(result.proposals.some((p) => p.title === favourite.name))
+  assert.deepEqual(result.missed, [])
+  const far = guide.places.find((p) => p.destination === 'sapporo' && !p.when)!
+  assert.deepEqual(plan({}, { mustDo: [far.id] }, likes('temples')).missed, [far.name])
+})
+
+test('les questions et les favoris sont vérifiés dans les données', () => {
+  const good = trip({ mustDo: ['a'], preferences: { ...likes('temples'), top: ['temples'], answers: { start: 'early' }, dayAnswers: [{ date: '2027-04-01', answers: { evening: 'never' } }] } })
+  const read = (t: unknown) => parseData(JSON.stringify({ version: 1, trips: [t] }))
+  assert.ok(read(good))
+  assert.equal(read({ ...good, mustDo: [3] }), null)
+  assert.equal(read({ ...good, preferences: { ...good.preferences!, answers: { start: 'midnight' } } }), null)
+})
+
 test('remplacer ne vide jamais un jour qui ne reçoit rien', () => {
   const old = ['2027-04-01', '2027-04-02', '2027-04-02'].map((date, i) => ({
     id: `${i}`, date, time: '', title: `t${i}`, place: '', notes: '', auto: true,

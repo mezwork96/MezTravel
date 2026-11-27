@@ -1,5 +1,5 @@
 {
- "checkedOn": "2026-11-26",
+ "checkedOn": "2026-11-27",
  "destinations": [
   {
    "id": "tokyo",
@@ -874,7 +874,8 @@
     "fr": ""
    },
    "source": "https://www.gotokyo.org/en/spot/15/index.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "tokyo-sanja-matsuri",
@@ -1050,7 +1051,8 @@
     "fr": ""
    },
    "source": "https://www.gotokyo.org/en/spot/55/index.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "tokyo-ryogoku-sumo",
@@ -1131,7 +1133,8 @@
     "fr": "Surtout en espèces. Ne pas manger en marchant. Mieux le matin."
    },
    "source": "https://www.gotokyo.org/en/spot/65/index.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "tokyo-ginza",
@@ -1156,7 +1159,8 @@
     "fr": ""
    },
    "source": "https://www.gotokyo.org/en/destinations/central-tokyo/ginza/index.html",
-   "checked": false
+   "checked": false,
+   "highlight": true
   },
   {
    "id": "tokyo-kabukiza",
@@ -1438,7 +1442,8 @@
     "fr": ""
    },
    "source": "https://www.gotokyo.org/en/destinations/western-tokyo/harajuku/index.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "tokyo-shibuya",
@@ -1463,7 +1468,8 @@
     "fr": ""
    },
    "source": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
-   "checked": false
+   "checked": false,
+   "highlight": true
   },
   {
    "id": "tokyo-shibuya-sky",
@@ -1560,7 +1566,8 @@
     "fr": "Réservation à l'avance obligatoire (date et heure) ; pas de vente sur place."
    },
    "source": "https://www.ghibli-museum.jp/en/tickets/",
-   "checked": true
+   "checked": true,
+   "booking": true
   },
   {
    "id": "tokyo-wb-studio-tour",
@@ -1791,7 +1798,8 @@
     "fr": "Nouvel An chinois vers début février (date variable)."
    },
    "source": "https://www.japan.travel/en/spot/1600/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "yokohama-minato-mirai",
@@ -1817,7 +1825,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/2099/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "yokohama-cupnoodles",
@@ -1867,7 +1876,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/ma_50/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "yokohama-ramen-museum",
@@ -1940,7 +1950,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/1581/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kamakura-reitaisai-yabusame",
@@ -2019,7 +2030,8 @@
     "fr": "Règles sur la nourriture et les photos ; pas de drones."
    },
    "source": "https://kotoku-in.jp/en/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kamakura-daibutsu-trail",
@@ -2123,7 +2135,8 @@
     "fr": "Baignade interdite autour de l'île ; maillot requis dans certains bains mixtes du spa."
    },
    "source": "https://www.japan.travel/en/spot/2096/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nikko-toshogu",
@@ -2148,7 +2161,8 @@
     "fr": ""
    },
    "source": "https://www.visitnikko.jp/en/spots/shrines-and-temples-of-nikko/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nikko-yabusame-festival",
@@ -2202,7 +2216,8 @@
     "fr": ""
    },
    "source": "https://www.visitnikko.jp/en/spots/kegon-falls/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nikko-senjogahara",
@@ -2332,7 +2347,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/1564/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "hakone-gora-craft",
@@ -2380,7 +2396,8 @@
     "fr": "Fermeture possible à cause des gaz ; déconseillé en cas de troubles respiratoires ou cardiaques, de grossesse, aux nourrissons et aux personnes âgées."
    },
    "source": "https://www.japan.travel/en/spot/1566/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "hakone-lake-ashi",
@@ -2404,7 +2421,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/1569/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "hakone-hakone-shrine",
@@ -2501,7 +2519,8 @@
     "fr": "Montée à pied ; cerisiers mi-avril, couleurs d'automne en novembre."
    },
    "source": "https://www.japan.travel/en/spot/1334/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kawaguchiko-oshino-hakkai",
@@ -2525,7 +2544,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/1327/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kawaguchiko-yamanaka-watersports",
@@ -2744,7 +2764,8 @@
     "fr": ""
    },
    "source": "https://kyoto.travel/en/itineraries/higashiyama-at-dawn/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kyoto-yasaka-sannenzaka",
@@ -2796,7 +2817,8 @@
     "fr": "Respectez les habitants et les usages du quartier."
    },
    "source": "https://kyoto.travel/en/travel-inspiration/kyoto-nightlife-local-bars-and-nighttime-strolls-to-enjoy/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kyoto-pontocho",
@@ -2847,7 +2869,8 @@
     "fr": "Ne mangez pas en marchant : consommez sur place ou emportez."
    },
    "source": "https://www.japan.travel/en/spot/1174/",
-   "checked": false
+   "checked": false,
+   "highlight": true
   },
   {
    "id": "kyoto-nijo-castle",
@@ -2996,7 +3019,8 @@
     "fr": ""
    },
    "source": "https://kyoto.travel/en/see-and-do/area_kinugasa_kitano_nishijin.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kyoto-nishijin",
@@ -3102,7 +3126,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/1142/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kyoto-monkey-park",
@@ -3178,7 +3203,8 @@
     "fr": ""
    },
    "source": "https://kyoto.travel/en/areas/fushimi/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kyoto-fushimi-sake",
@@ -3404,7 +3430,8 @@
     "fr": ""
    },
    "source": "https://osaka-info.jp/en/osaka/basic/popular-spot/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "osaka-dotonbori",
@@ -3430,7 +3457,8 @@
     "fr": ""
    },
    "source": "https://osaka-info.jp/en/osaka/basic/popular-spot/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "osaka-hozenji",
@@ -3555,7 +3583,8 @@
     "fr": ""
    },
    "source": "https://osaka-info.jp/en/osaka/basic/popular-spot/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "osaka-umeda-sky",
@@ -3603,7 +3632,8 @@
     "fr": ""
    },
    "source": "https://osaka-info.jp/en/osaka/basic/popular-spot/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "osaka-usj",
@@ -3780,7 +3810,8 @@
     "fr": "Ne donnez que les biscuits pour cerfs ; évitez les mâles en période de reproduction."
    },
    "source": "https://narashikanko.or.jp/en/feature/narapark",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nara-todaiji",
@@ -3805,7 +3836,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/kansai/nara/nara-park-and-around/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nara-kofukuji",
@@ -3831,7 +3863,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/kansai/nara/nara-park-and-around/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nara-kasuga",
@@ -3855,7 +3888,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/kansai/nara/nara-park-and-around/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nara-wakakusa",
@@ -3956,7 +3990,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/kansai/hyogo/kobe-and-around/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kobe-nankinmachi",
@@ -3981,7 +4016,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/kansai/hyogo/kobe-and-around/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kobe-harbor",
@@ -4006,7 +4042,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/kansai/hyogo/kobe-and-around/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kobe-nada-sake",
@@ -4081,7 +4118,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/kansai/hyogo/kobe-and-around/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kobe-suma-beach",
@@ -4206,7 +4244,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/1030/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "himeji-kokoen",
@@ -4229,7 +4268,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/kansai/hyogo/himeji-and-around/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "himeji-engyoji",
@@ -4254,7 +4294,8 @@
     "fr": "Accès en bus et téléphérique."
    },
    "source": "https://visit-himeji.com/en/sightseeing/shoshazan-engyo-ji-temple/",
-   "checked": false
+   "checked": false,
+   "highlight": true
   },
   {
    "id": "koyasan-okunoin",
@@ -4278,7 +4319,8 @@
     "fr": ""
    },
    "source": "https://www.koyasan.or.jp/en/meguru/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "koyasan-garan",
@@ -4328,7 +4370,8 @@
     "fr": ""
    },
    "source": "https://visitwakayama.jp/en/itineraries/detail_11.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "koyasan-sutra-copying",
@@ -4426,7 +4469,8 @@
     "fr": "Tatouages admis dans les bains publics ; chacun a son jour de fermeture et Satono-yu est fermé pour travaux sans date de réouverture."
    },
    "source": "https://visitkinosaki.com/plan/visitor-info/faq/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kinosaki-ropeway",
@@ -4601,7 +4645,8 @@
     "fr": ""
    },
    "source": "https://dive-hiroshima.com/en/explore/2621/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "hiroshima-miyajima",
@@ -4627,7 +4672,8 @@
     "fr": "La vue dépend de la marée : vérifiez les horaires des marées."
    },
    "source": "https://www.japan.travel/en/spot/ma_179/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "hiroshima-misen",
@@ -4775,7 +4821,8 @@
     "fr": "Elles ouvrent le soir ; beaucoup n'acceptent que les espèces."
    },
    "source": "https://gofukuoka.jp/articles/detail/7228d79f-e6d9-490a-9f58-de5a914c740e",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "fukuoka-dazaifu",
@@ -4800,7 +4847,8 @@
     "fr": ""
    },
    "source": "https://www.dazaifutenmangu.or.jp/en/plan/first-time-visitors/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "fukuoka-kyushu-museum",
@@ -4995,7 +5043,8 @@
     "fr": ""
    },
    "source": "https://www.discover-nagasaki.com/en/sightseeing/126",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nagasaki-peace-park",
@@ -5018,7 +5067,8 @@
     "fr": "Cérémonie de la paix le 9 août."
    },
    "source": "https://www.japan.travel/en/spot/742/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nagasaki-glover",
@@ -5043,7 +5093,8 @@
     "fr": ""
    },
    "source": "https://www.discover-nagasaki.com/en/sightseeing/101",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nagasaki-inasa",
@@ -5115,7 +5166,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/754",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nagasaki-meganebashi",
@@ -5163,7 +5215,8 @@
     "fr": "Réservation obligatoire à l'avance auprès d'un opérateur."
    },
    "source": "https://www.discover-nagasaki.com/en/sightseeing/51797",
-   "checked": true
+   "checked": true,
+   "booking": true
   },
   {
    "id": "nagasaki-lantern-festival",
@@ -5215,7 +5268,8 @@
     "fr": ""
    },
    "source": "https://visitkanazawa.jp/en/attractions/detail_10106.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kanazawa-museum21",
@@ -5239,7 +5293,8 @@
     "fr": "Vérifiez les jours de fermeture."
    },
    "source": "https://visitkanazawa.jp/en/attractions/detail_10066.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kanazawa-crafts-museum",
@@ -5289,7 +5344,8 @@
     "fr": ""
    },
    "source": "https://visitkanazawa.jp/en/attractions/detail_10212.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kanazawa-omicho",
@@ -5339,7 +5395,8 @@
     "fr": ""
    },
    "source": "https://visitkanazawa.jp/en/attractions/detail_10195.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kanazawa-yamato-koji",
@@ -5413,7 +5470,8 @@
     "fr": ""
    },
    "source": "https://www.hida.jp/english/touristattractions/takayamacity/historyandculture/4000153.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "takayama-morning-market",
@@ -5437,7 +5495,8 @@
     "fr": "Le matin seulement ; moins d'étals sous la pluie ou en hiver."
    },
    "source": "https://www.hida.jp/english/touristattractions/takayamacity/historyandculture/4000162.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "takayama-jinya",
@@ -5536,7 +5595,8 @@
     "fr": ""
    },
    "source": "https://www.hida.jp/english/touristattractions/takayamacity/historyandculture/4000165.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "takayama-sake",
@@ -5584,7 +5644,8 @@
     "fr": "Environ 50 minutes en bus depuis Takayama."
    },
    "source": "https://www.japan.travel/en/spot/2031/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "takayama-shiroyama-view",
@@ -5631,7 +5692,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/1356/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "matsumoto-nawate",
@@ -5764,7 +5826,8 @@
      9,
      10
     ]
-   }
+   },
+   "highlight": true
   },
   {
    "id": "matsumoto-zenkoji",
@@ -5872,7 +5935,8 @@
     "fr": ""
    },
    "source": "https://www.sapporo.travel/en/spot/facility/odori_park/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "sapporo-snow-festival",
@@ -5900,7 +5964,8 @@
    "when": {
     "from": "02-04",
     "to": "02-11"
-   }
+   },
+   "highlight": true
   },
   {
    "id": "sapporo-nijo-market",
@@ -5973,7 +6038,8 @@
     "fr": "La visite guidée est facultative."
    },
    "source": "https://www.japan.travel/en/spot/1922/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "sapporo-moiwa",
@@ -6130,7 +6196,8 @@
     "fr": ""
    },
    "source": "https://discoversendai.travel/must-do/24-hours-in-sendai-the-ultimate-1-day-itinerary/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "sendai-castle-site",
@@ -6154,7 +6221,8 @@
     "fr": ""
    },
    "source": "https://discoversendai.travel/must-do/24-hours-in-sendai-the-ultimate-1-day-itinerary/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "sendai-morning-market",
@@ -6206,7 +6274,8 @@
     "fr": ""
    },
    "source": "https://discoversendai.travel/must-do/24-hours-in-sendai-the-ultimate-1-day-itinerary/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "sendai-tanabata",
@@ -6356,7 +6425,8 @@
     "fr": "L'intérieur du pavillon principal, ouvert depuis le 23 novembre 2026, exige une réservation datée et horaire. Les bâtiments voisins sont encore en restauration."
    },
    "source": "https://oki-park.jp/shurijo/en/ticket_guide/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "naha-kokusai",
@@ -6382,7 +6452,8 @@
     "fr": ""
    },
    "source": "https://visitokinawajapan.com/destinations/okinawa-main-island/southern-okinawa-main-island/naha/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "naha-makishi",
@@ -6455,7 +6526,8 @@
     "fr": ""
    },
    "source": "https://visitokinawajapan.com/destinations/okinawa-main-island/southern-okinawa-main-island/naha/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "naha-kerama",
@@ -6904,7 +6976,8 @@
     "fr": "Réservation en ligne (date et heure) ; ferme aussi entre les expositions."
    },
    "source": "https://www.gotokyo.org/en/spot/1/index.html",
-   "checked": true
+   "checked": true,
+   "booking": true
   },
   {
    "id": "tokyo-suehirotei",
@@ -7407,7 +7480,8 @@
     "fr": ""
    },
    "source": "https://visitkanagawa.jp/destination/aka-renga-soko-yokohama-red-brick-warehouse/109",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "yokohama-hammerhead",
@@ -7677,7 +7751,8 @@
     "fr": ""
    },
    "source": "https://visitkanagawa.jp/destination/komachi-street/374",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kamakura-wagashi",
@@ -7724,7 +7799,8 @@
     "fr": ""
    },
    "source": "https://visitkanagawa.jp/destination/hase-dera-temple/158",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kamakura-engakuji",
@@ -8257,12 +8333,20 @@
     "fr": "Musée du verre de Venise avec café-restaurant italien et boutique."
    },
    "note": {
-    "it": "Chiude per diversi giorni a gennaio e a volte tra le mostre.",
-    "en": "Closes for several days in January and sometimes between exhibitions.",
-    "fr": "Fermé plusieurs jours en janvier et parfois entre les expositions."
+    "it": "Chiuso dal 12 al 22 gennaio 2027; possibili altre chiusure tra una mostra e l'altra.",
+    "en": "Closed 12-22 January 2027; may also close between exhibitions.",
+    "fr": "Fermé du 12 au 22 janvier 2027 ; fermetures possibles entre deux expositions."
    },
    "source": "https://visitkanagawa.jp/destination/hakone-venetian-glass-museum/384",
-   "checked": true
+   "checked": true,
+   "when": {
+    "closed": [
+     [
+      "2027-01-12",
+      "2027-01-22"
+     ]
+    ]
+   }
   },
   {
    "id": "hakone-lalique",
@@ -8806,7 +8890,8 @@
     "fr": "Réservation obligatoire."
    },
    "source": "https://visit-himeji.com/en/activities/japanese-calligraphy-experience-hidden-jam-in-himejis-castle-town/",
-   "checked": true
+   "checked": true,
+   "booking": true
   },
   {
    "id": "himeji-bar-hopping",
@@ -8947,7 +9032,8 @@
     "fr": ""
    },
    "source": "https://www.visitnara.jp/venues/A00430/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nara-isuien",
@@ -9597,7 +9683,8 @@
     "fr": "Réservation obligatoire, 20 ans minimum, pièce d'identité requise."
    },
    "source": "https://visitkinosaki.com/tour-packages/japanese-snack-pub-hopping-tour-with-english-speaking-guide/",
-   "checked": true
+   "checked": true,
+   "booking": true
   },
   {
    "id": "kinosaki-kintsugi",
@@ -9620,7 +9707,8 @@
     "fr": "Réserver à l'avance ; dès 12 ans."
    },
    "source": "https://visitkinosaki.com/tour-packages/diy-kintsugi-ceramics-workshop-with-english-speaking-guide",
-   "checked": true
+   "checked": true,
+   "booking": true
   },
   {
    "id": "kinosaki-izushi-soba",
@@ -9643,7 +9731,8 @@
     "fr": "Réservation obligatoire ; déconseillé en cas d'allergie au sarrasin."
    },
    "source": "https://visitkinosaki.com/tour-packages/soba-making-activity/",
-   "checked": true
+   "checked": true,
+   "booking": true
   },
   {
    "id": "kinosaki-izushi-eirakukan",
@@ -9747,7 +9836,8 @@
     "fr": "Réservation obligatoire."
    },
    "source": "https://osaka-info.jp/experience/en/osaka/activity/424",
-   "checked": true
+   "checked": true,
+   "booking": true
   },
   {
    "id": "osaka-home-cooking",
@@ -10155,8 +10245,16 @@
     "en": "",
     "fr": ""
    },
-   "source": "https://www.artm.pref.hyogo.jp/eng/access/rinen/index.html",
-   "checked": false
+   "source": "https://www.artm.pref.hyogo.jp/",
+   "checked": true,
+   "when": {
+    "closed": [
+     [
+      "2027-02-24",
+      "2027-03-05"
+     ]
+    ]
+   }
   },
   {
    "id": "kobe-jazz",
@@ -10723,7 +10821,8 @@
     "fr": "Réservation obligatoire jusqu’à une semaine avant ; 2 personnes minimum."
    },
    "source": "https://visitkanazawa.jp/en/activities/detail_703.html",
-   "checked": true
+   "checked": true,
+   "booking": true
   },
   {
    "id": "kanazawa-koshiyama-wagashi",
@@ -10746,7 +10845,8 @@
     "fr": "Réservation obligatoire."
    },
    "source": "https://www.ishikawatravel.jp/en/spots/japanese-confectionary-experience/",
-   "checked": true
+   "checked": true,
+   "booking": true
   },
   {
    "id": "kanazawa-kaga-yuzen",
@@ -11026,7 +11126,8 @@
     "fr": ""
    },
    "source": "https://www.crossroadfukuoka.jp/en/experience/12901",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "fukuoka-kokura-racecourse",
@@ -11274,7 +11375,8 @@
     "fr": "Réserver au moins la veille."
    },
    "source": "https://www.hida.jp/english/recreationandleisure/foodandculture/4000078.html",
-   "checked": true
+   "checked": true,
+   "booking": true
   },
   {
    "id": "takayama-senbei",
@@ -11458,7 +11560,8 @@
    "checked": true,
    "when": {
     "someDays": true
-   }
+   },
+   "booking": true
   },
   {
    "id": "matsumoto-coffee-marumo",
@@ -11667,7 +11770,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/550/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "sapporo-otaru-sushi-street",
@@ -11860,7 +11964,8 @@
     "fr": "Le donjon principal ne se visite pas actuellement."
    },
    "source": "https://www.nagoya-info.jp/en/spot/detail/1/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nagoya-atsuta",
@@ -11884,7 +11989,8 @@
     "fr": ""
    },
    "source": "https://www.nagoya-info.jp/en/spot/detail/11/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nagoya-scmaglev",
@@ -11908,7 +12014,8 @@
     "fr": "Certains simulateurs sont attribués par tirage au sort ; vérifier les jours de fermeture."
    },
    "source": "https://www.nagoya-info.jp/en/spot/detail/16/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nagoya-osu",
@@ -11933,7 +12040,8 @@
     "fr": ""
    },
    "source": "https://www.nagoya-info.jp/en/spot/detail/19/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nagoya-tokugawa-museum",
@@ -11957,7 +12065,8 @@
     "fr": ""
    },
    "source": "https://www.nagoya-info.jp/en/spot/detail/14/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "nagoya-ghibli-park",
@@ -11982,7 +12091,8 @@
     "fr": "Billets à réserver à l'avance, non vendus sur place ; vérifier le calendrier des fermetures."
    },
    "source": "https://www.nagoya-info.jp/en/spot/detail/249/",
-   "checked": true
+   "checked": true,
+   "booking": true
   },
   {
    "id": "nagoya-higashiyama-zoo",
@@ -12031,7 +12141,8 @@
     "fr": ""
    },
    "source": "https://www.okayama-japan.jp/en/spot/10672",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "okayama-castle",
@@ -12083,7 +12194,8 @@
     "fr": ""
    },
    "source": "https://www.okayama-japan.jp/en/spot/10736",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "okayama-ohara",
@@ -12115,7 +12227,8 @@
       "2027-01-15"
      ]
     ]
-   }
+   },
+   "highlight": true
   },
   {
    "id": "okayama-kojima-jeans",
@@ -12139,7 +12252,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/917/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "okayama-washuzan",
@@ -12213,7 +12327,8 @@
     "fr": ""
    },
    "source": "https://www.my-kagawa.jp/en/see-and-do/10077",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "takamatsu-arcades",
@@ -12262,7 +12377,8 @@
     "fr": ""
    },
    "source": "https://www.my-kagawa.jp/en/see-and-do/10080",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "takamatsu-shikoku-mura",
@@ -12313,7 +12429,8 @@
     "fr": "De nombreux sites ferment le lundi (règles spéciales les jours fériés). Environ une heure de ferry depuis Takamatsu."
    },
    "source": "https://www.my-kagawa.jp/en/see-and-do/10079",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "takamatsu-chichu",
@@ -12343,7 +12460,8 @@
     "closedWeekdays": [
      1
     ]
-   }
+   },
+   "booking": true
   },
   {
    "id": "takamatsu-kotohira",
@@ -12416,7 +12534,8 @@
     "fr": ""
    },
    "source": "https://www.visitehimejapan.com/en/things-to-do/spots/0020/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "matsuyama-dogo-honkan",
@@ -12441,7 +12560,8 @@
     "fr": "Fermé un jour en décembre pour le grand nettoyage. Se renseigner directement pour les tatouages."
    },
    "source": "https://dogo.jp/en/honkan.php",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "matsuyama-dogo-haikara",
@@ -12489,7 +12609,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/820/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "matsuyama-tobeyaki",
@@ -12560,7 +12681,8 @@
     "fr": "À regarder seulement : pas de baignade."
    },
    "source": "https://www.japan.travel/en/spot/713/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "beppu-takegawara",
@@ -12609,7 +12731,8 @@
     "fr": "Ne pas nourrir, toucher ni fixer les singes."
    },
    "source": "https://www.japan.travel/en/spot/699/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "beppu-umitamago",
@@ -12707,7 +12830,8 @@
     "fr": "Après le séisme de juillet 2026, réouverture le 13 août 2026 ; vérifier les zones accessibles."
    },
    "source": "https://kumamoto.guide/en/spots/detail/12303",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kumamoto-suizenji",
@@ -12829,7 +12953,8 @@
     "fr": "Un pass en bois donne accès à plusieurs bains ; photos généralement interdites. Se renseigner pour les tatouages."
    },
    "source": "https://kumamoto.guide/en/spots/detail/1756",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kagoshima-sengan-en",
@@ -12854,7 +12979,16 @@
     "fr": "Fermé le premier dimanche de mars pour le marathon."
    },
    "source": "https://www.kagoshima-yokanavi.jp/en/spot/10006",
-   "checked": true
+   "checked": true,
+   "when": {
+    "closed": [
+     [
+      "2027-03-07",
+      "2027-03-07"
+     ]
+    ]
+   },
+   "highlight": true
   },
   {
    "id": "kagoshima-sakurajima",
@@ -12878,7 +13012,8 @@
     "fr": "Consulter les informations sur l'activité volcanique ; cendres possibles."
    },
    "source": "https://www.kagoshima-yokanavi.jp/en/spot/10021",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kagoshima-shiroyama",
@@ -12954,7 +13089,19 @@
     "fr": "Fermé quatre jours à partir du premier lundi de décembre."
    },
    "source": "https://www.kagoshima-yokanavi.jp/en/spot/10030",
-   "checked": true
+   "checked": true,
+   "when": {
+    "closed": [
+     [
+      "2026-12-07",
+      "2026-12-10"
+     ],
+     [
+      "2027-12-06",
+      "2027-12-09"
+     ]
+    ]
+   }
   },
   {
    "id": "kagoshima-meiji-museum",
@@ -13041,7 +13188,8 @@
     "fr": "Téléphérique et route connaissent des interruptions saisonnières (automne et hiver) : vérifier."
    },
    "source": "https://www.hakodate.travel/en/information/mt-hakodate/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "hakodate-motomachi",
@@ -13066,7 +13214,8 @@
     "fr": ""
    },
    "source": "https://www.hakodate.travel/en/top7/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "hakodate-bay-area",
@@ -13092,7 +13241,8 @@
     "fr": ""
    },
    "source": "https://www.hakodate.travel/en/top7/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "hakodate-morning-market",
@@ -13116,7 +13266,8 @@
     "fr": ""
    },
    "source": "https://www.hakodate.travel/en/top7/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "hakodate-goryokaku",
@@ -13141,7 +13292,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/1903/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "hakodate-yunokawa",
@@ -13164,7 +13316,8 @@
     "fr": ""
    },
    "source": "https://www.hakodate.travel/en/top7/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "hakodate-onuma",
@@ -13220,7 +13373,8 @@
       "2027-08-10"
      ]
     ]
-   }
+   },
+   "highlight": true
   },
   {
    "id": "aomori-nebuta-festival",
@@ -13250,7 +13404,8 @@
     ],
     "from": "08-02",
     "to": "08-07"
-   }
+   },
+   "highlight": true
   },
   {
    "id": "aomori-gyosai-center",
@@ -13298,7 +13453,8 @@
     "fr": ""
    },
    "source": "https://aomori-tourism.com/en/spot/detail_7.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "aomori-museum-of-art",
@@ -13322,7 +13478,8 @@
     "fr": "Fermé les 2e et 4e lundis du mois et pendant le Nouvel An."
    },
    "source": "https://aomori-tourism.com/en/spot/detail_1664.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "aomori-hakkoda-ropeway",
@@ -13395,7 +13552,8 @@
     "fr": "Baignade et snorkeling interdits dans la baie."
    },
    "source": "https://visitokinawajapan.com/destinations/yaeyama-islands/ishigaki-island/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "ishigaki-manta-scramble",
@@ -13587,7 +13745,8 @@
     "fr": ""
    },
    "source": "https://www.tohokukanko.jp/en/attractions/detail_1568.html",
-   "checked": false
+   "checked": false,
+   "highlight": true
   },
   {
    "id": "morioka-motsuji",
@@ -13709,7 +13868,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/1812/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "morioka-handiworks",
@@ -13810,7 +13970,8 @@
     "closedWeekdays": [
      3
     ]
-   }
+   },
+   "booking": true
   },
   {
    "id": "morioka-chagu-chagu",
@@ -13893,7 +14054,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/tohoku/akita/kakunodate-and-around/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "akita-aoyagi-house",
@@ -13965,7 +14127,8 @@
     "fr": "Vérifier avant l'état du sentier et les éventuelles alertes ours."
    },
    "source": "https://www.japan.travel/en/destinations/tohoku/akita/kakunodate-and-around/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "akita-nyuto-onsen",
@@ -14090,7 +14253,8 @@
    "when": {
     "from": "08-03",
     "to": "08-06"
-   }
+   },
+   "highlight": true
   },
   {
    "id": "akita-namahage-museum",
@@ -14192,7 +14356,8 @@
     "fr": "Environ mille marches à monter."
    },
    "source": "https://www.japan.travel/en/spot/1796/",
-   "checked": false
+   "checked": false,
+   "highlight": true
   },
   {
    "id": "yamagata-zao-snow-monsters",
@@ -14224,7 +14389,8 @@
      3
     ],
     "someDays": true
-   }
+   },
+   "highlight": true
   },
   {
    "id": "yamagata-zao-onsen",
@@ -14249,7 +14415,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/tohoku/yamagata/yamagata-and-around/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "yamagata-ginzan-onsen",
@@ -14474,7 +14641,8 @@
     "fr": ""
    },
    "source": "https://fukushima.travel/itineraries/day-trip-in-aizu-wakamatsu-city/6",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "aizuwakamatsu-akabeko",
@@ -14523,7 +14691,8 @@
     "fr": ""
    },
    "source": "https://fukushima.travel/destination/sazaedo-temple/157",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "aizuwakamatsu-higashiyama-onsen",
@@ -14572,7 +14741,8 @@
     "fr": ""
    },
    "source": "https://fukushima.travel/destination/ouchi-juku/11",
-   "checked": false
+   "checked": false,
+   "highlight": true
   },
   {
    "id": "aizuwakamatsu-goshikinuma",
@@ -14787,7 +14957,8 @@
     "fr": "La fête des pruniers a lieu vers février-mars."
    },
    "source": "https://www.japan.travel/en/uk/inspiration/ibaraki-prefecture-crash-course-exploring-the-enthralling-east-coast/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "mito-hitachi-seaside-park",
@@ -14810,7 +14981,8 @@
     "fr": ""
    },
    "source": "https://visit.ibarakiguide.jp/en/column/27000/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "mito-oarai-isosaki",
@@ -14835,7 +15007,8 @@
     "fr": ""
    },
    "source": "https://visit.ibarakiguide.jp/en/column/27000/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "mito-aquaworld",
@@ -14963,7 +15136,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/uk/inspiration/ibaraki-prefecture-crash-course-exploring-the-enthralling-east-coast/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "mito-mount-tsukuba",
@@ -15026,7 +15200,8 @@
       "2027-12-31"
      ]
     ]
-   }
+   },
+   "highlight": true
   },
   {
    "id": "kusatsu-yubatake",
@@ -15050,7 +15225,8 @@
     "fr": "L'eau de Kusatsu est très acide."
    },
    "source": "https://www.japan.travel/en/destinations/kanto/gunma/kusatsu-area/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kusatsu-netsunoyu",
@@ -15363,7 +15539,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/1424/",
-   "checked": false
+   "checked": false,
+   "highlight": true
   },
   {
    "id": "kawagoe-candy-alley",
@@ -15387,7 +15564,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/kanto/saitama/kawagoe-area/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kawagoe-kitain",
@@ -15411,7 +15589,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/kanto/saitama/kawagoe-area/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kawagoe-hikawa-shrine",
@@ -15537,7 +15716,8 @@
    "checked": true,
    "when": {
     "someDays": true
-   }
+   },
+   "booking": true
   },
   {
    "id": "kawagoe-moominvalley",
@@ -15676,7 +15856,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/kanto/chiba/narita-and-around/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "chiba-sawara",
@@ -15702,7 +15883,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/destinations/kanto/chiba/narita-and-around/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "chiba-rekihaku",
@@ -15929,7 +16111,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/280/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "niigata-northern-culture-museum",
@@ -16003,7 +16186,8 @@
     "fr": ""
    },
    "source": "https://www.tohokukanko.jp/en/attractions/detail_1109.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "niigata-sado-gold-mine",
@@ -16027,7 +16211,8 @@
     "fr": "Sur l'île de Sado : il faut traverser en bateau."
    },
    "source": "https://www.japan.travel/en/world-heritage/sado-island-gold-mines-unesco/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "niigata-tarai-bune",
@@ -16365,7 +16550,8 @@
     "fr": "Le guide bénévole se réserve une semaine à l'avance."
    },
    "source": "https://visit-toyama-japan.com/en/places-to-go/41003",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "toyama-himi-banya",
@@ -16475,7 +16661,8 @@
      10,
      11
     ]
-   }
+   },
+   "highlight": true
   },
   {
    "id": "toyama-alpine-route",
@@ -16512,7 +16699,8 @@
      10,
      11
     ]
-   }
+   },
+   "highlight": true
   },
   {
    "id": "fukui-dinosaur-museum",
@@ -16531,12 +16719,13 @@
     "fr": "Grand musée consacré aux dinosaures."
    },
    "note": {
-    "it": "Chiude il 2° e 4° mercoledì salvo vacanze estive: controllare il calendario.",
-    "en": "Closed 2nd and 4th Wednesdays except summer holidays: check the calendar.",
-    "fr": "Fermé les 2e et 4e mercredis hors vacances d'été : consultez le calendrier."
+    "it": "Biglietti con data e ora, di regola da comprare in anticipo; il giorno stesso solo se restano posti. Chiuso il 2° e 4° mercoledì, tranne nelle vacanze estive.",
+    "en": "As a rule, buy dated, timed tickets in advance; same-day tickets only if places remain. Closed 2nd and 4th Wednesdays except summer holidays.",
+    "fr": "En principe, billets datés et horodatés à acheter à l'avance ; le jour même seulement s'il reste des places. Fermé les 2e et 4e mercredis, sauf vacances d'été."
    },
-   "source": "https://www.dinosaur.pref.fukui.jp/en/info.html",
-   "checked": true
+   "source": "https://www.dinosaur.pref.fukui.jp/guide/ticket.html",
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "fukui-eiheiji",
@@ -16561,7 +16750,8 @@
     "fr": "Méditation et nuitées en disponibilité limitée : renseignez-vous avant."
    },
    "source": "https://www.fuku-e.com/en/attractions/detail_1089.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "fukui-tojinbo",
@@ -16585,7 +16775,8 @@
     "fr": ""
    },
    "source": "https://www.fuku-e.com/en/attractions/detail_1476.html",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "fukui-awara-footbath",
@@ -16995,7 +17186,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/2040/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "shizuoka-shirahama-beach",
@@ -17111,7 +17303,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/1210/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "ise-okage-yokocho",
@@ -17135,7 +17328,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/itineraries/ise-shrine-toba-ago-bay-and-beyond/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "ise-meoto-iwa",
@@ -17434,7 +17628,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/1076/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "otsu-enryakuji",
@@ -17646,7 +17841,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/13/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "otsu-tanuki-village",
@@ -17704,7 +17900,8 @@
     "closedWeekdays": [
      1
     ]
-   }
+   },
+   "highlight": true
   },
   {
    "id": "otsu-miho-museum",
@@ -17744,7 +17941,8 @@
     "closedWeekdays": [
      1
     ]
-   }
+   },
+   "highlight": true
   },
   {
    "id": "tottori-sand-dunes",
@@ -17769,7 +17967,8 @@
     "fr": ""
    },
    "source": "https://www.tottori-tour.jp/en/sightseeing/456/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "tottori-sand-museum",
@@ -17820,7 +18019,8 @@
     "fr": ""
    },
    "source": "https://www.tottori-tour.jp/en/sightseeing/775/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "tottori-mitokusan",
@@ -17857,7 +18057,8 @@
      10,
      11
     ]
-   }
+   },
+   "highlight": true
   },
   {
    "id": "tottori-misasa-onsen",
@@ -18026,7 +18227,8 @@
     "fr": "L'ascension du sommet est éprouvante ; les sorties guidées se réservent."
    },
    "source": "https://www.tottori-tour.jp/en/sightseeing/844/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "tottori-ueda-museum",
@@ -18090,7 +18292,8 @@
     "fr": ""
    },
    "source": "https://www.kankou-shimane.com/en/destinations/9282",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "matsue-ancient-izumo-museum",
@@ -18188,7 +18391,8 @@
     "fr": ""
    },
    "source": "https://www.kankou-shimane.com/en/destinations/9289",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "matsue-horikawa-boat",
@@ -18236,7 +18440,8 @@
     "fr": ""
    },
    "source": "https://www.kankou-shimane.com/en/destinations/9290",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "matsue-tamatsukuri-onsen",
@@ -18259,7 +18464,8 @@
     "fr": ""
    },
    "source": "https://www.kankou-shimane.com/en/destinations/9283",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "matsue-magatama-workshop",
@@ -18306,7 +18512,8 @@
     "fr": ""
    },
    "source": "https://www.kankou-shimane.com/en/destinations/9287",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "matsue-aquas",
@@ -18381,7 +18588,8 @@
     "fr": ""
    },
    "source": "https://en.karusuto.com/spot/akiyoshido/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "yamaguchi-akiyoshidai",
@@ -18456,7 +18664,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/177/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "yamaguchi-yuda-onsen",
@@ -18527,7 +18736,8 @@
     "fr": "Réservation obligatoire."
    },
    "source": "https://www.hagishi.com/en/search/detail.php?d=700040",
-   "checked": true
+   "checked": true,
+   "booking": true
   },
   {
    "id": "yamaguchi-motonosumi",
@@ -18552,7 +18762,8 @@
     "fr": "Ni bus ni train : venir en voiture ou en taxi ; le vent peut être fort."
    },
    "source": "https://www.japan.travel/en/spot/866/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "yamaguchi-tsunoshima",
@@ -18577,7 +18788,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/858/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "yamaguchi-karato-market",
@@ -18604,7 +18816,8 @@
    "checked": true,
    "when": {
     "someDays": true
-   }
+   },
+   "highlight": true
   },
   {
    "id": "yamaguchi-kaikyokan",
@@ -18653,7 +18866,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/2191/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "tokushima-uzu-no-michi",
@@ -18708,7 +18922,8 @@
     "fr": "Choisir l'heure selon les marées."
    },
    "source": "https://www.japan.travel/en/spot/847/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "tokushima-otsuka-museum",
@@ -18834,7 +19049,8 @@
    "when": {
     "from": "08-12",
     "to": "08-15"
-   }
+   },
+   "highlight": true
   },
   {
    "id": "tokushima-ai-no-yakata",
@@ -18912,7 +19128,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/851/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "tokushima-oboke",
@@ -18936,7 +19153,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/849/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "tokushima-tsurugi",
@@ -18997,7 +19215,8 @@
     "fr": "Fermé du 26 décembre au 1er janvier."
    },
    "source": "https://visitkochijapan.com/en/see-and-do/10009",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kochi-hirome-market",
@@ -19022,7 +19241,8 @@
     "fr": "Les cartes sont souvent refusées ; quelques jours de fermeture par an."
    },
    "source": "https://visitkochijapan.com/en/see-and-do/10024",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kochi-sunday-market",
@@ -19080,7 +19300,8 @@
     "fr": "Baignade interdite en raison des forts courants."
    },
    "source": "https://visitkochijapan.com/en/see-and-do/10011",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kochi-makino-garden",
@@ -19127,7 +19348,8 @@
     "fr": "Les réservations de visites se font uniquement en japonais."
    },
    "source": "https://visitkochijapan.com/en/see-and-do/10056",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "kochi-ryugado",
@@ -19255,7 +19477,8 @@
     "from": "05-01",
     "to": "10-31",
     "someDays": true
-   }
+   },
+   "booking": true
   },
   {
    "id": "kochi-racecourse",
@@ -19307,7 +19530,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/762/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "saga-karatsu-kunchi",
@@ -19334,7 +19558,8 @@
    "when": {
     "from": "11-02",
     "to": "11-04"
-   }
+   },
+   "highlight": true
   },
   {
    "id": "saga-yobuko-market",
@@ -19407,7 +19632,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/322/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "saga-ceramic-museum",
@@ -19530,7 +19756,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/757/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "saga-balloon-fiesta",
@@ -19611,7 +19838,8 @@
     "fr": "Barques réservées uniquement en ligne, de 2 semaines à 2 jours avant (selon l'office du tourisme) ; vite complet."
    },
    "source": "https://www.kanko-miyazaki.jp/en/sightseeing/1001",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "miyazaki-yokagura",
@@ -19680,7 +19908,8 @@
     "fr": ""
    },
    "source": "https://www.miyazaki-city.tourism.or.jp/en/see-and-do/10002",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "miyazaki-aoshima-beach",
@@ -19728,7 +19957,8 @@
     "fr": ""
    },
    "source": "https://www.japan.travel/en/spot/627/",
-   "checked": true
+   "checked": true,
+   "highlight": true
   },
   {
    "id": "miyazaki-sunmesse",
@@ -19889,6 +20119,3201 @@
     "fr": ""
    },
    "source": "https://www.kanko-miyazaki.jp/en/sightseeing/1235",
+   "checked": true
+  },
+  {
+   "id": "tokyo-nezu-shrine",
+   "destination": "tokyo",
+   "name": "Nezu Shrine",
+   "area": "Yanaka",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 1,
+   "slot": "morning",
+   "about": {
+    "it": "Santuario con edifici storici e un giardino di azalee che fiorisce in primavera.",
+    "en": "Shrine with historic buildings and an azalea garden that blooms in spring.",
+    "fr": "Sanctuaire aux bâtiments anciens, avec un jardin d'azalées fleuri au printemps."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.gotokyo.org/en/spot/70/index.html",
+   "checked": false
+  },
+  {
+   "id": "tokyo-kanda-myojin",
+   "destination": "tokyo",
+   "name": "Kanda Myojin Shrine",
+   "area": "Akihabara",
+   "interests": [
+    "temples",
+    "historic",
+    "filmSpots"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Antico santuario vicino ad Akihabara, meta anche dei fan degli anime.",
+    "en": "Old shrine near Akihabara, also a pilgrimage spot for anime fans.",
+    "fr": "Ancien sanctuaire près d'Akihabara, aussi un lieu de pèlerinage pour les fans d'anime."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.japan.travel/en/spot/1701/",
+   "checked": false
+  },
+  {
+   "id": "tokyo-zojoji",
+   "destination": "tokyo",
+   "name": "Zojoji Temple",
+   "area": "Shiba",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Tempio con un'antica porta rossa e le tombe di sei shogun Tokugawa, accanto alla Tokyo Tower.",
+    "en": "Temple with an old red gate and the tombs of six Tokugawa shoguns, next to Tokyo Tower.",
+    "fr": "Temple à l'ancienne porte rouge, avec les tombes de six shoguns Tokugawa, près de la tour de Tokyo."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.japan.travel/en/spot/1636/",
+   "checked": true
+  },
+  {
+   "id": "tokyo-gotokuji",
+   "destination": "tokyo",
+   "name": "Gotokuji Temple",
+   "area": "Setagaya",
+   "interests": [
+    "temples"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Tempio legato alla leggenda del maneki-neko, il gatto portafortuna.",
+    "en": "Temple linked to the legend of the maneki-neko beckoning cat.",
+    "fr": "Temple lié à la légende du maneki-neko, le chat porte-bonheur."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://gotokuji.jp/en/manekineko/",
+   "checked": false
+  },
+  {
+   "id": "tokyo-hie-shrine",
+   "destination": "tokyo",
+   "name": "Hie Shrine",
+   "area": "Akasaka",
+   "interests": [
+    "temples"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Santuario nel centro di Tokyo, noto per la grande festa Sanno di giugno.",
+    "en": "Shrine in central Tokyo, known for its big Sanno Festival in June.",
+    "fr": "Sanctuaire du centre de Tokyo, connu pour la grande fête de Sanno en juin."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.gotokyo.org/en/spot/343/index.html",
+   "checked": false
+  },
+  {
+   "id": "tokyo-yushima-tenjin",
+   "destination": "tokyo",
+   "name": "Yushima Tenjin Shrine",
+   "area": "Ueno",
+   "interests": [
+    "temples"
+   ],
+   "hours": 0.5,
+   "slot": "any",
+   "about": {
+    "it": "Santuario dedicato allo studio, noto per i suoi alberi di susino.",
+    "en": "Shrine dedicated to learning, known for its plum trees.",
+    "fr": "Sanctuaire dédié aux études, connu pour ses pruniers."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.gotokyo.org/en/spot/ev149/index.html",
+   "checked": false
+  },
+  {
+   "id": "tokyo-shibamata",
+   "destination": "tokyo",
+   "name": "Shibamata Taishakuten and its approach street",
+   "area": "Shibamata",
+   "interests": [
+    "temples",
+    "historic",
+    "neighborhoods",
+    "streetFood"
+   ],
+   "hours": 2.5,
+   "slot": "any",
+   "about": {
+    "it": "Tempio dai ricchi intagli in fondo a una via di vecchie botteghe e specialità locali.",
+    "en": "Finely carved temple at the end of a street of old shops and food specialities.",
+    "fr": "Temple richement sculpté au bout d'une rue de vieilles boutiques et de spécialités."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.gotokyo.org/en/spot/33/index.html",
+   "checked": false
+  },
+  {
+   "id": "tokyo-jindaiji",
+   "destination": "tokyo",
+   "name": "Jindaiji Temple",
+   "area": "Chofu",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 2,
+   "slot": "any",
+   "about": {
+    "it": "Tempio molto antico a Chofu, vicino al giardino botanico.",
+    "en": "Very old temple in Chofu, next to the botanical garden.",
+    "fr": "Très ancien temple à Chofu, près du jardin botanique."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.gotokyo.org/en/destinations/outlying-area/chofu-fuchu-and-around/index.html",
+   "checked": false
+  },
+  {
+   "id": "tokyo-fukagawa-fudodo",
+   "destination": "tokyo",
+   "name": "Fukagawa Fudodo Temple",
+   "area": "Kiyosumi",
+   "interests": [
+    "temples"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Tempio buddhista dove si può assistere al rito del fuoco goma.",
+    "en": "Buddhist temple where visitors can watch the goma fire ritual.",
+    "fr": "Temple bouddhiste où l'on peut assister au rituel du feu goma."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.gotokyo.org/en/story/walks-and-tours/edo_castle_and_fukagawa/index.html",
+   "checked": false
+  },
+  {
+   "id": "tokyo-suga-shrine-stairs",
+   "destination": "tokyo",
+   "name": "Suga Shrine stairs (Your Name)",
+   "area": "Shinjuku",
+   "interests": [
+    "filmSpots"
+   ],
+   "hours": 0.5,
+   "slot": "any",
+   "about": {
+    "it": "La scalinata del santuario diventata simbolo del film Your Name.",
+    "en": "The shrine stairway that became a symbol of the film Your Name.",
+    "fr": "L'escalier du sanctuaire devenu un symbole du film Your Name."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.japan.travel/it/it/itineraries/giappone-film/",
+   "checked": true
+  },
+  {
+   "id": "tokyo-pokemon-center-mega",
+   "destination": "tokyo",
+   "name": "Pokemon Center Mega Tokyo",
+   "area": "Ikebukuro",
+   "interests": [
+    "gaming",
+    "shopping"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Grande negozio ufficiale Pokemon dentro Sunshine City.",
+    "en": "Large official Pokemon store inside Sunshine City.",
+    "fr": "Grande boutique officielle Pokémon dans Sunshine City."
+   },
+   "note": {
+    "it": "Controlla le eventuali limitazioni di ingresso.",
+    "en": "Check for any entry restrictions.",
+    "fr": "Vérifiez d'éventuelles restrictions d'entrée."
+   },
+   "source": "https://www.pokemon.co.jp/shop/en/pokecen/megatokyo/",
+   "checked": false
+  },
+  {
+   "id": "tokyo-namjatown",
+   "destination": "tokyo",
+   "name": "Namjatown",
+   "area": "Ikebukuro",
+   "interests": [
+    "themeParks",
+    "gaming"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Parco divertimenti al coperto di Bandai Namco, con una zona dedicata ai gyoza.",
+    "en": "Bandai Namco indoor theme park with an area devoted to gyoza.",
+    "fr": "Parc d'attractions couvert de Bandai Namco, avec un espace consacré aux gyoza."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.gotokyo.org/en/spot/626/index.html",
+   "checked": true
+  },
+  {
+   "id": "tokyo-joypolis",
+   "destination": "tokyo",
+   "name": "Tokyo Joypolis",
+   "area": "Odaiba",
+   "interests": [
+    "gaming",
+    "themeParks"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Parco al coperto con attrazioni, realtà virtuale ed eventi legati agli anime.",
+    "en": "Indoor park with rides, virtual reality and anime tie-in events.",
+    "fr": "Parc couvert avec attractions, réalité virtuelle et événements liés aux anime."
+   },
+   "note": {
+    "it": "Chiusure irregolari: controlla il calendario.",
+    "en": "Irregular closing days: check the calendar.",
+    "fr": "Fermetures irrégulières : vérifiez le calendrier."
+   },
+   "source": "https://www.gotokyo.org/en/spot/243/index.html",
+   "checked": true
+  },
+  {
+   "id": "tokyo-anime-station",
+   "destination": "tokyo",
+   "name": "Anime Tokyo Station",
+   "area": "Ikebukuro",
+   "interests": [
+    "gaming",
+    "museums"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Spazio dedicato agli anime, con mostre, proiezioni e laboratori.",
+    "en": "Space devoted to anime, with exhibitions, screenings and workshops.",
+    "fr": "Lieu consacré à l'animation, avec expositions, projections et ateliers."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://animetokyo.jp/en/",
+   "checked": true,
+   "when": {
+    "closedWeekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "id": "tokyo-suginami-animation",
+   "destination": "tokyo",
+   "name": "Suginami Animation Museum",
+   "area": "Ogikubo",
+   "interests": [
+    "museums",
+    "gaming"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Museo sulla storia e la produzione degli anime, con attività pratiche.",
+    "en": "Museum on the history and making of anime, with hands-on activities.",
+    "fr": "Musée sur l'histoire et la fabrication des anime, avec des activités pratiques."
+   },
+   "note": {
+    "it": "I gruppi devono prenotare. Possibili chiusure temporanee.",
+    "en": "Groups must reserve. Temporary closures possible.",
+    "fr": "Réservation obligatoire pour les groupes. Fermetures temporaires possibles."
+   },
+   "source": "https://sam.or.jp/english_home",
+   "checked": true,
+   "when": {
+    "closedWeekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "id": "tokyo-tokiwaso-manga",
+   "destination": "tokyo",
+   "name": "Tokiwaso Manga Museum",
+   "area": "Ikebukuro",
+   "interests": [
+    "museums",
+    "gaming"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Museo di quartiere dedicato alla casa Tokiwaso e agli autori di manga che la resero celebre.",
+    "en": "Museum devoted to the Tokiwaso apartment house and the manga artists who made it famous.",
+    "fr": "Musée consacré à l'immeuble Tokiwaso et aux auteurs de manga qui l'ont rendu célèbre."
+   },
+   "note": {
+    "it": "Chi prenota ha la precedenza all'ingresso.",
+    "en": "Visitors with reservations get priority.",
+    "fr": "Les visiteurs ayant réservé sont prioritaires."
+   },
+   "source": "https://tokiwasomm.jp/en/",
+   "checked": true,
+   "when": {
+    "closedWeekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "id": "tokyo-oedo-antique-market",
+   "destination": "tokyo",
+   "name": "Oedo Antique Market",
+   "area": "Marunouchi",
+   "interests": [
+    "markets",
+    "shopping"
+   ],
+   "hours": 1.5,
+   "slot": "morning",
+   "about": {
+    "it": "Mercato dell'antiquariato all'aperto davanti al Tokyo International Forum.",
+    "en": "Open-air antique market in front of Tokyo International Forum.",
+    "fr": "Marché d'antiquités en plein air devant le Tokyo International Forum."
+   },
+   "note": {
+    "it": "Di norma la 1a e la 3a domenica del mese; può saltare con la pioggia.",
+    "en": "Normally 1st and 3rd Sundays; rain may cancel it.",
+    "fr": "En principe les 1er et 3e dimanches ; la pluie peut l'annuler."
+   },
+   "source": "https://www.gotokyo.org/en/story/guide/tokyo-markets/index.html",
+   "checked": true,
+   "when": {
+    "someDays": true
+   }
+  },
+  {
+   "id": "tokyo-unu-farmers-market",
+   "destination": "tokyo",
+   "name": "Farmer's Market at UNU",
+   "area": "Shibuya",
+   "interests": [
+    "markets"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Mercato contadino del fine settimana davanti all'Università delle Nazioni Unite.",
+    "en": "Weekend farmers' market in front of the United Nations University.",
+    "fr": "Marché fermier du week-end devant l'Université des Nations unies."
+   },
+   "note": {
+    "it": "Sabato e domenica.",
+    "en": "Saturdays and Sundays.",
+    "fr": "Samedis et dimanches."
+   },
+   "source": "https://www.gotokyo.org/en/story/guide/tokyo-markets/index.html",
+   "checked": true,
+   "when": {
+    "someDays": true
+   }
+  },
+  {
+   "id": "tokyo-setagaya-boroichi",
+   "destination": "tokyo",
+   "name": "Setagaya Boro-ichi flea market",
+   "area": "Setagaya",
+   "interests": [
+    "markets",
+    "historic"
+   ],
+   "hours": 2.5,
+   "slot": "any",
+   "about": {
+    "it": "Grande e storico mercato delle pulci con centinaia di bancarelle.",
+    "en": "Large historic flea market with hundreds of stalls.",
+    "fr": "Grande brocante historique avec des centaines d'étals."
+   },
+   "note": {
+    "it": "Solo il 15-16 dicembre e il 15-16 gennaio (confermare l'anno).",
+    "en": "Only 15-16 December and 15-16 January (confirm each year).",
+    "fr": "Uniquement les 15-16 décembre et 15-16 janvier (à confirmer chaque année)."
+   },
+   "source": "https://www.gotokyo.org/en/spot/ev114/index.html",
+   "checked": true,
+   "when": {
+    "months": [
+     1,
+     12
+    ],
+    "someDays": true
+   }
+  },
+  {
+   "id": "tokyo-jingu-stadium",
+   "destination": "tokyo",
+   "name": "Baseball at Jingu Stadium (Yakult Swallows)",
+   "area": "Harajuku",
+   "interests": [
+    "sportEvents"
+   ],
+   "hours": 3.5,
+   "slot": "evening",
+   "about": {
+    "it": "Partita di baseball professionistico nello stadio di casa degli Yakult Swallows.",
+    "en": "Professional baseball at the home ground of the Yakult Swallows.",
+    "fr": "Match de baseball professionnel au stade des Yakult Swallows."
+   },
+   "note": {
+    "it": "Controlla calendario e stadio della stagione.",
+    "en": "Check the season's schedule and venue.",
+    "fr": "Vérifiez le calendrier et le stade de la saison."
+   },
+   "source": "https://www.yakult-swallows.co.jp/en",
+   "checked": false,
+   "when": {
+    "months": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "someDays": true
+   }
+  },
+  {
+   "id": "tokyo-oi-racecourse",
+   "destination": "tokyo",
+   "name": "Oi Racecourse night racing (Tokyo City Keiba)",
+   "area": "Shinagawa",
+   "interests": [
+    "horses",
+    "sportEvents",
+    "nightlife"
+   ],
+   "hours": 3,
+   "slot": "evening",
+   "about": {
+    "it": "Ippodromo vicino al centro, famoso per le corse serali illuminate.",
+    "en": "Racecourse close to the city, known for its floodlit evening races.",
+    "fr": "Hippodrome proche du centre, connu pour ses courses en nocturne."
+   },
+   "note": {
+    "it": "Notturne dalla primavera a fine anno; controlla i giorni di corsa.",
+    "en": "Night races from spring to year-end; check race days.",
+    "fr": "Nocturnes du printemps à la fin de l'année ; vérifiez les jours de course."
+   },
+   "source": "https://www.gotokyo.org/en/spot/348/index.html",
+   "checked": true,
+   "when": {
+    "someDays": true
+   }
+  },
+  {
+   "id": "tokyo-asakusa-yabusame",
+   "destination": "tokyo",
+   "name": "Asakusa Yabusame (horseback archery)",
+   "area": "Asakusa",
+   "interests": [
+    "horses",
+    "festivals",
+    "sportEvents"
+   ],
+   "hours": 2.5,
+   "slot": "afternoon",
+   "about": {
+    "it": "Arcieri a cavallo tirano al galoppo nel parco Sumida.",
+    "en": "Archers shoot targets from galloping horses in Sumida Park.",
+    "fr": "Des archers à cheval au galop tirent sur des cibles au parc Sumida."
+   },
+   "note": {
+    "it": "L'edizione 2026 aveva la data del 18 aprile; la data 2027 è da confermare. Visione dello yabusame a pagamento.",
+    "en": "The 2026 page showed 18 April; confirm the 2027 date. Yabusame viewing is paid.",
+    "fr": "La page 2026 indiquait le 18 avril ; date 2027 à confirmer. Yabusame payant."
+   },
+   "source": "https://www.gotokyo.org/en/spot/ev026/index.html",
+   "checked": true,
+   "when": {
+    "from": "04-10",
+    "to": "04-30",
+    "someDays": true
+   }
+  },
+  {
+   "id": "tokyo-jra-horse-show",
+   "destination": "tokyo",
+   "name": "JRA Horse Show (show jumping) at Baji Koen",
+   "area": "Setagaya",
+   "interests": [
+    "horses",
+    "sportEvents"
+   ],
+   "hours": 4,
+   "slot": "any",
+   "about": {
+    "it": "Concorso ippico della JRA nel parco equestre di Tokyo.",
+    "en": "JRA horse show at the Tokyo equestrian park.",
+    "fr": "Concours hippique de la JRA au parc équestre de Tokyo."
+   },
+   "note": {
+    "it": "Dal 2024 al 2026 si è svolto il 3-5 maggio; date 2027 da confermare.",
+    "en": "Held 3-5 May in 2024-2026; 2027 dates to be confirmed.",
+    "fr": "Tenu les 3-5 mai de 2024 à 2026 ; dates 2027 à confirmer."
+   },
+   "source": "https://www.jra.go.jp/facilities/bajikouen/taikai/",
+   "checked": true,
+   "when": {
+    "from": "05-03",
+    "to": "05-05",
+    "someDays": true
+   }
+  },
+  {
+   "id": "tokyo-kyunakagawa-kayak",
+   "destination": "tokyo",
+   "name": "Kayak on the Kyu-Nakagawa River",
+   "area": "Ojima",
+   "interests": [
+    "waterSports",
+    "activeSports"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Uscite in kayak a piccoli gruppi sul fiume, con vista sulla Skytree.",
+    "en": "Small-group kayak tours on the river with Skytree views.",
+    "fr": "Sorties en kayak en petit groupe sur la rivière, avec vue sur la Skytree."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.gotokyo.org/en/story/guide/enjoying-tokyos-open-air-spaces/",
+   "checked": false
+  },
+  {
+   "id": "tokyo-miyashita-park",
+   "destination": "tokyo",
+   "name": "Miyashita Park (bouldering and skate)",
+   "area": "Shibuya",
+   "interests": [
+    "activeSports"
+   ],
+   "hours": 2,
+   "slot": "any",
+   "about": {
+    "it": "Parco sul tetto con parete da boulder, skatepark e campo di sabbia.",
+    "en": "Rooftop park with a bouldering wall, skatepark and sand court.",
+    "fr": "Parc sur un toit avec mur d'escalade, skatepark et terrain de sable."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.gotokyo.org/en/spot/1844/index.html",
+   "checked": false
+  },
+  {
+   "id": "yokohama-fujiko-museum",
+   "destination": "yokohama",
+   "name": "Fujiko F. Fujio Museum (Doraemon)",
+   "area": "Kawasaki",
+   "interests": [
+    "museums",
+    "gaming",
+    "kids"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Museo di Kawasaki dedicato al creatore di Doraemon.",
+    "en": "Kawasaki museum devoted to the creator of Doraemon.",
+    "fr": "Musée de Kawasaki consacré au créateur de Doraemon."
+   },
+   "note": {
+    "it": "Prenotazione anticipata a orario obbligatoria.",
+    "en": "Timed advance reservation required.",
+    "fr": "Réservation à heure fixe obligatoire à l'avance."
+   },
+   "source": "https://fujiko-museum.com/english.html",
+   "checked": true,
+   "when": {
+    "closedWeekdays": [
+     2
+    ]
+   },
+   "booking": true
+  },
+  {
+   "id": "yokohama-kawasaki-racecourse",
+   "destination": "yokohama",
+   "name": "Kawasaki Racecourse night racing",
+   "area": "Kawasaki",
+   "interests": [
+    "horses",
+    "sportEvents",
+    "nightlife"
+   ],
+   "hours": 2,
+   "slot": "evening",
+   "about": {
+    "it": "Corse di cavalli, anche in notturna, vicino al centro di Kawasaki.",
+    "en": "Horse racing, including night meetings, near central Kawasaki.",
+    "fr": "Courses hippiques, aussi en nocturne, près du centre de Kawasaki."
+   },
+   "note": {
+    "it": "Notturne da aprile a dicembre; controlla i giorni.",
+    "en": "Night races April to December; check the days.",
+    "fr": "Nocturnes d'avril à décembre ; vérifiez les jours."
+   },
+   "source": "https://visitkanagawa.jp/destination/kawasaki-racecourse-watch-races/827",
+   "checked": true,
+   "when": {
+    "someDays": true
+   }
+  },
+  {
+   "id": "yokohama-sup-club",
+   "destination": "yokohama",
+   "name": "Yokohama SUP Club",
+   "area": "Sakuragicho-Noge",
+   "interests": [
+    "waterSports",
+    "activeSports"
+   ],
+   "hours": 2,
+   "slot": "any",
+   "about": {
+    "it": "Lezioni di stand up paddle per principianti su acqua calma.",
+    "en": "Beginner stand-up paddle lessons on calm water.",
+    "fr": "Cours de paddle pour débutants sur eau calme."
+   },
+   "note": {
+    "it": "Chiusure irregolari.",
+    "en": "Irregular closing days.",
+    "fr": "Fermetures irrégulières."
+   },
+   "source": "https://visitkanagawa.jp/destination/yokohama-sup-club",
+   "checked": false
+  },
+  {
+   "id": "kamakura-hayama-sup",
+   "destination": "kamakura",
+   "name": "SUP lesson at Hayama",
+   "area": "Hayama",
+   "interests": [
+    "waterSports",
+    "beaches"
+   ],
+   "hours": 2.5,
+   "slot": "any",
+   "about": {
+    "it": "Lezione di stand up paddle in piccoli gruppi sulla spiaggia di Hayama.",
+    "en": "Small-group stand-up paddle lesson off the beach at Hayama.",
+    "fr": "Cours de paddle en petit groupe depuis la plage de Hayama."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://visitkanagawa.jp/destination/sup-at-hayama-ocean-sports/1337",
+   "checked": false
+  },
+  {
+   "id": "kamakura-miura-horse-trekking",
+   "destination": "kamakura",
+   "name": "Horse Trekking Farm Miura Kaigan (beach riding)",
+   "area": "Miura Kaigan",
+   "interests": [
+    "horses",
+    "beaches",
+    "activeSports"
+   ],
+   "hours": 2,
+   "slot": "any",
+   "about": {
+    "it": "Uscite a cavallo sulla spiaggia, fin tra le onde, per tutti i livelli.",
+    "en": "Beach rides right into the waves, for all levels.",
+    "fr": "Balades à cheval sur la plage, jusque dans les vagues, pour tous les niveaux."
+   },
+   "note": {
+    "it": "Prenotazione online o per telefono. Chiuso il martedì e un mercoledì al mese (il 2°).",
+    "en": "Book online or by phone. Closed Tuesdays and every second Wednesday.",
+    "fr": "Réservation en ligne ou par téléphone. Fermé le mardi et un mercredi sur deux (2e)."
+   },
+   "source": "https://visitkanagawa.jp/destination/horse-trekking-farm-miura-kaigan/1697",
+   "checked": false,
+   "when": {
+    "closedWeekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "id": "hakone-oi-matsuda-riding",
+   "destination": "hakone",
+   "name": "Oi Matsuda Horse Riding Club",
+   "area": "Oi",
+   "interests": [
+    "horses",
+    "activeSports"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Circolo ippico con lezioni sia per principianti sia per chi prepara le gare.",
+    "en": "Riding club with lessons for beginners and for competition riders.",
+    "fr": "Club hippique avec cours pour débutants comme pour cavaliers de compétition."
+   },
+   "note": {
+    "it": "Chiuso il mercoledì. A distanza da Hakone.",
+    "en": "Closed Wednesdays. Some distance from Hakone.",
+    "fr": "Fermé le mercredi. À distance de Hakone."
+   },
+   "source": "https://visitkanagawa.jp/destination/oi-matsuda-horse-riding-club/1660",
+   "checked": true,
+   "when": {
+    "closedWeekdays": [
+     3
+    ]
+   }
+  },
+  {
+   "id": "hakone-choanji",
+   "destination": "hakone",
+   "name": "Choanji Temple",
+   "area": "Sengokuhara",
+   "interests": [
+    "temples",
+    "nature"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Tempio con centinaia di statue di discepoli del Buddha sparse sul pendio.",
+    "en": "Temple with hundreds of statues of Buddha's disciples scattered on the hillside.",
+    "fr": "Temple aux centaines de statues de disciples du Bouddha dispersées sur la colline."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.hakonenavi.jp/international/en/spot/353",
+   "checked": false
+  },
+  {
+   "id": "kawaguchiko-yamanashi-equestrian",
+   "destination": "kawaguchiko",
+   "name": "Yamanashi Equestrian Center",
+   "area": "Kobuchizawa",
+   "interests": [
+    "horses",
+    "sportEvents"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Impianto equestre di Kobuchizawa, dove ogni estate si tiene un campionato nazionale aperto al pubblico.",
+    "en": "Equestrian venue in Kobuchizawa, with a national championship open to the public each summer.",
+    "fr": "Site équestre de Kobuchizawa, avec chaque été un championnat national ouvert au public."
+   },
+   "note": {
+    "it": "Lontano dal lago Kawaguchi; verifica le date delle gare.",
+    "en": "Far from Lake Kawaguchi; check competition dates.",
+    "fr": "Loin du lac Kawaguchi ; vérifiez les dates des concours."
+   },
+   "source": "https://www.yamanashi-kankou.jp/english/discover/kobuchizawa.html",
+   "checked": true,
+   "when": {
+    "months": [
+     6,
+     7,
+     8,
+     9
+    ],
+    "someDays": true
+   }
+  },
+  {
+   "id": "matsumoto-kiso-uma",
+   "destination": "matsumoto",
+   "name": "Kiso Horse Village (Kiso-uma no Sato)",
+   "area": "Kaida Kogen",
+   "interests": [
+    "horses",
+    "animals",
+    "nature"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Allevamento sull'altopiano dove conoscere e montare il cavallo autoctono di Kiso.",
+    "en": "Highland farm where you can meet and ride the native Kiso horse.",
+    "fr": "Ferme d'altitude où approcher et monter le cheval indigène de Kiso."
+   },
+   "note": {
+    "it": "Adatto ai principianti. Lontano da Matsumoto.",
+    "en": "Suitable for beginners. Far from Matsumoto.",
+    "fr": "Adapté aux débutants. Loin de Matsumoto."
+   },
+   "source": "https://www.go-nagano.net/en/trip-idea/id17831",
+   "checked": true
+  },
+  {
+   "id": "matsumoto-suetoshi-ranch",
+   "destination": "matsumoto",
+   "name": "Suetoshi Ranch riding",
+   "area": "Saku",
+   "interests": [
+    "horses",
+    "nature",
+    "animals"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Maneggio con passeggiate nel bosco, lezioni di vari livelli e molti ex cavalli da corsa.",
+    "en": "Ranch with woodland rides, lessons at several levels and many retired racehorses.",
+    "fr": "Ranch avec balades en forêt, cours de plusieurs niveaux et nombreux anciens chevaux de course."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.go-nagano.net/en/trip-idea/id17831",
+   "checked": true
+  },
+  {
+   "id": "matsumoto-lake-suwa",
+   "destination": "matsumoto",
+   "name": "Lake Suwa (Your Name inspiration)",
+   "area": "Suwa",
+   "interests": [
+    "filmSpots",
+    "nature"
+   ],
+   "hours": 2,
+   "slot": "any",
+   "about": {
+    "it": "Lago indicato come ispirazione per il lago del film Your Name.",
+    "en": "Lake cited as the inspiration for the lake in the film Your Name.",
+    "fr": "Lac cité comme inspiration du lac du film Your Name."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.japan.travel/en/ph/special-features/anime-locations-real-life/",
+   "checked": true
+  },
+  {
+   "id": "matsumoto-karuizawa-snow",
+   "destination": "matsumoto",
+   "name": "Karuizawa Prince Snow Resort",
+   "area": "Karuizawa",
+   "interests": [
+    "winterSports"
+   ],
+   "hours": 6,
+   "slot": "any",
+   "about": {
+    "it": "Stazione sciistica vicina alla fermata dello Shinkansen di Karuizawa.",
+    "en": "Ski area close to the Karuizawa bullet train station.",
+    "fr": "Station de ski proche de la gare du Shinkansen de Karuizawa."
+   },
+   "note": {
+    "it": "La pagina aperta indica ancora la stagione 2025-26 (1/11-31/3).",
+    "en": "The page still shows the 2025-26 season (1 Nov-31 Mar).",
+    "fr": "La page indique encore la saison 2025-26 (1/11-31/3)."
+   },
+   "source": "https://www.princehotels.com/en/ski/karuizawa/",
+   "checked": true,
+   "when": {
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "matsumoto-nozawa-onsen",
+   "destination": "matsumoto",
+   "name": "Nozawa Onsen Snow Resort",
+   "area": "Nozawa Onsen",
+   "interests": [
+    "winterSports"
+   ],
+   "hours": 7,
+   "slot": "any",
+   "about": {
+    "it": "Grande comprensorio sciistico sopra un villaggio termale.",
+    "en": "Large ski resort above a hot spring village.",
+    "fr": "Grand domaine skiable au-dessus d'un village thermal."
+   },
+   "note": {
+    "it": "L'apertura dipende dalla neve.",
+    "en": "Opening depends on snowfall.",
+    "fr": "L'ouverture dépend de l'enneigement."
+   },
+   "source": "https://www.japan.travel/en/spot/2190/",
+   "checked": true,
+   "when": {
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   }
+  },
+  {
+   "id": "matsumoto-shiga-kogen",
+   "destination": "matsumoto",
+   "name": "Shiga Kogen highlands",
+   "area": "Shiga Kogen",
+   "interests": [
+    "winterSports",
+    "hiking",
+    "nature"
+   ],
+   "hours": 7,
+   "slot": "any",
+   "about": {
+    "it": "Vasto altopiano con tante piste in inverno ed escursioni in estate.",
+    "en": "Vast highland with many ski runs in winter and hiking in summer.",
+    "fr": "Vaste plateau avec de nombreuses pistes l'hiver et des randonnées l'été."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.japan.travel/en/spot/2051/",
+   "checked": true
+  },
+  {
+   "id": "nikko-senbonmatsu-farm",
+   "destination": "nikko",
+   "name": "Senbonmatsu Dairy Farm",
+   "area": "Nasushiobara",
+   "interests": [
+    "horses",
+    "animals",
+    "kids"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Fattoria-parco a ingresso libero con equitazione, bici e animali.",
+    "en": "Free-entry farm park with horse riding, cycling and animals.",
+    "fr": "Parc-ferme à entrée libre avec équitation, vélo et animaux."
+   },
+   "note": {
+    "it": "Lontano da Nikko.",
+    "en": "Some distance from Nikko.",
+    "fr": "À distance de Nikko."
+   },
+   "source": "https://www.japan.travel/en/spot/303/",
+   "checked": true
+  },
+  {
+   "id": "chiba-ichinomiya-riding",
+   "destination": "chiba",
+   "name": "Ichinomiya Horse Riding Center (beach course)",
+   "area": "Ichinomiya",
+   "interests": [
+    "horses",
+    "beaches"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Giro a cavallo sulla sabbia con l'istruttore che conduce il cavallo, adatto ai principianti.",
+    "en": "Sand ride with an instructor leading the horse, suitable for beginners.",
+    "fr": "Promenade sur le sable avec un moniteur qui mène le cheval, adaptée aux débutants."
+   },
+   "note": {
+    "it": "Contatta il centro prima di andare.",
+    "en": "Contact the centre before going.",
+    "fr": "Contactez le centre avant d'y aller."
+   },
+   "source": "https://maruchiba.jp/spot/detail_13532.html",
+   "checked": true,
+   "when": {
+    "closedWeekdays": [
+     3
+    ]
+   }
+  },
+  {
+   "id": "chiba-tsurigasaki-surf",
+   "destination": "chiba",
+   "name": "Tsurigasaki Surfing Beach",
+   "area": "Ichinomiya",
+   "interests": [
+    "beaches",
+    "waterSports"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "La spiaggia scelta per il surf alle Olimpiadi di Tokyo 2020.",
+    "en": "The beach used for surfing at the Tokyo 2020 Olympics.",
+    "fr": "La plage retenue pour le surf aux Jeux de Tokyo 2020."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.visitchiba.jp/spot/tsurigasaki-surfing-beach/",
+   "checked": true
+  },
+  {
+   "id": "kawagoe-washinomiya",
+   "destination": "kawagoe",
+   "name": "Washinomiya Shrine (Lucky Star)",
+   "area": "Kuki",
+   "interests": [
+    "filmSpots",
+    "temples"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Antico santuario diventato meta dei fan dell'anime Lucky Star.",
+    "en": "Old shrine that became a destination for fans of the anime Lucky Star.",
+    "fr": "Ancien sanctuaire devenu un lieu de pèlerinage des fans de l'anime Lucky Star."
+   },
+   "note": {
+    "it": "Lontano da Kawagoe.",
+    "en": "Some distance from Kawagoe.",
+    "fr": "À distance de Kawagoe."
+   },
+   "source": "https://www.japan.travel/en/blog/visit-three-of-japans-famous-anime-locations/",
+   "checked": true
+  },
+  {
+   "id": "kyoto-sanjusangendo",
+   "destination": "kyoto",
+   "name": "Sanjusangendo Temple",
+   "area": "Shichijo",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Lunghissima sala in legno con mille statue della divinità Kannon.",
+    "en": "Very long wooden hall lined with a thousand Kannon statues.",
+    "fr": "Très longue salle en bois abritant mille statues de Kannon."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://kyoto.travel/en/shrine_temple/159.html",
+   "checked": false
+  },
+  {
+   "id": "kyoto-ryoanji",
+   "destination": "kyoto",
+   "name": "Ryoan-ji Temple",
+   "area": "Kinugasa",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 1.5,
+   "slot": "morning",
+   "about": {
+    "it": "Tempio zen celebre per il giardino secco di pietre e ghiaia.",
+    "en": "Zen temple famous for its dry rock garden.",
+    "fr": "Temple zen célèbre pour son jardin sec de pierres."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://kyoto.travel/en/destinations/ryoanji-temple/",
+   "checked": false
+  },
+  {
+   "id": "kyoto-toji",
+   "destination": "kyoto",
+   "name": "To-ji Temple",
+   "area": "Kyoto Station",
+   "interests": [
+    "temples",
+    "historic",
+    "architecture"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Tempio vicino alla stazione con la pagoda in legno più alta del Giappone.",
+    "en": "Temple near the station with Japan's tallest wooden pagoda.",
+    "fr": "Temple près de la gare, avec la plus haute pagode en bois du Japon."
+   },
+   "note": {
+    "it": "L'interno della pagoda apre solo in periodi speciali.",
+    "en": "The pagoda interior opens only at special periods.",
+    "fr": "L'intérieur de la pagode n'ouvre qu'à certaines périodes."
+   },
+   "source": "https://kyoto.travel/en/destinations/toji-temple/",
+   "checked": false
+  },
+  {
+   "id": "kyoto-nanzenji",
+   "destination": "kyoto",
+   "name": "Nanzen-ji Temple",
+   "area": "Okazaki",
+   "interests": [
+    "temples",
+    "historic",
+    "architecture"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Grande complesso zen con porta monumentale e giardini secchi.",
+    "en": "Large Zen complex with a monumental gate and dry gardens.",
+    "fr": "Grand ensemble zen avec une porte monumentale et des jardins secs."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.japan.travel/en/spot/1175/",
+   "checked": false
+  },
+  {
+   "id": "kyoto-philosophers-path",
+   "destination": "kyoto",
+   "name": "Philosopher's Path",
+   "area": "Okazaki",
+   "interests": [
+    "nature",
+    "neighborhoods"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Passeggiata lungo un canale, molto amata nella stagione dei ciliegi.",
+    "en": "Canal-side walk, much loved in cherry blossom season.",
+    "fr": "Promenade au bord d'un canal, très appréciée au temps des cerisiers."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://kyoto.travel/en/destinations/philosophers-path-tetsugakunomichi/",
+   "checked": false
+  },
+  {
+   "id": "kyoto-heian-jingu",
+   "destination": "kyoto",
+   "name": "Heian Jingu Shrine",
+   "area": "Okazaki",
+   "interests": [
+    "temples",
+    "architecture",
+    "nature"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Santuario con un enorme torii rosso e un giardino con laghetto.",
+    "en": "Shrine with a huge red torii and a pond garden.",
+    "fr": "Sanctuaire avec un immense torii rouge et un jardin à étang."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.japan.travel/en/spot/1195/",
+   "checked": false
+  },
+  {
+   "id": "kyoto-chionin",
+   "destination": "kyoto",
+   "name": "Chion-in Temple",
+   "area": "Higashiyama",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Tempio principale della scuola Jodo, ai piedi delle colline di Higashiyama.",
+    "en": "Head temple of the Jodo school at the foot of the Higashiyama hills.",
+    "fr": "Temple principal de l'école Jodo, au pied des collines de Higashiyama."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.japan.travel/en/spot/1185/",
+   "checked": false
+  },
+  {
+   "id": "kyoto-tofukuji",
+   "destination": "kyoto",
+   "name": "Tofuku-ji Temple",
+   "area": "Fushimi",
+   "interests": [
+    "temples",
+    "historic",
+    "nature"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Grande tempio zen famoso per gli aceri visti dal ponte Tsutenkyo.",
+    "en": "Large Zen temple famous for maples seen from the Tsutenkyo bridge.",
+    "fr": "Grand temple zen célèbre pour ses érables vus du pont Tsutenkyo."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://kyoto.travel/en/destinations/tofukuji-temple/",
+   "checked": false
+  },
+  {
+   "id": "kyoto-ninnaji",
+   "destination": "kyoto",
+   "name": "Ninna-ji Temple",
+   "area": "Kinugasa",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Tempio patrimonio mondiale un tempo guidato da membri della famiglia imperiale.",
+    "en": "World Heritage temple once headed by members of the imperial family.",
+    "fr": "Temple du patrimoine mondial autrefois dirigé par des membres de la famille impériale."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://kyoto.travel/en/destinations/ninnaji-temple/",
+   "checked": false
+  },
+  {
+   "id": "kyoto-sanzenin",
+   "destination": "kyoto",
+   "name": "Sanzen-in Temple, Ohara",
+   "area": "Ohara",
+   "interests": [
+    "temples",
+    "nature",
+    "historic"
+   ],
+   "hours": 3,
+   "slot": "morning",
+   "about": {
+    "it": "Tempio con giardino di muschio nel tranquillo villaggio di Ohara.",
+    "en": "Temple with a moss garden in the quiet village of Ohara.",
+    "fr": "Temple au jardin de mousse dans le paisible village d'Ohara."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://kyoto.travel/en/destinations/sanzenin-temple/",
+   "checked": false
+  },
+  {
+   "id": "kyoto-saihoji",
+   "destination": "kyoto",
+   "name": "Saiho-ji (Moss Temple)",
+   "area": "Arashiyama",
+   "interests": [
+    "temples",
+    "nature"
+   ],
+   "hours": 2.5,
+   "slot": "any",
+   "about": {
+    "it": "Il tempio del muschio, con un giardino su due livelli.",
+    "en": "The Moss Temple, with a garden on two levels.",
+    "fr": "Le temple des mousses, avec un jardin sur deux niveaux."
+   },
+   "note": {
+    "it": "Prenotazione obbligatoria, almeno un giorno prima.",
+    "en": "Reservation required at least one day ahead.",
+    "fr": "Réservation obligatoire au moins un jour à l'avance."
+   },
+   "source": "https://kyoto.travel/en/destinations/saihoji-temple-kokedera-temple/",
+   "checked": true,
+   "booking": true
+  },
+  {
+   "id": "kyoto-kitano-tenmangu",
+   "destination": "kyoto",
+   "name": "Kitano Tenmangu Shrine",
+   "area": "Kinugasa",
+   "interests": [
+    "temples"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Santuario dedicato allo studio, noto anche per il mercatino mensile.",
+    "en": "Shrine tied to learning, also known for its monthly market.",
+    "fr": "Sanctuaire lié aux études, connu aussi pour son marché mensuel."
+   },
+   "note": {
+    "it": "Il 25 di ogni mese c'è il mercatino Tenjin-san.",
+    "en": "Tenjin-san flea market on the 25th of each month.",
+    "fr": "Brocante Tenjin-san le 25 de chaque mois."
+   },
+   "source": "https://kyoto.travel/en/travel-inspiration/monthly-and-seasonal-markets-in-kyoto/",
+   "checked": true
+  },
+  {
+   "id": "kyoto-kobo-market",
+   "destination": "kyoto",
+   "name": "Kobo-san flea market at To-ji",
+   "area": "Kyoto Station",
+   "interests": [
+    "markets",
+    "shopping"
+   ],
+   "hours": 2,
+   "slot": "morning",
+   "about": {
+    "it": "Mercato mensile nel recinto del tempio To-ji, con antiquariato e artigianato.",
+    "en": "Monthly market of antiques and handmade goods in the To-ji grounds.",
+    "fr": "Marché mensuel d'antiquités et d'artisanat dans l'enceinte du To-ji."
+   },
+   "note": {
+    "it": "Il 21 di ogni mese.",
+    "en": "On the 21st of each month.",
+    "fr": "Le 21 de chaque mois."
+   },
+   "source": "https://kyoto.travel/en/travel-inspiration/monthly-and-seasonal-markets-in-kyoto/",
+   "checked": true,
+   "when": {
+    "someDays": true
+   }
+  },
+  {
+   "id": "kyoto-aoi-matsuri",
+   "destination": "kyoto",
+   "name": "Aoi Matsuri procession",
+   "area": "Central Kyoto",
+   "interests": [
+    "festivals",
+    "horses",
+    "historic"
+   ],
+   "hours": 3,
+   "slot": "morning",
+   "about": {
+    "it": "Corteo in costumi di corte antica, con decine di cavalli, fino ai santuari Kamo.",
+    "en": "Procession in ancient court dress, with dozens of horses, to the Kamo shrines.",
+    "fr": "Cortège en costumes de cour anciens, avec des dizaines de chevaux, jusqu'aux sanctuaires Kamo."
+   },
+   "note": {
+    "it": "15 maggio (il 16 se piove). Vietato il flash.",
+    "en": "15 May (16 if rain). No flash.",
+    "fr": "15 mai (16 en cas de pluie). Flash interdit."
+   },
+   "source": "https://kyoto.travel/en/season_festivals/aoi_matsuri.html",
+   "checked": true,
+   "when": {
+    "from": "05-15",
+    "to": "05-16",
+    "someDays": true
+   }
+  },
+  {
+   "id": "kyoto-shimogamo-yabusame",
+   "destination": "kyoto",
+   "name": "Yabusame ritual at Shimogamo Shrine",
+   "area": "Kamigamo",
+   "interests": [
+    "horses",
+    "festivals"
+   ],
+   "hours": 2,
+   "slot": "afternoon",
+   "about": {
+    "it": "Arcieri a cavallo tirano al galoppo nel recinto del santuario.",
+    "en": "Mounted archers shoot at a gallop in the shrine grounds.",
+    "fr": "Des archers à cheval tirent au galop dans l'enceinte du sanctuaire."
+   },
+   "note": {
+    "it": "Di solito il 3 maggio; conferma data e orario.",
+    "en": "Usually 3 May; confirm date and time.",
+    "fr": "En général le 3 mai ; date et heure à confirmer."
+   },
+   "source": "https://www.japan.travel/en/spot/1160/",
+   "checked": false,
+   "when": {
+    "from": "05-03",
+    "to": "05-03",
+    "someDays": true
+   }
+  },
+  {
+   "id": "kyoto-fujinomori-kakeuma",
+   "destination": "kyoto",
+   "name": "Fujinomori Shrine horseback acrobatics (kakeuma)",
+   "area": "Fushimi",
+   "interests": [
+    "horses",
+    "festivals"
+   ],
+   "hours": 2,
+   "slot": "afternoon",
+   "about": {
+    "it": "Durante la festa del santuario, cavalieri eseguono acrobazie a cavallo.",
+    "en": "During the shrine festival, riders perform acrobatics on horseback.",
+    "fr": "Pendant la fête du sanctuaire, des cavaliers font des acrobaties à cheval."
+   },
+   "note": {
+    "it": "Nel 2026 il 5 maggio; programma 2027 da confermare.",
+    "en": "On 5 May in 2026; confirm the 2027 programme.",
+    "fr": "Le 5 mai en 2026 ; programme 2027 à confirmer."
+   },
+   "source": "https://kyoto.travel/wp-content/uploads/2025/04/Events_20260427-0510.pdf",
+   "checked": false,
+   "when": {
+    "from": "05-05",
+    "to": "05-05",
+    "someDays": true
+   }
+  },
+  {
+   "id": "kyoto-gion-matsuri",
+   "destination": "kyoto",
+   "name": "Gion Matsuri festival",
+   "area": "Gion",
+   "interests": [
+    "festivals",
+    "historic"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Grande festa estiva di Kyoto con sfilate di carri decorati.",
+    "en": "Kyoto's great summer festival with parades of decorated floats.",
+    "fr": "Grande fête d'été de Kyoto avec des défilés de chars décorés."
+   },
+   "note": {
+    "it": "Eventi per tutto luglio; sfilate principali il 17 e il 24.",
+    "en": "Events all July; main processions on the 17th and 24th.",
+    "fr": "Événements tout juillet ; grands défilés les 17 et 24."
+   },
+   "source": "https://kyoto.travel/en/travel-inspiration/gion-matsuri-festival/",
+   "checked": true,
+   "when": {
+    "from": "07-01",
+    "to": "07-31",
+    "someDays": true
+   }
+  },
+  {
+   "id": "osaka-shitennoji",
+   "destination": "osaka",
+   "name": "Shitennoji Temple",
+   "area": "Tennoji",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Uno dei più antichi templi buddhisti del Giappone, fondato dal principe Shotoku.",
+    "en": "One of Japan's oldest Buddhist temples, founded by Prince Shotoku.",
+    "fr": "L'un des plus anciens temples bouddhiques du Japon, fondé par le prince Shotoku."
+   },
+   "note": {
+    "it": "Bancarelle nel recinto il 21 e il 22 del mese.",
+    "en": "Stalls on the grounds on the 21st and 22nd.",
+    "fr": "Étals dans l'enceinte les 21 et 22."
+   },
+   "source": "https://osaka-info.jp/en/spot/shitennoji/",
+   "checked": true
+  },
+  {
+   "id": "osaka-sumiyoshi-taisha",
+   "destination": "osaka",
+   "name": "Sumiyoshi Taisha Shrine",
+   "area": "Sumiyoshi",
+   "interests": [
+    "temples",
+    "historic",
+    "architecture"
+   ],
+   "hours": 1.5,
+   "slot": "morning",
+   "about": {
+    "it": "Santuario antico con un ponte ad arco e uno stile architettonico proprio.",
+    "en": "Ancient shrine with an arched bridge and its own architectural style.",
+    "fr": "Sanctuaire ancien avec un pont en arc et un style architectural propre."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://osaka-info.jp/en/spot/sumiyoshitaisha/",
+   "checked": false
+  },
+  {
+   "id": "osaka-tenmangu",
+   "destination": "osaka",
+   "name": "Osaka Tenmangu Shrine",
+   "area": "Tenjinbashi",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 0.75,
+   "slot": "any",
+   "about": {
+    "it": "Santuario dedicato allo studio, cuore della festa Tenjin.",
+    "en": "Shrine dedicated to learning, heart of the Tenjin Festival.",
+    "fr": "Sanctuaire dédié aux études, au cœur de la fête de Tenjin."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://osaka-info.jp/en/spot/osakatenmangu/",
+   "checked": true
+  },
+  {
+   "id": "osaka-tenjin-matsuri",
+   "destination": "osaka",
+   "name": "Tenjin Matsuri festival",
+   "area": "Tenjinbashi",
+   "interests": [
+    "festivals",
+    "historic"
+   ],
+   "hours": 4,
+   "slot": "evening",
+   "about": {
+    "it": "Corteo in costume e sfilata di barche sul fiume con fuochi d'artificio.",
+    "en": "Costumed parade and river boat procession with fireworks.",
+    "fr": "Défilé costumé et cortège de bateaux sur la rivière avec feux d'artifice."
+   },
+   "note": {
+    "it": "24 e 25 luglio.",
+    "en": "24 and 25 July.",
+    "fr": "Les 24 et 25 juillet."
+   },
+   "source": "https://osaka-info.jp/en/spot/osakatenmangu/",
+   "checked": true,
+   "when": {
+    "from": "07-24",
+    "to": "07-25",
+    "someDays": true
+   }
+  },
+  {
+   "id": "osaka-pokemon-center-dx",
+   "destination": "osaka",
+   "name": "Pokemon Center Osaka DX",
+   "area": "Minami",
+   "interests": [
+    "gaming",
+    "shopping"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Negozio ufficiale Pokemon nei grandi magazzini Daimaru di Shinsaibashi.",
+    "en": "Official Pokemon store inside Daimaru Shinsaibashi.",
+    "fr": "Boutique officielle Pokémon au grand magasin Daimaru Shinsaibashi."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://shop.pokemon.co.jp/en/shop/pokemoncenter-osakadx/",
+   "checked": true
+  },
+  {
+   "id": "osaka-kyocera-dome",
+   "destination": "osaka",
+   "name": "Baseball at Kyocera Dome (Orix Buffaloes)",
+   "area": "Taisho",
+   "interests": [
+    "sportEvents"
+   ],
+   "hours": 3.5,
+   "slot": "evening",
+   "about": {
+    "it": "Partita di baseball nello stadio coperto degli Orix Buffaloes.",
+    "en": "Baseball game at the Orix Buffaloes' domed stadium.",
+    "fr": "Match de baseball au stade couvert des Orix Buffaloes."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://osaka-info.jp/en/spot/kyocera-dome-osaka/",
+   "checked": false,
+   "when": {
+    "months": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "someDays": true
+   }
+  },
+  {
+   "id": "osaka-river-sup",
+   "destination": "osaka",
+   "name": "River SUP in Nakanoshima",
+   "area": "Nakanoshima",
+   "interests": [
+    "waterSports",
+    "activeSports"
+   ],
+   "hours": 2,
+   "slot": "any",
+   "about": {
+    "it": "Stand up paddle sui fiumi del centro, accessibile ai principianti.",
+    "en": "Stand-up paddling on the city rivers, easy for beginners.",
+    "fr": "Paddle sur les rivières du centre, accessible aux débutants."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://osaka-info.jp/en/spot/do-sport-sup/",
+   "checked": true
+  },
+  {
+   "id": "osaka-nishikinohama",
+   "destination": "osaka",
+   "name": "Nishikinohama Park beach",
+   "area": "Kaizuka",
+   "interests": [
+    "beaches",
+    "waterSports"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Parco sul mare dove praticare canoa e stand up paddle.",
+    "en": "Seaside park for canoeing and stand-up paddling.",
+    "fr": "Parc en bord de mer pour le canoë et le paddle."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://osaka-info.jp/en/spot/nishikinohama-park/",
+   "checked": false
+  },
+  {
+   "id": "osaka-pakapoko-hiroba",
+   "destination": "osaka",
+   "name": "Pakapoko Hiroba horse farm",
+   "area": "Ibaraki",
+   "interests": [
+    "horses",
+    "nature",
+    "kids"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Spazio dove imparare a capire, curare e montare i cavalli.",
+    "en": "Place to learn to understand, care for and ride horses.",
+    "fr": "Lieu pour apprendre à comprendre, soigner et monter les chevaux."
+   },
+   "note": {
+    "it": "Prenotazione richiesta; nei giorni feriali con una settimana di anticipo.",
+    "en": "Reservation required; one week ahead for weekdays.",
+    "fr": "Réservation obligatoire ; une semaine à l'avance en semaine."
+   },
+   "source": "https://discover.osaka-info.jp/en/articles/ibaraki-dam",
+   "checked": true,
+   "booking": true
+  },
+  {
+   "id": "kobe-tezuka-museum",
+   "destination": "kobe",
+   "name": "Osamu Tezuka Manga Museum",
+   "area": "Takarazuka",
+   "interests": [
+    "museums",
+    "gaming"
+   ],
+   "hours": 2,
+   "slot": "any",
+   "about": {
+    "it": "Museo sul padre di Astro Boy, con biblioteca e laboratorio di animazione.",
+    "en": "Museum on the creator of Astro Boy, with a library and animation workshop.",
+    "fr": "Musée consacré au créateur d'Astro Boy, avec bibliothèque et atelier d'animation."
+   },
+   "note": {
+    "it": "Possibili chiusure temporanee.",
+    "en": "Temporary closures possible.",
+    "fr": "Fermetures temporaires possibles."
+   },
+   "source": "https://www.hyogo-tourism.jp/world/spot/detail_1036.html",
+   "checked": true,
+   "when": {
+    "closedWeekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "id": "kobe-rokkosan-pasture",
+   "destination": "kobe",
+   "name": "Rokkosan Pasture",
+   "area": "Rokko",
+   "interests": [
+    "horses",
+    "animals",
+    "kids",
+    "nature"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Fattoria in quota con animali, latticini e la possibilità di andare a cavallo.",
+    "en": "Hilltop farm with animals, dairy produce and a chance to ride a horse.",
+    "fr": "Ferme d'altitude avec animaux, produits laitiers et possibilité de monter à cheval."
+   },
+   "note": {
+    "it": "Aperto il martedì dal 21/7 al 31/8. Chiuso in inverno: date da verificare.",
+    "en": "Open Tuesdays 21 Jul-31 Aug. Closed in winter: check dates.",
+    "fr": "Ouvert le mardi du 21/7 au 31/8. Fermé l'hiver : dates à vérifier."
+   },
+   "source": "https://www.hyogo-tourism.jp/world/spot/detail_1014.html",
+   "checked": true,
+   "when": {
+    "months": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "closedWeekdays": [
+     2
+    ]
+   }
+  },
+  {
+   "id": "kobe-rokko-snow-park",
+   "destination": "kobe",
+   "name": "Rokko Snow Park",
+   "area": "Rokko",
+   "interests": [
+    "winterSports",
+    "kids"
+   ],
+   "hours": 5,
+   "slot": "any",
+   "about": {
+    "it": "Area con neve artificiale per sci, snowboard e slittino, adatta ai principianti.",
+    "en": "Artificial snow area for skiing, snowboarding and sledding, good for beginners.",
+    "fr": "Domaine à neige artificielle pour ski, snowboard et luge, idéal pour débuter."
+   },
+   "note": {
+    "it": "Stagione 2026-27: dal 5 dicembre al 7 marzo.",
+    "en": "2026-27 season: 5 December to 7 March.",
+    "fr": "Saison 2026-27 : du 5 décembre au 7 mars."
+   },
+   "source": "https://www.rokkosan.com/ski/information/?lang=en",
+   "checked": true,
+   "when": {
+    "months": [
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "kobe-nijigen-no-mori",
+   "destination": "kobe",
+   "name": "Nijigen no Mori anime park",
+   "area": "Awaji Island",
+   "interests": [
+    "themeParks",
+    "gaming"
+   ],
+   "hours": 5,
+   "slot": "any",
+   "about": {
+    "it": "Parco sull'isola di Awaji con attrazioni a tema, tra cui Godzilla e Dragon Quest.",
+    "en": "Park on Awaji Island with themed attractions, including Godzilla and Dragon Quest.",
+    "fr": "Parc sur l'île d'Awaji avec des attractions à thème, dont Godzilla et Dragon Quest."
+   },
+   "note": {
+    "it": "Biglietti online consigliati.",
+    "en": "Online tickets recommended.",
+    "fr": "Billets en ligne conseillés."
+   },
+   "source": "https://nijigennomori.com/en/faq/",
+   "checked": false
+  },
+  {
+   "id": "nara-horyuji",
+   "destination": "nara",
+   "name": "Horyu-ji Temple",
+   "area": "Ikaruga",
+   "interests": [
+    "temples",
+    "historic",
+    "architecture"
+   ],
+   "hours": 2.5,
+   "slot": "any",
+   "about": {
+    "it": "Complesso patrimonio mondiale con antichissimi edifici in legno.",
+    "en": "World Heritage complex with extremely old wooden buildings.",
+    "fr": "Ensemble du patrimoine mondial aux bâtiments en bois très anciens."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.horyuji.or.jp/en/annai/",
+   "checked": false
+  },
+  {
+   "id": "nara-yakushiji",
+   "destination": "nara",
+   "name": "Yakushi-ji Temple",
+   "area": "Nishinokyo",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Grande tempio antico dedicato al Buddha della guarigione.",
+    "en": "Great ancient temple dedicated to the Buddha of healing.",
+    "fr": "Grand temple ancien dédié au Bouddha guérisseur."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.visitnara.jp/venues/A00499/",
+   "checked": false
+  },
+  {
+   "id": "nara-toshodaiji",
+   "destination": "nara",
+   "name": "Toshodai-ji Temple",
+   "area": "Nishinokyo",
+   "interests": [
+    "temples",
+    "historic",
+    "architecture"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Tempio fondato dal monaco cinese Ganjin, con una sala principale antica.",
+    "en": "Temple founded by the Chinese monk Ganjin, with an ancient main hall.",
+    "fr": "Temple fondé par le moine chinois Ganjin, avec un pavillon principal ancien."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.visitnara.jp/venues/A00500/",
+   "checked": false
+  },
+  {
+   "id": "nara-gangoji",
+   "destination": "nara",
+   "name": "Gango-ji Temple",
+   "area": "Naramachi",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Antico tempio nel quartiere di Naramachi, con edifici classificati tesoro nazionale.",
+    "en": "Old temple in Naramachi with National Treasure buildings.",
+    "fr": "Ancien temple de Naramachi aux bâtiments classés trésors nationaux."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.visitnara.jp/lists-and-stories/story/explore-naras-world-heritage-sites/",
+   "checked": false
+  },
+  {
+   "id": "hiroshima-daishoin",
+   "destination": "hiroshima",
+   "name": "Daisho-in Temple, Miyajima",
+   "area": "Miyajima",
+   "interests": [
+    "temples",
+    "historic",
+    "nature"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Tempio ai piedi del monte Misen, molto bello con gli aceri d'autunno.",
+    "en": "Temple below Mount Misen, lovely with autumn maples.",
+    "fr": "Temple au pied du mont Misen, superbe avec les érables d'automne."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://dive-hiroshima.com/en/explore/4218/",
+   "checked": false
+  },
+  {
+   "id": "hiroshima-mitakidera",
+   "destination": "hiroshima",
+   "name": "Mitaki-dera Temple",
+   "area": "Mitaki",
+   "interests": [
+    "temples",
+    "nature"
+   ],
+   "hours": 2,
+   "slot": "any",
+   "about": {
+    "it": "Tempio immerso nel verde, con cascate e una pagoda rossa.",
+    "en": "Temple in the greenery with waterfalls and a red pagoda.",
+    "fr": "Temple dans la verdure avec cascades et pagode vermillon."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://dive-hiroshima.com/en/feature/hiroshima-trip-08/",
+   "checked": false
+  },
+  {
+   "id": "hiroshima-tomonoura",
+   "destination": "hiroshima",
+   "name": "Tomonoura harbour town (Ponyo)",
+   "area": "Tomonoura",
+   "interests": [
+    "filmSpots",
+    "historic",
+    "neighborhoods",
+    "dayTrips"
+   ],
+   "hours": 5,
+   "slot": "any",
+   "about": {
+    "it": "Vecchio borgo portuale legato al film Ponyo e comparso anche in Wolverine.",
+    "en": "Old port town featured in connection with Ponyo and also in The Wolverine.",
+    "fr": "Vieux port associé au film Ponyo et vu aussi dans Wolverine."
+   },
+   "note": {
+    "it": "A Fukuyama, lontano dalla città di Hiroshima.",
+    "en": "In Fukuyama, far from Hiroshima city.",
+    "fr": "À Fukuyama, loin de la ville d'Hiroshima."
+   },
+   "source": "https://www.japan.travel/en/spot/875/",
+   "checked": true
+  },
+  {
+   "id": "kanazawa-myoryuji",
+   "destination": "kanazawa",
+   "name": "Myoryu-ji (Ninja Temple)",
+   "area": "Teramachi",
+   "interests": [
+    "temples",
+    "historic",
+    "architecture"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Tempio pieno di scale nascoste e trabocchetti difensivi.",
+    "en": "Temple full of hidden stairs and defensive traps.",
+    "fr": "Temple rempli d'escaliers cachés et de pièges défensifs."
+   },
+   "note": {
+    "it": "Prenotazione obbligatoria solo per telefono; annunci in giapponese; vietato ai bambini in età prescolare.",
+    "en": "Phone reservation required; announcements in Japanese; no preschool children.",
+    "fr": "Réservation par téléphone obligatoire ; annonces en japonais ; interdit aux enfants d'âge préscolaire."
+   },
+   "source": "https://visitkanazawa.jp/en/attractions/detail_50022.html",
+   "checked": true,
+   "booking": true
+  },
+  {
+   "id": "kanazawa-oyama-shrine",
+   "destination": "kanazawa",
+   "name": "Oyama Shrine",
+   "area": "Kenrokuen",
+   "interests": [
+    "temples",
+    "architecture"
+   ],
+   "hours": 0.5,
+   "slot": "any",
+   "about": {
+    "it": "Santuario dedicato al signore Maeda Toshiie, con un portale illuminato la sera.",
+    "en": "Shrine to Lord Maeda Toshiie with a gate lit in the evening.",
+    "fr": "Sanctuaire dédié au seigneur Maeda Toshiie, à la porte éclairée le soir."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://visitkanazawa.jp/en/attractions/detail_50021.html",
+   "checked": false
+  },
+  {
+   "id": "fukuoka-tochoji",
+   "destination": "fukuoka",
+   "name": "Tochoji Temple and Great Buddha",
+   "area": "Hakata",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 0.75,
+   "slot": "any",
+   "about": {
+    "it": "Tempio di Hakata con un grande Buddha seduto in legno.",
+    "en": "Hakata temple with a large seated wooden Buddha.",
+    "fr": "Temple de Hakata abritant un grand Bouddha assis en bois."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://gofukuoka.jp/route/detail/3b64e3e0-f008-4c31-9780-dd36d71dc410",
+   "checked": true
+  },
+  {
+   "id": "fukuoka-sumiyoshi-shrine",
+   "destination": "fukuoka",
+   "name": "Sumiyoshi Shrine, Hakata",
+   "area": "Hakata",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 0.75,
+   "slot": "any",
+   "about": {
+    "it": "Antico santuario di Hakata con una statua portafortuna di Ebisu.",
+    "en": "Old Hakata shrine with a lucky Ebisu statue.",
+    "fr": "Ancien sanctuaire de Hakata avec une statue porte-bonheur d'Ebisu."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://gofukuoka.jp/route/detail/3b64e3e0-f008-4c31-9780-dd36d71dc410",
+   "checked": true
+  },
+  {
+   "id": "fukuoka-shofukuji",
+   "destination": "fukuoka",
+   "name": "Shofukuji Temple",
+   "area": "Hakata",
+   "interests": [
+    "temples",
+    "historic"
+   ],
+   "hours": 0.75,
+   "slot": "any",
+   "about": {
+    "it": "Tempio fondato dal monaco Eisai, ritenuto il primo tempio zen del Giappone.",
+    "en": "Temple founded by the monk Eisai, regarded as Japan's first Zen temple.",
+    "fr": "Temple fondé par le moine Eisai, considéré comme le premier temple zen du Japon."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.crossroadfukuoka.jp/en/spot/12554",
+   "checked": false
+  },
+  {
+   "id": "fukuoka-nanzoin",
+   "destination": "fukuoka",
+   "name": "Nanzoin reclining Buddha",
+   "area": "Sasaguri",
+   "interests": [
+    "temples",
+    "dayTrips"
+   ],
+   "hours": 2.5,
+   "slot": "any",
+   "about": {
+    "it": "Tempio fuori città con un enorme Buddha sdraiato in bronzo.",
+    "en": "Temple outside the city with a huge bronze reclining Buddha.",
+    "fr": "Temple hors de la ville avec un immense Bouddha couché en bronze."
+   },
+   "note": {
+    "it": "È un luogo di preghiera, non un'attrazione: comportati con rispetto.",
+    "en": "It is a place of prayer, not an attraction: be respectful.",
+    "fr": "C'est un lieu de prière, pas une attraction : restez respectueux."
+   },
+   "source": "https://www.crossroadfukuoka.jp/en/spot/11999",
+   "checked": false
+  },
+  {
+   "id": "fukuoka-yanagibashi-market",
+   "destination": "fukuoka",
+   "name": "Yanagibashi Rengo Market",
+   "area": "Tenjin-Nakasu",
+   "interests": [
+    "markets"
+   ],
+   "hours": 1,
+   "slot": "morning",
+   "about": {
+    "it": "Mercato coperto di pesce e prodotti freschi, chiamato la cucina di Hakata.",
+    "en": "Covered fish and fresh food market known as Hakata's kitchen.",
+    "fr": "Marché couvert de poissons et produits frais, surnommé la cuisine de Hakata."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://gofukuoka.jp/spots/detail/26956",
+   "checked": false
+  },
+  {
+   "id": "fukuoka-paypay-dome",
+   "destination": "fukuoka",
+   "name": "Baseball at Fukuoka PayPay Dome (SoftBank Hawks)",
+   "area": "Momochi",
+   "interests": [
+    "sportEvents"
+   ],
+   "hours": 3.5,
+   "slot": "evening",
+   "about": {
+    "it": "Stadio degli Hawks con tetto apribile, dove si fanno anche visite guidate.",
+    "en": "The Hawks' retractable-roof stadium, which also offers guided tours.",
+    "fr": "Stade des Hawks à toit rétractable, avec aussi des visites guidées."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.japan.travel/en/spot/2257/",
+   "checked": true,
+   "when": {
+    "months": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "someDays": true
+   }
+  },
+  {
+   "id": "fukuoka-kyushu-sumo",
+   "destination": "fukuoka",
+   "name": "Kyushu Grand Sumo Tournament",
+   "area": "Hakata",
+   "interests": [
+    "sportEvents"
+   ],
+   "hours": 5,
+   "slot": "afternoon",
+   "about": {
+    "it": "Il torneo di sumo di novembre al Fukuoka Kokusai Center.",
+    "en": "The November sumo tournament at Fukuoka Kokusai Center.",
+    "fr": "Le tournoi de sumo de novembre au Fukuoka Kokusai Center."
+   },
+   "note": {
+    "it": "Date 2027 da confermare.",
+    "en": "Confirm the 2027 dates.",
+    "fr": "Dates 2027 à confirmer."
+   },
+   "source": "https://www.crossroadfukuoka.jp/en/event/10397",
+   "checked": true,
+   "when": {
+    "months": [
+     11
+    ],
+    "someDays": true
+   }
+  },
+  {
+   "id": "nagoya-sumo",
+   "destination": "nagoya",
+   "name": "Nagoya Grand Sumo Tournament",
+   "area": "Castle",
+   "interests": [
+    "sportEvents"
+   ],
+   "hours": 5,
+   "slot": "afternoon",
+   "about": {
+    "it": "Il torneo di sumo di luglio, alla IG Arena vicino al castello.",
+    "en": "The July sumo tournament at IG Arena near the castle.",
+    "fr": "Le tournoi de sumo de juillet, à l'IG Arena près du château."
+   },
+   "note": {
+    "it": "I biglietti possono esaurirsi; date 2027 da confermare.",
+    "en": "Tickets can sell out; confirm 2027 dates.",
+    "fr": "Les billets peuvent s'épuiser ; dates 2027 à confirmer."
+   },
+   "source": "https://aichinow.pref.aichi.jp/en/events/detail/64/",
+   "checked": true,
+   "when": {
+    "months": [
+     7
+    ],
+    "someDays": true
+   }
+  },
+  {
+   "id": "nagoya-vantelin-dome",
+   "destination": "nagoya",
+   "name": "Baseball at Vantelin Dome (Chunichi Dragons)",
+   "area": "Ozone",
+   "interests": [
+    "sportEvents"
+   ],
+   "hours": 3.5,
+   "slot": "evening",
+   "about": {
+    "it": "Partita di baseball nello stadio coperto dei Chunichi Dragons.",
+    "en": "Baseball game at the Chunichi Dragons' domed stadium.",
+    "fr": "Match de baseball au stade couvert des Chunichi Dragons."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://aichinow.pref.aichi.jp/en/events/detail/54/",
+   "checked": false,
+   "when": {
+    "months": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "someDays": true
+   }
+  },
+  {
+   "id": "nagoya-yanagibashi-market",
+   "destination": "nagoya",
+   "name": "Yanagibashi Central Market",
+   "area": "Nagoya Station",
+   "interests": [
+    "markets"
+   ],
+   "hours": 1,
+   "slot": "morning",
+   "about": {
+    "it": "Mercato del pesce vicino alla stazione di Nagoya, attivo di primo mattino.",
+    "en": "Fish market near Nagoya Station, active early in the morning.",
+    "fr": "Marché aux poissons près de la gare de Nagoya, actif tôt le matin."
+   },
+   "note": {
+    "it": "Orari diversi da un negozio all'altro; vai presto.",
+    "en": "Hours vary by shop; go early.",
+    "fr": "Horaires variables selon les commerces ; venez tôt."
+   },
+   "source": "https://aichinow.pref.aichi.jp/en/spots/detail/173/",
+   "checked": false
+  },
+  {
+   "id": "nagoya-chukyo-racecourse",
+   "destination": "nagoya",
+   "name": "Chukyo Racecourse (JRA)",
+   "area": "Toyoake",
+   "interests": [
+    "horses",
+    "sportEvents"
+   ],
+   "hours": 5,
+   "slot": "any",
+   "about": {
+    "it": "Ippodromo della JRA alle porte di Nagoya.",
+    "en": "JRA racecourse on the edge of Nagoya.",
+    "fr": "Hippodrome de la JRA aux portes de Nagoya."
+   },
+   "note": {
+    "it": "Corse solo in certi giorni: controlla il calendario.",
+    "en": "Racing on certain days only: check the calendar.",
+    "fr": "Courses certains jours seulement : vérifiez le calendrier."
+   },
+   "source": "https://japanracing.jp/en/racing/go_racing/jra_racecourses/j05.html",
+   "checked": false,
+   "when": {
+    "someDays": true
+   }
+  },
+  {
+   "id": "sapporo-hokkaido-jingu",
+   "destination": "sapporo",
+   "name": "Hokkaido Shrine (Hokkaido Jingu)",
+   "area": "Maruyama",
+   "interests": [
+    "temples",
+    "nature"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Il principale santuario dell'Hokkaido, in un parco con tanti ciliegi.",
+    "en": "Hokkaido's main shrine, in grounds with many cherry trees.",
+    "fr": "Principal sanctuaire de Hokkaido, dans un parc aux nombreux cerisiers."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.sapporo.travel/en/spot/facility/hokkaido_shrine/",
+   "checked": true
+  },
+  {
+   "id": "sapporo-moerenuma-park",
+   "destination": "sapporo",
+   "name": "Moerenuma Park",
+   "area": "Higashi-ku",
+   "interests": [
+    "modernArt",
+    "nature",
+    "architecture"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Grande parco progettato da Isamu Noguchi come un'unica scultura.",
+    "en": "Large park designed by Isamu Noguchi as one single sculpture.",
+    "fr": "Grand parc conçu par Isamu Noguchi comme une seule sculpture."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.japan.travel/en/spot/1931/",
+   "checked": true
+  },
+  {
+   "id": "sapporo-teine-ski",
+   "destination": "sapporo",
+   "name": "Sapporo Teine ski resort",
+   "area": "Teine",
+   "interests": [
+    "winterSports"
+   ],
+   "hours": 6,
+   "slot": "any",
+   "about": {
+    "it": "Stazione sciistica vicina alla città, con piste usate alle Olimpiadi del 1972.",
+    "en": "Ski resort near the city, with slopes used at the 1972 Olympics.",
+    "fr": "Station de ski proche de la ville, avec des pistes des Jeux de 1972."
+   },
+   "note": {
+    "it": "La zona alta resta aperta più a lungo di quella bassa.",
+    "en": "The upper zone stays open longer than the lower one.",
+    "fr": "La zone haute reste ouverte plus longtemps que la zone basse."
+   },
+   "source": "https://sapporo-teine.com/snow/lang/en/about/",
+   "checked": true,
+   "when": {
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   }
+  },
+  {
+   "id": "sapporo-tomamu",
+   "destination": "sapporo",
+   "name": "Tomamu resort winter activities",
+   "area": "Tomamu",
+   "interests": [
+    "winterSports",
+    "horses"
+   ],
+   "hours": 7,
+   "slot": "any",
+   "about": {
+    "it": "Resort con attività sulla neve, tra cui sci ed equitazione nella pianura innevata.",
+    "en": "Resort with snow activities, including skiing and riding across snowfields.",
+    "fr": "Station aux activités de neige, dont ski et équitation dans les champs enneigés."
+   },
+   "note": {
+    "it": "Lontano da Sapporo.",
+    "en": "Far from Sapporo.",
+    "fr": "Loin de Sapporo."
+   },
+   "source": "https://www.visit-hokkaido.jp/en/spot/detail_10376.html",
+   "checked": false,
+   "when": {
+    "months": [
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "sapporo-es-con-field",
+   "destination": "sapporo",
+   "name": "Baseball at ES CON Field Hokkaido (Fighters)",
+   "area": "Kitahiroshima",
+   "interests": [
+    "sportEvents"
+   ],
+   "hours": 4,
+   "slot": "any",
+   "about": {
+    "it": "Moderno stadio dei Nippon-Ham Fighters dentro un villaggio del baseball.",
+    "en": "The Fighters' modern ballpark inside a baseball village.",
+    "fr": "Stade moderne des Fighters au sein d'un village du baseball."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://event.hkdballpark.com/visitguide/en/",
+   "checked": false,
+   "when": {
+    "months": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "someDays": true
+   }
+  },
+  {
+   "id": "sapporo-banei-obihiro",
+   "destination": "sapporo",
+   "name": "Banei draft horse racing, Obihiro",
+   "area": "Obihiro",
+   "interests": [
+    "horses",
+    "sportEvents",
+    "animals"
+   ],
+   "hours": 4,
+   "slot": "any",
+   "about": {
+    "it": "Corse uniche in cui cavalli da tiro trascinano slitte pesanti su dossi di terra.",
+    "en": "Unique races where draft horses haul heavy sleds over earth mounds.",
+    "fr": "Courses uniques où des chevaux de trait tirent de lourds traîneaux sur des buttes."
+   },
+   "note": {
+    "it": "Di solito sabato, domenica e lunedì. Lontano da Sapporo.",
+    "en": "Usually Saturday, Sunday and Monday. Far from Sapporo.",
+    "fr": "En général samedi, dimanche et lundi. Loin de Sapporo."
+   },
+   "source": "https://www.visit-hokkaido.jp/en/spot/detail_10256.html",
+   "checked": true,
+   "when": {
+    "someDays": true
+   }
+  },
+  {
+   "id": "sapporo-niikappu-riding",
+   "destination": "sapporo",
+   "name": "Niikappu Horoshiri Horse Riding Club",
+   "area": "Niikappu",
+   "interests": [
+    "horses",
+    "nature"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Passeggiate e lezioni con ex purosangue da corsa, per principianti ed esperti.",
+    "en": "Treks and lessons on retired thoroughbreds, for novices and experienced riders.",
+    "fr": "Randonnées et cours sur d'anciens pur-sang, pour débutants et confirmés."
+   },
+   "note": {
+    "it": "Chiuso a Capodanno. Lontano da Sapporo.",
+    "en": "Closed at New Year. Far from Sapporo.",
+    "fr": "Fermé au Nouvel An. Loin de Sapporo."
+   },
+   "source": "https://www.visit-hokkaido.jp/en/spot/detail_10438.html",
+   "checked": true
+  },
+  {
+   "id": "sapporo-lake-toya-ranch",
+   "destination": "sapporo",
+   "name": "Lake Toya Ranch horse trekking",
+   "area": "Lake Toya",
+   "interests": [
+    "horses",
+    "nature"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Trekking a cavallo guidato tra boschi e alture, senza bisogno di esperienza.",
+    "en": "Guided horse treks through woods and highlands, no experience needed.",
+    "fr": "Randonnées équestres guidées en forêt et sur les hauteurs, sans expérience requise."
+   },
+   "note": {
+    "it": "In inverno chiuso il martedì. Lontano da Sapporo.",
+    "en": "Closed Tuesdays in winter. Far from Sapporo.",
+    "fr": "Fermé le mardi en hiver. Loin de Sapporo."
+   },
+   "source": "https://www.visit-hokkaido.jp/en/spot/detail_10432.html",
+   "checked": true
+  },
+  {
+   "id": "hakodate-racecourse",
+   "destination": "hakodate",
+   "name": "Hakodate Racecourse (JRA)",
+   "area": "Yunokawa",
+   "interests": [
+    "horses",
+    "sportEvents"
+   ],
+   "hours": 4,
+   "slot": "any",
+   "about": {
+    "it": "Ippodromo della JRA con due brevi riunioni di corse all'anno.",
+    "en": "JRA racecourse with two short race meetings a year.",
+    "fr": "Hippodrome de la JRA avec deux courtes réunions de courses par an."
+   },
+   "note": {
+    "it": "Controlla il calendario delle corse.",
+    "en": "Check the racing calendar.",
+    "fr": "Vérifiez le calendrier des courses."
+   },
+   "source": "https://japanracing.jp/en/racing/go_racing/jra_racecourses/j10.html",
+   "checked": true,
+   "when": {
+    "someDays": true
+   }
+  },
+  {
+   "id": "niigata-racecourse",
+   "destination": "niigata",
+   "name": "Niigata Racecourse (JRA)",
+   "area": "Kita-ku",
+   "interests": [
+    "horses",
+    "sportEvents"
+   ],
+   "hours": 4,
+   "slot": "any",
+   "about": {
+    "it": "Ippodromo della JRA raggiungibile con una navetta dalla città.",
+    "en": "JRA racecourse reachable by shuttle bus from the city.",
+    "fr": "Hippodrome de la JRA accessible par navette depuis la ville."
+   },
+   "note": {
+    "it": "Controlla il calendario delle corse.",
+    "en": "Check the racing calendar.",
+    "fr": "Vérifiez le calendrier des courses."
+   },
+   "source": "https://japanracing.jp/en/racing/go_racing/jra_racecourses/pdf/j07_NiigataRacecourse.pdf",
+   "checked": false,
+   "when": {
+    "someDays": true
+   }
+  },
+  {
+   "id": "niigata-naeba-ski",
+   "destination": "niigata",
+   "name": "Naeba ski resort",
+   "area": "Naeba",
+   "interests": [
+    "winterSports"
+   ],
+   "hours": 7,
+   "slot": "any",
+   "about": {
+    "it": "Grande stazione sciistica collegata con una lunga cabinovia alla zona di Kagura.",
+    "en": "Large ski resort linked by a long gondola to the Kagura area.",
+    "fr": "Grande station de ski reliée par une longue télécabine au secteur de Kagura."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.japan.travel/en/spot/1447/",
+   "checked": false,
+   "when": {
+    "months": [
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "sendai-haikyu-spots",
+   "destination": "sendai",
+   "name": "Haikyu!! pilgrimage in Sendai",
+   "area": "Central Sendai",
+   "interests": [
+    "filmSpots",
+    "gaming"
+   ],
+   "hours": 4,
+   "slot": "any",
+   "about": {
+    "it": "Itinerario tra monumenti e tombini dedicati al manga di pallavolo Haikyu!!.",
+    "en": "Trail of monuments and manhole covers devoted to the volleyball manga Haikyu!!.",
+    "fr": "Parcours de monuments et plaques d'égout dédiés au manga de volley Haikyu!!."
+   },
+   "note": {
+    "it": "Kamei Arena chiusa fino a marzo 2027: il suo monumento è al parco Tomizawa.",
+    "en": "Kamei Arena closed until March 2027: its monument is in Tomizawa Park.",
+    "fr": "Kamei Arena fermée jusqu'en mars 2027 : son monument est au parc Tomizawa."
+   },
+   "source": "https://discoversendai.travel/itineraries/haikyu-tour-in-sendai/",
+   "checked": true
+  },
+  {
+   "id": "sendai-rakuten-ballpark",
+   "destination": "sendai",
+   "name": "Baseball at the Rakuten Eagles ballpark",
+   "area": "Miyagino",
+   "interests": [
+    "sportEvents"
+   ],
+   "hours": 3.5,
+   "slot": "evening",
+   "about": {
+    "it": "Lo stadio di casa dei Rakuten Eagles, con varie animazioni per i tifosi.",
+    "en": "The Rakuten Eagles' home ballpark, with various fan events.",
+    "fr": "Le stade des Rakuten Eagles, avec diverses animations."
+   },
+   "note": {
+    "it": "Il nome dello stadio può cambiare con lo sponsor.",
+    "en": "The stadium name may change with the sponsor.",
+    "fr": "Le nom du stade peut changer selon le sponsor."
+   },
+   "source": "https://discoversendai.travel/places/sendai-professional-sports/",
+   "checked": false,
+   "when": {
+    "months": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "someDays": true
+   }
+  },
+  {
+   "id": "morioka-umakko-park",
+   "destination": "morioka",
+   "name": "Umakko Park Iwate",
+   "area": "Takizawa",
+   "interests": [
+    "horses",
+    "kids",
+    "animals"
+   ],
+   "hours": 2.5,
+   "slot": "any",
+   "about": {
+    "it": "Centro ippico con lezioni, uscite nel parco boscoso e prati per rilassarsi.",
+    "en": "Riding centre with lessons, forest park treks and open lawns.",
+    "fr": "Centre équestre avec leçons, randonnées dans le parc boisé et pelouses."
+   },
+   "note": {
+    "it": "Contatta il centro per informazioni sulla prenotazione.",
+    "en": "Contact the centre about booking.",
+    "fr": "Contactez le centre pour la réservation."
+   },
+   "source": "https://iwatetabi.jp/en/?p=80903",
+   "checked": true,
+   "when": {
+    "closedWeekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "id": "morioka-tonouma-no-sato",
+   "destination": "morioka",
+   "name": "Tonouma no Sato horse village",
+   "area": "Tono",
+   "interests": [
+    "horses",
+    "animals",
+    "nature"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Centro di allevamento nella storica terra dei cavalli di Tono, dove si può montare.",
+    "en": "Breeding centre in Tono's historic horse country, with riding.",
+    "fr": "Centre d'élevage au pays historique du cheval de Tono, avec équitation."
+   },
+   "note": {
+    "it": "Prenotazione obbligatoria per montare.",
+    "en": "Reservation required to ride.",
+    "fr": "Réservation obligatoire pour monter."
+   },
+   "source": "https://iwatetabi.jp/en/spots/95553",
+   "checked": true,
+   "when": {
+    "closedWeekdays": [
+     1
+    ]
+   },
+   "booking": true
+  },
+  {
+   "id": "morioka-appi-kogen",
+   "destination": "morioka",
+   "name": "Appi Kogen ski resort",
+   "area": "Appi Kogen",
+   "interests": [
+    "winterSports"
+   ],
+   "hours": 7,
+   "slot": "any",
+   "about": {
+    "it": "Grande stazione sciistica dell'Iwate.",
+    "en": "Large ski resort in Iwate.",
+    "fr": "Grande station de ski d'Iwate."
+   },
+   "note": {
+    "it": "Inverno 2026-27: apertura prevista il 5 dicembre.",
+    "en": "Winter 2026-27: opening planned for 5 December.",
+    "fr": "Hiver 2026-27 : ouverture prévue le 5 décembre."
+   },
+   "source": "https://www.appi.co.jp/en/access-winter-3/",
+   "checked": false,
+   "when": {
+    "months": [
+     12,
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  },
+  {
+   "id": "aomori-komakko-land",
+   "destination": "aomori",
+   "name": "Komakko Land horse park and Shotokukan museum",
+   "area": "Towada",
+   "interests": [
+    "horses",
+    "museums",
+    "kids",
+    "animals"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Parco del cavallo con pony, giri a mano e un museo sulla cultura equestre locale.",
+    "en": "Horse park with ponies, led rides and a museum on local horse culture.",
+    "fr": "Parc du cheval avec poneys, tours en main et musée de la culture équestre locale."
+   },
+   "note": {
+    "it": "Si monta solo con il cavallo condotto a mano.",
+    "en": "Riding is lead-rein only.",
+    "fr": "On monte uniquement avec un cheval tenu en main."
+   },
+   "source": "https://aomori-tourism.com/spot/detail_1841.html",
+   "checked": true,
+   "when": {
+    "closedWeekdays": [
+     1
+    ]
+   }
+  },
+  {
+   "id": "aomori-kandachime-horses",
+   "destination": "aomori",
+   "name": "Kandachime horses at Cape Shiriyazaki",
+   "area": "Shiriyazaki",
+   "interests": [
+    "horses",
+    "animals",
+    "nature"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Robusti cavalli che pascolano liberi sul capo, vicino al faro.",
+    "en": "Sturdy horses grazing freely on the cape by the lighthouse.",
+    "fr": "Chevaux trapus paissant en liberté sur le cap, près du phare."
+   },
+   "note": {
+    "it": "Sul capo da aprile a novembre; inaccessibile da gennaio a marzo. Lontano da Aomori.",
+    "en": "On the cape April to November; inaccessible January to March. Far from Aomori.",
+    "fr": "Sur le cap d'avril à novembre ; inaccessible de janvier à mars. Loin d'Aomori."
+   },
+   "source": "https://www.japan.travel/en/sports/snow/snow-travel/cape-shiriyazaki-kandachime-horses/",
+   "checked": true,
+   "when": {
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   }
+  },
+  {
+   "id": "akita-masuda-manga",
+   "destination": "akita",
+   "name": "Yokote Masuda Manga Museum",
+   "area": "Yokote",
+   "interests": [
+    "museums",
+    "gaming"
+   ],
+   "hours": 2,
+   "slot": "any",
+   "about": {
+    "it": "Museo del manga con una grande raccolta di tavole originali.",
+    "en": "Manga museum with a large collection of original drawings.",
+    "fr": "Musée du manga avec une vaste collection de planches originales."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.city.yokote.lg.jp/kanko/1001533/1006604/1006606.html",
+   "checked": false
+  },
+  {
+   "id": "otsu-miidera",
+   "destination": "otsu",
+   "name": "Mii-dera Temple (Rurouni Kenshin location)",
+   "area": "Otsu Port",
+   "interests": [
+    "temples",
+    "historic",
+    "filmSpots"
+   ],
+   "hours": 1.5,
+   "slot": "any",
+   "about": {
+    "it": "Grande tempio vicino al lago Biwa, usato nel film dal vivo Rurouni Kenshin.",
+    "en": "Large temple near Lake Biwa, used in the Rurouni Kenshin live-action film.",
+    "fr": "Grand temple près du lac Biwa, vu dans le film Rurouni Kenshin."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://www.japan.travel/en/au/news-blog/5-locations-to-visit-in-shiga-for-anime-and-pop-culture-fans/",
+   "checked": true
+  },
+  {
+   "id": "matsue-tsuwano-yabusame",
+   "destination": "matsue",
+   "name": "Tsuwano Yabusame horseback archery",
+   "area": "Tsuwano",
+   "interests": [
+    "horses",
+    "festivals",
+    "sportEvents"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Tiro con l'arco da cavallo al santuario Washibara Hachimangu.",
+    "en": "Horseback archery at Washibara Hachimangu Shrine.",
+    "fr": "Tir à l'arc à cheval au sanctuaire Washibara Hachimangu."
+   },
+   "note": {
+    "it": "Prima domenica di aprile (data da confermare). Lontano da Matsue.",
+    "en": "First Sunday of April (confirm). Far from Matsue.",
+    "fr": "Premier dimanche d'avril (à confirmer). Loin de Matsue."
+   },
+   "source": "https://www.kankou-shimane.com/en/destinations/12369",
+   "checked": true,
+   "when": {
+    "from": "04-01",
+    "to": "04-07",
+    "someDays": true
+   }
+  },
+  {
+   "id": "beppu-oyama-dam",
+   "destination": "beppu",
+   "name": "Oyama Dam Attack on Titan statues",
+   "area": "Hita",
+   "interests": [
+    "filmSpots"
+   ],
+   "hours": 1,
+   "slot": "any",
+   "about": {
+    "it": "Statue dei protagonisti di L'attacco dei giganti davanti alla diga.",
+    "en": "Statues of the Attack on Titan heroes facing the dam.",
+    "fr": "Statues des héros de L'Attaque des Titans face au barrage."
+   },
+   "note": {
+    "it": "Lontano da Beppu.",
+    "en": "Far from Beppu.",
+    "fr": "Loin de Beppu."
+   },
+   "source": "https://www.japan.travel/en/ph/special-features/anime-locations-real-life/",
+   "checked": true
+  },
+  {
+   "id": "kumamoto-luffy-statue",
+   "destination": "kumamoto",
+   "name": "Luffy statue (One Piece)",
+   "area": "Suizenji",
+   "interests": [
+    "filmSpots"
+   ],
+   "hours": 0.5,
+   "slot": "any",
+   "about": {
+    "it": "Statua di Luffy davanti alla sede della prefettura, parte del progetto di rinascita dopo il terremoto.",
+    "en": "Statue of Luffy by the prefectural office, part of the post-earthquake revival project.",
+    "fr": "Statue de Luffy devant la préfecture, issue du projet de relance après le séisme."
+   },
+   "note": {
+    "it": "",
+    "en": "",
+    "fr": ""
+   },
+   "source": "https://kumamoto-guide.jp/en/spots/detail/368",
+   "checked": true
+  },
+  {
+   "id": "kumamoto-el-patio-ranch",
+   "destination": "kumamoto",
+   "name": "El Patio Ranch riding in Aso",
+   "area": "Aso",
+   "interests": [
+    "horses",
+    "nature"
+   ],
+   "hours": 2,
+   "slot": "any",
+   "about": {
+    "it": "Uscite a cavallo con vista sui monti di Aso, dal passo tranquillo al trotto più veloce.",
+    "en": "Rides with views of the Aso peaks, from gentle walks to faster trots.",
+    "fr": "Balades avec vue sur les monts d'Aso, du pas tranquille au trot soutenu."
+   },
+   "note": {
+    "it": "Contatti per prenotare per email o telefono; si parla anche inglese.",
+    "en": "Booking contacts by email or phone; English listed.",
+    "fr": "Contacts de réservation par e-mail ou téléphone ; anglais indiqué."
+   },
+   "source": "https://www.japan.travel/national-parks/parks/aso-kuju/see-and-do/horseback-riding-and-stunning-scenery/",
+   "checked": true
+  },
+  {
+   "id": "kagoshima-horse-trust",
+   "destination": "kagoshima",
+   "name": "Horse Trust ranch experience, Kirishima",
+   "area": "Kirishima",
+   "interests": [
+    "horses",
+    "animals",
+    "nature"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Esperienza guidata in un ranch per cavalli in pensione, a stretto contatto con il branco.",
+    "en": "Guided experience at a retired horse ranch, spending time with the herd.",
+    "fr": "Expérience guidée dans un ranch de chevaux retraités, auprès du troupeau."
+   },
+   "note": {
+    "it": "Domanda 2 settimane prima; niente sandali o gonne per montare.",
+    "en": "Apply 2 weeks ahead; no sandals or skirts for riding.",
+    "fr": "Demande 2 semaines à l'avance ; ni sandales ni jupe pour monter."
+   },
+   "source": "https://www.kagoshima-kankou.com/for/attractions/70375",
+   "checked": true,
+   "booking": true
+  },
+  {
+   "id": "naha-iejima-horse-park",
+   "destination": "naha",
+   "name": "Iejima Beachside Horse Park",
+   "area": "Ie Island",
+   "interests": [
+    "horses",
+    "beaches"
+   ],
+   "hours": 3,
+   "slot": "any",
+   "about": {
+    "it": "Uscite a cavallo sulla spiaggia dell'isola di Ie, adatte anche ai principianti.",
+    "en": "Beach rides on Ie Island, open to beginners.",
+    "fr": "Balades à cheval sur la plage de l'île d'Ie, ouvertes aux débutants."
+   },
+   "note": {
+    "it": "Meglio prenotare. In mare da maggio a inizio ottobre; il trekking richiede un livello intermedio.",
+    "en": "Booking advised. Sea rides May to early October; trekking needs intermediate level.",
+    "fr": "Réservation conseillée. Dans la mer de mai à début octobre ; trekking niveau intermédiaire."
+   },
+   "source": "https://www.okinawastory.jp/spot/600010416",
    "checked": true
   }
  ],

@@ -1,9 +1,10 @@
 // Itinéraire créé par l'app elle-même, à partir d'un guide inclus : des règles fixes,
 // pas une intelligence artificielle. Sans dépendance à l'écran (donc testable).
-import { interestsOn, type Pace, type Preferences } from './interests.ts'
+import { interestsOn, settingsOn, type Pace, type Preferences } from './interests.ts'
 import { stageOn, type Stage } from './stages.ts'
 import type { Guide, GuideDestination, GuidePlace, Localized } from './guide/types.ts'
 import type { Proposal } from './proposals.ts'
+import { startTimes } from './questions.ts'
 import { activitiesOn, listDays, type Trip } from './trips.ts'
 
 type GuideLanguage = keyof Localized
@@ -240,10 +241,23 @@ const outingText = { it: 'Gita da', en: 'Day trip from', fr: 'Excursion depuis' 
 const clock = (minutes: number) =>
   `${String(Math.floor(minutes / 60)).padStart(2, '0')}:${String(minutes % 60).padStart(2, '0')}`
 
+const lunchInterests = ['restaurants', 'streetFood', 'markets', 'cafes']
+export const lunchText = { it: 'Per pranzo.', en: 'For lunch.', fr: 'Pour le déjeuner.' }
+
+// Ce que les réponses aux questions écartent.
+function suits(place: GuidePlace, answers: Record<string, string>): boolean {
+  const has = (...ids: string[]) => ids.some((i) => place.interests.includes(i))
+  if (answers.evening === 'never' && place.slot === 'evening') return false
+  if (answers.walking === 'little' && has('hiking')) return false
+  if (answers.hike === 'easy' && has('hiking') && place.hours > 4) return false
+  return !(answers.children === 'yes' && has('bars', 'nightlife'))
+}
+
 export type DayPlan = {
   proposals: Proposal[]
   unknownCity: string[] // jours dont la ville n'est pas dans le guide
   empty: string[] // jours sans aucun lieu correspondant
+  missed: string[] // lieux favoris qui n'ont pas pu être placés
 }
 
 // Le lieu peut-il être proposé ce jour-là, d'après les périodes connues ?
@@ -275,7 +289,14 @@ export function planDays(
     trip.activities.filter((a) => allDays.includes(a.date)).map((a) => normalise(a.title)),
   )
   const seen = new Map<string, number>() // fois où une envie a déjà été servie
-  const result: DayPlan = { proposals: [], unknownCity: [], empty: [] }
+  const result: DayPlan = { proposals: [], unknownCity: [], empty: [], missed: [] }
+  const favourites = new Set(trip.mustDo ?? [])
+  const placed = new Set<string>()
+  const top = new Set(preferences.top ?? [])
+  const favouritesIn = (id: string, date: string) =>
+    guide.places.filter(
+      (p) => p.destination === id && favourites.has(p.id) && !used.has(p.id) && isAvailable(p, date),
+    ).length
   const onlyDestination = findDestination(guide, trip.destination)
   const stageIds = new Set((trip.stages ?? []).map((s) => findDestination(guide, s.city)?.id))
   const visited = new Set<string>() // excursions déjà placées
@@ -297,8 +318,20 @@ export function planDays(
     daysIn.set(base.id, Math.max(dayNumber, daysIn.get(base.id) ?? 0))
     const matches = (id: string) =>
       guide.places.filter((p) => p.destination === id && p.interests.some((i) => wanted.includes(i))).length
+    const { pace, answers } = settingsOn(preferences, date)
+    const outings = answers.outings !== 'no'
+    // Un lieu favori hors des étapes justifie une excursion, dès le deuxième jour.
+    const wantedOuting =
+      dayNumber >= 2 && !lastDay
+        ? guide.destinations.find(
+            (d) =>
+              d.id !== base.id && !stageIds.has(d.id) && time(base.id, d.id) <= 120 &&
+              favouritesIn(d.id, date) > 0,
+          )
+        : undefined
     const outing =
-      dayNumber >= 3 && !lastDay
+      wantedOuting ??
+      (outings && dayNumber >= 3 && !lastDay
         ? guide.destinations
             .filter(
               (d) =>
@@ -306,12 +339,15 @@ export function planDays(
                 time(base.id, d.id) <= 75 && matches(d.id) >= 2,
             )
             .sort((a, b) => matches(b.id) - matches(a.id))[0]
-        : undefined
+        : undefined)
     if (outing) visited.add(outing.id)
     const destination = outing ?? base
 
-    let { hours, count } = limits[preferences.pace]
-    let start = 9 * 60 + 30
+    let { hours, count } = limits[pace]
+    let start = startTimes[answers.start] ?? startTimes.normal
+    // Commencer plus tard raccourcit la journée, plus tôt l'allonge.
+    hours += (startTimes.normal - start) / 60
+    if (answers.walking === 'little') count = Math.max(1, count - 1)
     const from = here?.from ? findDestination(guide, here.from) : undefined
     if (here?.from) {
       // Jour de déplacement : le trajet et les bagages prennent une partie de la journée.
@@ -334,7 +370,7 @@ export function planDays(
     const planned = activitiesOn(trip, date).length
     count = Math.max(0, count - planned)
     if (mode === 'pick') {
-      count = limits[preferences.pace].count + 3
+      count = limits[pace].count + 3
       hours = 99
     }
     if (count === 0) continue
@@ -347,21 +383,40 @@ export function planDays(
         isAvailable(p, date) &&
         // Un événement « certains jours » n'est proposé que quand on choisit soi-même.
         (mode === 'pick' || !p.when?.someDays) &&
-        p.interests.some((i) => wanted.includes(i)),
+        // Un lieu favori passe avant les réponses aux questions.
+        (favourites.has(p.id) || (p.interests.some((i) => wanted.includes(i)) && suits(p, answers))),
     )
     const score = (p: GuidePlace, areas: Set<string>) =>
       p.interests
         .filter((i) => wanted.includes(i))
         // Une envie déjà servie compte moins, pour varier le programme.
-        .reduce((sum, i) => sum + 10 / (1 + (seen.get(i) ?? 0)), 0) +
-      (areas.has(p.area) ? 15 : 0) +
-      (p.checked ? 1 : 0)
+        .reduce((sum, i) => sum + ((top.has(i) ? 20 : 10) / (1 + (seen.get(i) ?? 0))), 0) +
+      (areas.has(p.area) ? (answers.walking === 'little' ? 30 : 15) : 0) +
+      (p.checked ? 1 : 0) +
+      (p.highlight ? (answers.classics === 'first' ? 14 : answers.classics === 'quiet' ? -6 : 3) : 0) +
+      (answers.evening === 'often' && p.slot === 'evening' ? 12 : 0) +
+      (answers.children === 'yes' && p.interests.includes('kids') ? 8 : 0) +
+      (favourites.has(p.id) ? 1000 : 0)
+
+    // Le déjeuner demandé occupe une des places de la journée.
+    const lunch =
+      mode === 'plan' && answers.lunch === 'yes' && start <= 12 * 60 && hours >= 3
+        ? guide.places
+            .filter(
+              (p) =>
+                p.destination === destination.id && !used.has(p.id) && !taken.has(normalise(p.name)) &&
+                isAvailable(p, date) && !p.when?.someDays && suits(p, answers) &&
+                (p.slot === 'any' || p.slot === 'morning') && p.hours <= 2.5 &&
+                p.interests.some((i) => lunchInterests.includes(i)),
+            )
+        : []
 
     const chosen: GuidePlace[] = []
     const areas = new Set<string>()
     let spent = 0
     let evenings = 0
-    while (chosen.length < count) {
+    const mainCount = lunch.length ? Math.max(1, count - 1) : count
+    while (chosen.length < mainCount) {
       const candidates = free
         .filter((p) => !chosen.includes(p))
         .filter((p) => mode === 'pick' || p.slot !== 'evening' || (evenings === 0 && !lastDay))
@@ -378,9 +433,27 @@ export function planDays(
       if (next.slot === 'evening') evenings++
       for (const i of next.interests) seen.set(i, (seen.get(i) ?? 0) + 1)
     }
+    // Pas de second repas si le programme en contient déjà un en journée.
+    const eats = chosen.some((p) => p.slot !== 'evening' && p.interests.some((i) => lunchInterests.includes(i)))
+    let lunchPlace: GuidePlace | undefined
+    if (lunch.length && !eats && chosen.length > 0) {
+      lunchPlace = lunch
+        .filter((p) => !chosen.includes(p))
+        .sort(
+          (a, b) =>
+            Number(areas.has(b.area)) - Number(areas.has(a.area)) ||
+            Number(b.checked) - Number(a.checked) ||
+            a.id.localeCompare(b.id),
+        )[0]
+      if (lunchPlace) {
+        chosen.push(lunchPlace)
+        used.add(lunchPlace.id)
+        spent += lunchPlace.hours
+      }
+    }
     const extras = new Set<string>()
     if (fill && mode === 'plan') {
-      const target = Math.min(count, fillTo[preferences.pace])
+      const target = Math.min(count, fillTo[pace])
       while (chosen.length < target) {
         const next = guide.places
           .filter(
@@ -391,6 +464,7 @@ export function planDays(
               isAvailable(p, date) &&
               !p.when?.someDays &&
               p.slot !== 'evening' &&
+              suits(p, answers) &&
               p.interests.every((i) => !['hiking', 'activeSports', 'winterSports', 'waterSports', 'bars', 'nightlife'].includes(i)) &&
               p.interests.some((i) => generalInterests.includes(i)) &&
               spent + p.hours <= hours,
@@ -417,9 +491,23 @@ export function planDays(
     const rank = { morning: 0, any: 1, afternoon: 2, evening: 3 }
     // Par moment de la journée, en gardant ensemble les lieux d'un même quartier.
     const areaOrder = [...areas]
-    chosen.sort((a, b) => rank[a.slot] - rank[b.slot] || areaOrder.indexOf(a.area) - areaOrder.indexOf(b.area))
+    // Le déjeuner se place entre les visites du matin et les autres.
+    const order = (p: GuidePlace) => (p === lunchPlace ? 0.5 : rank[p.slot])
+    chosen.sort((a, b) => order(a) - order(b) || areaOrder.indexOf(a.area) - areaOrder.indexOf(b.area))
+    // Le matin ne garde pas plus de visites que ce qui tient avant le déjeuner.
+    if (lunchPlace) {
+      const others = chosen.filter((p) => p !== lunchPlace)
+      let clockTime = start
+      let before = 0
+      while (before < others.length && others[before].slot !== 'afternoon' && others[before].slot !== 'evening' && clockTime < 11 * 60 + 30) {
+        clockTime += Math.round(others[before].hours * 2) * 30 + 30
+        before++
+      }
+      chosen.splice(0, chosen.length, ...others.slice(0, before), lunchPlace, ...others.slice(before))
+    }
     let now = start
     for (const place of chosen) {
+      if (place === lunchPlace) now = Math.max(now, 12 * 60)
       if (place.slot === 'afternoon') now = Math.max(now, 13 * 60 + 30)
       if (place.slot === 'evening') now = Math.max(now, 18 * 60 + 30)
       // Une visite de journée ne commence pas en fin d'après-midi : on la garde pour un autre jour.
@@ -427,6 +515,7 @@ export function planDays(
         used.delete(place.id)
         continue
       }
+      placed.add(place.id)
       result.proposals.push({
         date,
         time: mode === 'plan' && now < 23 * 60 ? clock(now) : '',
@@ -434,6 +523,7 @@ export function planDays(
         place: `${place.name}, ${destination.name}`,
         notes: [
           extras.has(place.id) && extraText[language],
+          place === lunchPlace && lunchText[language],
           outing && `${outingText[language]} ${base.name} (~${time(base.id, outing.id)} min).`,
           place.about[language],
           place.note[language],
@@ -444,10 +534,46 @@ export function planDays(
       })
       // Visite, trajet, et la pause de midi.
       const end = now + Math.round(place.hours * 2) * 30 + 30
-      now = now < 12 * 60 + 30 && end >= 12 * 60 + 30 ? end + 60 : end
+      // La pause de midi n'est ajoutée que si aucun lieu n'est déjà prévu pour manger.
+      now = !lunchPlace && now < 12 * 60 + 30 && end >= 12 * 60 + 30 ? end + 60 : end
     }
   }
+  const planned = new Set(trip.activities.map((a) => normalise(a.title)))
+  result.missed = guide.places
+    .filter((p) => favourites.has(p.id) && !placed.has(p.id) && !planned.has(normalise(p.name)))
+    .map((p) => p.name)
   return result
+}
+
+// Ce que le guide sait d'une étape, selon les envies et les lieux favoris.
+export function stageSummary(
+  guide: Guide,
+  city: string,
+  previous: string | undefined,
+  preferences: Preferences,
+  mustDo: string[] = [],
+) {
+  const destination = findDestination(guide, city)
+  if (!destination) return null
+  const wanted = new Set([...preferences.interests, ...preferences.days.flatMap((d) => d.interests)])
+  const own = guide.places.filter((p) => p.destination === destination.id)
+  const matching = wanted.size ? own.filter((p) => p.interests.some((i) => wanted.has(i))) : own
+  const weight = (p: GuidePlace) =>
+    (p.highlight ? 10 : 0) + p.interests.filter((i) => wanted.has(i)).length
+  const from = previous ? findDestination(guide, previous) : undefined
+  const minutes = from && from.id !== destination.id ? travelTimes(guide)(from.id, destination.id) : null
+  const direct = guide.travel.find(
+    (t) =>
+      (t.from === from?.id && t.to === destination.id) ||
+      (t.to === from?.id && t.from === destination.id),
+  )
+  return {
+    matching: matching.length,
+    examples: [...matching].sort((a, b) => weight(b) - weight(a) || a.id.localeCompare(b.id)).slice(0, 3).map((p) => p.name),
+    favourites: own.filter((p) => mustDo.includes(p.id)).map((p) => p.name),
+    travel: minutes !== null && minutes < unknownTravel ? minutes : null,
+    how: direct?.how ?? '',
+  }
 }
 
 // Les villes du guide citées dans un texte, comme « Tokyo e Kyoto ».
@@ -463,6 +589,12 @@ export function guideCovers(guide: Guide, trip: Pick<Trip, 'destination' | 'stag
   return Boolean(trip.stages?.length && trip.stages.every((s) => findDestination(guide, s.city)))
 }
 
+// Les villes à inclure pour les lieux favoris ; les excursions se font depuis une étape.
+export function favouriteCities(guide: Guide, mustDo: string[] = []): string[] {
+  const ids = guide.places.filter((p) => mustDo.includes(p.id)).map((p) => p.destination)
+  return [...new Set(ids)].filter((id) => guide.destinations.find((d) => d.id === id)!.minNights > 0)
+}
+
 // Sans parcours enregistré, l'app en choisit un elle-même pour pouvoir créer
 // l'itinéraire en une fois. null : inutile (parcours déjà là ou une seule ville).
 export function automaticRoute(
@@ -476,7 +608,7 @@ export function automaticRoute(
   if (cities.length === 1 || (!cities.length && findDestination(guide, trip.destination))) return null
   const nights = listDays(trip.startDate, trip.endDate).length - 1
   const routes = proposeRoutes(guide, Math.max(1, nights), preferences, {
-    include: cities,
+    include: [...new Set([...cities, ...favouriteCities(guide, trip.mustDo)])],
     arrival: '',
     departure: '',
   })

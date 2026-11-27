@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ClaudeSteps from '../components/ClaudeSteps'
 import GuideRoute from '../components/GuideRoute'
+import StageInfo from '../components/StageInfo'
 import StagesEditor from '../components/StagesEditor'
 import { useGuide } from '../guide/useGuide'
 import { guideCovers } from '../planner'
@@ -110,6 +111,21 @@ export default function RouteView({ t, language, trip, onChange }: Props) {
             language={language}
             days={days}
             initial={stages}
+            info={
+              covered
+                ? (stage, previous) => (
+                    <StageInfo
+                      t={t}
+                      guide={guide}
+                      stage={stage}
+                      previous={previous}
+                      preferences={preferences}
+                      mustDo={trip.mustDo}
+                    />
+                  )
+                : undefined
+            }
+            suggestions={covered ? guide.destinations.map((d) => d.name) : undefined}
             saveLabel={t.saveRoute}
             onSave={(next) => save(next, false)}
           />
@@ -147,6 +163,7 @@ export default function RouteView({ t, language, trip, onChange }: Props) {
               preferences={preferences}
               days={days}
               destination={trip.destination}
+              mustDo={trip.mustDo}
               onSave={save}
             />
           )}

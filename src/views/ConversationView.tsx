@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { readCache, writeCache } from '../cache'
 import type { Dictionary, Language } from '../i18n'
-import { phraseLanguages, phrases } from '../phrases'
+import { phraseGroups, phraseLanguages } from '../phrases'
 import { link } from '../route'
 import { canListen, listen, speak, stopSpeaking, unlockSpeech, type MicProblem } from '../speech'
 import { checkText, QuotaError, translate, translationLanguages } from '../translate'
@@ -236,24 +236,31 @@ export default function ConversationView({ t, language }: Props) {
         <details className="card">
           <summary>⭐ {t.readyPhrases}</summary>
           <p className="muted">{t.readyPhrasesNote}</p>
-          <ul className="plain results">
-            {phrases.map((phrase) => (
-              <li key={phrase.ja}>
-                <button
-                  type="button"
-                  disabled={busy}
-                  onClick={() => {
-                    stopSpeaking()
-                    unlockSpeech()
-                    send('mine', phrase[readyCodes.mine])
-                    document.getElementById('their-half')?.scrollIntoView({ behavior: 'smooth' })
-                  }}
-                >
-                  <span lang={readyCodes.mine}>{phrase[readyCodes.mine]}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
+          {phraseGroups.map((group) => (
+            <details key={group.en} className="region">
+              <summary>
+                {group.icon} {group[language]} ({group.phrases.length})
+              </summary>
+              <ul className="plain results">
+                {group.phrases.map((phrase) => (
+                  <li key={phrase.ja}>
+                    <button
+                      type="button"
+                      disabled={busy}
+                      onClick={() => {
+                        stopSpeaking()
+                        unlockSpeech()
+                        send('mine', phrase[readyCodes.mine])
+                        document.getElementById('their-half')?.scrollIntoView({ behavior: 'smooth' })
+                      }}
+                    >
+                      <span lang={readyCodes.mine}>{phrase[readyCodes.mine]}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
         </details>
       )}
 
