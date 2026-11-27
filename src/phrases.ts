@@ -96,25 +96,6 @@ const groups: Group[] = [
     ],
   },
   {
-    icon: '🐴', it: 'Cavalli e maneggio', en: 'Horses and riding', fr: 'Chevaux et équitation',
-    rows: [
-      ['Sono un cavaliere professionista di salto ostacoli', 'I am a professional show-jumping rider', 'Je suis cavalier professionnel de saut d’obstacles', '私は障害馬術のプロの選手です。'],
-      ['Ho esperienza di equitazione', 'I have riding experience', 'J’ai de l’expérience à cheval', '乗馬の経験があります。'],
-      ['Sono un principiante a cavallo', 'I am a beginner rider', 'Je débute à cheval', '乗馬は初心者です。'],
-      ['Dov’è il maneggio?', 'Where is the riding club?', 'Où est le centre équestre ?', '乗馬クラブはどこですか？'],
-      ['Si può visitare la scuderia?', 'May we visit the stables?', 'Peut-on visiter l’écurie ?', '厩舎を見学できますか？'],
-      ['Posso accarezzare il cavallo?', 'May I stroke the horse?', 'Puis-je caresser le cheval ?', '馬に触ってもいいですか？'],
-      ['Posso montare a cavallo?', 'May I ride?', 'Puis-je monter à cheval ?', '馬に乗れますか？'],
-      ['Posso saltare gli ostacoli?', 'May I jump fences?', 'Puis-je sauter des obstacles ?', '障害を跳んでもいいですか？'],
-      ['Come si chiama questo cavallo?', 'What is this horse’s name?', 'Comment s’appelle ce cheval ?', 'この馬の名前は何ですか？'],
-      ['Quanti anni ha questo cavallo?', 'How old is this horse?', 'Quel âge a ce cheval ?', 'この馬は何歳ですか？'],
-      ['È un cavallo tranquillo?', 'Is this a calm horse?', 'Est-ce un cheval calme ?', 'おとなしい馬ですか？'],
-      ['Posso noleggiare un casco?', 'Can I rent a helmet?', 'Puis-je louer un casque ?', 'ヘルメットを借りられますか？'],
-      ['Posso noleggiare gli stivali?', 'Can I rent boots?', 'Puis-je louer des bottes ?', 'ブーツを借りられますか？'],
-      ['Quando c’è il prossimo concorso?', 'When is the next competition?', 'Quand a lieu le prochain concours ?', '次の競技会はいつですか？'],
-    ],
-  },
-  {
     icon: '💊', it: 'Salute', en: 'Health', fr: 'Santé',
     rows: [
       ['Non mi sento bene', 'I don’t feel well', 'Je ne me sens pas bien', '体調が悪いです。'],
@@ -124,7 +105,6 @@ const groups: Group[] = [
       ['Dov’è l’ospedale?', 'Where is the hospital?', 'Où est l’hôpital ?', '病院はどこですか？'],
       ['Ho un’allergia alimentare', 'I have a food allergy', 'J’ai une allergie alimentaire', '食物アレルギーがあります。'],
       ['Sono caduto', 'I had a fall', 'Je suis tombé', '転びました。'],
-      ['Sono caduto da cavallo', 'I fell off a horse', 'Je suis tombé de cheval', '馬から落ちました。'],
       ['Ho un’assicurazione', 'I have insurance', 'J’ai une assurance', '保険に入っています。'],
     ],
   },
