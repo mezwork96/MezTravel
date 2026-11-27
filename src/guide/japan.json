@@ -20526,9 +20526,9 @@
    "points": [
     {
      "text": {
-      "it": "Italiani: niente visto per turismo fino a 90 giorni (Viaggiare Sicuri precisa: 90 giorni ogni 180). La scheda consultata è aggiornata ad aprile 2026 e riporta una validità fino ad agosto 2026: ricontrollala prima di partire.",
-      "en": "Italians: no visa for tourism of up to 90 days (Viaggiare Sicuri says 90 days in any 180). The sheet consulted was updated in April 2026 and shows validity until August 2026: recheck it before departure.",
-      "fr": "Italiens : pas de visa pour un séjour touristique de 90 jours au maximum (Viaggiare Sicuri précise : 90 jours par période de 180). La fiche consultée, mise à jour en avril 2026, indique une validité jusqu'en août 2026 : revérifiez-la avant le départ."
+      "it": "Italiani: niente visto per turismo fino a un massimo di 90 giorni ogni 180, secondo Viaggiare Sicuri. La scheda consultata è aggiornata ad aprile 2026 e risulta valida fino al 13 agosto 2026: ricontrollala prima di partire.",
+      "en": "Italians: no visa for tourism for up to 90 days in any 180, according to Viaggiare Sicuri. The sheet consulted was updated in April 2026 and shows validity until 13 August 2026: recheck it before departure.",
+      "fr": "Italiens : pas de visa pour le tourisme jusqu’à 90 jours sur 180, selon Viaggiare Sicuri. La fiche consultée date d’avril 2026 et indique une validité jusqu’au 13 août 2026 : revérifiez-la avant le départ."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
      "checked": true,
@@ -20536,9 +20536,9 @@
     },
     {
      "text": {
-      "it": "Svizzeri: niente visto per turismo. La pagina dell'ente turistico giapponese cita sia un accordo fino a 6 mesi sia un limite di 90 giorni per il turismo: calcola 90 giorni e, per soggiorni più lunghi, chiedi a una rappresentanza giapponese. Serve la prova che proseguirai il viaggio fuori dal Giappone.",
-      "en": "Swiss: no visa for tourism. The Japan tourism office page mentions both an agreement of up to 6 months and a 90-day limit for tourism: plan on 90 days and ask a Japanese mission about longer stays. Proof of onward travel is required.",
-      "fr": "Suisses : pas de visa pour le tourisme. La page de l'office du tourisme japonais mentionne à la fois un accord allant jusqu'à 6 mois et une limite de 90 jours pour le tourisme : prévoyez 90 jours et, pour un séjour plus long, renseignez-vous auprès d'une représentation japonaise. Une preuve de poursuite du voyage est exigée."
+      "it": "Svizzeri: niente visto per turismo fino a 90 giorni. La pagina dell’ente del turismo giapponese cita la Svizzera anche tra i Paesi con un accordo fino a 6 mesi: la proroga di 90 giorni va chiesta all’ufficio immigrazione prima della fine dei primi 90. Serve la prova che lascerai il Giappone.",
+      "en": "Swiss: no visa for tourism for up to 90 days. The Japan tourism office page also lists Switzerland among countries with an agreement of up to 6 months: the extra 90 days must be requested at an immigration office before the first 90 end. You need proof that you will leave Japan.",
+      "fr": "Suisses : pas de visa pour le tourisme jusqu’à 90 jours. La page de l’office du tourisme japonais cite aussi la Suisse parmi les pays avec un accord jusqu’à 6 mois : la prolongation de 90 jours se demande au bureau de l’immigration avant la fin des 90 premiers. Une preuve de départ du Japon est exigée."
      },
      "source": "https://www.japan.travel/en/fr/guide/passeport-et-formalites/",
      "checked": true,
@@ -20546,9 +20546,9 @@
     },
     {
      "text": {
-      "it": "Italiani: il passaporto deve valere per tutto il soggiorno, senza validità residua minima; serve anche il biglietto di ritorno. Un passaporto già denunciato come perso o rubato può far negare l'ingresso. Controlla che sia integro e leggibile.",
-      "en": "Italians: the passport must be valid for the whole stay, with no minimum remaining validity; a return ticket is also needed. A passport once reported lost or stolen can lead to refusal of entry. Check it is intact and readable.",
-      "fr": "Italiens : le passeport doit être valable pendant tout le séjour, sans validité résiduelle minimale ; un billet de retour est aussi nécessaire. Un passeport déjà déclaré perdu ou volé peut entraîner un refus d'entrée. Vérifiez qu'il est intact et lisible."
+      "it": "Italiani: il passaporto deve essere valido per tutto il soggiorno (non è richiesta una validità residua minima) e serve il biglietto di ritorno. Un passaporto già denunciato come smarrito o rubato può far rifiutare l’ingresso. Controlla che sia integro e leggibile.",
+      "en": "Italians: the passport must be valid for the whole stay (no minimum remaining validity is required) and you need a return ticket. A passport once reported lost or stolen can lead to refusal of entry. Check it is intact and readable.",
+      "fr": "Italiens : le passeport doit être valable pendant tout le séjour (aucune validité restante minimale n’est exigée) et il faut un billet de retour. Un passeport déjà déclaré perdu ou volé peut entraîner un refus d’entrée. Vérifiez qu’il est intact et lisible."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
      "checked": true,
@@ -20556,9 +20556,19 @@
     },
     {
      "text": {
-      "it": "All'arrivo si prendono impronte digitali e foto del viso (esclusi, tra gli altri, i minori di 16 anni). Possono chiederti itinerario, prenotazioni degli alloggi e volo di uscita.",
-      "en": "On arrival, fingerprints and a face photo are taken (under-16s, among others, are exempt). Officers may ask about your route, hotel bookings and departure flight.",
-      "fr": "À l'arrivée, on relève les empreintes digitales et on prend une photo du visage (les moins de 16 ans, entre autres, en sont dispensés). On peut vous demander votre itinéraire, vos réservations d'hébergement et votre vol de départ."
+      "it": "In Giappone devi poter dimostrare la tua identità in qualsiasi momento con il passaporto: tienilo sempre con te.",
+      "en": "In Japan you must be able to prove your identity at any time with your passport: always carry it with you.",
+      "fr": "Au Japon, vous devez pouvoir prouver votre identité à tout moment avec votre passeport : gardez-le toujours sur vous."
+     },
+     "source": "https://www.schweiz-japan.eda.admin.ch/it/consigli-di-viaggio-sul-posto",
+     "checked": true,
+     "changing": false
+    },
+    {
+     "text": {
+      "it": "All’arrivo vengono prese impronte digitali e foto del volto (sono esclusi, tra gli altri, i minori di 16 anni). I controlli sono severi: possono chiederti dettagli su itinerario, alberghi prenotati e volo di partenza.",
+      "en": "On arrival, fingerprints and a face photo are taken (under-16s, among others, are exempt). Checks are strict: officers may ask about your route, hotel bookings and departure flight.",
+      "fr": "À l’arrivée, on relève empreintes digitales et photo du visage (les moins de 16 ans, entre autres, sont exemptés). Les contrôles sont stricts : on peut vous interroger sur votre itinéraire, vos hôtels et votre vol de départ."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
      "checked": true,
@@ -20566,31 +20576,61 @@
     },
     {
      "text": {
-      "it": "Con Visit Japan Web puoi compilare in anticipo i moduli di immigrazione e dogana e mostrare i codici QR.",
-      "en": "With Visit Japan Web you can fill in immigration and customs forms in advance and show QR codes.",
-      "fr": "Visit Japan Web permet de remplir à l'avance les formulaires d'immigration et de douane et de présenter des codes QR."
+      "it": "Visit Japan Web è il servizio online dell’Agenzia digitale giapponese per preparare le pratiche di immigrazione e dogana: all’arrivo mostri un codice 2D (tipo QR) su smartphone o tablet. Serve anche per gli acquisti tax free.",
+      "en": "Visit Japan Web is the Japanese Digital Agency’s online service to prepare immigration and customs procedures: on arrival you show a 2D (QR-type) code on a smartphone or tablet. It is also used for tax-free shopping.",
+      "fr": "Visit Japan Web est le service en ligne de l’Agence numérique japonaise pour préparer les formalités d’immigration et de douane : à l’arrivée, vous montrez un code 2D (type QR) sur smartphone ou tablette. Il sert aussi aux achats détaxés."
      },
-     "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
+     "source": "https://services.digital.go.jp/en/visit-japan-web/",
      "checked": true,
      "changing": true
     },
     {
      "text": {
-      "it": "JESTA, la futura autorizzazione elettronica di viaggio: il governo ha annunciato di volerla introdurre nell'anno fiscale 2028 (da aprile 2028 a marzo 2029). In base a questo calendario non è prevista per il 2027. Data esatta e procedura non sono verificate qui: ricontrolla e diffida dei siti non ufficiali.",
-      "en": "JESTA, the planned electronic travel authorisation: the government has announced it aims to introduce it in fiscal 2028 (April 2028 to March 2029). On that timetable it is not expected in 2027. The exact date and procedure are not verified here: check again and beware of unofficial sites.",
-      "fr": "JESTA, la future autorisation de voyage électronique : le gouvernement a annoncé viser sa mise en place pendant l'exercice 2028 (avril 2028 à mars 2029). Selon ce calendrier, elle n'est pas attendue en 2027. La date exacte et la procédure ne sont pas vérifiées ici : revérifiez et méfiez-vous des sites non officiels."
+      "it": "L’iscrizione a Visit Japan Web non è obbligatoria, ma farla in anticipo rende più comode procedure come quella tax free.",
+      "en": "Registering on Visit Japan Web is not required, but doing it in advance makes procedures such as tax-free shopping more convenient.",
+      "fr": "L’inscription à Visit Japan Web n’est pas obligatoire, mais la faire à l’avance facilite des démarches comme la détaxe."
      },
-     "source": "https://www.moj.go.jp/isa/content/001446181.pdf",
-     "checked": false,
+     "source": "https://www.japan.travel/en/plan/visa-info/",
+     "checked": true,
      "changing": true
     },
     {
      "text": {
-      "it": "Tax free: per gli acquisti dal 1° novembre 2026 paghi il prezzo tasse incluse e il rimborso arriva dopo il controllo doganale in uscita, da fare entro 90 giorni dall'acquisto. C'è una spesa minima per negozio e per giorno. Fai il controllo al terminale prima di consegnare i bagagli e arriva con anticipo. Cibi, bevande, cosmetici e altri beni usati in Giappone non danno diritto al rimborso.",
-      "en": "Tax-free shopping: for purchases from 1 November 2026 you pay the price including tax and are refunded after the customs check on departure, due within 90 days of purchase. A minimum spend per shop per day applies. Do the terminal check before handing over bags and arrive early. Food, drinks, cosmetics and other goods used in Japan do not qualify.",
-      "fr": "Détaxe : pour les achats à partir du 1er novembre 2026, vous payez le prix taxe comprise et le remboursement vient après le contrôle douanier au départ, à faire dans les 90 jours suivant l'achat. Un montant minimal par magasin et par jour s'applique. Passez à la borne avant de confier vos bagages et arrivez en avance. Aliments, boissons, cosmétiques et autres produits utilisés au Japon ne sont pas remboursés."
+      "it": "JESTA, la futura autorizzazione elettronica di viaggio: la legge approvata il 29 maggio 2026 ne prevede l’introduzione nell’anno fiscale giapponese 2028 (da aprile 2028 a marzo 2029). Con questo calendario non è prevista per un viaggio nel 2027. Ricontrolla prima di partire.",
+      "en": "JESTA, the future electronic travel authorisation: the law passed on 29 May 2026 provides for its introduction during Japanese fiscal year 2028 (April 2028 to March 2029). On that timetable it is not expected for a trip in 2027. Check again before departure.",
+      "fr": "JESTA, la future autorisation de voyage électronique : la loi votée le 29 mai 2026 prévoit sa mise en place au cours de l’exercice fiscal japonais 2028 (avril 2028 à mars 2029). Selon ce calendrier, elle n’est pas prévue pour un voyage en 2027. Revérifiez avant le départ."
+     },
+     "source": "https://www.mlit.go.jp/kankocho/content/002019006.pdf",
+     "checked": true,
+     "changing": true
+    },
+    {
+     "text": {
+      "it": "Tax free, per acquisti dal 1° novembre 2026: paghi le tasse in negozio e ricevi il rimborso dopo il controllo doganale in uscita, da fare con il passaporto entro 90 giorni dall’acquisto. Serve una spesa minima per negozio e per giorno. Cibo, bevande o cosmetici consumati in Giappone non danno diritto al rimborso.",
+      "en": "Tax-free shopping, for purchases from 1 November 2026: you pay the tax in the shop and are refunded after the customs check when leaving, done with your passport within 90 days of purchase. A minimum spend per shop per day applies. Food, drinks or cosmetics consumed in Japan get no refund.",
+      "fr": "Détaxe, pour les achats dès le 1er novembre 2026 : vous payez la taxe en magasin et êtes remboursé après le contrôle douanier au départ, à faire avec votre passeport dans les 90 jours suivant l’achat. Un achat minimum par magasin et par jour est exigé. Nourriture, boissons ou cosmétiques consommés au Japon ne sont pas remboursés."
      },
      "source": "https://www.customs.go.jp/kaigairyoko/taxrefund.htm",
+     "checked": true,
+     "changing": true
+    },
+    {
+     "text": {
+      "it": "Tax free in partenza: fai la procedura al terminale prima di consegnare i bagagli, perché dopo il check-in dei bagagli non si può più fare. Arriva in anticipo. Per le modalità del rimborso chiedi al negozio.",
+      "en": "Tax-free on departure: do the procedure at the terminal before handing over your bags, because it is no longer possible after checking them in. Arrive early. Ask the shop how the refund is paid.",
+      "fr": "Détaxe au départ : faites la procédure à la borne avant d’enregistrer vos bagages, car elle n’est plus possible ensuite. Arrivez en avance. Demandez au magasin comment le remboursement est versé."
+     },
+     "source": "https://www.mlit.go.jp/kankocho/tax-free/page01_000001_00028.html",
+     "checked": true,
+     "changing": true
+    },
+    {
+     "text": {
+      "it": "Tassa di partenza dal Giappone: dal 1° luglio 2026 è aumentata. Di norma la compagnia aerea o di navigazione la riscuote insieme al biglietto. I bambini sotto i 2 anni sono esenti; per alcuni biglietti emessi entro il 30 giugno 2026 valgono regole transitorie.",
+      "en": "Japan departure tax: it went up on 1 July 2026. The airline or shipping company normally collects it with the ticket. Children under 2 are exempt; transitional rules apply to some tickets issued by 30 June 2026.",
+      "fr": "Taxe de départ du Japon : elle a augmenté le 1er juillet 2026. La compagnie aérienne ou maritime la perçoit en général avec le billet. Les enfants de moins de 2 ans en sont exemptés ; des règles transitoires visent certains billets émis jusqu’au 30 juin 2026."
+     },
+     "source": "https://www.mlit.go.jp/kankocho/content/001996464.pdf",
      "checked": true,
      "changing": true
     }
@@ -20607,9 +20647,9 @@
    "points": [
     {
      "text": {
-      "it": "Senza certificato puoi portare per uso personale fino a 1 mese di farmaci con ricetta e fino a 2 mesi della maggior parte degli altri farmaci; i prodotti a uso esterno hanno un limite di pezzi. Non vale per le sostanze vietate o controllate. Controlla il principio attivo di ogni farmaco.",
-      "en": "Without a certificate, for personal use you may bring up to 1 month of prescription medicines and up to 2 months of most other medicines; external-use products have an item limit. This does not cover banned or controlled substances. Check the active ingredient of every medicine.",
-      "fr": "Sans certificat, pour usage personnel : jusqu'à 1 mois de médicaments sur ordonnance et jusqu'à 2 mois de la plupart des autres médicaments ; les produits à usage externe sont limités en nombre d'unités. Cela ne couvre pas les substances interdites ou contrôlées. Vérifiez la substance active de chaque médicament."
+      "it": "Senza certificato, per uso personale puoi portare fino a 1 mese di medicinali con ricetta e fino a 2 mesi della maggior parte degli altri; i prodotti per uso esterno hanno un limite di pezzi. Questo non vale per sostanze vietate o controllate: controlla il principio attivo di ogni farmaco.",
+      "en": "Without a certificate, for personal use you may bring up to 1 month of prescription medicines and up to 2 months of most other medicines; external-use products have an item limit. This does not cover banned or controlled substances: check the active ingredient of every medicine.",
+      "fr": "Sans certificat, pour usage personnel : jusqu’à 1 mois de médicaments sur ordonnance et 2 mois pour la plupart des autres ; les produits à usage externe ont une limite en nombre. Cela ne vaut pas pour les substances interdites ou contrôlées : vérifiez le principe actif de chaque médicament."
      },
      "source": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iyakuhin/kojinyunyu/topics/tp010401-1_00001.html",
      "checked": true,
@@ -20617,9 +20657,9 @@
     },
     {
      "text": {
-      "it": "Per quantità superiori serve un certificato di conferma d'importazione (Import Confirmation), da ottenere prima di partire: domanda online con ricetta o nota del medico e dati del volo.",
-      "en": "Larger quantities need an Import Confirmation certificate obtained before you leave: apply online with a prescription or doctor's note and your flight details.",
-      "fr": "Au-delà, il faut un certificat de confirmation d'importation (Import Confirmation), à obtenir avant le départ : demande en ligne avec ordonnance ou attestation médicale et informations de vol."
+      "it": "Per più di 1 mese di medicinali con ricetta serve il certificato «Import Confirmation», da ottenere prima dell’ingresso: si può richiedere online, con ricetta o nota del medico e un documento della compagnia con i dati del volo.",
+      "en": "For more than 1 month of prescription medicine you need an Import Confirmation certificate before entering Japan: you can apply online, with a prescription or doctor’s note and an airline document showing your flight details.",
+      "fr": "Pour plus d’un mois de médicaments sur ordonnance, il faut un certificat « Import Confirmation » avant d’entrer au Japon : demande possible en ligne, avec ordonnance ou note du médecin et un document de la compagnie indiquant votre vol."
      },
      "source": "https://www.mhlw.go.jp/content/001686827.pdf",
      "checked": true,
@@ -20627,19 +20667,29 @@
     },
     {
      "text": {
-      "it": "Narcotici (per esempio morfina o fentanyl) e materie prime di stimolanti (per esempio lisdexamfetamina, usata contro l'ADHD) si possono portare solo con un'autorizzazione preventiva del governo giapponese. Metanfetamina e altre droghe vietate non entrano neanche con ricetta. In caso di dubbio scrivi in anticipo al ministero della salute.",
-      "en": "Narcotics (e.g. morphine, fentanyl) and stimulant raw materials (e.g. lisdexamfetamine, used for ADHD) may only be carried with prior permission from the Japanese government. Methamphetamine and other banned drugs are not allowed even with a prescription. If unsure, email the health ministry in advance.",
-      "fr": "Les stupéfiants (par exemple morphine, fentanyl) et les matières premières de stimulants (par exemple la lisdexamfétamine, utilisée contre le TDAH) ne peuvent être emportés qu'avec une autorisation préalable du gouvernement japonais. La méthamphétamine et les autres drogues interdites le restent même avec ordonnance. En cas de doute, écrivez à l'avance au ministère de la santé."
+      "it": "Alcuni farmaci comuni sono controllati: per esempio morfina, fentanyl, ossicodone e codeina (narcotici), lisdexamfetamina e pseudoefedrina. Serve un permesso prima di entrare in Giappone: chiedilo almeno 14 giorni prima del viaggio, con certificato medico.",
+      "en": "Some common medicines are controlled: for example morphine, fentanyl, oxycodone and codeine (narcotics), lisdexamfetamine and pseudoephedrine. You need permission before entering Japan: apply at least 14 days before travelling, with a medical certificate.",
+      "fr": "Certains médicaments courants sont contrôlés : par exemple morphine, fentanyl, oxycodone et codéine (stupéfiants), lisdexamfétamine et pseudoéphédrine. Il faut une autorisation avant d’entrer au Japon : demandez-la au moins 14 jours avant le voyage, avec un certificat médical."
      },
-     "source": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iyakuhin/kojinyunyu/topics/tp010401-1_00001.html",
+     "source": "https://www.ncd.mhlw.go.jp/en/application2.html",
      "checked": true,
      "changing": true
     },
     {
      "text": {
-      "it": "Droghe: tolleranza zero, cannabis compresa, anche per quantità minime a uso personale.",
-      "en": "Drugs: zero tolerance, cannabis included, even for tiny personal amounts.",
-      "fr": "Drogues : tolérance zéro, cannabis compris, même pour une quantité infime à usage personnel."
+      "it": "Vietati anche con ricetta: i medicinali con anfetamina (per esempio Adderall) o metanfetamina, oltre a eroina, polvere d’oppio e metaqualone. Per gli psicofarmaci detti «psicotropi» (per esempio metilfenidato, diazepam, zolpidem), oltre la quantità in tabella o in forma iniettabile serve un certificato del medico.",
+      "en": "Banned even with a prescription: medicines containing amphetamine (such as Adderall) or methamphetamine, plus heroin, opium powder and methaqualone. For drugs classed as psychotropics (such as methylphenidate, diazepam, zolpidem), amounts above the official table, or injectable forms, need a doctor’s certificate.",
+      "fr": "Interdits même avec ordonnance : les médicaments contenant de l’amphétamine (par exemple Adderall) ou de la méthamphétamine, ainsi que l’héroïne, la poudre d’opium et la méthaqualone. Pour les psychotropes (par exemple méthylphénidate, diazépam, zolpidem), au-delà de la quantité du tableau officiel ou sous forme injectable, un certificat médical est exigé."
+     },
+     "source": "https://www.ncd.mhlw.go.jp/en/application2.html",
+     "checked": true,
+     "changing": true
+    },
+    {
+     "text": {
+      "it": "Droga: tolleranza zero, cannabis compresa, anche per quantità minime a uso personale. Le pene sono molto severe.",
+      "en": "Drugs: zero tolerance, cannabis included, even for tiny personal amounts. Penalties are very severe.",
+      "fr": "Drogue : tolérance zéro, cannabis compris, même en quantité minime pour usage personnel. Les peines sont très sévères."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
      "checked": true,
@@ -20647,19 +20697,29 @@
     },
     {
      "text": {
-      "it": "Il DFAE svizzero avverte che possono creare problemi anche prodotti legali in Svizzera, come sigarette elettroniche, snus o canapa a basso contenuto di THC.",
-      "en": "The Swiss foreign ministry warns that items legal in Switzerland, such as e-cigarettes, snus or low-THC hemp products, can also cause trouble.",
-      "fr": "Le DFAE suisse signale que des produits légaux en Suisse, comme les cigarettes électroniques, le snus ou le chanvre pauvre en THC, peuvent aussi poser problème."
+      "it": "È vietato importare prodotti a base di cannabis, anche se legali altrove: per esempio biscotti, cioccolato, burro, sigarette elettroniche e medicinali. Il divieto vale anche per uso medico.",
+      "en": "Importing cannabis products is forbidden even if they are legal elsewhere: for example cookies, chocolate, butter, e-cigarettes and medicines made with cannabis. The ban also covers medical use.",
+      "fr": "L’importation de produits au cannabis est interdite même s’ils sont légaux ailleurs : par exemple biscuits, chocolat, beurre, cigarettes électroniques et médicaments au cannabis. L’interdiction vaut aussi pour un usage médical."
      },
-     "source": "https://www.eda.admin.ch/countries/japan/it/home/consigli-di-viaggio/consigli-di-viaggio.html",
-     "checked": false,
+     "source": "https://www.customs.go.jp/english/passenger/brochure/brochure_e_update.pdf",
+     "checked": true,
      "changing": true
     },
     {
      "text": {
-      "it": "Carne e prodotti che ne contengono (anche sottovuoto, cotti, del duty free o dei pasti in aereo) sono in genere vietati, come la maggior parte di frutta e verdura fresca. La terra è vietata. Le sanzioni sono pesanti.",
-      "en": "Meat and anything containing it (even vacuum-packed, cooked, duty-free or from in-flight meals) is generally banned, as is most fresh fruit and vegetables. Soil is banned. Penalties are severe.",
-      "fr": "La viande et les produits qui en contiennent (même sous vide, cuits, achetés en duty free ou issus des repas à bord) sont en général interdits, comme la plupart des fruits et légumes frais. La terre est interdite. Les sanctions sont lourdes."
+      "it": "Franchigia per adulto: 3 bottiglie di alcolici da 760 ml; tabacco: 200 sigarette, oppure 50 sigari, oppure 10 confezioni di tabacco riscaldato, oppure 250 g di altro tabacco (se mescoli i tipi, 250 g in tutto); profumo: circa 56 ml. Sotto i 20 anni: nessuna franchigia per alcol e tabacco.",
+      "en": "Duty-free allowance per adult: 3 bottles of alcohol of 760 ml; tobacco: 200 cigarettes, or 50 cigars, or 10 packs of heated tobacco, or 250 g of other tobacco (250 g in total if you mix types); perfume: about 56 ml. Under 20: no alcohol or tobacco allowance.",
+      "fr": "Franchise par adulte : 3 bouteilles d’alcool de 760 ml ; tabac : 200 cigarettes, ou 50 cigares, ou 10 paquets de tabac chauffé, ou 250 g d’autre tabac (250 g au total si vous mélangez) ; parfum : environ 56 ml. Moins de 20 ans : aucune franchise pour l’alcool et le tabac."
+     },
+     "source": "https://www.customs.go.jp/english/c-answer_e/keitaibetsuso/7105_e.htm",
+     "checked": true,
+     "changing": true
+    },
+    {
+     "text": {
+      "it": "Vietati in generale carne e alimenti con carne (anche sottovuoto, cotti, duty free o dei pasti in aereo) e la maggior parte di frutta e verdura fresca. Vietata la terra. Le sanzioni sono pesanti.",
+      "en": "Meat and food containing it (even vacuum-packed, cooked, duty-free or from in-flight meals) is generally banned, as is most fresh fruit and vegetables. Soil is banned. Penalties are severe.",
+      "fr": "Viande et aliments qui en contiennent (même sous vide, cuits, détaxés ou issus des repas à bord) sont en principe interdits, comme la plupart des fruits et légumes frais. La terre est interdite. Les sanctions sont lourdes."
      },
      "source": "https://www.maff.go.jp/pps/j/pqaqinfo_en.html",
      "checked": true,
@@ -20667,11 +20727,21 @@
     },
     {
      "text": {
-      "it": "Sono vietati anche, tra l'altro, armi da fuoco e munizioni, esplosivi, materiale pornografico che offende la morale pubblica e merci contraffatte.",
-      "en": "Also banned, among others: firearms and ammunition, explosives, pornography deemed harmful to public morals and counterfeit goods.",
-      "fr": "Sont aussi interdits notamment : armes à feu et munitions, explosifs, pornographie jugée contraire aux bonnes mœurs et contrefaçons."
+      "it": "Tra gli altri divieti: armi da fuoco e munizioni, esplosivi, pornografia e altro materiale che può nuocere alla pubblica morale, valuta o carte di credito false e articoli contraffatti.",
+      "en": "Also banned, among others: firearms and ammunition, explosives, pornography and other material that may harm public morals, fake money or credit cards, and counterfeit goods.",
+      "fr": "Sont aussi interdits, entre autres : armes à feu et munitions, explosifs, pornographie et autres contenus pouvant nuire aux bonnes mœurs, fausse monnaie ou fausses cartes et contrefaçons."
      },
      "source": "https://www.customs.go.jp/english/summary/prohibit.htm",
+     "checked": true,
+     "changing": false
+    },
+    {
+     "text": {
+      "it": "Il porto di certi tipi di spade, forbici e coltelli, compresi i coltellini tascabili, è regolato severamente e può essere punito: il Dipartimento degli esteri svizzero consiglia in generale di non usarne.",
+      "en": "Carrying certain swords, scissors and knives, pocket knives included, is strictly regulated and can be punished: the Swiss foreign ministry generally advises against using such items.",
+      "fr": "Le port de certains sabres, ciseaux et couteaux, couteaux de poche compris, est strictement réglementé et peut être puni : le DFAE suisse conseille en principe d’éviter ces objets."
+     },
+     "source": "https://www.schweiz-japan.eda.admin.ch/it/consigli-di-viaggio-sul-posto",
      "checked": true,
      "changing": false
     }
@@ -20688,9 +20758,9 @@
    "points": [
     {
      "text": {
-      "it": "Le cure sono generalmente molto buone ma a pagamento, pronto soccorso compreso, e molto care; è difficile trovare personale che parli lingue straniere. Prima di partire fai un'assicurazione che copra spese mediche e rimpatrio.",
-      "en": "Care is generally very good but must be paid for, emergency care included, and is very expensive; staff who speak foreign languages can be hard to find. Before leaving, take out insurance covering medical costs and repatriation.",
-      "fr": "Les soins sont généralement très bons mais payants, urgences comprises, et très chers ; il est difficile de trouver du personnel parlant des langues étrangères. Avant de partir, souscrivez une assurance couvrant les frais médicaux et le rapatriement."
+      "it": "L’assistenza è in genere molto buona ma a pagamento, pronto soccorso compreso, e molto cara; è difficile trovare personale che parli lingue straniere. Prima di partire stipula un’assicurazione che copra spese mediche e rimpatrio sanitario.",
+      "en": "Care is generally very good but must be paid for, emergency care included, and is very expensive; staff who speak foreign languages can be hard to find. Before leaving, take out insurance covering medical costs and medical repatriation.",
+      "fr": "Les soins sont en général très bons mais payants, urgences comprises, et très chers ; il est difficile de trouver du personnel parlant une langue étrangère. Avant de partir, prenez une assurance couvrant frais médicaux et rapatriement."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
      "checked": true,
@@ -20698,29 +20768,69 @@
     },
     {
      "text": {
-      "it": "Svizzeri: verifica che la cassa malati copra le cure in Giappone e il rimpatrio, altrimenti aggiungi un'assicurazione complementare. Gli ospedali possono chiedere una garanzia di pagamento prima di curare.",
-      "en": "Swiss travellers: check that your health insurer covers care in Japan and repatriation, otherwise add supplementary cover. Hospitals may ask for a payment guarantee before treatment.",
-      "fr": "Suisses : vérifiez que votre caisse maladie couvre les soins au Japon et le rapatriement, sinon prenez une assurance complémentaire. Les hôpitaux peuvent exiger une garantie de paiement avant de soigner."
+      "it": "Il Dipartimento degli esteri svizzero avverte: gli ospedali a volte chiedono una garanzia finanziaria prima delle cure (prova di assicurazione, carta di credito o anticipo) e spesso accettano pazienti solo se inviati da un medico.",
+      "en": "The Swiss foreign ministry warns that hospitals sometimes require a financial guarantee before treatment (proof of insurance, a credit card or advance payment) and often accept patients only when referred by a doctor.",
+      "fr": "Le DFAE suisse avertit que les hôpitaux exigent parfois une garantie financière avant les soins (preuve d’assurance, carte de crédit ou paiement d’avance) et n’acceptent souvent que les patients envoyés par un médecin."
      },
-     "source": "https://www.eda.admin.ch/countries/japan/it/home/consigli-di-viaggio/consigli-di-viaggio.html",
-     "checked": false,
+     "source": "https://www.schweiz-japan.eda.admin.ch/it/consigli-di-viaggio-sul-posto",
+     "checked": true,
      "changing": false
     },
     {
      "text": {
-      "it": "Non tutti i farmaci si trovano in Giappone: porta una scorta sufficiente, nei limiti doganali, con ricetta, confezione originale e foglietto illustrativo.",
-      "en": "Not every medicine is available in Japan: bring enough, within customs limits, with the prescription, original packaging and leaflet.",
-      "fr": "Tous les médicaments ne sont pas disponibles au Japon : emportez une réserve suffisante, dans les limites douanières, avec ordonnance, emballage d'origine et notice."
+      "it": "Non tutti i medicinali si trovano in Giappone: porta una scorta sufficiente di quelli che ti servono, rispettando i limiti doganali. Per farmaci con sostanze stupefacenti o per disturbi psichici possono valere regole speciali.",
+      "en": "Not every medicine is available in Japan: bring enough of what you need, within customs limits. Special rules may apply to medicines containing narcotics or used for mental health conditions.",
+      "fr": "Tous les médicaments ne sont pas disponibles au Japon : emportez une réserve suffisante, dans les limites douanières. Des règles spéciales peuvent viser les médicaments contenant des stupéfiants ou traitant des troubles psychiques."
      },
-     "source": "https://www.eda.admin.ch/countries/japan/it/home/consigli-di-viaggio/consigli-di-viaggio.html",
-     "checked": false,
+     "source": "https://www.schweiz-japan.eda.admin.ch/it/consigli-di-viaggio-sul-posto",
+     "checked": true,
+     "changing": true
+    },
+    {
+     "text": {
+      "it": "Numeri di emergenza: polizia 110; ambulanza e vigili del fuoco 119. La pagina svizzera li indica come numeri in lingua giapponese.",
+      "en": "Emergency numbers: police 110; ambulance and fire brigade 119. The Swiss page lists these numbers as Japanese-language.",
+      "fr": "Numéros d’urgence : police 110 ; ambulance et pompiers 119. La page suisse indique que ces numéros sont en japonais."
+     },
+     "source": "https://www.schweiz-japan.eda.admin.ch/it/consigli-di-viaggio-sul-posto",
+     "checked": true,
      "changing": false
     },
     {
      "text": {
-      "it": "La guida dell'ente turistico giapponese aiuta a cercare strutture mediche per zona e lingua. Chiama prima di andare. Spesso le cliniche accettano solo contanti. Spese mediche non pagate possono far negare un futuro ingresso.",
-      "en": "The Japan tourism office's guide helps you search for medical facilities by area and language. Call before going. Clinics generally take only cash. Unpaid medical bills can lead to refusal of future entry.",
-      "fr": "Le guide de l'office du tourisme japonais aide à chercher un établissement médical par zone et par langue. Appelez avant d'y aller. Les cliniques n'acceptent en général que les espèces. Des frais médicaux impayés peuvent entraîner un futur refus d'entrée."
+      "it": "Per assistenza in caso di emergenza (malattia, disastri) c’è la Japan Visitor Hotline dell’ente del turismo, 050-3816-2787, 24 ore su 24: inglese, cinese, coreano e giapponese. La polizia di Tokyo ha anche una linea di aiuto in inglese, 03-3501-0110.",
+      "en": "For help in an emergency (illness, disaster), the tourism office’s Japan Visitor Hotline, 050-3816-2787, works 24 hours a day in English, Chinese, Korean and Japanese. The Tokyo police also have an English helpline, 03-3501-0110.",
+      "fr": "Pour une aide en cas d’urgence (maladie, catastrophe), la Japan Visitor Hotline de l’office du tourisme, 050-3816-2787, répond 24 h/24 en anglais, chinois, coréen et japonais. La police de Tokyo a aussi une ligne d’aide en anglais, le 03-3501-0110."
+     },
+     "source": "https://www.japan.travel/en/plan/emergencies/",
+     "checked": true,
+     "changing": true
+    },
+    {
+     "text": {
+      "it": "Italiani: Ambasciata d’Italia a Tokyo +81 3-3453-5291, cellulare per emergenze a uffici chiusi +81 90-3908-1006. Consolato generale a Osaka +81 6-4706-5820, emergenze +81 90-3350-1561.",
+      "en": "Italians: Italian Embassy in Tokyo +81 3-3453-5291, out-of-hours emergency mobile +81 90-3908-1006. Consulate General in Osaka +81 6-4706-5820, emergencies +81 90-3350-1561.",
+      "fr": "Italiens : ambassade d’Italie à Tokyo +81 3-3453-5291, portable d’urgence hors ouverture +81 90-3908-1006. Consulat général à Osaka +81 6-4706-5820, urgences +81 90-3350-1561."
+     },
+     "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
+     "checked": true,
+     "changing": true
+    },
+    {
+     "text": {
+      "it": "Svizzeri: in caso di emergenza puoi rivolgerti alla rappresentanza svizzera più vicina o alla Helpline DFAE, attiva 24 ore su 24: +41 800 24 7 365 oppure +41 58 465 33 33.",
+      "en": "Swiss: in an emergency, contact the nearest Swiss representation or the FDFA Helpline, open 24 hours a day: +41 800 24 7 365 or +41 58 465 33 33.",
+      "fr": "Suisses : en cas d’urgence, contactez la représentation suisse la plus proche ou la Helpline DFAE, ouverte 24 h/24 : +41 800 24 7 365 ou +41 58 465 33 33."
+     },
+     "source": "https://www.schweiz-japan.eda.admin.ch/it/consigli-di-viaggio-sul-posto",
+     "checked": true,
+     "changing": false
+    },
+    {
+     "text": {
+      "it": "La guida dell’ente del turismo aiuta a cercare strutture mediche per zona e lingua. Chiama prima di andare. Le cliniche in genere accettano solo contanti e le spese mediche non pagate possono far rifiutare un futuro ingresso. Se non parli giapponese, per far chiamare un’ambulanza mostra: 救急車を呼んでください.",
+      "en": "The Japan tourism office’s guide helps you search for medical facilities by area and language. Call before going. Clinics generally take only cash, and unpaid medical bills can lead to refusal of future entry. If you cannot speak Japanese, show this so someone calls an ambulance: 救急車を呼んでください.",
+      "fr": "Le guide de l’office du tourisme aide à chercher un établissement médical par zone et par langue. Appelez avant d’y aller. Les cliniques n’acceptent en général que les espèces et des frais impayés peuvent entraîner un futur refus d’entrée. Si vous ne parlez pas japonais, montrez ceci pour qu’on appelle une ambulance : 救急車を呼んでください."
      },
      "source": "https://www.jnto.go.jp/emergency/eng/mi_guide.html",
      "checked": true,
@@ -20728,9 +20838,19 @@
     },
     {
      "text": {
+      "it": "L’acqua del rubinetto in Giappone è potabile.",
+      "en": "Tap water in Japan is safe to drink.",
+      "fr": "L’eau du robinet est potable au Japon."
+     },
+     "source": "https://www.japan.travel/en/faq/",
+     "checked": true,
+     "changing": false
+    },
+    {
+     "text": {
       "it": "Secondo Viaggiare Sicuri non ci sono vaccinazioni obbligatorie; per quelle consigliate chiedi al medico.",
       "en": "According to Viaggiare Sicuri there are no compulsory vaccinations; ask your doctor about recommended ones.",
-      "fr": "Selon Viaggiare Sicuri, aucun vaccin n'est obligatoire ; pour les vaccins conseillés, voyez votre médecin."
+      "fr": "Selon Viaggiare Sicuri, aucun vaccin n’est obligatoire ; demandez à votre médecin pour les vaccins conseillés."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
      "checked": true,
@@ -20749,9 +20869,9 @@
    "points": [
     {
      "text": {
-      "it": "Il contante conta ancora molto: porta sempre un po' di yen.",
-      "en": "Japan still relies heavily on cash: always carry some yen.",
-      "fr": "Les espèces restent très utilisées : gardez toujours des yens sur vous."
+      "it": "In Giappone il contante è ancora molto usato: porta sempre con te degli yen.",
+      "en": "Japan is still very much a cash society: always carry some yen.",
+      "fr": "Le Japon utilise encore beaucoup les espèces : ayez toujours des yens sur vous."
      },
      "source": "https://www.japan.travel/en/plan/currency/",
      "checked": true,
@@ -20759,9 +20879,9 @@
     },
     {
      "text": {
-      "it": "Le principali carte di credito sono accettate, ma alcune carte di debito o prepagate potrebbero non funzionare, e certi locali, soprattutto ristoranti, vogliono solo contanti. Porta la carta fisica e chiedi alla banca di controllare i limiti all'estero.",
+      "it": "Le principali carte di credito sono accettate, ma alcune carte di debito o prepagate potrebbero non funzionare e alcune attività, specie di ristorazione, vogliono solo contanti. Porta la carta fisica e chiedi alla banca i limiti all’estero.",
       "en": "Major credit cards are accepted, but some debit or prepaid cards may fail, and some businesses, especially eateries, take only cash. Carry the physical card and ask your bank about limits abroad.",
-      "fr": "Les principales cartes de crédit sont acceptées, mais certaines cartes de débit ou prépayées peuvent ne pas fonctionner, et certains commerces, surtout des restaurants, n'acceptent que les espèces. Prenez la carte physique et vérifiez les plafonds à l'étranger avec votre banque."
+      "fr": "Les principales cartes de crédit sont acceptées, mais certaines cartes de débit ou prépayées peuvent échouer et certains commerces, surtout de restauration, n’acceptent que les espèces. Prenez la carte physique et renseignez-vous sur les limites à l’étranger."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
      "checked": true,
@@ -20769,9 +20889,9 @@
     },
     {
      "text": {
-      "it": "Per prelevare con carte estere ci sono tra l'altro gli sportelli Japan Post Bank (soprattutto negli uffici postali) e Seven Bank (soprattutto nei 7-Eleven). Possono esserci commissioni e orari limitati.",
-      "en": "ATMs for foreign cards include Japan Post Bank (mostly in post offices) and Seven Bank (mainly in 7-Eleven stores). Fees and limited hours may apply.",
-      "fr": "Pour retirer avec une carte étrangère, il y a notamment les distributeurs Japan Post Bank (surtout dans les bureaux de poste) et Seven Bank (surtout dans les 7-Eleven). Des frais et des horaires limités sont possibles."
+      "it": "Per prelevare con carte estere ci sono tra l’altro gli sportelli Japan Post Bank (soprattutto negli uffici postali) e Seven Bank (soprattutto nei 7-Eleven). Possono esserci commissioni, orari limitati e a volte contanti esauriti.",
+      "en": "ATMs for foreign cards include Japan Post Bank (mostly in post offices) and Seven Bank (mainly in 7-Eleven stores). Fees and limited hours may apply, and machines sometimes run out of cash.",
+      "fr": "Pour retirer avec une carte étrangère, il y a notamment les distributeurs Japan Post Bank (surtout dans les bureaux de poste) et Seven Bank (surtout dans les 7-Eleven). Frais et horaires limités possibles, et parfois plus de billets."
      },
      "source": "https://www.japan.travel/en/plan/currency/",
      "checked": true,
@@ -20779,9 +20899,9 @@
     },
     {
      "text": {
-      "it": "Le carte non sempre valgono per i brevi tragitti in treno o metro. Le ricaricabili Suica o Pasmo si usano su molti trasporti, nei minimarket e in alcuni negozi e ristoranti.",
-      "en": "Bank cards do not always work for short train or subway rides. Rechargeable Suica or Pasmo cards work on much public transport, in convenience stores and at some shops and restaurants.",
-      "fr": "Les cartes bancaires ne fonctionnent pas toujours pour les courts trajets en train ou en métro. Les cartes rechargeables Suica ou Pasmo servent dans de nombreux transports, les supérettes et certains commerces et restaurants."
+      "it": "La carta di credito non sempre funziona per le brevi corse in treno o metro. Le carte ricaricabili Suica o Pasmo valgono su molti mezzi pubblici, nei konbini (minimarket) e in alcuni negozi e ristoranti.",
+      "en": "Credit cards do not always work for short train or subway rides. Rechargeable Suica or Pasmo cards work on much public transport, in convenience stores and at some shops and restaurants.",
+      "fr": "La carte de crédit ne fonctionne pas toujours pour les courts trajets en train ou métro. Les cartes rechargeables Suica ou Pasmo servent dans de nombreux transports, les supérettes et certains commerces et restaurants."
      },
      "source": "https://www.japan.travel/en/plan/credit-cards/",
      "checked": true,
@@ -20789,11 +20909,21 @@
     },
     {
      "text": {
-      "it": "Non c'è limite alla valuta che puoi portare dentro o fuori, ma una somma superiore a un milione di yen va dichiarata in dogana.",
+      "it": "Non ci sono limiti alla valuta in entrata o in uscita, ma le somme oltre un milione di yen vanno dichiarate in dogana.",
       "en": "There is no limit on currency taken in or out, but sums above one million yen must be declared to customs.",
-      "fr": "Il n'y a pas de limite aux devises importées ou exportées, mais une somme supérieure à un million de yens doit être déclarée en douane."
+      "fr": "Aucune limite sur les devises à l’entrée ou à la sortie, mais les sommes dépassant un million de yens doivent être déclarées en douane."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
+     "checked": true,
+     "changing": false
+    },
+    {
+     "text": {
+      "it": "Attenzione nei quartieri della vita notturna, soprattutto a Tokyo: ci sono casi di droghe messe di nascosto in cibi, bevande o sigarette, e di frodi con la carta di credito. Tieni d’occhio bicchiere e carta.",
+      "en": "Take care in nightlife districts, especially in Tokyo: drugs are sometimes slipped into food, drinks or cigarettes, and credit card fraud occurs. Watch your glass and your card.",
+      "fr": "Prudence dans les quartiers de la vie nocturne, surtout à Tokyo : des drogues sont parfois glissées dans la nourriture, les boissons ou les cigarettes, et des fraudes à la carte ont lieu. Surveillez votre verre et votre carte."
+     },
+     "source": "https://www.schweiz-japan.eda.admin.ch/it/consigli-di-viaggio-sul-posto",
      "checked": true,
      "changing": false
     }
@@ -20810,9 +20940,19 @@
    "points": [
     {
      "text": {
-      "it": "Welcome Suica Mobile è un'app di JR East per i visitatori, per iPhone: si crea e si ricarica una Suica con una carta in Apple Pay, anche prima di arrivare. Ha limiti di durata, età e rimborso: controlla le condizioni aggiornate.",
-      "en": "Welcome Suica Mobile is a JR East iPhone app for visitors: create and top up a Suica with a card in Apple Pay, even before arrival. Limits on validity, age and refunds apply: check current terms.",
-      "fr": "Welcome Suica Mobile est une application iPhone de JR East pour les visiteurs : on crée et recharge une Suica avec une carte dans Apple Pay, même avant l'arrivée. Durée, âge et remboursement sont limités : vérifiez les conditions à jour."
+      "it": "Batterie esterne (power bank) in aereo, avviso giapponese: mai nel bagaglio da stiva; al massimo 2 a persona, ciascuna fino a 160 Wh; non nella cappelliera ma vicino a te. A bordo non si ricaricano e non si usano per ricaricare altri apparecchi. La tua compagnia può avere regole più severe.",
+      "en": "Power banks on planes, Japanese notice: never in checked baggage; at most 2 per person, each up to 160 Wh; not in the overhead bin but close to you. On board, do not recharge them or use them to charge other devices. Your airline may be stricter.",
+      "fr": "Batteries externes en avion, avis japonais : jamais en soute ; 2 au maximum par personne, de 160 Wh au plus chacune ; pas dans le coffre à bagages mais près de vous. À bord, on ne les recharge pas et on ne s’en sert pas pour recharger d’autres appareils. Votre compagnie peut être plus stricte."
+     },
+     "source": "https://asset.japan.travel/image/upload/v1776649369/pdf/260414_To_All_Passengers_Regarding_Bringing_Power_Banks_on_Board_En.pdf",
+     "checked": true,
+     "changing": true
+    },
+    {
+     "text": {
+      "it": "Welcome Suica Mobile è un’app per iPhone di JR East per i visitatori: permette di avere e ricaricare una Suica con Apple Pay. Ci sono limiti di validità, età e rimborso: controlla le condizioni aggiornate.",
+      "en": "Welcome Suica Mobile is a JR East iPhone app for visitors: it lets you get and top up a Suica with Apple Pay. Limits on validity, age and refunds apply: check current terms.",
+      "fr": "Welcome Suica Mobile est une application iPhone de JR East pour les visiteurs : elle permet d’avoir et de recharger une Suica avec Apple Pay. Des limites de validité, d’âge et de remboursement existent : vérifiez les conditions."
      },
      "source": "https://www.jreast.co.jp/en/multi/welcomesuicamobile/",
      "checked": false,
@@ -20820,9 +20960,9 @@
     },
     {
      "text": {
-      "it": "Japan Rail Pass: per turisti stranieri con status Temporary Visitor indicato sul passaporto da timbro o adesivo. I varchi automatici in aeroporto non lo mettono: passa da un varco con operatore o chiedilo a un addetto.",
+      "it": "Japan Rail Pass: per turisti stranieri con il timbro o l’adesivo «Temporary Visitor» sul passaporto. I varchi automatici in aeroporto non lo mettono: passa da un varco con personale o chiedi a un addetto.",
       "en": "Japan Rail Pass: for foreign tourists whose passport shows Temporary Visitor status by stamp or sticker. Automated airport gates add none: use a staffed gate or ask an officer.",
-      "fr": "Japan Rail Pass : pour les touristes étrangers dont le passeport porte le statut Temporary Visitor (tampon ou vignette). Les portiques automatiques des aéroports n'en mettent pas : passez par un guichet tenu par un agent ou demandez-le."
+      "fr": "Japan Rail Pass : pour les touristes étrangers dont le passeport porte le tampon ou l’autocollant « Temporary Visitor ». Les portiques automatiques n’en mettent pas : passez au guichet ou demandez à un agent."
      },
      "source": "https://japanrailpass.net/en/about_jrp/riyou/",
      "checked": true,
@@ -20830,9 +20970,9 @@
     },
     {
      "text": {
-      "it": "Il pass è personale, non viene rifatto se perso o rubato e mentre lo usi devi avere il passaporto. I posti riservati si prenotano senza supplemento, ma il posto non è garantito.",
-      "en": "The pass is personal, is not reissued if lost or stolen, and you must carry your passport while using it. Seat reservations cost nothing extra, but a seat is not guaranteed.",
-      "fr": "Le pass est nominatif, n'est pas réémis en cas de perte ou de vol, et vous devez avoir votre passeport en l'utilisant. La réservation de siège est sans supplément, mais une place n'est pas garantie."
+      "it": "Il pass è personale, non viene riemesso se perso o rubato e mentre lo usi devi avere il passaporto. La prenotazione del posto non costa extra, ma il pass non garantisce un posto.",
+      "en": "The pass is personal, is not reissued if lost or stolen, and you must carry your passport while using it. Seat reservations cost nothing extra, but the pass does not guarantee a seat.",
+      "fr": "Le pass est personnel, n’est pas refait en cas de perte ou de vol, et il faut avoir son passeport en l’utilisant. La réservation de siège est sans supplément, mais le pass ne garantit pas de place."
      },
      "source": "https://japanrailpass.net/en/use/conditions-for-use/",
      "checked": true,
@@ -20840,9 +20980,9 @@
     },
     {
      "text": {
-      "it": "Il pass non basta per i treni Nozomi e Mizuho: usa Hikari, Sakura, Kodama o Tsubame, oppure compra ogni volta il biglietto speciale a pagamento riservato ai titolari. Alcuni tratti su ferrovie private si pagano a parte.",
-      "en": "The pass alone is not valid on Nozomi and Mizuho trains: take Hikari, Sakura, Kodama or Tsubame, or buy the paid special ticket for pass holders each time. Some private-railway sections are paid separately.",
-      "fr": "Le pass seul n'est pas valable dans les Nozomi et Mizuho : prenez les Hikari, Sakura, Kodama ou Tsubame, ou achetez à chaque fois le billet spécial payant réservé aux titulaires. Certains tronçons de compagnies privées se paient à part."
+      "it": "Il pass da solo non vale sui treni Nozomi e Mizuho: usa Hikari, Sakura, Kodama o Tsubame, oppure compra ogni volta, prima di salire, il biglietto speciale a pagamento per titolari del pass. Le tratte su ferrovie private si pagano a parte.",
+      "en": "The pass alone is not valid on Nozomi and Mizuho trains: take Hikari, Sakura, Kodama or Tsubame, or buy the paid special ticket for pass holders before boarding, each time. Private-railway sections are paid separately.",
+      "fr": "Le pass seul n’est pas valable sur les trains Nozomi et Mizuho : prenez Hikari, Sakura, Kodama ou Tsubame, ou achetez à chaque fois, avant de monter, le billet spécial payant pour détenteurs du pass. Les tronçons de compagnies privées se paient à part."
      },
      "source": "https://japanrailpass.net/en/about_jrp/route/",
      "checked": true,
@@ -20850,9 +20990,9 @@
     },
     {
      "text": {
-      "it": "Shinkansen Tokaido, Sanyo, Kyushu e Nishi-Kyushu: se la somma delle tre dimensioni del bagaglio supera 160 cm (fino a 250) va prenotato un posto con spazio per bagagli grandi; senza prenotazione si paga un supplemento. Oltre 250 cm non è ammesso. Passeggini, strumenti e attrezzi sportivi hanno regole particolari.",
+      "it": "Shinkansen Tokaido, Sanyo, Kyushu e Nishi-Kyushu: un bagaglio la cui somma delle tre dimensioni supera 160 cm (fino a 250) richiede la prenotazione di un posto con spazio per bagagli grandi; senza, si paga un supplemento. Oltre 250 cm non è ammesso. Per passeggini, strumenti e attrezzi sportivi ci sono regole speciali.",
       "en": "Tokaido, Sanyo, Kyushu and Nishi-Kyushu Shinkansen: baggage whose three dimensions total over 160 cm (up to 250) needs a reserved seat with oversized-baggage space; without it a fee applies. Over 250 cm is not allowed. Strollers, instruments and sports gear have special rules.",
-      "fr": "Shinkansen Tokaido, Sanyo, Kyushu et Nishi-Kyushu : si la somme des trois dimensions du bagage dépasse 160 cm (jusqu'à 250), il faut réserver un siège avec espace pour grands bagages ; sans réservation, des frais s'appliquent. Au-delà de 250 cm, il est refusé. Poussettes, instruments et matériel de sport ont des règles particulières."
+      "fr": "Shinkansen Tokaido, Sanyo, Kyushu et Nishi-Kyushu : un bagage dont la somme des trois dimensions dépasse 160 cm (jusqu’à 250) exige la réservation d’une place avec espace bagages ; sinon un supplément est dû. Au-delà de 250 cm, interdit. Poussettes, instruments et matériel de sport ont des règles spéciales."
      },
      "source": "https://global.jr-central.co.jp/en/info/oversized-baggage/",
      "checked": true,
@@ -20860,9 +21000,9 @@
     },
     {
      "text": {
-      "it": "Da Narita ci sono il Narita Express, il Keisei Skyliner (non coperto dal Japan Rail Pass), autobus e taxi. Se arrivi la sera controlla gli ultimi orari.",
+      "it": "Da Narita ci sono Narita Express, Keisei Skyliner (non coperto dal Japan Rail Pass), autobus e taxi. Se arrivi di sera controlla gli orari delle ultime corse.",
       "en": "From Narita there are the Narita Express, the Keisei Skyliner (not covered by the Japan Rail Pass), buses and taxis. For evening arrivals check the last departures.",
-      "fr": "Depuis Narita : Narita Express, Keisei Skyliner (non couvert par le Japan Rail Pass), bus et taxis. En cas d'arrivée le soir, vérifiez les derniers départs."
+      "fr": "Depuis Narita : Narita Express, Keisei Skyliner (non couvert par le Japan Rail Pass), bus et taxis. En arrivant le soir, vérifiez les derniers départs."
      },
      "source": "https://www.japan.travel/en/plan/airport-access/narita-airport/",
      "checked": true,
@@ -20870,29 +21010,39 @@
     },
     {
      "text": {
-      "it": "Da Haneda partono la linea Keikyu e la monorotaia di Tokyo, oltre agli autobus.",
-      "en": "From Haneda there are the Keikyu Line and the Tokyo Monorail, plus buses.",
-      "fr": "Depuis Haneda : ligne Keikyu et monorail de Tokyo, ainsi que des bus."
+      "it": "Da Haneda ci sono la linea Keikyu e la monorotaia di Tokyo, oltre ad autobus e taxi.",
+      "en": "From Haneda there are the Keikyu Line and the Tokyo Monorail, plus buses and taxis.",
+      "fr": "Depuis Haneda : la ligne Keikyu et le monorail de Tokyo, ainsi que bus et taxis."
      },
      "source": "https://www.japan.travel/en/plan/airport-access/haneda-airport/",
-     "checked": false,
-     "changing": false
+     "checked": true,
+     "changing": true
     },
     {
      "text": {
-      "it": "Dall'aeroporto del Kansai si va in città con i treni JR (tra cui l'Haruka) o Nankai.",
-      "en": "From Kansai Airport, JR trains (including the Haruka) and Nankai trains run to the city.",
-      "fr": "Depuis l'aéroport du Kansai, des trains JR (dont le Haruka) et Nankai desservent la ville."
+      "it": "Dall’aeroporto del Kansai i treni JR collegano il centro di Osaka, la stazione di Shin-Osaka (treni Shinkansen) e Kyoto.",
+      "en": "From Kansai Airport, JR trains connect to central Osaka, Shin-Osaka (the bullet train station) and Kyoto.",
+      "fr": "Depuis l’aéroport du Kansai, les trains JR relient le centre d’Osaka, la gare Shin-Osaka (Shinkansen) et Kyoto."
      },
-     "source": "https://www.kansai-airport.or.jp/en/access/train",
-     "checked": false,
-     "changing": false
+     "source": "https://www.japan.travel/en/plan/airport-access/osaka-kix/",
+     "checked": true,
+     "changing": true
     },
     {
      "text": {
-      "it": "Taxi: le porte si aprono e chiudono da sole e non si dà la mancia. Rosso = libero, verde = occupato. Porta l'indirizzo scritto in giapponese; fuori città tieni contanti. Di notte c'è un supplemento.",
-      "en": "Taxis: doors open and close automatically and you do not tip. Red means free, green occupied. Carry the address in Japanese; outside cities keep cash. A late-night surcharge applies.",
-      "fr": "Taxis : les portes s'ouvrent et se ferment automatiquement et on ne laisse pas de pourboire. Rouge = libre, vert = occupé. Ayez l'adresse écrite en japonais ; hors des villes, prévoyez des espèces. Un supplément de nuit s'applique."
+      "it": "Per la zona di Namba (Osaka) ci sono anche i treni Nankai: il Rapi:t (espresso limitato) e l’Airport Express.",
+      "en": "For the Namba area of Osaka there are also Nankai trains: the Limited Express Rapi:t and the Airport Express.",
+      "fr": "Pour le quartier de Namba à Osaka, il y a aussi les trains Nankai : le Rapi:t (express limité) et l’Airport Express."
+     },
+     "source": "https://www.nankai.co.jp/en_railway/traffic/kix.html",
+     "checked": true,
+     "changing": true
+    },
+    {
+     "text": {
+      "it": "Taxi: le porte si aprono e chiudono da sole e non si dà la mancia. La luce rossa indica libero, verde occupato. Porta l’indirizzo scritto in giapponese; fuori città tieni contanti. Di notte c’è un supplemento.",
+      "en": "Taxis: doors open and close automatically and you do not tip. Red means free, green occupied. Carry your destination written in Japanese; outside cities keep cash. A late-night surcharge applies.",
+      "fr": "Taxis : les portes s’ouvrent et se ferment seules et on ne donne pas de pourboire. Rouge signifie libre, vert occupé. Ayez la destination écrite en japonais ; hors des villes, prévoyez des espèces. Supplément la nuit."
      },
      "source": "https://www.japan.travel/en/plan/getting-around/taxis/",
      "checked": true,
@@ -20911,9 +21061,9 @@
    "points": [
     {
      "text": {
-      "it": "Italiani non residenti: serve la patente internazionale rilasciata dall'Italia secondo la Convenzione di Ginevra del 1949 (la sola patente italiana non basta). Si può guidare per un anno dal primo giorno di ingresso.",
+      "it": "Italiani non residenti: serve la patente internazionale rilasciata dall’Italia secondo la Convenzione di Ginevra del 1949 (la patente italiana da sola non basta). Si può guidare per un anno dal primo giorno d’ingresso.",
       "en": "Non-resident Italians: you need an International Driving Permit issued by Italy under the 1949 Geneva Convention (the Italian licence alone is not enough). Driving is allowed for one year from the first day of entry.",
-      "fr": "Italiens non résidents : il faut un permis international délivré par l'Italie selon la Convention de Genève de 1949 (le permis italien seul ne suffit pas). On peut conduire pendant un an à partir du premier jour d'entrée."
+      "fr": "Italiens non résidents : il faut le permis international délivré par l’Italie selon la Convention de Genève de 1949 (le permis italien seul ne suffit pas). Conduite autorisée un an à partir du premier jour d’entrée."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
      "checked": true,
@@ -20921,9 +21071,9 @@
     },
     {
      "text": {
-      "it": "Svizzeri: servono la patente originale valida e una sua traduzione in giapponese. La traduzione può essere preparata dalla JAF (automobile club giapponese) o dalla rappresentanza del Paese che ha rilasciato la patente.",
-      "en": "Swiss: you need your valid original licence plus a Japanese translation. It can be prepared by JAF (the Japanese automobile federation) or by the mission of the country that issued the licence.",
-      "fr": "Suisses : il faut le permis original valable et sa traduction en japonais. Elle peut être établie par la JAF (fédération automobile japonaise) ou par la représentation du pays qui a délivré le permis."
+      "it": "Svizzeri: serve la patente originale accompagnata da una traduzione in giapponese, fatta dalla JAF (la federazione automobilistica giapponese) o dalla rappresentanza del Paese che ha rilasciato la patente.",
+      "en": "Swiss: you need your original licence with a Japanese translation, made by JAF (the Japanese automobile federation) or by the mission of the country that issued the licence.",
+      "fr": "Suisses : il faut le permis original avec une traduction en japonais, établie par la JAF (fédération automobile japonaise) ou par la représentation du pays qui a délivré le permis."
      },
      "source": "https://www.keishicho.metro.tokyo.lg.jp/multilingual/english/finding_services/faq/drivers_license/drivers_license07.html",
      "checked": true,
@@ -20931,9 +21081,9 @@
     },
     {
      "text": {
-      "it": "Svizzeri: con la traduzione si guida al massimo per un anno dall'ingresso in Giappone.",
-      "en": "Swiss: with the translation you may drive for no more than one year from entering Japan.",
-      "fr": "Suisses : avec la traduction, on peut conduire au maximum un an après l'entrée au Japon."
+      "it": "Svizzeri: con la traduzione si guida al massimo per un anno dall’ingresso in Giappone; devi avere con te sia patente sia traduzione. La JAF indica che la traduzione si richiede solo online, con in media 2-3 giorni lavorativi.",
+      "en": "Swiss: with the translation you may drive for no more than one year from entering Japan; carry both licence and translation. JAF says translations are requested online only, taking 2 to 3 business days on average.",
+      "fr": "Suisses : avec la traduction, un an au maximum à partir de l’entrée au Japon ; gardez sur vous permis et traduction. La JAF indique que la demande se fait uniquement en ligne, avec en moyenne 2 à 3 jours ouvrables."
      },
      "source": "https://english.jaf.or.jp/driving-in-japan/drive-in-japan/switch-to-japanese-license",
      "checked": true,
@@ -20941,9 +21091,9 @@
     },
     {
      "text": {
-      "it": "La JAF accetta le richieste di traduzione solo dall'interno del Giappone e rimanda chi è all'estero a una pagina apposita. L'ente turistico giapponese indica anche servizi intermediari: organizzati in anticipo.",
-      "en": "JAF accepts translation applications only from within Japan and sends people abroad to a separate page. The Japan tourism office also lists proxy services: arrange this early.",
-      "fr": "La JAF n'accepte les demandes de traduction que depuis le Japon et renvoie les personnes à l'étranger vers une page dédiée. L'office du tourisme japonais signale aussi des intermédiaires : anticipez."
+      "it": "La JAF accetta le richieste di traduzione solo dal Giappone; per chi si trova all’estero rimanda a una pagina separata: organizzati per tempo.",
+      "en": "JAF accepts translation applications only from within Japan and sends people abroad to a separate page: arrange this early.",
+      "fr": "La JAF n’accepte les demandes de traduction que depuis le Japon et renvoie les personnes à l’étranger vers une page distincte : anticipez."
      },
      "source": "https://english.jaf.or.jp/driving-in-japan",
      "checked": true,
@@ -20951,9 +21101,9 @@
     },
     {
      "text": {
-      "it": "Per i permessi internazionali vale solo il libretto cartaceo del tipo 1949: non quelli del 1968 (Vienna), in formato tessera o sul telefono. I varchi automatici non timbrano il passaporto: fatti mettere il timbro d'ingresso.",
-      "en": "For international permits only the paper booklet of the 1949 type counts: not 1968 Vienna ones, card or phone versions. Automated gates do not stamp passports: get an entry stamp.",
-      "fr": "Pour le permis international, seul le livret papier de type 1949 est valable : ni celui de 1968 (Vienne), ni les formats carte ou téléphone. Les portiques automatiques ne tamponnent pas le passeport : faites mettre le tampon d'entrée."
+      "it": "Vale solo la patente internazionale a libretto cartaceo secondo la Convenzione del 1949: no tessera, no versione sul telefono. La data d’ingresso si controlla dal timbro sul passaporto: se passi dai varchi automatici, chiedi il timbro. La pagina indica anche servizi che si occupano della traduzione per le patenti svizzere.",
+      "en": "Only a paper booklet international permit under the 1949 Convention counts: no card or phone versions. Your arrival date is checked from the passport stamp: if you use automated gates, ask for a stamp. The page also lists services that arrange translations for Swiss licences.",
+      "fr": "Seul compte le permis international en livret papier selon la Convention de 1949 : ni carte ni version sur téléphone. La date d’arrivée se vérifie sur le tampon du passeport : après un portique automatique, demandez le tampon. La page cite aussi des services qui s’occupent de la traduction des permis suisses."
      },
      "source": "https://www.japan.travel/en/plan/getting-around/cars/",
      "checked": true,
@@ -20961,11 +21111,21 @@
     },
     {
      "text": {
-      "it": "Si guida a sinistra. Non bere affatto: Viaggiare Sicuri indica un limite di 0,3 g/l nel sangue, mentre il DFAE svizzero parla di zero. Le pene sono severe. Le assicurazioni auto estere non sono accettate.",
-      "en": "Traffic drives on the left. Do not drink at all: Viaggiare Sicuri gives a limit of 0.3 g/l in blood, while the Swiss foreign ministry says zero. Penalties are severe. Foreign car insurance is not accepted.",
-      "fr": "On roule à gauche. Ne buvez pas du tout : Viaggiare Sicuri indique une limite de 0,3 g/l de sang, alors que le DFAE suisse parle de zéro. Les peines sont sévères. Les assurances auto étrangères ne sont pas acceptées."
+      "it": "Si guida a sinistra. Il seggiolino o sistema di ritenuta per bambini è obbligatorio fino ai sei anni. Le assicurazioni auto estere non sono accettate: controlla la copertura prima di guidare.",
+      "en": "Traffic drives on the left. A child seat or restraint is compulsory up to age six. Foreign car insurance is not accepted: check your cover before driving.",
+      "fr": "On roule à gauche. Un siège ou système de retenue pour enfant est obligatoire jusqu’à six ans. Les assurances auto étrangères ne sont pas acceptées : vérifiez votre couverture avant de conduire."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
+     "checked": true,
+     "changing": false
+    },
+    {
+     "text": {
+      "it": "Alcol e guida: non bere per niente. Il Dipartimento degli esteri svizzero indica il divieto totale (0 per mille).",
+      "en": "Drink-driving: do not drink at all. The Swiss foreign ministry states a total ban (0 per mille).",
+      "fr": "Alcool au volant : ne buvez pas du tout. Le DFAE suisse indique une interdiction totale (0 pour mille)."
+     },
+     "source": "https://www.schweiz-japan.eda.admin.ch/it/consigli-di-viaggio-sul-posto",
      "checked": true,
      "changing": false
     }
@@ -20982,9 +21142,9 @@
    "points": [
     {
      "text": {
-      "it": "Per internet puoi usare eSIM, SIM dati o router portatili. Prima di partire controlla il roaming del tuo operatore.",
-      "en": "For internet you can use an eSIM, a data SIM or a portable router. Check your operator's roaming terms before leaving.",
-      "fr": "Pour internet : eSIM, carte SIM de données ou routeur portable. Avant de partir, vérifiez l'itinérance proposée par votre opérateur."
+      "it": "Per internet puoi usare una eSIM, una SIM dati o un router portatile. Prima di partire controlla le condizioni di roaming del tuo operatore.",
+      "en": "For internet you can use an eSIM, a data SIM or a portable router. Check your operator’s roaming terms before leaving.",
+      "fr": "Pour internet : eSIM, carte SIM de données ou routeur portable. Vérifiez les conditions d’itinérance de votre opérateur avant le départ."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
      "checked": true,
@@ -20992,9 +21152,9 @@
     },
     {
      "text": {
-      "it": "C'è Wi-Fi gratuito nei grandi aeroporti, in molti hotel di città e in alcuni locali, ma può essere instabile e manca in certi alloggi tradizionali. Per usare una SIM giapponese il telefono deve essere sbloccato.",
-      "en": "Free Wi-Fi exists at major airports, many city hotels and some cafés and shops, but can be patchy and may be missing in traditional inns. Using a local SIM requires an unlocked phone.",
-      "fr": "Il y a du Wi-Fi gratuit dans les grands aéroports, beaucoup d'hôtels en ville et certains commerces, mais il peut être instable et manquer dans des auberges traditionnelles. Une carte SIM locale exige un téléphone débloqué."
+      "it": "I principali aeroporti internazionali hanno il Wi-Fi gratuito. Anche alcune catene di caffè, fast food e konbini lo offrono, spesso con registrazione, e il segnale può essere debole. Per usare una SIM locale il telefono deve essere sbloccato.",
+      "en": "Major international airports have free Wi-Fi. Some coffee chains, fast-food restaurants and convenience stores offer it too, often after sign-up, and the signal can be weak. Using a local SIM requires an unlocked phone.",
+      "fr": "Les grands aéroports internationaux ont le Wi-Fi gratuit. Certaines chaînes de cafés, fast-foods et supérettes en proposent aussi, souvent après inscription, avec un signal parfois faible. Une SIM locale exige un téléphone débloqué."
      },
      "source": "https://www.japan.travel/en/plan/wifi-and-connectivity/",
      "checked": true,
@@ -21012,9 +21172,9 @@
     },
     {
      "text": {
-      "it": "La tensione è 100 V, con 50 Hz nell'est e 60 Hz nell'ovest (anche Nagoya, Kyoto e Osaka). Controlla che i tuoi apparecchi accettino 100 V; altrimenti può servire un trasformatore.",
+      "it": "La tensione è 100 V, a 50 Hz a est e 60 Hz a ovest (compresi Nagoya, Kyoto e Osaka). Controlla che i tuoi apparecchi accettino 100 V; altrimenti può servire un trasformatore.",
       "en": "Voltage is 100 V, at 50 Hz in the east and 60 Hz in the west (including Nagoya, Kyoto and Osaka). Check your devices accept 100 V; otherwise a transformer may be needed.",
-      "fr": "La tension est de 100 V, en 50 Hz à l'est et 60 Hz à l'ouest (dont Nagoya, Kyoto et Osaka). Vérifiez que vos appareils acceptent 100 V ; sinon un transformateur peut être nécessaire."
+      "fr": "Tension de 100 V, 50 Hz à l’est et 60 Hz à l’ouest (dont Nagoya, Kyoto et Osaka). Vérifiez que vos appareils acceptent 100 V ; sinon un transformateur peut être nécessaire."
      },
      "source": "https://www.japan.travel/en/plan/plug-and-electricity/",
      "checked": true,
@@ -21033,9 +21193,9 @@
    "points": [
     {
      "text": {
-      "it": "Onsen: lavati con il sapone prima di entrare, di solito si sta nudi in bagni separati per sesso e l'asciugamano resta fuori dall'acqua. I tatuaggi in genere non sono ammessi (anche in piscine e palestre): informati prima, coprili se il posto lo consente o scegli un bagno privato.",
-      "en": "Onsen: wash with soap before getting in; bathing is usually unclothed in separate areas for men and women, with towels kept out of the water. Tattoos are generally not allowed (also at pools and gyms): check first, cover them if the place allows it, or book a private bath.",
-      "fr": "Onsen : savonnez-vous avant d'entrer ; on se baigne en général nu, dans des bains séparés hommes et femmes, la serviette restant hors de l'eau. Les tatouages sont généralement refusés (aussi en piscine et en salle de sport) : renseignez-vous, couvrez-les si l'établissement l'accepte ou choisissez un bain privé."
+      "it": "Onsen e bagni pubblici: di solito uomini e donne hanno vasche separate; lavati con il sapone prima di entrare e tieni l’asciugamano fuori dall’acqua. I tatuaggi in genere non sono ammessi (anche in piscine e palestre); alcuni posti sono più tolleranti: chiedi prima o coprili.",
+      "en": "Onsen and public baths: men and women usually bathe separately; wash with soap before getting in and keep your towel out of the water. Tattoos are generally not allowed (also at pools and gyms); some places are more tolerant, so check first or cover them.",
+      "fr": "Onsen et bains publics : hommes et femmes ont en général des bassins séparés ; lavez-vous au savon avant d’entrer et gardez la serviette hors de l’eau. Les tatouages sont en général interdits (aussi en piscine et en salle de sport) ; certains lieux sont plus tolérants : demandez ou couvrez-les."
      },
      "source": "https://www.japan.travel/en/guide/understanding-and-mastering-japanese-manners-and-etiquette/",
      "checked": true,
@@ -21043,9 +21203,9 @@
     },
     {
      "text": {
-      "it": "Togli le scarpe all'ingresso quando richiesto, per esempio in case e alloggi tradizionali. Niente pantofole sul tatami; in bagno usa quelle apposite.",
-      "en": "Take off shoes at the entrance where expected, for example in homes and traditional inns. No slippers on tatami; use the separate toilet slippers.",
-      "fr": "Retirez vos chaussures à l'entrée quand c'est l'usage, par exemple dans les maisons et auberges traditionnelles. Pas de chaussons sur les tatamis ; aux toilettes, utilisez ceux prévus."
+      "it": "Togli le scarpe all’ingresso dove è previsto. Sul tatami non si cammina con le ciabatte; spesso il bagno ha ciabatte apposite.",
+      "en": "Take off your shoes at the entrance where expected. Remove slippers before stepping on tatami; toilets often have their own slippers.",
+      "fr": "Retirez vos chaussures à l’entrée quand c’est l’usage. Enlevez les chaussons avant de marcher sur un tatami ; les toilettes ont souvent leurs propres chaussons."
      },
      "source": "https://www.japan.travel/en/guide/understanding-and-mastering-japanese-manners-and-etiquette/",
      "checked": true,
@@ -21053,9 +21213,9 @@
     },
     {
      "text": {
-      "it": "Templi e santuari: calma, rispetto dei divieti di foto e scarpe tolte se richiesto. Al santuario l'usanza è due inchini, due battiti di mani, preghiera e un inchino; nei templi non si battono le mani.",
-      "en": "Temples and shrines: stay calm, respect photo bans and remove shoes if asked. At shrines the custom is two bows, two claps, a prayer and one bow; do not clap at temples.",
-      "fr": "Temples et sanctuaires : restez calme, respectez les interdictions de photo et déchaussez-vous si on le demande. Au sanctuaire : deux saluts, deux claquements de mains, une prière puis un salut ; au temple, on ne claque pas des mains."
+      "it": "Santuari: ci si inchina, si battono le mani due volte, si prega e ci si inchina di nuovo. Nei templi non serve battere le mani. In alcuni edifici bisogna togliere le scarpe e le foto non sono permesse ovunque: guarda i cartelli.",
+      "en": "At shrines you bow, clap twice, pray and bow again. At temples there is no need to clap. Some buildings require removing shoes, and photos are not allowed everywhere: look for signs.",
+      "fr": "Au sanctuaire : on s’incline, on frappe deux fois dans les mains, on prie et on s’incline à nouveau. Au temple, inutile de frapper dans les mains. Certains bâtiments exigent d’ôter ses chaussures et les photos ne sont pas permises partout : suivez les panneaux."
      },
      "source": "https://www.japan.travel/en/guide/shrine-and-temple-traditions/",
      "checked": true,
@@ -21063,9 +21223,9 @@
     },
     {
      "text": {
-      "it": "I cestini pubblici sono pochi: tieni con te i rifiuti finché ne trovi uno. Chiedi il permesso prima di fotografare le persone.",
-      "en": "Public bins are scarce: keep your rubbish until you find one. Ask permission before photographing people.",
-      "fr": "Les poubelles publiques sont rares : gardez vos déchets jusqu'à en trouver une. Demandez la permission avant de photographier quelqu'un."
+      "it": "I cestini pubblici possono essere pochi: tieni con te i rifiuti finché ne trovi uno. Alcuni negozi e strutture vietano le foto: rispetta i cartelli.",
+      "en": "Public bins can be scarce: keep your rubbish until you find one. Some shops and facilities ban photos: respect the signs.",
+      "fr": "Les poubelles publiques peuvent être rares : gardez vos déchets jusqu’à en trouver une. Certains commerces et lieux interdisent les photos : respectez les panneaux."
      },
      "source": "https://www.japan.travel/en/faq/",
      "checked": true,
@@ -21073,9 +21233,9 @@
     },
     {
      "text": {
-      "it": "Non fumare camminando e non buttare mozziconi: si rischia una multa. Cerca le aree fumatori.",
-      "en": "Do not smoke while walking or drop butts: fines are possible. Look for smoking areas.",
-      "fr": "Ne fumez pas en marchant et ne jetez pas de mégots : une amende est possible. Cherchez les zones fumeurs."
+      "it": "Non fumare camminando e non buttare mozziconi: è vietato e si rischia una multa. Usa le aree fumatori.",
+      "en": "Do not smoke while walking or drop butts: it is prohibited and may bring a fine. Use designated smoking areas.",
+      "fr": "Ne fumez pas en marchant et ne jetez pas vos mégots : c’est interdit et passible d’amende. Utilisez les zones fumeurs."
      },
      "source": "https://www.japan.travel/en/guide/understanding-and-mastering-japanese-manners-and-etiquette/",
      "checked": true,
@@ -21083,9 +21243,19 @@
     },
     {
      "text": {
-      "it": "La mancia in genere non è prevista, anche in ristoranti, bar, hotel e taxi.",
+      "it": "In Giappone sotto i 20 anni è vietato bere alcol e fumare.",
+      "en": "In Japan, people under 20 are not allowed to drink alcohol or smoke.",
+      "fr": "Au Japon, il est interdit de boire de l’alcool et de fumer avant 20 ans."
+     },
+     "source": "https://www.keishicho.metro.tokyo.lg.jp/multilingual/english/for_residents/index.files/04_english.pdf",
+     "checked": true,
+     "changing": false
+    },
+    {
+     "text": {
+      "it": "La mancia in genere non si usa, neanche in ristoranti, bar, hotel e taxi.",
       "en": "Tipping is generally not expected, including in restaurants, bars, hotels and taxis.",
-      "fr": "Le pourboire n'est généralement pas attendu, y compris au restaurant, au bar, à l'hôtel et en taxi."
+      "fr": "Le pourboire n’est en général pas d’usage, y compris au restaurant, au bar, à l’hôtel et en taxi."
      },
      "source": "https://www.japan.travel/en/plan/tipping-in-japan/",
      "checked": true,
@@ -21093,9 +21263,9 @@
     },
     {
      "text": {
-      "it": "Su treni e autobus parla piano, metti il telefono in silenzioso ed evita le chiamate. Lascia scendere prima di salire e cedi i posti prioritari.",
-      "en": "On trains and buses speak softly, keep your phone silent and avoid calls. Let people off before boarding and give up priority seats.",
-      "fr": "Dans les trains et les bus, parlez bas, mettez le téléphone en silencieux et évitez les appels. Laissez descendre avant de monter et cédez les places prioritaires."
+      "it": "Su treni e autobus tieni il telefono silenzioso ed evita le chiamate. Lascia scendere prima di salire e cedi i posti prioritari a chi ne ha bisogno.",
+      "en": "On trains and buses keep your phone silent and avoid calls. Let people off before boarding and give up priority seats to those who need them.",
+      "fr": "En train et en bus, mettez le téléphone en silencieux et évitez d’appeler. Laissez descendre avant de monter et cédez les places prioritaires à ceux qui en ont besoin."
      },
      "source": "https://www.japan.travel/en/guide/understanding-and-mastering-japanese-manners-and-etiquette/",
      "checked": true,
@@ -21103,9 +21273,9 @@
     },
     {
      "text": {
-      "it": "A Gion (Kyoto): non fotografare né filmare geiko e maiko senza permesso, non fermarle, toccarle o seguirle, non intralciare strade e marciapiedi e non entrare in proprietà private senza permesso. Il messaggio del quartiere pone limiti anche ad altre foto: segui i cartelli.",
-      "en": "In Gion (Kyoto): do not photograph or film geiko or maiko without permission, do not stop, touch or follow them, do not block streets or pavements, and do not enter private property uninvited. The district's message also restricts other photo-taking: follow the signs.",
-      "fr": "À Gion (Kyoto) : ne photographiez ni ne filmez les geiko et maiko sans autorisation, ne les arrêtez pas, ne les touchez pas et ne les suivez pas, ne gênez pas la circulation dans les rues et sur les trottoirs et n'entrez pas sans permission dans les propriétés privées. Le message du quartier restreint aussi d'autres prises de vue : suivez les panneaux."
+      "it": "A Gion (Kyoto): non fotografare o filmare geiko e maiko senza permesso, non fermarle, toccarle o seguirle, non bloccare strade e marciapiedi e non entrare in proprietà private senza permesso. Niente rifiuti né rumori forti; il messaggio del quartiere limita anche altre foto: segui i cartelli.",
+      "en": "In Gion (Kyoto): do not photograph or film geiko or maiko without permission, do not stop, touch or follow them, do not block streets or pavements, and do not enter private property without permission. No litter or loud noise; the district’s message also restricts other photo-taking: follow the signs.",
+      "fr": "À Gion (Kyoto) : ne photographiez ni ne filmez geiko ou maiko sans autorisation, ne les arrêtez pas, ne les touchez pas, ne les suivez pas, ne bloquez ni rues ni trottoirs et n’entrez pas dans une propriété privée sans permission. Ni déchets ni bruit ; le message du quartier limite aussi d’autres photos : suivez les panneaux."
      },
      "source": "https://kyoto.travel/en/responsible-travel/gion-manner-message-from-southern-gionmachi/",
      "checked": true,
@@ -21124,9 +21294,9 @@
    "points": [
     {
      "text": {
-      "it": "I ciliegi fioriscono tra marzo e maggio, avanzando da sud a nord. In autunno il foliage va da fine settembre a inizio dicembre, da nord a sud. Le date cambiano ogni anno: controlla le previsioni 2027.",
+      "it": "I ciliegi fioriscono tra marzo e maggio, da sud verso nord. I colori d’autunno vanno da fine settembre a inizio dicembre, da nord a sud. Le date cambiano ogni anno: controlla le previsioni 2027.",
       "en": "Cherry blossom runs from March to May, moving south to north. Autumn colours run from late September to early December, north to south. Dates vary yearly: check 2027 forecasts.",
-      "fr": "Les cerisiers fleurissent de mars à mai, du sud vers le nord. Les couleurs d'automne vont de fin septembre à début décembre, du nord au sud. Les dates changent chaque année : consultez les prévisions 2027."
+      "fr": "Les cerisiers fleurissent de mars à mai, du sud au nord. Les couleurs d’automne vont de fin septembre à début décembre, du nord au sud. Les dates varient : consultez les prévisions 2027."
      },
      "source": "https://www.japan.travel/en/plan/weather/",
      "checked": true,
@@ -21134,9 +21304,9 @@
     },
     {
      "text": {
-      "it": "La stagione delle piogge va in genere dall'inizio di giugno a metà luglio, con differenze tra regioni. I tifoni hanno il picco intorno ad agosto e settembre.",
-      "en": "The rainy season generally lasts from early June to mid-July, varying by region. Typhoon season peaks around August and September.",
-      "fr": "La saison des pluies va en général de début juin à la mi-juillet, avec des variations selon les régions. La saison des typhons culmine vers août et septembre."
+      "it": "La stagione delle piogge va in genere dall’inizio di giugno a metà luglio (le date cambiano secondo la regione). I tifoni sono più frequenti ad agosto e settembre.",
+      "en": "The rainy season generally lasts from early June to mid-July (dates vary by region). Typhoons peak in August and September.",
+      "fr": "La saison des pluies va en général de début juin à mi-juillet (selon la région). Les typhons culminent en août et septembre."
      },
      "source": "https://www.japan.travel/national-parks/plan-your-visit/seasons-and-climate/",
      "checked": true,
@@ -21144,9 +21314,9 @@
     },
     {
      "text": {
-      "it": "Viaggiare Sicuri segnala tifoni frequenti da giugno a ottobre e, negli ultimi anni, caldo molto intenso nello stesso periodo, con punte oltre i 40 gradi nelle grandi aree urbane. Bevi spesso e lascia margine nei programmi.",
+      "it": "Viaggiare Sicuri segnala tifoni frequenti da giugno a ottobre e, negli ultimi anni, caldo molto intenso negli stessi mesi, con picchi oltre 40°C nelle grandi aree urbane. Bevi spesso e lascia margini nel programma.",
       "en": "Viaggiare Sicuri reports frequent typhoons from June to October and, in recent years, intense heat over the same months, with peaks above 40°C in big urban areas. Drink often and keep slack in your plans.",
-      "fr": "Viaggiare Sicuri signale des typhons fréquents de juin à octobre et, ces dernières années, une chaleur très forte sur la même période, avec des pics au-delà de 40 °C dans les grandes agglomérations. Buvez souvent et gardez de la marge dans vos plans."
+      "fr": "Viaggiare Sicuri signale des typhons fréquents de juin à octobre et, ces dernières années, une chaleur intense sur la même période, avec des pointes au-delà de 40 °C dans les grandes villes. Buvez souvent et gardez de la marge."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
      "checked": true,
@@ -21154,9 +21324,9 @@
     },
     {
      "text": {
-      "it": "Golden Week (fine aprile - inizio maggio): più festività ravvicinate, grande folla e trasporti al completo. Prenota con largo anticipo.",
+      "it": "Golden Week (da fine aprile a inizio maggio): serie di festività, grande folla e trasporti al completo. Prenota con largo anticipo.",
       "en": "Golden Week (late April to early May): a cluster of holidays, big crowds and fully booked transport. Book well ahead.",
-      "fr": "Golden Week (fin avril à début mai) : jours fériés rapprochés, foule et transports complets. Réservez très à l'avance."
+      "fr": "Golden Week (fin avril à début mai) : série de jours fériés, foule et transports complets. Réservez longtemps à l’avance."
      },
      "source": "https://www.japan.travel/en/plan/business-hours-and-holidays/",
      "checked": true,
@@ -21164,9 +21334,9 @@
     },
     {
      "text": {
-      "it": "Obon (di solito 13-16 agosto): molti tornano in famiglia; treni, aerei e autobus a lunga percorrenza si riempiono presto, mentre le grandi città sono più tranquille.",
-      "en": "Obon (usually 13 to 16 August): many people visit family; trains, flights and highway buses sell out early, while big cities are quieter.",
-      "fr": "Obon (en général du 13 au 16 août) : beaucoup rentrent en famille ; trains, avions et autocars longue distance se remplissent tôt, tandis que les grandes villes sont plus calmes."
+      "it": "Obon (di solito dal 13 al 16 agosto): molti tornano in famiglia; posti su aerei, treni e autobus a lunga percorrenza si esauriscono in anticipo, mentre le grandi città sono meno affollate.",
+      "en": "Obon (usually 13 to 16 August): many people visit family; plane, train and highway bus seats sell out in advance, while big cities are less crowded.",
+      "fr": "Obon (en général du 13 au 16 août) : beaucoup rentrent en famille ; les places d’avion, de train et de car partent à l’avance, tandis que les grandes villes sont moins fréquentées."
      },
      "source": "https://www.japan.travel/en/guide/august/",
      "checked": true,
@@ -21174,7 +21344,7 @@
     },
     {
      "text": {
-      "it": "Capodanno (fine dicembre - inizio gennaio): molte attività chiudono per diversi giorni, mentre santuari e templi sono affollatissimi.",
+      "it": "Capodanno (da fine dicembre a inizio gennaio): molte attività chiudono per diversi giorni, mentre santuari e templi sono affollatissimi.",
       "en": "New Year (late December to early January): many businesses close for several days, while shrines and temples are extremely busy.",
       "fr": "Nouvel An (fin décembre à début janvier) : de nombreux commerces ferment plusieurs jours, tandis que sanctuaires et temples sont très fréquentés."
      },
@@ -21195,9 +21365,9 @@
    "points": [
     {
      "text": {
-      "it": "Il Giappone è ad alto rischio di terremoti, con possibili tsunami, e ha vulcani attivi; i tifoni possono portare frane e alluvioni. Segui le autorità locali e i bollettini della Japan Meteorological Agency.",
+      "it": "Il Giappone è ad alto rischio di terremoti, con possibili tsunami, e ha vulcani attivi; i tifoni possono causare frane e alluvioni. Segui le autorità locali e i bollettini della Japan Meteorological Agency.",
       "en": "Japan has a high earthquake risk, with possible tsunamis, and active volcanoes; typhoons can bring landslides and floods. Follow local authorities and Japan Meteorological Agency bulletins.",
-      "fr": "Le Japon présente un fort risque sismique, avec tsunamis possibles, et compte des volcans actifs ; les typhons peuvent causer glissements de terrain et inondations. Suivez les autorités locales et les bulletins de l'Agence météorologique du Japon."
+      "fr": "Le Japon présente un fort risque sismique, avec tsunamis possibles, et des volcans actifs ; les typhons peuvent provoquer glissements de terrain et inondations. Suivez les autorités et l’Agence météorologique japonaise."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
      "checked": true,
@@ -21205,9 +21375,9 @@
     },
     {
      "text": {
-      "it": "Se sei vicino alla costa dopo una forte scossa, vai subito in alto. All'arrivo in hotel controlla le vie di evacuazione e tieni il telefono carico.",
-      "en": "If you are near the coast after a large quake, head to higher ground. Check evacuation routes when you reach your hotel and keep your phone charged.",
-      "fr": "Si vous êtes près de la côte après une forte secousse, gagnez les hauteurs. À l'arrivée à l'hôtel, repérez les voies d'évacuation et gardez votre téléphone chargé."
+      "it": "Se sei sulla costa dopo un forte terremoto, vai subito in un punto alto. Quando arrivi in albergo controlla le vie di evacuazione e tieni il telefono carico.",
+      "en": "If you are on the coast when a large quake strikes, head to higher ground. Check evacuation routes when you check in and keep your phone charged.",
+      "fr": "Si vous êtes sur la côte lors d’un fort séisme, gagnez les hauteurs. À l’arrivée à l’hôtel, repérez les issues d’évacuation et gardez votre téléphone chargé."
      },
      "source": "https://www.japan.travel/en/plan/emergencies/",
      "checked": true,
@@ -21215,9 +21385,9 @@
     },
     {
      "text": {
-      "it": "L'app ufficiale Safety tips invia allerte per terremoti, tsunami e meteo. È disponibile in 15 lingue tra cui l'inglese; italiano e francese non sono in elenco.",
+      "it": "L’app ufficiale Safety tips invia allerte su terremoti, tsunami e meteo. Offre 15 lingue, tra cui l’inglese; italiano e francese non sono in elenco.",
       "en": "The official Safety tips app sends earthquake, tsunami and weather alerts. It offers 15 languages including English; Italian and French are not listed.",
-      "fr": "L'application officielle Safety tips envoie des alertes séisme, tsunami et météo. Elle propose 15 langues dont l'anglais ; l'italien et le français n'y figurent pas."
+      "fr": "L’application officielle Safety tips envoie des alertes séisme, tsunami et météo. Elle propose 15 langues dont l’anglais ; l’italien et le français n’y figurent pas."
      },
      "source": "https://www.jnto.go.jp/safety-tips/eng/app.html",
      "checked": true,
@@ -21225,9 +21395,9 @@
     },
     {
      "text": {
-      "it": "Per informazioni sui disastri sono utili anche NHK WORLD-JAPAN (sito e app) e la pagina Japan Safe Travel Information.",
-      "en": "NHK WORLD-JAPAN (web and app) and the Japan Safe Travel Information page are also useful for disaster news.",
-      "fr": "NHK WORLD-JAPAN (site et application) et la page Japan Safe Travel Information sont aussi utiles en cas de catastrophe."
+      "it": "Per le notizie sui disastri sono utili anche NHK WORLD-JAPAN (sito e app) e il sito Japan Safe Travel Information.",
+      "en": "NHK WORLD-JAPAN (web and app) and the Japan Safe Travel Information website are also useful for disaster news.",
+      "fr": "NHK WORLD-JAPAN (site et appli) et le site Japan Safe Travel Information sont aussi utiles en cas de catastrophe."
      },
      "source": "https://www.japan.travel/en/plan/emergencies/",
      "checked": true,
@@ -21235,9 +21405,9 @@
     },
     {
      "text": {
-      "it": "Italiani: Viaggiare Sicuri consiglia di registrare il viaggio su Dovesiamonelmondo o di usare l'app Viaggiare Sicuri con posizione e notifiche attive.",
+      "it": "Italiani: Viaggiare Sicuri consiglia di registrare il viaggio su Dovesiamonelmondo oppure di usare l’app Viaggiare Sicuri con localizzazione e notifiche attive.",
       "en": "Italians: Viaggiare Sicuri advises registering your trip on Dovesiamonelmondo or using the Viaggiare Sicuri app with location and notifications on.",
-      "fr": "Italiens : Viaggiare Sicuri conseille d'enregistrer le voyage sur Dovesiamonelmondo ou d'utiliser l'application Viaggiare Sicuri avec localisation et notifications activées."
+      "fr": "Italiens : Viaggiare Sicuri conseille d’enregistrer le voyage sur Dovesiamonelmondo ou d’utiliser l’appli Viaggiare Sicuri avec localisation et notifications activées."
      },
      "source": "https://www.viaggiaresicuri.it/schede_paese/pdf/JPN.pdf",
      "checked": true,
@@ -21256,29 +21426,29 @@
    "points": [
     {
      "text": {
-      "it": "Parco Ghibli (Aichi): servono biglietti comprati in anticipo con data scelta. La pagina dell'ente turistico indica la vendita tre mesi prima, ma un'altra fonte trovata indica due mesi: controlla il sito ufficiale del parco.",
-      "en": "Ghibli Park (Aichi): dated tickets must be bought in advance. The tourism office page says sales open three months ahead, but another source found says two months: check the park's official site.",
-      "fr": "Parc Ghibli (Aichi) : il faut des billets datés achetés à l'avance. La page de l'office du tourisme indique une vente trois mois avant, mais une autre source trouvée indique deux mois : vérifiez le site officiel du parc."
+      "it": "Parco Ghibli (Aichi): la prenotazione in anticipo è obbligatoria tutti i giorni. Per chi compra dall’estero la vendita apre il 10 del mese, due mesi prima del mese della visita, alle 14 ora giapponese (per febbraio 2027: 10 dicembre 2026). Le date di vendita possono cambiare.",
+      "en": "Ghibli Park (Aichi): advance reservation is required every day. For overseas buyers, sales open on the 10th, two months before the month of your visit, at 2 p.m. Japan time (for February 2027: 10 December 2026). Sales dates may change.",
+      "fr": "Parc Ghibli (Aichi) : réservation à l’avance obligatoire tous les jours. Depuis l’étranger, la vente ouvre le 10, deux mois avant le mois de la visite, à 14 h heure du Japon (pour février 2027 : 10 décembre 2026). Les dates de vente peuvent changer."
      },
-     "source": "https://www.japan.travel/en/spot/2072/",
+     "source": "https://ghibli-park.jp/en/ticket/",
      "checked": true,
      "changing": true
     },
     {
      "text": {
-      "it": "Ville imperiali di Kyoto, per esempio Katsura: visite guidate a posti limitati, da richiedere in anticipo all'Agenzia della Casa Imperiale; ci sono limiti di età. Il Palazzo Imperiale di Kyoto non richiede prenotazione.",
-      "en": "Kyoto imperial villas such as Katsura: limited guided tours, applied for in advance with the Imperial Household Agency; age limits apply. The Kyoto Imperial Palace needs no booking.",
-      "fr": "Villas impériales de Kyoto, comme Katsura : visites guidées à places limitées, à demander à l'avance à l'Agence de la Maison impériale ; il y a des limites d'âge. Le Palais impérial de Kyoto ne demande pas de réservation."
+      "it": "Kyoto: per il Palazzo Sento e le ville imperiali di Katsura e Shugakuin bisogna fare richiesta in anticipo (anche online) all’Agenzia della Casa Imperiale. Per il Palazzo imperiale di Kyoto non serve.",
+      "en": "Kyoto: the Sento Palace and the Katsura and Shugakuin imperial villas require an application to the Imperial Household Agency (online is possible). The Kyoto Imperial Palace needs none.",
+      "fr": "Kyoto : le palais Sento et les villas impériales de Katsura et Shugakuin exigent une demande auprès de l’Agence de la Maison impériale (possible en ligne). Le palais impérial de Kyoto n’en demande pas."
      },
      "source": "https://sankan.kunaicho.go.jp/english/index.html",
-     "checked": false,
+     "checked": true,
      "changing": true
     },
     {
      "text": {
-      "it": "Monte Fuji, sentiero Yoshida (regole 2026): stagione dal 1° luglio al 10 settembre, accesso a pagamento, limite giornaliero, cancello chiuso di notte (eccetto ospiti dei rifugi) e controllo dell'equipaggiamento. Prenotazione consigliata. Verifica le regole 2027; per gli altri sentieri controlla le procedure specifiche.",
-      "en": "Mount Fuji, Yoshida Trail (2026 rules): season 1 July to 10 September, paid access, a daily cap, a night gate closure (hut guests excepted) and a gear check. Booking is advised. Check the 2027 rules; other trails have their own procedures to check.",
-      "fr": "Mont Fuji, sentier Yoshida (règles 2026) : saison du 1er juillet au 10 septembre, accès payant, quota journalier, portail fermé la nuit (sauf clients des refuges) et contrôle de l'équipement. Réservation conseillée. Vérifiez les règles 2027 ; pour les autres sentiers, vérifiez les procédures propres."
+      "it": "Monte Fuji, sentiero Yoshida (regole 2026): stagione 1° luglio-10 settembre, accesso a pagamento, numero massimo al giorno, cancello chiuso dalle 14 alle 3 (esclusi gli ospiti dei rifugi) e controllo di abbigliamento caldo, impermeabile in due pezzi e scarpe adatte. Consigliata la prenotazione. Controlla le regole 2027; per gli altri sentieri verifica le loro procedure.",
+      "en": "Mount Fuji, Yoshida Trail (2026 rules): season 1 July to 10 September, paid access, a daily cap, gate closed from 2 p.m. to 3 a.m. (hut guests excepted) and a check for warm clothing, two-piece rain gear and suitable footwear. Booking is advised. Check the 2027 rules; check other trails’ own procedures.",
+      "fr": "Mont Fuji, sentier Yoshida (règles 2026) : saison du 1er juillet au 10 septembre, accès payant, quota quotidien, portail fermé de 14 h à 3 h (sauf clients des refuges) et contrôle des vêtements chauds, d’un ensemble de pluie deux pièces et de chaussures adaptées. Réservation conseillée. Vérifiez les règles 2027 et celles des autres sentiers."
      },
      "source": "https://www.fujisan-climb.jp/en/info/28/",
      "checked": true,
@@ -21286,9 +21456,9 @@
     },
     {
      "text": {
-      "it": "Per il Gion Matsuri (e in generale i grandi eventi) conviene prenotare l'alloggio con mesi di anticipo.",
-      "en": "For Gion Matsuri, book accommodation months in advance; do the same for other big events to be safe.",
-      "fr": "Pour le Gion Matsuri, réservez l'hébergement des mois à l'avance ; par prudence, faites de même pour les autres grands événements."
+      "it": "Per il Gion Matsuri prenota l’alloggio con mesi di anticipo.",
+      "en": "For Gion Matsuri, book accommodation months in advance.",
+      "fr": "Pour le Gion Matsuri, réservez l’hébergement des mois à l’avance."
      },
      "source": "https://www.japan.travel/en/spot/83/",
      "checked": true,
@@ -21296,9 +21466,9 @@
     },
     {
      "text": {
-      "it": "Nei periodi di punta alcuni servizi possono funzionare solo su prenotazione: controlla il sito di ogni gestore.",
-      "en": "At peak times some services may be reservation-only: check each operator's website.",
-      "fr": "En période de pointe, certains services peuvent n'être accessibles que sur réservation : consultez le site de chaque exploitant."
+      "it": "Nei periodi di punta alcuni servizi possono essere solo su prenotazione: controlla il sito di ogni gestore.",
+      "en": "At peak times some services may be reservation-only: check each operator’s website.",
+      "fr": "En période de pointe, certains services peuvent être sur réservation uniquement : consultez le site de chaque prestataire."
      },
      "source": "https://www.japan.travel/en/plan/business-hours-and-holidays/",
      "checked": true,
@@ -21317,9 +21487,9 @@
    "points": [
     {
      "text": {
-      "it": "Il personale ferroviario può aiutare chi è in sedia a rotelle a salire e scendere: comunica prima la destinazione. L'ente turistico raccoglie risorse sui percorsi senza barriere.",
+      "it": "Il personale delle stazioni può aiutare chi usa la sedia a rotelle a salire e scendere: indica in anticipo dove scendi. L’ente del turismo raccoglie risorse sull’accessibilità.",
       "en": "Railway staff can help wheelchair users board and get off: tell them your destination in advance. The tourism office gathers barrier-free resources.",
-      "fr": "Le personnel ferroviaire peut aider les personnes en fauteuil roulant à monter et descendre : indiquez-lui votre destination à l'avance. L'office du tourisme rassemble des ressources sur l'accessibilité."
+      "fr": "Le personnel des gares peut aider les personnes en fauteuil à monter et descendre : indiquez à l’avance votre destination. L’office du tourisme rassemble des ressources sur l’accessibilité."
      },
      "source": "https://www.japan.travel/en/guide/accessibility-in-japan/",
      "checked": true,
@@ -21327,9 +21497,9 @@
     },
     {
      "text": {
-      "it": "Con i bambini: si trovano sale per allattare e cambiare in grandi magazzini, stazioni e centri commerciali. La maggior parte delle grandi stazioni ha ascensori e diversi luoghi noleggiano passeggini.",
+      "it": "Con i bambini: sale per allattare e cambiarli si trovano in grandi magazzini, stazioni e centri commerciali. La maggior parte delle grandi stazioni ha ascensori e in vari posti si noleggiano passeggini.",
       "en": "With children: nursing and changing rooms are found in department stores, stations and malls. Most major stations have lifts and various places rent strollers.",
-      "fr": "Avec des enfants : on trouve des espaces pour allaiter et changer dans les grands magasins, les gares et les centres commerciaux. La plupart des grandes gares ont des ascenseurs et divers lieux louent des poussettes."
+      "fr": "Avec des enfants : des salles d’allaitement et de change se trouvent dans les grands magasins, gares et centres commerciaux. La plupart des grandes gares ont des ascenseurs et on peut louer des poussettes."
      },
      "source": "https://www.japan.travel/en/plan/traveling-with-children/",
      "checked": true,
@@ -21337,9 +21507,9 @@
     },
     {
      "text": {
-      "it": "Fuori dalle grandi città aspettati più scale e più strada a piedi; un marsupio può essere comodo. Evita treni affollati e ore di punta.",
+      "it": "Fuori dalle grandi città aspettati più scale e camminate; un marsupio può aiutare. Evita i treni affollati e le ore di punta.",
       "en": "Outside big cities expect more stairs and walking; a baby carrier can help. Avoid crowded trains and rush hours.",
-      "fr": "Hors des grandes villes, attendez-vous à plus d'escaliers et de marche ; un porte-bébé peut aider. Évitez les trains bondés et les heures de pointe."
+      "fr": "Hors des grandes villes, attendez-vous à plus d’escaliers et de marche ; un porte-bébé peut aider. Évitez les trains bondés et les heures de pointe."
      },
      "source": "https://www.japan.travel/en/plan/traveling-with-children/",
      "checked": true,
@@ -21358,19 +21528,19 @@
    "points": [
     {
      "text": {
-      "it": "Febbraio: Festival della neve di Sapporo. Controlla le date 2027.",
-      "en": "February: Sapporo Snow Festival. Check the 2027 dates.",
-      "fr": "Février : Festival de la neige de Sapporo. Vérifiez les dates 2027."
+      "it": "Festival della neve di Sapporo 2027: dal 4 all’11 febbraio.",
+      "en": "Sapporo Snow Festival 2027: 4 to 11 February.",
+      "fr": "Festival de la neige de Sapporo 2027 : du 4 au 11 février."
      },
-     "source": "https://www.japan.travel/en/us/blog/the-sapporo-snow-festival/",
+     "source": "https://www.snowfes.com/news/948.html",
      "checked": true,
      "changing": true
     },
     {
      "text": {
-      "it": "Luglio: Gion Matsuri a Kyoto, per tutto il mese; le sfilate dei carri sono il 17 e il 24.",
-      "en": "July: Gion Matsuri in Kyoto, all month; the float processions are on the 17th and 24th.",
-      "fr": "Juillet : Gion Matsuri à Kyoto, tout le mois ; les défilés de chars ont lieu les 17 et 24."
+      "it": "Luglio: Gion Matsuri a Kyoto, per tutto il mese; le sfilate principali dei carri sono il 17 e il 24.",
+      "en": "July: Gion Matsuri in Kyoto, all month; the main float processions are on the 17th and 24th.",
+      "fr": "Juillet : Gion Matsuri à Kyoto, tout le mois ; les principaux défilés de chars ont lieu les 17 et 24."
      },
      "source": "https://www.japan.travel/en/spot/83/",
      "checked": true,
@@ -21380,7 +21550,7 @@
      "text": {
       "it": "Inizio agosto: Nebuta di Aomori (2-7), Kanto di Akita (3-6) e Tanabata di Sendai (6-8). Conferma le date 2027.",
       "en": "Early August: Aomori Nebuta (2 to 7), Akita Kanto (3 to 6) and Sendai Tanabata (6 to 8). Confirm the 2027 dates.",
-      "fr": "Début août : Nebuta d'Aomori (du 2 au 7), Kanto d'Akita (du 3 au 6) et Tanabata de Sendai (du 6 au 8). Confirmez les dates 2027."
+      "fr": "Début août : Nebuta d’Aomori (2-7), Kanto d’Akita (3-6) et Tanabata de Sendai (6-8). Confirmez les dates 2027."
      },
      "source": "https://www.japan.travel/en/guide/august/",
      "checked": true,
@@ -21390,7 +21560,7 @@
      "text": {
       "it": "Metà agosto: Awa Odori a Tokushima (12-15). Conferma le date 2027.",
       "en": "Mid-August: Awa Odori in Tokushima (12 to 15). Confirm the 2027 dates.",
-      "fr": "Mi-août : Awa Odori à Tokushima (du 12 au 15). Confirmez les dates 2027."
+      "fr": "Mi-août : Awa Odori à Tokushima (12-15). Confirmez les dates 2027."
      },
      "source": "https://www.japan.travel/en/spot/203/",
      "checked": true,
@@ -21398,9 +21568,9 @@
     },
     {
      "text": {
-      "it": "Da giugno ad agosto si tengono centinaia di feste estive; a settembre c'è il Danjiri di Kishiwada.",
+      "it": "Da giugno ad agosto si tengono centinaia di festival estivi; a settembre c’è il Danjiri di Kishiwada.",
       "en": "Hundreds of summer festivals take place from June to August; September brings the Kishiwada Danjiri Festival.",
-      "fr": "De juin à août se tiennent des centaines de fêtes d'été ; en septembre a lieu le Danjiri de Kishiwada."
+      "fr": "De juin à août ont lieu des centaines de festivals d’été ; en septembre se tient le Danjiri de Kishiwada."
      },
      "source": "https://www.japan.travel/en/things-to-do/festivals-and-events/",
      "checked": true,
